@@ -261,7 +261,9 @@ h1 em {
   border-top: 1px dashed var(--border-strong);
 }
 
+.toggles { display: flex; flex-wrap: wrap; gap: 10px 24px; }
 .toggle { display: inline-flex; align-items: center; gap: 10px; cursor: pointer; font-size: .92rem; font-weight: 580; }
+.toggle small { color: var(--muted); font-weight: 500; font-size: .84rem; }
 .toggle input { position: absolute; opacity: 0; width: 1px; height: 1px; }
 .toggle-track {
   position: relative; flex: none;
@@ -504,6 +506,23 @@ h1 em {
   cursor: pointer;
 }
 .map-link:hover { text-decoration-color: currentColor; }
+
+/* Filialen ohne Angebot (Schalter "Alle Filialen zeigen") */
+.grid-heading {
+  grid-column: 1 / -1;
+  display: flex; align-items: center; gap: 12px;
+  margin: 20px 0 0;
+  font-size: .76rem; font-weight: 900; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--muted);
+}
+.grid-heading::after { content: ""; flex: 1; height: 1px; background: var(--border-strong); }
+.card--store { background: var(--surface); border-style: dashed; box-shadow: none; animation: none; }
+.card--store::before { display: none; }
+.card--store .chain-badge { filter: saturate(.4) brightness(.85); }
+.status--none { background: var(--surface-3); color: var(--muted); }
+.store-price { margin: 12px 0 0; font-size: .86rem; color: var(--muted); }
+.store-price b { color: var(--text); font-size: 1.2rem; font-weight: 850; font-variant-numeric: tabular-nums; }
+.pin--none { opacity: .65; filter: grayscale(.85); border-color: #9ba2ad; box-shadow: 0 2px 6px rgb(0 0 0 / .5); }
 
 /* Lade-Platzhalter */
 .card.skeleton { min-height: 230px; animation: pulse 1.4s ease-in-out infinite; }

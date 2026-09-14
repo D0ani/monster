@@ -11,6 +11,8 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 - Filter nach Kette und Packungsgröße (Einzeln/4er/6er/10er/…), Sortierung (Preis/Dose, Gesamtpreis, Rabatt)
 - App-Pille unter dem Preis: „Preis nur mit Lidl Plus“ (App-Pflicht, gefüllt) bzw. „Mit REWE-App +0,10 € Bonus“ /
   „Mit Netto-App nur 3,49 €“ (Extra-Rabatt, umrandet). Angebote **ohne App-Pflicht stehen immer vor App-Preisen**
+- Schalter **„Alle Filialen zeigen“**: listet zusätzlich alle Filialen ohne aktuelles Angebot (graue Pins auf der
+  Karte) mit dem zuletzt im Prospekt gesehenen Normalpreis der Kette, falls bekannt (`data/regular-prices.json`)
 - Bei gleichem Preis stehen **große Ketten vor kleinen** (Reihenfolge `CHAIN_RANK` in `app.js`:
   Edeka, Rewe, Lidl, Aldi Süd, Kaufland, Netto, Penny, Globus, Norma, … Nahkauf, Getränkemärkte)
 - Filter stehen in der URL (`?kette=Rewe&packung=pack4`) → Links teilbar
@@ -159,6 +161,14 @@ Array von Angeboten. Pflichtfelder wie spezifiziert, dazu einige optionale Zusat
 | `lat`/`lon` | optional; fehlen sie, sucht das Frontend die Filiale in `stores.json` |
 | `app` | optional: `{"name": "REWE-App", "required": false, "price": null, "bonus": 0.1, "text": "…"}` – `required: true` = Preis gilt nur mit App/Kundenkarte (wird hinten einsortiert), `price` = günstigerer Preis mit App, `bonus` = Gutschrift mit App |
 | `note` | optional: Pfand, „Preis je Dose beim Kauf im 12er-Pack“ … |
+
+**Normalpreise `data/regular-prices.json`**: Regalpreise liefert keine Quelle – der Scraper merkt sich deshalb pro
+Kette den zuletzt im Prospekt gesehenen Streich-/UVP-Preis pro Dose. Eigene Werte (z. B. selbst im Markt gesehen)
+mit `"manual": true` eintragen, die überschreibt der Scraper nie:
+
+```json
+{ "Lidl": { "pricePerUnit": 1.29, "seen": "2026-09-14", "source": "selbst gesehen", "manual": true } }
+```
 
 **Manuelle Angebote** (z. B. Aushang im Markt) kann man direkt in `deals.json` eintragen. Solange `source`
 nicht auf marktguru/kaufda/prospektangebote zeigt, lässt der Scraper sie bis zum Ablauf in Ruhe.

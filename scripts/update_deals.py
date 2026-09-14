@@ -41,6 +41,7 @@ from urllib3.util.retry import Retry
 ROOT = Path(__file__).resolve().parent.parent
 DEALS_FILE = ROOT / "data" / "deals.json"
 STORES_FILE = ROOT / "data" / "stores.json"
+PRICES_FILE = ROOT / "data" / "regular-prices.json"  # zuletzt gesehene Normalpreise je Kette
 
 # --------------------------------------------------------------------------- Konfiguration
 
@@ -674,6 +675,32 @@ def merge_with_existing(existing: list[dict], fresh: list[dict], ok_sources: set
     return merged, stats
 
 
+def update_regular_prices(deals: list[dict], dry_run: bool) -> None:
+    """Merkt sich pro Kette den zuletzt im Prospekt gesehenen Normalpreis pro Dose (Streich-/UVP-Preis).
+
+    Das Frontend zeigt ihn bei Filialen ohne aktuelles Angebot ("Alle Filialen zeigen").
+    Einträge mit "manual": true in data/regular-prices.json werden nie überschrieben.
+    """
+    prices = json.loads(PRICES_FILE.read_text(encoding="utf-8")) if PRICES_FILE.exists() else {}
+    before = json.dumps(prices, sort_keys=True)
+    low, high = CAN_PRICE_RANGE
+    # Einzeldosen zuletzt → haben Vorrang vor umgerechneten Multipack-Preisen
+    for deal in sorted(deals, key=lambda d: d.get("packType") == "single"):
+        regular, count = deal.get("regularPrice"), deal.get("unitCount")
+        if not regular or not count or (prices.get(deal["chain"]) or {}).get("manual"):
+            continue
+        per_can = round(regular / count, 2)
+        if low <= per_can <= high:
+            prices[deal["chain"]] = {"pricePerUnit": per_can, "seen": deal.get("validFrom"),
+                                     "source": deal.get("sourceName")}
+    if json.dumps(prices, sort_keys=True) == before:
+        return
+    log.info("Normalpreise: %s", ", ".join(f"{k} {v['pricePerUnit']:.2f} €" for k, v in sorted(prices.items())))
+    if not dry_run:
+        PRICES_FILE.write_text(json.dumps(dict(sorted(prices.items())), ensure_ascii=False, indent=2) + "\n",
+                               encoding="utf-8")
+
+
 def write_step_summary(report: list[tuple], deals: list[dict], stats: dict, dry_run: bool) -> None:
     path = os.environ.get("GITHUB_STEP_SUMMARY")
     if not path:
@@ -755,6 +782,7 @@ def main() -> int:
     merged, stats = merge_with_existing(existing, fresh, ok_sources, today)
     log.info("Ergebnis: %d Angebote (%d neu, %d abgelaufen entfernt, %d behalten aus ausgefallenen/manuellen Quellen)",
              len(merged), stats["new"], stats["expired"], stats["kept"])
+    update_regular_prices(merged, args.dry_run)
 
     output = json.dumps(merged, ensure_ascii=False, indent=2) + "\n"
     if args.dry_run:

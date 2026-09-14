@@ -8,6 +8,7 @@
 
   const DATA_URL = 'data/deals.json';
   const STORES_URL = 'data/stores.json';
+  const PRICES_URL = 'data/regular-prices.json';
   const TZ = 'Europe/Berlin';
   const SINGEN = [47.7597, 8.8403];
   const STALE_AFTER_H = 36;
@@ -43,8 +44,8 @@
     { key: 'pack10', label: '10er' },
   ];
 
-  const DEFAULT_STATE = { chain: 'all', pack: 'all', sort: 'unit', onlyValid: false };
-  const URL_KEYS = { chain: 'kette', pack: 'packung', sort: 'sort', onlyValid: 'gueltig' };
+  const DEFAULT_STATE = { chain: 'all', pack: 'all', sort: 'unit', onlyValid: false, showAll: false };
+  const URL_KEYS = { chain: 'kette', pack: 'packung', sort: 'sort', onlyValid: 'gueltig', showAll: 'alle' };
 
   const eur = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' });
   const liters = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 3 });
@@ -63,6 +64,7 @@
     chainChips: $('#chain-chips'),
     packChips: $('#pack-chips'),
     onlyValid: $('#only-valid'),
+    showAll: $('#show-all'),
     reset: $('#reset'),
     count: $('#result-count'),
     list: $('#deals'),
@@ -75,6 +77,9 @@
   const state = { ...DEFAULT_STATE };
   let deals = [];        // normalisiert, ohne abgelaufene
   let knownChains = [];  // Ketten aus dem Filialverzeichnis
+  let allStores = [];    // komplettes Filialverzeichnis (für "Alle Filialen zeigen")
+  let regularPrices = {}; // zuletzt gesehener Normalpreis pro Dose je Kette
+  let noDealStores = []; // aktuell angezeigte Filialen ohne Angebot
   let expiredCount = 0;
   let today = todayISO();
   let visible = [];
@@ -209,12 +214,12 @@
       renderError(err);
       return;
     }
-    let stores = [];
-    try {
-      stores = await fetchJSON(STORES_URL);
-    } catch {
-      /* Filialverzeichnis ist optional */
-    }
+    const [stores, prices] = await Promise.all([
+      fetchJSON(STORES_URL).catch(() => []),   // Filialverzeichnis ist optional
+      fetchJSON(PRICES_URL).catch(() => ({})), // Normalpreise sind optional
+    ]);
+    allStores = Array.isArray(stores) ? stores : [];
+    regularPrices = prices && typeof prices === 'object' ? prices : {};
 
     const list = Array.isArray(rawDeals) ? rawDeals : rawDeals.deals || [];
     const storesByKey = new Map(stores.map((s) => [fold(`${s.name}|${s.address}`), s]));
@@ -278,8 +283,8 @@
 
   /* ---------------- Rendering ---------------- */
 
-  function chip(value, label, count, pressed, extra = '') {
-    const disabled = !pressed && count === 0 && value !== 'all';
+  function chip(value, label, count, pressed, extra = '', enabled = false) {
+    const disabled = !enabled && !pressed && count === 0 && value !== 'all';
     return `<button type="button" class="chip" data-value="${esc(value)}" aria-pressed="${pressed}"${disabled ? ' disabled' : ''}>`
       + `${extra}<span>${esc(label)}</span><span class="chip-count">${count}</span></button>`;
   }
@@ -291,7 +296,8 @@
     const chainTotal = [...chainCounts.values()].reduce((s, n) => s + n, 0);
     el.chainChips.innerHTML = chip('all', 'Alle', chainTotal, state.chain === 'all')
       + chains.map((c) => chip(c, c, chainCounts.get(c) || 0, state.chain === c,
-        `<span class="chip-dot" style="${styleVars(chainStyle(c))}" aria-hidden="true"></span>`)).join('');
+        `<span class="chip-dot" style="${styleVars(chainStyle(c))}" aria-hidden="true"></span>`,
+        state.showAll && knownChains.includes(c))).join(''); // mit "Alle Filialen" auch Ketten ohne Angebot wählbar
 
     const packCounts = countBy(deals.filter((d) => matches(d, 'pack')), (d) => d.packType);
     const extraPacks = [...packCounts.keys()]
@@ -427,19 +433,60 @@
       </article>`;
   }
 
+  const storeKeyOf = (s) => `${s.name}|${s.address}`;
+
+  // Karte für eine Filiale ohne Angebot – mit zuletzt gesehenem Normalpreis der Kette, falls bekannt
+  function storeCardHTML(s) {
+    const cs = chainStyle(s.chain);
+    const known = regularPrices[s.chain];
+    const osm = `https://www.openstreetmap.org/?mlat=${s.lat}&mlon=${s.lon}#map=18/${s.lat}/${s.lon}`;
+    const price = known && known.pricePerUnit
+      ? `<p class="store-price">${known.manual ? 'Normalpreis (eigene Angabe)' : 'Normalpreis zuletzt laut Prospekt'}: `
+        + `<b>${eur.format(known.pricePerUnit)}</b> pro Dose${known.seen ? ` · Stand ${esc(fmtDay(known.seen))}` : ''}</p>`
+      : '<p class="store-price">Kein Monster-Angebot im aktuellen Prospekt · Normalpreis nicht bekannt</p>';
+    return `
+      <article class="card card--store">
+        <header class="card-head">
+          <span class="chain-badge" style="${styleVars(cs)}" title="${esc(s.chain)}" aria-hidden="true">${esc(cs.abbr)}</span>
+          <div class="store">
+            <h3>${esc(s.name)}</h3>
+            <p class="addr"><a href="${esc(osm)}" target="_blank" rel="noopener">${esc(s.address)}</a></p>
+          </div>
+          <span class="status status--none">kein Angebot</span>
+        </header>
+        ${price}
+        <footer class="card-foot">
+          ${s.lat != null ? `<button type="button" class="map-link" data-store="${esc(storeKeyOf(s))}">Auf Karte zeigen</button>` : ''}
+        </footer>
+      </article>`;
+  }
+
   function renderList() {
     visible = sortDeals(deals.filter((d) => matches(d)));
     const priced = visible.filter((d) => d.status === 'active' && d.pricePerUnit != null && !d.appRequired);
     const bestUnit = Math.min(...priced.map((d) => d.pricePerUnit));
     // "Bestpreis" nur zeigen, wenn es überhaupt teurere Alternativen gibt – sonst sagt das Label nichts aus
     const showBest = priced.some((d) => d.pricePerUnit - bestUnit >= 0.005);
+
+    // "Alle Filialen zeigen": Filialen ohne irgendein Angebot ergänzen (Packungs-Filter spielt hier keine Rolle)
+    const withDeals = new Set(deals.map(storeKey));
+    noDealStores = state.showAll
+      ? allStores
+        .filter((s) => !withDeals.has(storeKeyOf(s)) && (state.chain === 'all' || s.chain === state.chain))
+        .sort((a, b) => chainRank(a.chain) - chainRank(b.chain) || a.name.localeCompare(b.name, 'de'))
+      : [];
+
     el.list.innerHTML = visible
       .map((d) => cardHTML(d, showBest && d.status === 'active' && !d.appRequired && Math.abs(d.pricePerUnit - bestUnit) < 0.005))
-      .join('');
-    el.empty.hidden = visible.length > 0;
+      .join('')
+      + (noDealStores.length
+        ? `<h2 class="grid-heading">Filialen ohne Monster-Angebot (${noDealStores.length})</h2>${noDealStores.map(storeCardHTML).join('')}`
+        : '');
+    el.empty.hidden = visible.length > 0 || noDealStores.length > 0;
 
+    const noDeal = noDealStores.length ? ` · ${noDealStores.length} Filialen ohne Angebot` : '';
     const hiddenExpired = expiredCount ? ` · ${expiredCount} abgelaufene ausgeblendet` : '';
-    el.count.innerHTML = `<strong>${visible.length}</strong> von ${deals.length} Angeboten${hiddenExpired}`;
+    el.count.innerHTML = `<strong>${visible.length}</strong> von ${deals.length} Angeboten${noDeal}${hiddenExpired}`;
   }
 
   function renderSkeleton() {
@@ -481,13 +528,14 @@
     if (p.has(URL_KEYS.pack)) state.pack = p.get(URL_KEYS.pack);
     if (SORTERS[p.get(URL_KEYS.sort)]) state.sort = p.get(URL_KEYS.sort);
     state.onlyValid = p.get(URL_KEYS.onlyValid) === '1';
+    state.showAll = p.get(URL_KEYS.showAll) === '1';
   }
 
   function writeURL() {
     const p = new URLSearchParams();
     for (const [key, param] of Object.entries(URL_KEYS)) {
       if (state[key] === DEFAULT_STATE[key]) continue;
-      p.set(param, key === 'onlyValid' ? '1' : state[key]);
+      p.set(param, typeof state[key] === 'boolean' ? '1' : state[key]);
     }
     const qs = p.toString();
     history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
@@ -496,6 +544,7 @@
   function syncControls() {
     el.sort.value = state.sort;
     el.onlyValid.checked = state.onlyValid;
+    el.showAll.checked = state.showAll;
   }
 
   /* ---------------- Karte (Leaflet, lazy) ---------------- */
@@ -578,9 +627,32 @@
       mapState.markers.set(key, marker);
     }
 
-    if (fit && groups.size) {
-      const bounds = L.latLngBounds([...groups.values()].map((g) => [g[0].lat, g[0].lon]));
-      mapState.map.fitBounds(bounds, { padding: [40, 40], maxZoom: 15 });
+    // Filialen ohne Angebot: graue, gedimmte Pins (liegen unter den Angebots-Pins)
+    const noDealPoints = [];
+    for (const s of noDealStores) {
+      if (s.lat == null || s.lon == null) continue;
+      const cs = chainStyle(s.chain);
+      const known = regularPrices[s.chain];
+      const icon = L.divIcon({
+        className: '',
+        html: `<span class="pin pin--none" style="--pin-bg:${cs.bg};--pin-fg:${cs.fg}">${esc(cs.abbr)}</span>`,
+        iconSize: [34, 34],
+        iconAnchor: [17, 17],
+        popupAnchor: [0, -16],
+      });
+      const info = known && known.pricePerUnit
+        ? `<br><small>Normalpreis zuletzt: ${eur.format(known.pricePerUnit)}/Dose</small>` : '';
+      const marker = L.marker([s.lat, s.lon], { icon, title: s.name, zIndexOffset: -500 })
+        .bindPopup(`<p class="popup-title">${esc(s.name)}</p><p class="popup-addr">${esc(s.address)}</p>`
+          + `<ul class="popup-list"><li>Kein Monster-Angebot${info}</li></ul>`);
+      marker.addTo(mapState.layer);
+      mapState.markers.set(storeKeyOf(s), marker);
+      noDealPoints.push([s.lat, s.lon]);
+    }
+
+    const points = [...[...groups.values()].map((g) => [g[0].lat, g[0].lon]), ...noDealPoints];
+    if (fit && points.length) {
+      mapState.map.fitBounds(L.latLngBounds(points), { padding: [40, 40], maxZoom: 15 });
     }
   }
 
@@ -608,6 +680,11 @@
     });
     el.onlyValid.addEventListener('change', () => {
       state.onlyValid = el.onlyValid.checked;
+      update();
+    });
+    el.showAll.addEventListener('change', () => {
+      state.showAll = el.showAll.checked;
+      if (!state.showAll && state.chain !== 'all' && !deals.some((d) => d.chain === state.chain)) state.chain = 'all';
       update();
     });
     el.chainChips.addEventListener('click', (e) => {

@@ -71,14 +71,14 @@ jobs:
       - name: Änderungen committen & pushen
         id: commit
         run: |
-          if git diff --quiet -- data/deals.json; then
-            echo "Keine Änderungen an data/deals.json – nichts zu committen."
+          git add data/deals.json data/regular-prices.json
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen an den Daten – nichts zu committen."
             echo "changed=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/deals.json
           git commit -m "Angebote aktualisiert: $(TZ=Europe/Berlin date '+%d.%m.%Y %H:%M')"
           # Falls zwischenzeitlich jemand gepusht hat: rebasen statt scheitern
           git pull --rebase origin "${GITHUB_REF_NAME}"
