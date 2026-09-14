@@ -11,6 +11,8 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 - Filter nach Kette und Packungsgröße (Einzeln/4er/6er/10er/…), Sortierung (Preis/Dose, Gesamtpreis, Rabatt)
 - App-Pille unter dem Preis: „Preis nur mit Lidl Plus“ (App-Pflicht, gefüllt) bzw. „Mit REWE-App +0,10 € Bonus“ /
   „Mit Netto-App nur 3,49 €“ (Extra-Rabatt, umrandet). Angebote **ohne App-Pflicht stehen immer vor App-Preisen**
+- Bei gleichem Preis stehen **große Ketten vor kleinen** (Reihenfolge `CHAIN_RANK` in `app.js`:
+  Edeka, Rewe, Lidl, Aldi Süd, Kaufland, Netto, Penny, Globus, Norma, … Nahkauf, Getränkemärkte)
 - Filter stehen in der URL (`?kette=Rewe&packung=pack4`) → Links teilbar
 - Optionale Karte (Leaflet + OpenStreetMap), synchron zu den Filtern. Lädt erst nach Klick → keine
   Drittanbieter-Requests beim Seitenaufruf, keine Google Fonts (DSGVO-freundlich)
@@ -174,7 +176,8 @@ nicht auf marktguru/kaufda/prospektangebote zeigt, lässt der Scraper sie bis zu
   ```
 - Neue Kette: Regex in `CHAIN_ALIASES` (`scripts/update_deals.py`) und `CHAIN_PATTERNS`
   (`scripts/update_stores.py`) ergänzen. Die Hausfarbe fürs Icon kommt in `CHAINS` in `app.js`, ohne
-  Eintrag gibt es automatisch eine Farbe.
+  Eintrag gibt es automatisch eine Farbe. Für die Reihenfolge bei gleichem Preis die Kette in `CHAIN_RANK`
+  (`app.js`) einsortieren, nicht gelistete Ketten landen hinter allen gelisteten.
 
 **Neue Quelle (weiterer Aggregator)**
 1. In `update_deals.py` eine Funktion `fetch_xyz(session) -> list[Offer]` schreiben. Sie wirft bei Problemen

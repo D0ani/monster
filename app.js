@@ -238,23 +238,37 @@
     return true;
   }
 
-  const byNum = (a, b) => (a ?? Infinity) - (b ?? Infinity);
-  const SORTERS = {
-    unit: (a, b) => byNum(a.pricePerUnit, b.pricePerUnit) || a.price - b.price,
-    total: (a, b) => a.price - b.price || byNum(a.pricePerUnit, b.pricePerUnit),
-    discount: (a, b) => (b.discount ?? -1) - (a.discount ?? -1) || byNum(a.pricePerUnit, b.pricePerUnit),
+  // Kettengröße: bei gleichem Preis stehen große Ketten vor kleinen (Index = Rang, nicht gelistet = ganz hinten)
+  const CHAIN_RANK = ['Edeka', 'Rewe', 'Lidl', 'Aldi Süd', 'Kaufland', 'Netto', 'Penny', 'Globus', 'Norma',
+    'Marktkauf', 'tegut', 'Nahkauf', 'Rossmann', 'Trinkgut', 'Getränke Hoffmann', 'Fristo', 'Getränke Müller'];
+  const chainRank = (chain) => {
+    const i = CHAIN_RANK.indexOf(chain);
+    return i === -1 ? CHAIN_RANK.length : i;
   };
 
-  function sortDeals(list) {
-    const primary = SORTERS[state.sort] || SORTERS.unit;
-    // 1. ohne App-Pflicht immer vor App-Preisen, 2. aktuell gültige vor kommenden, 3. gewählte Sortierung
-    return list.sort((a, b) =>
-      Number(a.appRequired) - Number(b.appRequired)
-      || (a.status === 'active' ? 0 : 1) - (b.status === 'active' ? 0 : 1)
-      || primary(a, b)
-      || a.chain.localeCompare(b.chain, 'de')
-      || a.store.localeCompare(b.store, 'de'));
+  // Preise centgenau vergleichen (0.99 vs. 0.9900000001 gilt als gleich)
+  const byCents = (a, b) => Math.round((a ?? 1e6) * 100) - Math.round((b ?? 1e6) * 100);
+  // main = gewählte Sortierung; bei Gleichstand entscheidet die Kettengröße, danach tie
+  const SORTERS = {
+    unit: { main: (a, b) => byCents(a.pricePerUnit, b.pricePerUnit), tie: (a, b) => byCents(a.price, b.price) },
+    total: { main: (a, b) => byCents(a.price, b.price), tie: (a, b) => byCents(a.pricePerUnit, b.pricePerUnit) },
+    discount: {
+      main: (a, b) => (b.discount ?? -1) - (a.discount ?? -1) || byCents(a.pricePerUnit, b.pricePerUnit),
+      tie: (a, b) => byCents(a.price, b.price),
+    },
+  };
+
+  function compareDeals(a, b, sortKey = state.sort) {
+    const sorter = SORTERS[sortKey] || SORTERS.unit;
+    return Number(a.appRequired) - Number(b.appRequired)                  // 1. ohne App-Pflicht zuerst
+      || (a.status === 'active' ? 0 : 1) - (b.status === 'active' ? 0 : 1) // 2. aktuell vor demnächst
+      || sorter.main(a, b)                                                 // 3. gewählte Sortierung
+      || chainRank(a.chain) - chainRank(b.chain)                           // 4. gleicher Preis: große Kette zuerst
+      || sorter.tie(a, b)
+      || a.store.localeCompare(b.store, 'de');
   }
+
+  const sortDeals = (list) => list.sort((a, b) => compareDeals(a, b));
 
   function countBy(list, fn) {
     const counts = new Map();
@@ -273,7 +287,7 @@
   function renderChips() {
     const chainCounts = countBy(deals.filter((d) => matches(d, 'chain')), (d) => d.chain);
     const chains = [...new Set([...knownChains, ...deals.map((d) => d.chain)])]
-      .sort((a, b) => (chainCounts.get(b) || 0) - (chainCounts.get(a) || 0) || a.localeCompare(b, 'de'));
+      .sort((a, b) => (chainCounts.get(b) || 0) - (chainCounts.get(a) || 0) || chainRank(a) - chainRank(b));
     const chainTotal = [...chainCounts.values()].reduce((s, n) => s + n, 0);
     el.chainChips.innerHTML = chip('all', 'Alle', chainTotal, state.chain === 'all')
       + chains.map((c) => chip(c, c, chainCounts.get(c) || 0, state.chain === c,
@@ -309,7 +323,7 @@
     }
     // App-Preise zählen nur, wenn es gar kein Angebot ohne App gibt
     const withoutApp = active.filter((d) => !d.appRequired);
-    const best = (withoutApp.length ? withoutApp : active).slice().sort(SORTERS.unit)[0];
+    const best = (withoutApp.length ? withoutApp : active).slice().sort((a, b) => compareDeals(a, b, 'unit'))[0];
     const chains = new Set(deals.map((d) => d.chain));
     const stores = new Set(deals.map(storeKey));
     el.summary.innerHTML = `
