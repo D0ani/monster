@@ -20,27 +20,29 @@
   const LEAFLET_JS = 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js';
   const LEAFLET_CSS = 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css';
 
-  // Ketten-Icons: Monogramm in Hausfarben (keine Markenlogos eingebunden)
+  // Ketten: echtes Logo (Wikimedia Commons, gemeinfrei – Nachweise in assets/logos/CREDITS.md),
+  // Farben + Kürzel als Rückfall, falls es kein Logo gibt oder es nicht lädt
+  const LOGO = (file) => `assets/logos/${file}.png`;
   const CHAINS = {
-    'Aldi Süd': { bg: '#1c2f7c', fg: '#ffffff', abbr: 'A' },
-    'Edeka': { bg: '#ffe500', fg: '#1a4696', abbr: 'E' },
-    'Rewe': { bg: '#cc071e', fg: '#ffffff', abbr: 'R' },
-    'Nahkauf': { bg: '#2f8a2f', fg: '#ffffff', abbr: 'nk' },
-    'Lidl': { bg: '#0050aa', fg: '#fff000', abbr: 'L' },
-    'Kaufland': { bg: '#e10915', fg: '#ffffff', abbr: 'K' },
-    'Netto': { bg: '#ffe500', fg: '#e30613', abbr: 'N' },
-    'Penny': { bg: '#cd1414', fg: '#ffffff', abbr: 'P' },
-    'Norma': { bg: '#004f9f', fg: '#ffffff', abbr: 'No' },
-    'Globus': { bg: '#e2231a', fg: '#ffffff', abbr: 'G' },
-    'tegut': { bg: '#ef7d00', fg: '#ffffff', abbr: 't' },
-    'Marktkauf': { bg: '#005ca9', fg: '#ffe500', abbr: 'M' },
-    'Trinkgut': { bg: '#e3000b', fg: '#ffffff', abbr: 'T' },
-    'Fristo': { bg: '#009640', fg: '#ffffff', abbr: 'F' },
-    'Getränke Hoffmann': { bg: '#003c7e', fg: '#ffffff', abbr: 'GH' },
+    'Aldi Süd': { bg: '#1c2f7c', fg: '#ffffff', abbr: 'A', logo: LOGO('aldi-sued') },
+    'Edeka': { bg: '#ffe500', fg: '#1a4696', abbr: 'E', logo: LOGO('edeka') },
+    'Rewe': { bg: '#cc071e', fg: '#ffffff', abbr: 'R', logo: LOGO('rewe') },
+    'Nahkauf': { bg: '#2f8a2f', fg: '#ffffff', abbr: 'nk', logo: LOGO('nahkauf') },
+    'Lidl': { bg: '#0050aa', fg: '#fff000', abbr: 'L', logo: LOGO('lidl') },
+    'Kaufland': { bg: '#e10915', fg: '#ffffff', abbr: 'K', logo: LOGO('kaufland') },
+    'Netto': { bg: '#ffe500', fg: '#e30613', abbr: 'N', logo: LOGO('netto') },
+    'Penny': { bg: '#cd1414', fg: '#ffffff', abbr: 'P', logo: LOGO('penny') },
+    'Norma': { bg: '#004f9f', fg: '#ffffff', abbr: 'No', logo: LOGO('norma') },
+    'Globus': { bg: '#e2231a', fg: '#ffffff', abbr: 'G', logo: LOGO('globus') },
+    'tegut': { bg: '#ef7d00', fg: '#ffffff', abbr: 't', logo: LOGO('tegut') },
+    'Marktkauf': { bg: '#005ca9', fg: '#ffe500', abbr: 'M', logo: LOGO('marktkauf') },
+    'Trinkgut': { bg: '#e3000b', fg: '#ffffff', abbr: 'T', logo: LOGO('trinkgut') },
+    'Fristo': { bg: '#009640', fg: '#ffffff', abbr: 'F', logo: LOGO('fristo') },
+    'Getränke Hoffmann': { bg: '#003c7e', fg: '#ffffff', abbr: 'GH', logo: LOGO('getraenke-hoffmann') },
     'Getränke Müller': { bg: '#264653', fg: '#ffffff', abbr: 'GM' },
-    'Rossmann': { bg: '#c3002d', fg: '#ffffff', abbr: 'Ro' },
-    'dm': { bg: '#0d3a78', fg: '#ffd500', abbr: 'dm' },
-    'Müller': { bg: '#f18700', fg: '#ffffff', abbr: 'Mü' },
+    'Rossmann': { bg: '#c3002d', fg: '#ffffff', abbr: 'Ro', logo: LOGO('rossmann') },
+    'dm': { bg: '#0d3a78', fg: '#ffd500', abbr: 'dm', logo: LOGO('dm') },
+    'Müller': { bg: '#f18700', fg: '#ffffff', abbr: 'Mü', logo: LOGO('mueller') },
   };
 
   const BASE_PACKS = [
@@ -142,6 +144,36 @@
   }
 
   const styleVars = (s) => `--bg-c:${s.bg};--fg-c:${s.fg}`;
+
+  // Ketten-Kachel für Karten: Logo auf weißer Kachel, sonst farbiges Kürzel
+  function chainBadge(chain) {
+    const cs = chainStyle(chain);
+    if (!cs.logo) {
+      return `<span class="chain-badge" style="${styleVars(cs)}" title="${esc(chain)}" aria-hidden="true">${esc(cs.abbr)}</span>`;
+    }
+    return `<span class="chain-badge has-logo" title="${esc(chain)}">`
+      + `<img src="${esc(cs.logo)}" alt="${esc(chain)}" loading="lazy" decoding="async"></span>`;
+  }
+
+  // Kleines Logo in den Markt-Chips (statt Farbpunkt)
+  function chipMark(chain) {
+    const cs = chainStyle(chain);
+    return cs.logo
+      ? `<span class="chip-logo" aria-hidden="true"><img src="${esc(cs.logo)}" alt="" loading="lazy" decoding="async"></span>`
+      : `<span class="chip-dot" style="${styleVars(cs)}" aria-hidden="true"></span>`;
+  }
+
+  // Karten-Pin: Logo auf weißem Schild, sonst runder Kürzel-Pin
+  function pinIcon(chain, extraClass = '') {
+    const cs = chainStyle(chain);
+    const html = cs.logo
+      ? `<span class="pin pin--logo ${extraClass}"><img src="${esc(cs.logo)}" alt=""></span>`
+      : `<span class="pin ${extraClass}" style="--pin-bg:${cs.bg};--pin-fg:${cs.fg}">${esc(cs.abbr)}</span>`;
+    const size = cs.logo ? [48, 32] : [34, 34];
+    return window.L.divIcon({
+      className: '', html, iconSize: size, iconAnchor: [size[0] / 2, size[1] / 2], popupAnchor: [0, -size[1] / 2],
+    });
+  }
 
   function unitsOf(packType) {
     const m = /^pack(\d+)$/.exec(packType);
@@ -381,7 +413,7 @@
     const chainTotal = [...chainCounts.values()].reduce((s, n) => s + n, 0);
     el.chainChips.innerHTML = chip('all', 'Alle', chainTotal, state.chain === 'all')
       + chains.map((c) => chip(c, c, chainCounts.get(c) || 0, state.chain === c,
-        `<span class="chip-dot" style="${styleVars(chainStyle(c))}" aria-hidden="true"></span>`,
+        chipMark(c),
         state.showAll && knownChains.includes(c))).join(''); // mit "Alle Filialen" auch Ketten ohne Angebot wählbar
 
     const packCounts = countBy(deals.filter((d) => matches(d, 'pack')), (d) => d.packType);
@@ -450,7 +482,6 @@
   const appPill = (app) => `<p class="app-pill${app.required ? ' app-pill--required' : ''}">${PHONE_ICON}<span>${esc(appText(app))}</span></p>`;
 
   function cardHTML(d, isBest) {
-    const cs = chainStyle(d.chain);
     const [productMain, productSub] = splitProduct(d.product);
 
     let statusText = 'aktuell gültig';
@@ -491,7 +522,7 @@
       <article class="card${isBest ? ' is-best' : ''}${d.status === 'upcoming' ? ' is-upcoming' : ''}">
         ${isBest ? '<span class="best-flag">Bestpreis</span>' : ''}
         <header class="card-head">
-          <span class="chain-badge" style="${styleVars(cs)}" title="${esc(d.chain)}" aria-hidden="true">${esc(cs.abbr)}</span>
+          ${chainBadge(d.chain)}
           <div class="store">
             <h3>${esc(d.store)}</h3>
             <p class="addr"><a href="${esc(osm)}" target="_blank" rel="noopener">${esc(d.address || 'Adresse unbekannt')}</a></p>
@@ -522,9 +553,8 @@
 
   // Karte für eine Filiale ohne Angebot – mit zuletzt gesehenem Normalpreis der Kette, falls bekannt
   function storeCardHTML(s) {
-    const cs = chainStyle(s.chain);
     const known = regularPrices[s.chain];
-    const osm = `https://www.openstreetmap.org/?mlat=${s.lat}&mlon=${s.lon}#map=18/${s.lat}/${s.lon}`;
+    const osm =`https://www.openstreetmap.org/?mlat=${s.lat}&mlon=${s.lon}#map=18/${s.lat}/${s.lon}`;
     const price = known && known.pricePerUnit
       ? `<p class="store-price">${known.manual ? 'Normalpreis (eigene Angabe)' : 'Normalpreis zuletzt laut Prospekt'}: `
         + `<b>${eur.format(known.pricePerUnit)}</b> pro Dose${known.seen ? ` · Stand ${esc(fmtDay(known.seen))}` : ''}</p>`
@@ -532,7 +562,7 @@
     return `
       <article class="card card--store">
         <header class="card-head">
-          <span class="chain-badge" style="${styleVars(cs)}" title="${esc(s.chain)}" aria-hidden="true">${esc(cs.abbr)}</span>
+          ${chainBadge(s.chain)}
           <div class="store">
             <h3>${esc(s.name)}</h3>
             <p class="addr"><a href="${esc(osm)}" target="_blank" rel="noopener">${esc(s.address)}</a></p>
@@ -696,14 +726,7 @@
 
     for (const [key, items] of groups) {
       const first = items[0];
-      const cs = chainStyle(first.chain);
-      const icon = L.divIcon({
-        className: '',
-        html: `<span class="pin" style="--pin-bg:${cs.bg};--pin-fg:${cs.fg}">${esc(cs.abbr)}</span>`,
-        iconSize: [34, 34],
-        iconAnchor: [17, 17],
-        popupAnchor: [0, -16],
-      });
+      const icon = pinIcon(first.chain);
       const rows = items.map((d) => `<li>${esc(packLabel(d))}: <b>${eur.format(d.price)}</b>`
         + `${d.packType !== 'single' && d.pricePerUnit != null ? ` (${eur.format(d.pricePerUnit)}/Dose)` : ''}`
         + `${d.app ? `<br><small>📱 ${esc(appText(d.app))}</small>` : ''}</li>`).join('');
@@ -717,15 +740,8 @@
     const noDealPoints = [];
     for (const s of noDealStores) {
       if (s.lat == null || s.lon == null) continue;
-      const cs = chainStyle(s.chain);
       const known = regularPrices[s.chain];
-      const icon = L.divIcon({
-        className: '',
-        html: `<span class="pin pin--none" style="--pin-bg:${cs.bg};--pin-fg:${cs.fg}">${esc(cs.abbr)}</span>`,
-        iconSize: [34, 34],
-        iconAnchor: [17, 17],
-        popupAnchor: [0, -16],
-      });
+      const icon = pinIcon(s.chain, 'pin--none');
       const info = known && known.pricePerUnit
         ? `<br><small>Normalpreis zuletzt: ${eur.format(known.pricePerUnit)}/Dose</small>` : '';
       const marker = L.marker([s.lat, s.lon], { icon, title: s.name, zIndexOffset: -500 })

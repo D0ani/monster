@@ -276,6 +276,14 @@ h1 em {
 }
 .chip[aria-pressed="true"] .chip-count { background: rgb(10 11 13 / .14); }
 .chip-dot { width: 10px; height: 10px; border-radius: 50%; background: var(--bg-c, #888); box-shadow: 0 0 0 1px rgb(255 255 255 / .2); }
+.chip-logo {
+  display: inline-grid; place-items: center;
+  height: 22px; padding: 3px 6px; margin-left: -5px;
+  border-radius: 999px;
+  background: #fff;
+}
+.chip-logo img { display: block; width: auto; height: auto; max-height: 15px; max-width: 46px; }
+.chip:disabled .chip-logo { filter: grayscale(1); }
 
 .filter-foot {
   display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px;
@@ -425,6 +433,15 @@ h1 em {
   font-weight: 850; font-size: .95rem; letter-spacing: -.03em;
   box-shadow: inset 0 0 0 1px rgb(255 255 255 / .12), 0 4px 12px -4px rgb(0 0 0 / .7);
 }
+/* Echte Ketten-Logos: weiße Kachel, Breite passt sich dem Logo an (REWE breit, ALDI quadratisch) */
+.chain-badge.has-logo {
+  width: auto; min-width: 44px; max-width: 108px;
+  padding: 6px 9px;
+  background: #fff;
+  box-shadow: inset 0 0 0 1px rgb(0 0 0 / .06), 0 4px 14px -4px rgb(0 0 0 / .75);
+}
+.chain-badge.has-logo img { display: block; width: auto; height: auto; max-width: 90px; max-height: 30px; object-fit: contain; }
+
 .store { min-width: 0; flex: 1; }
 .store h3 { margin: 0; font-size: 1.02rem; line-height: 1.25; font-weight: 800; letter-spacing: -.01em; }
 .addr { margin: 2px 0 0; font-size: .84rem; color: var(--muted); }
@@ -545,6 +562,14 @@ h1 em {
 .store-price { margin: 12px 0 0; font-size: .86rem; color: var(--muted); }
 .store-price b { color: var(--text); font-size: 1.2rem; font-weight: 850; font-variant-numeric: tabular-nums; }
 .pin--none { opacity: .65; filter: grayscale(.85); border-color: #9ba2ad; box-shadow: 0 2px 6px rgb(0 0 0 / .5); }
+/* Logo-Pin: weißes Schild statt Kreis */
+.pin--logo { width: 48px; height: 32px; padding: 3px 5px; border-radius: 10px; border-width: 2px; background: #fff; }
+/* Leaflet setzt Bilder im Marker-Bereich auf width:auto/max-width:none !important – hier gezielt überschreiben */
+/* Innenfläche des Pins: 48 − 2×5 − 2×2 = 34 px breit, 32 − 2×3 − 2×2 = 22 px hoch (feste Werte, da % im Grid nicht greift) */
+.leaflet-container .leaflet-marker-pane .pin--logo img {
+  display: block; width: auto; height: auto;
+  max-width: 34px !important; max-height: 22px !important;
+}
 
 /* Lade-Platzhalter */
 .card.skeleton { min-height: 230px; animation: pulse 1.4s ease-in-out infinite; }

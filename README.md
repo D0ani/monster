@@ -11,7 +11,9 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 - Kleine **Städte-Suche**: alle Gemeinden im Landkreis Konstanz mit Filialen (Konstanz, Radolfzell, Stockach,
   Engen …) plus **Stuttgart** und **Leonberg** – per Name, Ortsteil oder PLZ; teilbar per Link `?stadt=konstanz`.
   Startseite bleibt Singen
-- Supermärkte, Discounter, Getränkemärkte **und Drogerien** (Müller, dm, Rossmann)
+- Supermärkte, Discounter, Getränkemärkte **und Drogerien** (Müller, dm, Rossmann) – mit echten **Händlerlogos**
+  auf Karten, Markt-Chips und Karten-Pins (`assets/logos/`, Herkunft/Lizenz in `assets/logos/CREDITS.md`).
+  Neue Kette: PNG nach `assets/logos/` legen und in `CHAINS` in `app.js` als `logo` eintragen
 - Filter nach Kette und Packungsgröße (Einzeln/4er/6er/10er/…), Sortierung (Preis/Dose, Gesamtpreis, Rabatt)
 - App-Pille unter dem Preis: „Preis nur mit Lidl Plus“ (App-Pflicht, gefüllt) bzw. „Mit REWE-App +0,10 € Bonus“ /
   „Mit Netto-App nur 3,49 €“ (Extra-Rabatt, umrandet). Angebote **ohne App-Pflicht stehen immer vor App-Preisen**
@@ -32,6 +34,7 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 │   └── deploy-pages.yml     # Pages-Deployment (Push auf main, manuell, oder Aufruf durch update-deals)
 ├── assets/
 │   ├── can-ultra-white.webp # Dosenfoto im Header (CC0, Wikimedia Commons, freigestellt)
+│   ├── logos/               # Händlerlogos (Wikimedia Commons, gemeinfrei) + CREDITS.md mit Nachweisen
 │   ├── favicon-32.png, icon-192.png, apple-touch-icon.png
 │   └── og-image.jpg         # Vorschaubild beim Teilen des Links (1200×630)
 ├── data/
