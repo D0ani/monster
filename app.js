@@ -10,7 +10,12 @@
   const STORES_URL = 'data/stores.json';
   const PRICES_URL = 'data/regular-prices.json';
   const TZ = 'Europe/Berlin';
-  const SINGEN = [47.7597, 8.8403];
+  const CITIES_URL = 'data/cities.json';
+  // Fallback, falls data/cities.json fehlt
+  const DEFAULT_CITY = {
+    slug: 'singen', name: 'Singen', label: 'Singen (Hohentwiel) mit allen Ortsteilen & Rielasingen-Worblingen',
+    lat: 47.7597, lon: 8.8403, zips: ['78224', '78239'], aliases: [],
+  };
   const STALE_AFTER_H = 36;
   const LEAFLET_JS = 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js';
   const LEAFLET_CSS = 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css';
@@ -34,6 +39,8 @@
     'Getränke Hoffmann': { bg: '#003c7e', fg: '#ffffff', abbr: 'GH' },
     'Getränke Müller': { bg: '#264653', fg: '#ffffff', abbr: 'GM' },
     'Rossmann': { bg: '#c3002d', fg: '#ffffff', abbr: 'Ro' },
+    'dm': { bg: '#0d3a78', fg: '#ffd500', abbr: 'dm' },
+    'Müller': { bg: '#f18700', fg: '#ffffff', abbr: 'Mü' },
   };
 
   const BASE_PACKS = [
@@ -44,8 +51,8 @@
     { key: 'pack10', label: '10er' },
   ];
 
-  const DEFAULT_STATE = { chain: 'all', pack: 'all', sort: 'unit', onlyValid: false, showAll: false };
-  const URL_KEYS = { chain: 'kette', pack: 'packung', sort: 'sort', onlyValid: 'gueltig', showAll: 'alle' };
+  const DEFAULT_STATE = { city: 'singen', chain: 'all', pack: 'all', sort: 'unit', onlyValid: false, showAll: false };
+  const URL_KEYS = { city: 'stadt', chain: 'kette', pack: 'packung', sort: 'sort', onlyValid: 'gueltig', showAll: 'alle' };
 
   const eur = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' });
   const liters = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 3 });
@@ -65,6 +72,12 @@
     packChips: $('#pack-chips'),
     onlyValid: $('#only-valid'),
     showAll: $('#show-all'),
+    cityInput: $('#city'),
+    cityList: $('#city-list'),
+    cityHint: $('#city-hint'),
+    cityName: $('#city-name'),
+    citySub: $('#city-sub'),
+    cityRegion: $('#city-region'),
     reset: $('#reset'),
     count: $('#result-count'),
     list: $('#deals'),
@@ -80,6 +93,9 @@
   let allStores = [];    // komplettes Filialverzeichnis (für "Alle Filialen zeigen")
   let regularPrices = {}; // zuletzt gesehener Normalpreis pro Dose je Kette
   let noDealStores = []; // aktuell angezeigte Filialen ohne Angebot
+  let everyStore = [];   // Filialen aller Städte
+  let allDeals = [];     // Angebote aller Städte (normalisiert, inkl. abgelaufene)
+  let cities = [DEFAULT_CITY];
   let expiredCount = 0;
   let today = todayISO();
   let visible = [];
@@ -214,24 +230,93 @@
       renderError(err);
       return;
     }
-    const [stores, prices] = await Promise.all([
+    const [stores, prices, cityList] = await Promise.all([
       fetchJSON(STORES_URL).catch(() => []),   // Filialverzeichnis ist optional
       fetchJSON(PRICES_URL).catch(() => ({})), // Normalpreise sind optional
+      fetchJSON(CITIES_URL).catch(() => []),   // Städteliste ist optional
     ]);
-    allStores = Array.isArray(stores) ? stores : [];
+    everyStore = Array.isArray(stores) ? stores : [];
+    if (Array.isArray(cityList) && cityList.length) cities = cityList;
+    if (!cities.some((c) => c.slug === state.city)) state.city = (cities.find((c) => c.default) || cities[0]).slug;
     regularPrices = prices && typeof prices === 'object' ? prices : {};
 
     const list = Array.isArray(rawDeals) ? rawDeals : rawDeals.deals || [];
     const storesByKey = new Map(stores.map((s) => [fold(`${s.name}|${s.address}`), s]));
-    knownChains = [...new Set(stores.map((s) => s.chain))];
+    allDeals = list.map((d) => normalize(d, storesByKey)).filter(Boolean);
 
-    const normalized = list.map((d) => normalize(d, storesByKey)).filter(Boolean);
-    expiredCount = normalized.filter((d) => d.status === 'expired').length;
-    deals = normalized.filter((d) => d.status !== 'expired');
-
+    renderCityOptions();
     renderUpdated(list);
+    applyCity();
+  }
+
+  /* ---------------- Städte ---------------- */
+
+  const cityOf = (item) => item.city || DEFAULT_CITY.slug; // alte Einträge ohne "city" gehören zu Singen
+  const currentCity = () => cities.find((c) => c.slug === state.city) || cities[0] || DEFAULT_CITY;
+
+  // Angebote + Filialen der gewählten Stadt übernehmen und alles neu zeichnen
+  function applyCity() {
+    const city = currentCity();
+    allStores = everyStore.filter((s) => (s.cities || [DEFAULT_CITY.slug]).includes(city.slug));
+    knownChains = [...new Set(allStores.map((s) => s.chain))];
+    const cityDeals = allDeals.filter((d) => cityOf(d) === city.slug);
+    expiredCount = cityDeals.filter((d) => d.status === 'expired').length;
+    deals = cityDeals.filter((d) => d.status !== 'expired');
+    if (state.chain !== 'all' && !knownChains.includes(state.chain) && !deals.some((d) => d.chain === state.chain)) {
+      state.chain = 'all';
+    }
+    el.cityName.textContent = city.name;
+    el.citySub.textContent = `${city.label} · täglich aktualisiert`;
+    el.cityRegion.textContent = `Energy-Deals · ${city.region || 'Landkreis Konstanz'}`;
+    el.cityInput.value = '';
+    el.cityInput.placeholder = `${city.name} · andere Stadt oder PLZ suchen …`;
+    document.title = `Monster-Angebote ${city.name}`;
     renderSummary();
     update();
+  }
+
+  function renderCityOptions() {
+    el.cityList.innerHTML = cities
+      .map((c) => `<option value="${esc(c.name)}">${c.label !== c.name ? esc(c.label) : ''}</option>`).join('');
+  }
+
+  // Suche nach Stadtname, Gemeinde, Ortsteil (aliases) oder PLZ:
+  // exakt → Wortanfang (auch Ortsteile) → "enthält" nur im Stadtnamen (sonst findet "Berlin" z. B. "Berliner Hof")
+  function findCity(query) {
+    const q = fold(query.trim());
+    if (!q) return null;
+    const own = (c) => [c.name, c.label, c.slug].map(fold);
+    const aliases = (c) => (c.aliases || []).map(fold);
+    const wordStart = (n) => n.startsWith(q) || n.split(/[\s(-]+/).some((w) => w.startsWith(q));
+    // Städtenamen schlagen Ortsteile: "Mühlhausen" → Mühlhausen-Ehingen, nicht Stuttgart-Mühlhausen
+    return cities.find((c) => own(c).includes(q) || (c.zips || []).includes(q))
+      || cities.find((c) => own(c).some(wordStart))
+      || cities.find((c) => aliases(c).includes(q))
+      || cities.find((c) => aliases(c).some(wordStart) || (c.zips || []).some((z) => z.startsWith(q)))
+      || cities.find((c) => own(c).some((n) => n.includes(q)));
+  }
+
+  function selectCity(query, { exactOnly = false } = {}) {
+    if (!query.trim()) {
+      el.cityHint.hidden = true;
+      return;
+    }
+    const city = findCity(query);
+    if (!city || (exactOnly && fold(city.name) !== fold(query.trim()))) {
+      if (!exactOnly) {
+        el.cityHint.textContent = `Für „${query.trim()}“ gibt es noch keine Daten. Verfügbar: ${cities.map((c) => c.name).join(', ')}.`;
+        el.cityHint.hidden = false;
+      }
+      return;
+    }
+    el.cityHint.hidden = true;
+    el.cityInput.blur();
+    if (city.slug !== state.city) {
+      state.city = city.slug;
+      applyCity();
+    } else {
+      el.cityInput.value = '';
+    }
   }
 
   /* ---------------- Filtern & Sortieren ---------------- */
@@ -244,8 +329,8 @@
   }
 
   // Kettengröße: bei gleichem Preis stehen große Ketten vor kleinen (Index = Rang, nicht gelistet = ganz hinten)
-  const CHAIN_RANK = ['Edeka', 'Rewe', 'Lidl', 'Aldi Süd', 'Kaufland', 'Netto', 'Penny', 'Globus', 'Norma',
-    'Marktkauf', 'tegut', 'Nahkauf', 'Rossmann', 'Trinkgut', 'Getränke Hoffmann', 'Fristo', 'Getränke Müller'];
+  const CHAIN_RANK = ['Edeka', 'Rewe', 'Lidl', 'Aldi Süd', 'Kaufland', 'Netto', 'Penny', 'dm', 'Rossmann', 'Globus',
+    'Norma', 'Müller', 'Marktkauf', 'tegut', 'Nahkauf', 'Trinkgut', 'Getränke Hoffmann', 'Fristo', 'Getränke Müller'];
   const chainRank = (chain) => {
     const i = CHAIN_RANK.indexOf(chain);
     return i === -1 ? CHAIN_RANK.length : i;
@@ -529,6 +614,7 @@
     if (SORTERS[p.get(URL_KEYS.sort)]) state.sort = p.get(URL_KEYS.sort);
     state.onlyValid = p.get(URL_KEYS.onlyValid) === '1';
     state.showAll = p.get(URL_KEYS.showAll) === '1';
+    if (p.has(URL_KEYS.city)) state.city = p.get(URL_KEYS.city);
   }
 
   function writeURL() {
@@ -573,7 +659,7 @@
     if (!mapState.map) {
       try {
         const L = await loadLeaflet();
-        mapState.map = L.map(el.map, { scrollWheelZoom: false }).setView(SINGEN, 13);
+        mapState.map = L.map(el.map, { scrollWheelZoom: false }).setView([currentCity().lat, currentCity().lon], 13);
         L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
           maxZoom: 19,
           attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>',
@@ -653,6 +739,8 @@
     const points = [...[...groups.values()].map((g) => [g[0].lat, g[0].lon]), ...noDealPoints];
     if (fit && points.length) {
       mapState.map.fitBounds(L.latLngBounds(points), { padding: [40, 40], maxZoom: 15 });
+    } else if (fit) {
+      mapState.map.setView([currentCity().lat, currentCity().lon], 13);
     }
   }
 
@@ -668,7 +756,7 @@
   /* ---------------- Events ---------------- */
 
   function resetFilters() {
-    Object.assign(state, DEFAULT_STATE);
+    Object.assign(state, DEFAULT_STATE, { city: state.city }); // Stadt bleibt beim Zurücksetzen erhalten
     syncControls();
     update();
   }
@@ -686,6 +774,14 @@
       state.showAll = el.showAll.checked;
       if (!state.showAll && state.chain !== 'all' && !deals.some((d) => d.chain === state.chain)) state.chain = 'all';
       update();
+    });
+    // Städte-Suche: Vorschlag aus der Liste gewählt → sofort wechseln; Enter → auch Teiltreffer/PLZ/Ortsteil
+    el.cityInput.addEventListener('input', () => selectCity(el.cityInput.value, { exactOnly: true }));
+    el.cityInput.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter') {
+        e.preventDefault();
+        selectCity(el.cityInput.value);
+      }
     });
     el.chainChips.addEventListener('click', (e) => {
       const btn = e.target.closest('.chip');

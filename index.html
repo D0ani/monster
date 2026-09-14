@@ -36,9 +36,9 @@
       <div class="brand">
         <img class="brand-can" src="assets/can-ultra-white.webp" alt="Dose Monster Energy Ultra (weiß)" width="197" height="520">
         <div>
-          <p class="eyebrow">Energy-Deals · Landkreis Konstanz</p>
-          <h1>Monster-Angebote <em>Singen</em></h1>
-          <p class="brand-sub">Singen (Hohentwiel) mit allen Ortsteilen &amp; Rielasingen-Worblingen · täglich aktualisiert</p>
+          <p class="eyebrow" id="city-region">Energy-Deals · Landkreis Konstanz</p>
+          <h1>Monster-Angebote <em id="city-name">Singen</em></h1>
+          <p class="brand-sub" id="city-sub">Singen (Hohentwiel) mit allen Ortsteilen &amp; Rielasingen-Worblingen · täglich aktualisiert</p>
         </div>
       </div>
       <p class="updated" id="updated" role="status">
@@ -53,6 +53,12 @@
 
     <section class="panel filters" aria-label="Filter und Sortierung">
       <div class="filter-top">
+        <label class="city-search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span class="visually-hidden">Andere Stadt suchen</span>
+          <input id="city" type="search" list="city-list" placeholder="Andere Stadt oder PLZ suchen …" autocomplete="off" spellcheck="false" enterkeyhint="search">
+          <datalist id="city-list"></datalist>
+        </label>
         <label class="sort">
           <span>Sortieren nach</span>
           <select id="sort">
@@ -62,6 +68,7 @@
           </select>
         </label>
       </div>
+      <p class="city-hint" id="city-hint" role="status" hidden></p>
 
       <div class="chip-row">
         <span class="chip-label" id="lbl-chain">Markt</span>
@@ -109,7 +116,7 @@
 
     <div class="empty panel" id="empty" hidden>
       <p class="empty-title">Keine passenden Angebote</p>
-      <p>Diese Woche hat offenbar kein Markt in Singen oder Rielasingen-Worblingen Monster zu deinen Filtern im Prospekt. Probier andere Filter – oder schau morgen wieder vorbei.</p>
+      <p>Diese Woche hat hier offenbar kein Markt Monster zu deinen Filtern im Prospekt. Probier andere Filter, eine andere Stadt – oder schau morgen wieder vorbei. Mit „Alle Filialen zeigen“ siehst du trotzdem alle Märkte.</p>
       <button type="button" class="btn" data-action="reset">Filter zurücksetzen</button>
     </div>
   </main>

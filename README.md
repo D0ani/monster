@@ -8,6 +8,9 @@ auf schwarzem Grund, Silber-Akzente, Eisblau wie der ENERGY-Schriftzug.
 Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggregatoren gescrapt.
 
 - Kein Backend, kein Framework: `index.html` + `style.css` + `app.js` lesen `data/deals.json`
+- Kleine **Städte-Suche**: alle Gemeinden im Landkreis Konstanz mit Filialen (Konstanz, Radolfzell, Stockach,
+  Engen …) plus **Stuttgart** – per Name, Ortsteil oder PLZ; teilbar per Link `?stadt=konstanz`. Startseite bleibt Singen
+- Supermärkte, Discounter, Getränkemärkte **und Drogerien** (Müller, dm, Rossmann)
 - Filter nach Kette und Packungsgröße (Einzeln/4er/6er/10er/…), Sortierung (Preis/Dose, Gesamtpreis, Rabatt)
 - App-Pille unter dem Preis: „Preis nur mit Lidl Plus“ (App-Pflicht, gefüllt) bzw. „Mit REWE-App +0,10 € Bonus“ /
   „Mit Netto-App nur 3,49 €“ (Extra-Rabatt, umrandet). Angebote **ohne App-Pflicht stehen immer vor App-Preisen**
@@ -31,8 +34,10 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 │   ├── favicon-32.png, icon-192.png, apple-touch-icon.png
 │   └── og-image.jpg         # Vorschaubild beim Teilen des Links (1200×630)
 ├── data/
-│   ├── deals.json           # Angebote (vom Scraper überschrieben/gemergt)
-│   └── stores.json          # Filialverzeichnis Singen + Rielasingen (aus OpenStreetMap)
+│   ├── cities.json          # suchbare Städte (aus OpenStreetMap, von update_stores.py)
+│   ├── deals.json           # Angebote aller Städte (vom Scraper überschrieben/gemergt)
+│   ├── regular-prices.json  # zuletzt gesehene Normalpreise je Kette
+│   └── stores.json          # Filialverzeichnis aller Städte (aus OpenStreetMap)
 ├── scripts/
 │   ├── update_deals.py      # Scraper: marktguru, kaufDA, prospektangebote
 │   ├── update_stores.py     # baut data/stores.json aus OpenStreetMap neu
@@ -92,9 +97,9 @@ Läufe oft 5–30 Minuten später.
 2. `scripts/update_deals.py` fragt jede Quelle ab:
    | Quelle | Technik | Standort |
    |---|---|---|
-   | marktguru.de | JSON-API (öffentliche Web-Keys aus dem HTML) | PLZ 78224 + 78239 |
-   | kaufda.de | `__NEXT_DATA__` der Seite `/Angebote/Monster` | Cookie `location` = Singen |
-   | prospektangebote.de | Playwright (AWS-WAF-JS-Challenge), JSON-LD | bundesweit → nur Ketten mit Filiale in Singen |
+   | marktguru.de | JSON-API (öffentliche Web-Keys aus dem HTML) | je Stadt per PLZ |
+   | kaufda.de | `__NEXT_DATA__` der Seite `/Angebote/Monster` | Cookie `location` = jeweilige Stadt |
+   | prospektangebote.de | Playwright (AWS-WAF-JS-Challenge), JSON-LD | bundesweit → je Stadt nur Ketten mit Filiale dort |
 3. Filter auf Monster Energy (Spielzeug, „Monster Munch“ usw. fliegen raus), Erkennung der Packungsgröße
    per Regex (`4er-Pack`, `12ER-TRAY`, `4 x 0,5 l`, `6x`, `Tray mit 12 Dosen` …) inkl. Plausibilitätsprüfung
    (z. B. „12er-Tray 0,88 €“ = Dosenpreis → Gesamtpreis 10,56 €) und Zusatzangeboten wie
@@ -154,6 +159,7 @@ Array von Angeboten. Pflichtfelder wie spezifiziert, dazu einige optionale Zusat
 
 | Feld | Bedeutung |
 |---|---|
+| `city` | Stadt-Slug aus `data/cities.json` (z. B. `singen`, `konstanz`) – das Frontend zeigt je Stadt nur ihre Angebote |
 | `packType` | `single`, `pack4`, `pack6`, `pack10`, `pack12`, `pack24` … oder `multipack` (Größe unbekannt) |
 | `pricePerUnit` | Preis pro Dose (bei `multipack` `null`) |
 | `regularPrice` | Streich-/Normalpreis, nur wenn die Quelle einen nennt – sonst `null` (kein Rabatt-Chip) |
@@ -182,7 +188,7 @@ nicht auf marktguru/kaufda/prospektangebote zeigt, lässt der Scraper sie bis zu
   `update_stores.py`-Lauf erhalten:
   ```json
   { "id": "globus-singen", "chain": "Globus", "name": "Globus Singen", "address": "Musterstraße 1, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)", "lat": 47.76, "lon": 8.84, "manual": true }
+    "cities": ["singen"], "lat": 47.76, "lon": 8.84, "manual": true }
   ```
 - Neue Kette: Regex in `CHAIN_ALIASES` (`scripts/update_deals.py`) und `CHAIN_PATTERNS`
   (`scripts/update_stores.py`) ergänzen. Die Hausfarbe fürs Icon kommt in `CHAINS` in `app.js`, ohne
@@ -197,9 +203,15 @@ nicht auf marktguru/kaufda/prospektangebote zeigt, lässt der Scraper sie bis zu
    übernommen.
 3. Mit `python scripts/update_deals.py --only xyz --dry-run -v --debug-dir debug` testen.
 
-Anderer Ort? `REGION` in `update_deals.py` sowie `BBOX`/`ALLOWED_POSTCODES`/`SINGEN_PARTS` in
-`update_stores.py` anpassen. Die Box ist bewusst großzügig, eingegrenzt wird über die Postleitzahl.
-Filialen in Singener Ortsteilen bekommen den Ortsteil in die Adresse, z. B. „78224 Singen-Bohlingen“.
+**Weitere Städte / Landkreise**: `python scripts/update_stores.py` legt für jede Gemeinde der Kreise in
+`AGS_PREFIXES` (Standard `08335` = Landkreis Konstanz) mit mindestens einer Ketten-Filiale eine Stadt in
+`data/cities.json` an (inkl. PLZ, Mittelpunkt und Ortsteilen für die Suche). Weitere Kreise: Präfix ergänzen,
+z. B. `"08327"` (Landkreis Tuttlingen) oder `"08435"` (Bodenseekreis), und `BBOX` vergrößern. Danach
+`update_deals.py` laufen lassen – ab dem nächsten Lauf werden die neuen Städte täglich mit aktualisiert.
+Einzelne Städte außerhalb dieser Kreise stehen mit ihrem Gemeindeschlüssel in `EXTRA_AGS` – aktuell
+`08111000` = Stuttgart. Großhändler (METRO, Selgros …) werden ignoriert, dort kauft man nur mit Gewerbeausweis.
+Zusammengefasste Städte (wie „Singen“ = Singen mit Ortsteilen + Rielasingen-Worblingen) stehen in
+`COMBINED_CITIES`. Filialen in Singener Ortsteilen bekommen den Ortsteil in die Adresse, z. B. „78224 Singen-Bohlingen“.
 
 ## Grenzen & Hinweise
 

@@ -1,0 +1,548 @@
+[
+  {
+    "slug": "singen",
+    "name": "Singen",
+    "label": "Singen (Hohentwiel) mit allen Ortsteilen & Rielasingen-Worblingen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78224",
+      "78239"
+    ],
+    "lat": 47.75208,
+    "lon": 8.84682,
+    "stores": 24,
+    "aliases": [
+      "Arlen",
+      "Beuren an der Aach",
+      "Bohlingen",
+      "Friedingen",
+      "Haslen",
+      "Hausen an der Aach",
+      "Hohentwiel (Domäne)",
+      "Lummold",
+      "Rielasingen",
+      "Rielasingen-Worblingen",
+      "Rosenegg",
+      "Schlatt unter Krähen",
+      "Singen (Hohentwiel)",
+      "Worblingen",
+      "Überlingen am Ried"
+    ],
+    "default": true
+  },
+  {
+    "slug": "aach",
+    "name": "Aach",
+    "label": "Aach",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78267"
+    ],
+    "lat": 47.84413,
+    "lon": 8.85196,
+    "stores": 1,
+    "aliases": []
+  },
+  {
+    "slug": "allensbach",
+    "name": "Allensbach",
+    "label": "Allensbach",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78476"
+    ],
+    "lat": 47.71687,
+    "lon": 9.0687,
+    "stores": 4,
+    "aliases": [
+      "Freudental",
+      "Gemeinmerkerhöfe",
+      "Hegne",
+      "Kaltbrunn",
+      "Kargegg",
+      "Langenrain"
+    ]
+  },
+  {
+    "slug": "bodman-ludwigshafen",
+    "name": "Bodman-Ludwigshafen",
+    "label": "Bodman-Ludwigshafen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78351"
+    ],
+    "lat": 47.81251,
+    "lon": 9.04872,
+    "stores": 3,
+    "aliases": [
+      "Blumhof",
+      "Bodman",
+      "Bühlhof",
+      "Forsthaus Laubegg",
+      "Frauenberg",
+      "Ludwigshafen",
+      "Mooshof",
+      "Regentsweiler",
+      "Rehmhof",
+      "Weiherhof"
+    ]
+  },
+  {
+    "slug": "engen",
+    "name": "Engen",
+    "label": "Engen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78234"
+    ],
+    "lat": 47.85324,
+    "lon": 8.77045,
+    "stores": 8,
+    "aliases": [
+      "Alte Ölmühle",
+      "Anselfingen",
+      "Bargen",
+      "Biesendorf",
+      "Bittelbrunn",
+      "Hangerhof",
+      "Neuhausen",
+      "Stetten",
+      "Talhof",
+      "Talmühle",
+      "Welschingen",
+      "Zimmerholz"
+    ]
+  },
+  {
+    "slug": "gailingen-am-hochrhein",
+    "name": "Gailingen am Hochrhein",
+    "label": "Gailingen am Hochrhein",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78262"
+    ],
+    "lat": 47.69679,
+    "lon": 8.75502,
+    "stores": 4,
+    "aliases": [
+      "Obergailingen"
+    ]
+  },
+  {
+    "slug": "gottmadingen",
+    "name": "Gottmadingen",
+    "label": "Gottmadingen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78244"
+    ],
+    "lat": 47.73401,
+    "lon": 8.77634,
+    "stores": 8,
+    "aliases": [
+      "Bietingen",
+      "Ebringen",
+      "Hanglerhof",
+      "Murbach",
+      "Petersburg",
+      "Randegg"
+    ]
+  },
+  {
+    "slug": "hilzingen",
+    "name": "Hilzingen",
+    "label": "Hilzingen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78247"
+    ],
+    "lat": 47.765,
+    "lon": 8.78477,
+    "stores": 3,
+    "aliases": [
+      "Binningen",
+      "Dietlishof",
+      "Duchtlingen",
+      "Hofwiesen",
+      "Riedheim",
+      "Schlatt am Randen",
+      "Storzeln",
+      "Weiterdingen"
+    ]
+  },
+  {
+    "slug": "hohenfels",
+    "name": "Hohenfels",
+    "label": "Hohenfels",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78355"
+    ],
+    "lat": 47.88392,
+    "lon": 9.10941,
+    "stores": 1,
+    "aliases": [
+      "Deutwang",
+      "Hahnenmühle",
+      "Hippenhof",
+      "Kalkofen",
+      "Knollenkratten",
+      "Liggersdorf",
+      "Mindersdorf",
+      "Neumühle",
+      "Rappenhof",
+      "Ratzenweiler",
+      "Reisch",
+      "Sattelöse",
+      "Schloß Hohenfels",
+      "Selgetsweiler",
+      "Vogelsang",
+      "Weiherhöfe"
+    ]
+  },
+  {
+    "slug": "konstanz",
+    "name": "Konstanz",
+    "label": "Konstanz",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78467",
+      "78462",
+      "78464"
+    ],
+    "lat": 47.65922,
+    "lon": 9.17507,
+    "stores": 31,
+    "aliases": [
+      "Allmannsdorf",
+      "Altstadt",
+      "Dettingen",
+      "Dingelsdorf",
+      "Egg",
+      "Fürstenberg",
+      "Industriegebiet",
+      "Königsbau",
+      "Litzelstetten",
+      "Oberdorf",
+      "Paradies",
+      "Petershausen-Ost",
+      "Petershausen-West",
+      "Staad",
+      "Wallhausen",
+      "Wollmatingen"
+    ]
+  },
+  {
+    "slug": "moos",
+    "name": "Moos",
+    "label": "Moos",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78345"
+    ],
+    "lat": 47.72471,
+    "lon": 8.93481,
+    "stores": 1,
+    "aliases": [
+      "Bankholzen",
+      "Bettnang",
+      "Iznang",
+      "Weiler"
+    ]
+  },
+  {
+    "slug": "muehlhausen-ehingen",
+    "name": "Mühlhausen-Ehingen",
+    "label": "Mühlhausen-Ehingen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78259"
+    ],
+    "lat": 47.80175,
+    "lon": 8.8244,
+    "stores": 3,
+    "aliases": [
+      "Ehingen",
+      "Mühlhausen"
+    ]
+  },
+  {
+    "slug": "oehningen",
+    "name": "Öhningen",
+    "label": "Öhningen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78337"
+    ],
+    "lat": 47.66004,
+    "lon": 8.88932,
+    "stores": 1,
+    "aliases": [
+      "Hof Riedern",
+      "Kattenhorn",
+      "Litzelshausen",
+      "Marbach",
+      "Schienen",
+      "Sonnenhof",
+      "Stiegen",
+      "Unterbühlhof",
+      "Wangen",
+      "Öhningen (Bodensee)"
+    ]
+  },
+  {
+    "slug": "orsingen-nenzingen",
+    "name": "Orsingen-Nenzingen",
+    "label": "Orsingen-Nenzingen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78359"
+    ],
+    "lat": 47.84052,
+    "lon": 8.93622,
+    "stores": 1,
+    "aliases": [
+      "Dürrenast",
+      "Langenstein",
+      "Nenzingen",
+      "Orsingen"
+    ]
+  },
+  {
+    "slug": "radolfzell-am-bodensee",
+    "name": "Radolfzell am Bodensee",
+    "label": "Radolfzell am Bodensee",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78315"
+    ],
+    "lat": 47.73728,
+    "lon": 8.97028,
+    "stores": 12,
+    "aliases": [
+      "Böhringen",
+      "Güttingen",
+      "Hintere Homburg",
+      "Liggeringen",
+      "Markelfingen",
+      "Möggingen",
+      "Reutehöfe",
+      "Schloßhöfe",
+      "Stahringen",
+      "Ziegelei Rickelshausen"
+    ]
+  },
+  {
+    "slug": "reichenau",
+    "name": "Reichenau",
+    "label": "Reichenau",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78479"
+    ],
+    "lat": 47.69665,
+    "lon": 9.06161,
+    "stores": 3,
+    "aliases": []
+  },
+  {
+    "slug": "rielasingen-worblingen",
+    "name": "Rielasingen-Worblingen",
+    "label": "Rielasingen-Worblingen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78239"
+    ],
+    "lat": 47.72959,
+    "lon": 8.84535,
+    "stores": 6,
+    "aliases": [
+      "Arlen",
+      "Rielasingen",
+      "Rosenegg",
+      "Worblingen"
+    ]
+  },
+  {
+    "slug": "steisslingen",
+    "name": "Steißlingen",
+    "label": "Steißlingen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78256"
+    ],
+    "lat": 47.79951,
+    "lon": 8.92783,
+    "stores": 1,
+    "aliases": [
+      "Maiershöfe",
+      "Schoren",
+      "Wiechs"
+    ]
+  },
+  {
+    "slug": "stockach",
+    "name": "Stockach",
+    "label": "Stockach",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78333"
+    ],
+    "lat": 47.85309,
+    "lon": 9.01345,
+    "stores": 9,
+    "aliases": [
+      "Airach",
+      "Besetze",
+      "Bleiche",
+      "Braunenberg",
+      "Burgtal",
+      "Dietsche",
+      "Eggenried",
+      "Einöde",
+      "Espasingen",
+      "Frickenweiler",
+      "Heinrichsweiler",
+      "Hengelau",
+      "Hildegrund",
+      "Hindelwangen",
+      "Hochreute",
+      "Hoppetenzell",
+      "Hungerhof",
+      "Im Moos",
+      "Jettweiler",
+      "Lehnsitzerhof",
+      "Lette",
+      "Lichtberg",
+      "Mahlspüren im Hegau",
+      "Mahlspüren im Tal",
+      "Malezreute",
+      "Maushalde",
+      "Mooshof",
+      "Neuhof",
+      "Neuseggehof",
+      "Obernusserhof",
+      "Raithaslach",
+      "Sailerhof",
+      "Sandlochhof",
+      "Schleichenhof",
+      "Schlierbahn",
+      "Seelfingen",
+      "Sonnenberg",
+      "Spittelsberg",
+      "Ursaul",
+      "Wahlwies",
+      "Windegg",
+      "Winterspüren",
+      "Zizenhausen"
+    ]
+  },
+  {
+    "slug": "stuttgart",
+    "name": "Stuttgart",
+    "label": "Stuttgart",
+    "region": "Stuttgart",
+    "zips": [
+      "70178",
+      "70173",
+      "70469"
+    ],
+    "lat": 48.77845,
+    "lon": 9.18001,
+    "stores": 161,
+    "aliases": [
+      "Asemwald",
+      "Bad Cannstatt",
+      "Berg",
+      "Bergheim",
+      "Birkach",
+      "Botnang",
+      "Bruderrain",
+      "Büsnau",
+      "Degerloch",
+      "Dürrlewang",
+      "Fasanenhof",
+      "Feuerbach",
+      "Frauenkopf",
+      "Freiberg",
+      "Giebel",
+      "Hausen",
+      "Hedelfingen",
+      "Heslach",
+      "Heumaden",
+      "Hofen",
+      "Hoffeld",
+      "Hohenheim",
+      "Kaltental",
+      "Lederberg",
+      "Luginsland",
+      "Möhringen",
+      "Mönchfeld",
+      "Mühlhausen",
+      "Münster",
+      "Neugereut",
+      "Obertürkheim",
+      "Plieningen",
+      "Riedenberg",
+      "Rohr",
+      "Rohracker",
+      "Rot",
+      "Rotenberg",
+      "Schönberg",
+      "Sillenbuch",
+      "Sommerrain",
+      "Sonnenberg",
+      "Stammheim",
+      "Steckfeld",
+      "Steinhaldenfeld",
+      "Stuttgart-Mitte",
+      "Stuttgart-Nord",
+      "Stuttgart-Ost",
+      "Stuttgart-Süd",
+      "Stuttgart-West",
+      "Uhlbach",
+      "Untertürkheim",
+      "Vaihingen",
+      "Wangen",
+      "Weilimdorf",
+      "Wolfbusch",
+      "Zazenhausen",
+      "Zuffenhausen"
+    ]
+  },
+  {
+    "slug": "tengen",
+    "name": "Tengen",
+    "label": "Tengen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78250"
+    ],
+    "lat": 47.8166,
+    "lon": 8.65942,
+    "stores": 1,
+    "aliases": [
+      "Beuren am Ried",
+      "Blumenfeld",
+      "Büßlingen",
+      "Talheim",
+      "Uttenhofen",
+      "Watterdingen",
+      "Weil",
+      "Wiechs am Randen"
+    ]
+  },
+  {
+    "slug": "volkertshausen",
+    "name": "Volkertshausen",
+    "label": "Volkertshausen",
+    "region": "Landkreis Konstanz",
+    "zips": [
+      "78269"
+    ],
+    "lat": 47.82164,
+    "lon": 8.86514,
+    "stores": 1,
+    "aliases": []
+  }
+]

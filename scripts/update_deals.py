@@ -1,11 +1,12 @@
 #!/usr/bin/env python3
 """
-Sammelt aktuelle Monster-Energy-Angebote für Singen (Hohentwiel) und Rielasingen-Worblingen
-und schreibt data/deals.json.
+Sammelt aktuelle Monster-Energy-Angebote für alle Städte aus data/cities.json (Startseite: Singen
+mit Ortsteilen + Rielasingen-Worblingen, dazu alle Gemeinden im Landkreis Konstanz mit Filialen)
+und schreibt data/deals.json (jedes Angebot mit Feld "city").
 
-Quellen (jede läuft isoliert – fällt eine aus, wird sie übersprungen und geloggt):
-  * marktguru        Web-API von marktguru.de (Schlüssel stehen öffentlich im HTML), PLZ 78224 + 78239
-  * kaufda           Next.js-Seite kaufda.de/Angebote/Monster, Standort über "location"-Cookie
+Quellen (jede läuft isoliert – fällt eine aus, wird sie für die Stadt übersprungen und geloggt):
+  * marktguru        Web-API von marktguru.de (Schlüssel stehen öffentlich im HTML), je Stadt per PLZ
+  * kaufda           Next.js-Seite kaufda.de/Angebote/Monster, Standort je Stadt über "location"-Cookie
   * prospektangebote AWS-WAF-geschützt → Playwright (headless Chromium), Daten aus JSON-LD.
                      Nicht standortbezogen → nur Ketten mit Filiale im Verzeichnis werden übernommen.
 
@@ -15,6 +16,7 @@ Filialen aus data/stores.json verteilen → mit bestehender deals.json mergen �
     python scripts/update_deals.py                      # alle Quellen, schreibt data/deals.json
     python scripts/update_deals.py --dry-run -v         # nichts schreiben, ausführlich loggen
     python scripts/update_deals.py --only marktguru,kaufda
+    python scripts/update_deals.py --city singen,konstanz  # nur bestimmte Städte
     python scripts/update_deals.py --debug-dir debug    # Rohantworten der Quellen speichern
 """
 from __future__ import annotations
@@ -26,6 +28,7 @@ import os
 import re
 import sys
 import time as _time
+from collections import Counter
 from dataclasses import dataclass
 from datetime import date, datetime, time, timedelta, timezone
 from pathlib import Path
@@ -45,16 +48,14 @@ PRICES_FILE = ROOT / "data" / "regular-prices.json"  # zuletzt gesehene Normalpr
 
 # --------------------------------------------------------------------------- Konfiguration
 
-REGION = {
-    "label": "Singen (Hohentwiel) inkl. Ortsteile / Rielasingen-Worblingen",
-    "area": "Singen/Rielasingen",   # für Angebote ohne bekannte Filiale: "Filiale im Raum …"
-    "zip": "78224",                 # Hauptstandort (kaufDA-Cookie)
-    "zips": ["78224", "78239"],     # Singen + Rielasingen-Worblingen (marktguru)
-    "city": "Singen",
-    "lat": 47.7597,
-    "lng": 8.8403,
+CITIES_FILE = ROOT / "data" / "cities.json"  # Städte – erzeugt von scripts/update_stores.py
+# Fallback, falls data/cities.json fehlt
+DEFAULT_CITY = {
+    "slug": "singen", "name": "Singen", "label": "Singen (Hohentwiel) mit allen Ortsteilen & Rielasingen-Worblingen",
+    "zips": ["78224", "78239"], "lat": 47.7597, "lon": 8.8403,
 }
-SEARCH_TERMS = ["monster energy", "monster"]
+SEARCH_TERMS = ["monster"]  # "monster" findet alles, was "monster energy" findet
+CITY_DELAY = 0.8  # Sekunden Pause zwischen zwei Städten – schont die Quellen
 TZ = ZoneInfo("Europe/Berlin")
 HTTP_TIMEOUT = 25
 BROWSER_UA = ("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 "
@@ -82,6 +83,9 @@ CHAIN_ALIASES: list[tuple[str, str, bool]] = [
     (r"\bfristo\b", "Fristo", False),
     (r"getr(ä|ae)nke[\s-]*hoffmann", "Getränke Hoffmann", False),
     (r"\brossmann\b", "Rossmann", False),
+    (r"getr(ä|ae)nke\s*m(ü|ue)ller", "Getränke Müller", False),
+    (r"^\s*dm\b|\bdm\s*drogerie", "dm", False),
+    (r"\bm(ü|ue)ller\b", "Müller", False),  # Drogeriemarkt Müller – muss nach "Getränke Müller" stehen
 ]
 
 # Bekannte Sorten (längste zuerst prüfen, damit "Ultra Paradise" vor "Ultra" greift)
@@ -365,8 +369,14 @@ def build_note(offer: Offer, variant: dict) -> str | None:
     return " · ".join(parts) or None
 
 
+# Großhandel (nur mit Gewerbeausweis) ist für Privatkunden nutzlos
+WHOLESALE_RE = re.compile(r"\bmetro\b|selgros|handelshof|transgourmet|\bc\s*\+\s*c\b", re.I)
+
+
 def normalize_chain(retailer: str, *, regional: bool) -> str | None:
     name = retailer.replace("-", " ").strip()
+    if WHOLESALE_RE.search(name):
+        return None
     for pattern, chain, regional_only in CHAIN_ALIASES:
         if re.search(pattern, name, re.I) and (regional or not regional_only):
             return chain
@@ -379,22 +389,36 @@ MARKTGURU_HOME = "https://www.marktguru.de/"
 MARKTGURU_API = "https://api.marktguru.de/api/v1/offers/search"
 
 
-def fetch_marktguru(session: requests.Session) -> list[Offer]:
-    home = http_get(session, MARKTGURU_HOME).text
-    api_key = re.search(r'"apiKey"\s*:\s*"([^"]+)"', home)
-    client_key = re.search(r'"clientKey"\s*:\s*"([^"]+)"', home)
-    if not (api_key and client_key):
-        raise SourceError("API-Schlüssel nicht im HTML gefunden – Seitenstruktur geändert?")
-    headers = {"x-apikey": api_key.group(1), "x-clientkey": client_key.group(1), "Accept": "application/json"}
+_MARKTGURU_HEADERS: dict | None = None
+
+
+def marktguru_headers(session: requests.Session) -> dict:
+    """API-Schlüssel einmal pro Lauf aus der Startseite lesen (gilt dann für alle Städte)."""
+    global _MARKTGURU_HEADERS
+    if _MARKTGURU_HEADERS is None:
+        home = http_get(session, MARKTGURU_HOME).text
+        api_key = re.search(r'"apiKey"\s*:\s*"([^"]+)"', home)
+        client_key = re.search(r'"clientKey"\s*:\s*"([^"]+)"', home)
+        if not (api_key and client_key):
+            raise SourceError("API-Schlüssel nicht im HTML gefunden – Seitenstruktur geändert?")
+        _MARKTGURU_HEADERS = {"x-apikey": api_key.group(1), "x-clientkey": client_key.group(1),
+                              "Accept": "application/json"}
+    return _MARKTGURU_HEADERS
+
+
+def fetch_marktguru(session: requests.Session, city: dict) -> list[Offer]:
+    if not city.get("zips"):
+        raise SourceError("keine Postleitzahl für diese Stadt bekannt")
+    headers = marktguru_headers(session)
 
     raw: dict = {}  # nach Angebots-ID dedupliziert (PLZs/Suchbegriffe überschneiden sich)
-    for zip_code in REGION["zips"]:
+    for zip_code in city["zips"]:
         for term in SEARCH_TERMS:
             offset = 0
             while offset < 500:
                 params = {"as": "web", "q": term, "zipCode": zip_code, "limit": 100, "offset": offset}
                 resp = http_get(session, MARKTGURU_API, headers=headers, params=params)
-                debug_dump(f"marktguru_{zip_code}_{slug(term)}_{offset}.json", resp.text)
+                debug_dump(f"marktguru_{city['slug']}_{zip_code}_{slug(term)}_{offset}.json", resp.text)
                 payload = resp.json()
                 results = payload.get("results") or []
                 raw.update({item.get("id"): item for item in results})
@@ -430,19 +454,23 @@ def fetch_marktguru(session: requests.Session) -> list[Offer]:
 KAUFDA_URL = "https://www.kaufda.de/Angebote/Monster"
 
 
-def fetch_kaufda(session: requests.Session) -> list[Offer]:
+def fetch_kaufda(session: requests.Session, city: dict) -> list[Offer]:
     # kaufDA bestimmt den Standort per IP – der "location"-Cookie überschreibt das (wichtig auf GitHub-Runnern).
-    location = {"lat": REGION["lat"], "lng": REGION["lng"], "city": REGION["city"],
-                "zip": REGION["zip"], "countryCode": "DE"}
+    zip_code = (city.get("zips") or [""])[0]
+    location = {"lat": city["lat"], "lng": city["lon"], "city": city["name"], "zip": zip_code, "countryCode": "DE"}
+    # kaufDA setzt den Cookie in der Antwort selbst – den alten Standort aus der Session entfernen,
+    # sonst gehen zwei "location"-Cookies raus und der Server nimmt den der vorherigen Stadt
+    for cookie in [c for c in session.cookies if c.name == "location"]:
+        session.cookies.clear(cookie.domain, cookie.path, cookie.name)
     resp = http_get(session, KAUFDA_URL, cookies={"location": quote(json.dumps(location, separators=(",", ":")))})
-    debug_dump("kaufda.html", resp.text)
+    debug_dump(f"kaufda_{city['slug']}.html", resp.text)
     m = re.search(r'<script id="__NEXT_DATA__"[^>]*>(.*?)</script>', resp.text, re.S)
     if not m:
         raise SourceError("__NEXT_DATA__ nicht gefunden – Seitenstruktur geändert?")
     info = json.loads(m.group(1)).get("props", {}).get("pageProps", {}).get("pageInformation") or {}
     loc = info.get("location") or {}
-    if loc.get("zip") and loc["zip"] != REGION["zip"]:
-        raise SourceError(f"Standort {loc.get('city')} {loc.get('zip')} statt {REGION['zip']} – Cookie ignoriert?")
+    if loc.get("zip") and zip_code and loc["zip"] != zip_code:
+        raise SourceError(f"Standort {loc.get('city')} {loc.get('zip')} statt {zip_code} – Cookie ignoriert?")
 
     items, seen = [], set()
     for group in (info.get("offers") or {}).values():
@@ -470,7 +498,7 @@ def fetch_kaufda(session: requests.Session) -> list[Offer]:
 PA_URL = "https://www.prospektangebote.de/angebote/monster"
 
 
-def fetch_prospektangebote(_session: requests.Session) -> list[Offer]:
+def fetch_prospektangebote(_session: requests.Session, _city: dict | None = None) -> list[Offer]:
     try:
         from playwright.sync_api import Error as PlaywrightError, sync_playwright
     except ImportError as exc:
@@ -551,8 +579,8 @@ class Source:
     key: str
     label: str
     domain: str
-    regional: bool  # liefert die Quelle bereits nur Angebote für Singen?
-    fetch: Callable[[requests.Session], list[Offer]]
+    regional: bool  # True = je Stadt abfragen (standortgenau), False = einmal bundesweit, dann je Stadt filtern
+    fetch: Callable[[requests.Session, dict | None], list[Offer]]
 
 
 SOURCES = [  # Reihenfolge = Priorität bei Dubletten
@@ -564,18 +592,29 @@ SOURCES = [  # Reihenfolge = Priorität bei Dubletten
 
 # --------------------------------------------------------------------------- Filialen & Deals
 
-def load_stores() -> dict[str, list[dict]]:
+def load_cities() -> list[dict]:
+    if CITIES_FILE.exists():
+        cities = json.loads(CITIES_FILE.read_text(encoding="utf-8"))
+        if cities:
+            return cities
+    log.warning("%s fehlt – nur Singen (python scripts/update_stores.py)", CITIES_FILE.relative_to(ROOT))
+    return [DEFAULT_CITY]
+
+
+def load_stores() -> dict[str, dict[str, list[dict]]]:
+    """Filialen je Stadt und Kette: {"singen": {"Rewe": [...], ...}, "konstanz": {...}}"""
     if not STORES_FILE.exists():
         log.warning("%s fehlt – Angebote werden ohne Filialadresse gespeichert "
                     "(python scripts/update_stores.py)", STORES_FILE.relative_to(ROOT))
         return {}
-    by_chain: dict[str, list[dict]] = {}
+    by_city: dict[str, dict[str, list[dict]]] = {}
     for store in json.loads(STORES_FILE.read_text(encoding="utf-8")):
-        by_chain.setdefault(store["chain"], []).append(store)
-    return by_chain
+        for city_slug in store.get("cities") or [DEFAULT_CITY["slug"]]:
+            by_city.setdefault(city_slug, {}).setdefault(store["chain"], []).append(store)
+    return by_city
 
 
-def build_deals(offers: list[Offer], stores_by_chain: dict, today: date, now_iso: str) -> list[dict]:
+def build_deals(offers: list[Offer], stores_by_chain: dict, today: date, now_iso: str, city: dict) -> list[dict]:
     deals = []
     for offer in offers:
         if not offer.price:
@@ -587,7 +626,7 @@ def build_deals(offers: list[Offer], stores_by_chain: dict, today: date, now_iso
         chain = normalize_chain(f"{offer.retailer} {offer.retailer_hint}".strip(), regional=offer.regional)
         branches = stores_by_chain.get(chain, []) if chain else []
         if not chain or (not branches and not offer.regional):
-            log.info("  - %s: keine Filiale in %s, übersprungen", offer.retailer or "?", REGION["label"])
+            log.debug("  - %s: keine Filiale in %s, übersprungen", offer.retailer or "?", city["name"])
             continue
 
         valid_from = offer.valid_from or today
@@ -600,11 +639,12 @@ def build_deals(offers: list[Offer], stores_by_chain: dict, today: date, now_iso
                 regular = None
             for store in branches or [None]:
                 deal = {
-                    "id": slug("-".join([chain, store["id"] if store else "region", variant["packType"],
-                                         valid_from.isoformat(), f"{variant['price']:.2f}"])),
+                    "id": slug("-".join([city["slug"], chain, store["id"] if store else "region",
+                                         variant["packType"], valid_from.isoformat(), f"{variant['price']:.2f}"])),
+                    "city": city["slug"],
                     "store": store["name"] if store else chain,
                     "chain": chain,
-                    "address": store["address"] if store else f"Filiale im Raum {REGION['area']}",
+                    "address": store["address"] if store else f"Filiale im Raum {city['name']}",
                 }
                 if store:
                     deal.update(lat=store["lat"], lon=store["lon"])
@@ -656,19 +696,19 @@ def origin_of(deal: dict) -> str | None:
     return next((s.key for s in SOURCES if host.endswith(s.domain)), None)
 
 
-def merge_with_existing(existing: list[dict], fresh: list[dict], ok_sources: set[str],
+def merge_with_existing(existing: list[dict], fresh: list[dict], ok_pairs: set[tuple[str, str]],
                         today: date) -> tuple[list[dict], dict]:
-    """Abgelaufenes raus; Einträge erfolgreicher Quellen werden ersetzt; Einträge ausgefallener
-    Quellen und manuelle Einträge (fremde source) bleiben bis zum Ablauf erhalten."""
+    """Abgelaufenes raus; Einträge erfolgreicher (Quelle, Stadt)-Paare werden ersetzt; Einträge ausgefallener
+    Quellen/Städte und manuelle Einträge (fremde source) bleiben bis zum Ablauf erhalten."""
     today_s = today.isoformat()
     kept, expired = [], 0
     for deal in existing:
         if (deal.get("validTo") or "9999-12-31") < today_s:
             expired += 1
-        elif origin_of(deal) not in ok_sources:
+        elif (origin_of(deal), deal.get("city", DEFAULT_CITY["slug"])) not in ok_pairs:
             kept.append(deal)
     merged = merge_duplicates(fresh + kept)
-    merged.sort(key=lambda d: (d.get("chain", ""), d.get("store", ""), d.get("validFrom", ""),
+    merged.sort(key=lambda d: (d.get("city", ""), d.get("chain", ""), d.get("store", ""), d.get("validFrom", ""),
                                d.get("unitCount") or 999, d.get("price", 0)))
     old_ids = {d.get("id") for d in existing}
     stats = {"expired": expired, "kept": len(kept), "new": sum(d["id"] not in old_ids for d in merged)}
@@ -705,13 +745,15 @@ def write_step_summary(report: list[tuple], deals: list[dict], stats: dict, dry_
     path = os.environ.get("GITHUB_STEP_SUMMARY")
     if not path:
         return
-    lines = ["## Monster-Angebote Singen", "", "| Quelle | Status | Monster-Angebote | Filial-Einträge |",
+    lines = ["## Monster-Angebote", "", "| Quelle | Status | Monster-Angebote | Filial-Einträge |",
              "|---|---|---:|---:|"]
     lines += [f"| {name} | {status} | {raw if raw is not None else '–'} | {n if n is not None else '–'} |"
               for name, status, raw, n in report]
+    per_city = Counter(d.get("city", DEFAULT_CITY["slug"]) for d in deals)
     lines += ["", f"**{len(deals)} Angebote** in `data/deals.json` · {stats['new']} neu · "
                   f"{stats['expired']} abgelaufen entfernt · {stats['kept']} aus ausgefallenen/manuellen Quellen behalten"
-                  + (" · *Dry-Run, nichts geschrieben*" if dry_run else "")]
+                  + (" · *Dry-Run, nichts geschrieben*" if dry_run else ""),
+              "", "Je Stadt: " + (" · ".join(f"{c} {n}" for c, n in sorted(per_city.items())) or "–")]
     with open(path, "a", encoding="utf-8") as fh:
         fh.write("\n".join(lines) + "\n")
 
@@ -722,6 +764,7 @@ def main() -> int:
     global DEBUG_DIR
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--only", help="kommagetrennte Quellen: " + ",".join(s.key for s in SOURCES))
+    parser.add_argument("--city", help="nur diese Städte (Slugs aus data/cities.json, kommagetrennt)")
     parser.add_argument("--dry-run", action="store_true", help="nichts schreiben, Ergebnis ausgeben")
     parser.add_argument("--output", type=Path, default=DEALS_FILE, help="Zieldatei (Standard: data/deals.json)")
     parser.add_argument("--debug-dir", type=Path, help="Rohantworten der Quellen hier speichern")
@@ -747,39 +790,77 @@ def main() -> int:
 
     today = datetime.now(TZ).date()
     now_iso = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
-    stores_by_chain = load_stores()
+    cities = load_cities()
+    if args.city:
+        wanted_cities = {c.strip().lower() for c in args.city.split(",") if c.strip()}
+        cities = [c for c in cities if c["slug"] in wanted_cities]
+        if not cities:
+            parser.error(f"keine passende Stadt in {CITIES_FILE.relative_to(ROOT)}: {args.city}")
+    stores_by_city = load_stores()
     existing = json.loads(args.output.read_text(encoding="utf-8")) if args.output.exists() else []
     session = make_session()
+    log.info("%d Städte: %s", len(cities), ", ".join(c["name"] for c in cities))
 
     fresh: list[dict] = []
-    ok_sources: set[str] = set()
+    ok_pairs: set[tuple[str, str]] = set()  # (Quelle, Stadt), die heute erfolgreich waren
     report: list[tuple] = []
     for source in selected:
         started = _time.monotonic()
         log.info("Quelle %s …", source.label)
-        try:
-            offers = source.fetch(session)
-        except Exception as exc:  # bewusst breit: eine kaputte Quelle darf den Lauf nicht abbrechen
-            log.error("Quelle %s übersprungen: %s", source.label, exc)
-            log.debug("Details", exc_info=True)
-            gh_annotation("warning", f"Quelle {source.label} übersprungen", str(exc))
-            report.append((source.label, f"übersprungen: {exc}", None, None))
-            continue
-        for offer in offers:
-            offer.regional = source.regional
-            log.debug("  %s | %s | %s | %.2f €", offer.retailer, offer.title, offer.description[:70], offer.price or 0)
-        deals = build_deals(offers, stores_by_chain, today, now_iso)
-        ok_sources.add(source.key)
-        fresh.extend(deals)
-        report.append((source.label, "ok", len(offers), len(deals)))
-        log.info("Quelle %s: %d Monster-Angebote -> %d Filial-Einträge (%.1f s)",
-                 source.label, len(offers), len(deals), _time.monotonic() - started)
+        national: list[Offer] | None = None
+        if not source.regional:  # bundesweite Quelle: einmal holen, dann je Stadt auf deren Filialen filtern
+            try:
+                national = source.fetch(session, None)
+            except Exception as exc:  # bewusst breit: eine kaputte Quelle darf den Lauf nicht abbrechen
+                log.error("Quelle %s übersprungen: %s", source.label, exc)
+                log.debug("Details", exc_info=True)
+                gh_annotation("warning", f"Quelle {source.label} übersprungen", str(exc))
+                report.append((source.label, f"übersprungen: {exc}", None, None))
+                continue
 
-    if not ok_sources:
+        failures: list[str] = []
+        n_offers = len(national) if national is not None else 0
+        n_deals = 0
+        for i, city in enumerate(cities):
+            if national is not None:
+                offers = national
+            else:
+                if i:
+                    _time.sleep(CITY_DELAY)
+                try:
+                    offers = source.fetch(session, city)
+                except Exception as exc:  # bewusst breit: nur diese Stadt überspringen
+                    failures.append(f"{city['name']}: {exc}")
+                    log.warning("  %s / %s übersprungen: %s", source.label, city["name"], exc)
+                    log.debug("Details", exc_info=True)
+                    if len(failures) >= 3 and not any((source.key, c["slug"]) in ok_pairs for c in cities):
+                        log.error("Quelle %s scheitert durchgehend – restliche Städte übersprungen", source.label)
+                        break
+                    continue
+                n_offers += len(offers)
+            for offer in offers:
+                offer.regional = source.regional
+                log.debug("  %s | %s | %s | %s | %.2f €", city["slug"], offer.retailer, offer.title,
+                          offer.description[:60], offer.price or 0)
+            deals = build_deals(offers, stores_by_city.get(city["slug"], {}), today, now_iso, city)
+            ok_pairs.add((source.key, city["slug"]))
+            fresh.extend(deals)
+            n_deals += len(deals)
+
+        ok_count = sum((source.key, c["slug"]) in ok_pairs for c in cities)
+        if failures:
+            gh_annotation("warning", f"Quelle {source.label}: {len(failures)} Städte übersprungen",
+                          "\n".join(failures[:10]))
+        status = f"ok ({ok_count}/{len(cities)} Städte)" if ok_count else f"übersprungen: {failures[0] if failures else '?'}"
+        report.append((source.label, status, n_offers if ok_count else None, n_deals if ok_count else None))
+        log.info("Quelle %s: %d/%d Städte, %d Monster-Angebote -> %d Filial-Einträge (%.1f s)",
+                 source.label, ok_count, len(cities), n_offers, n_deals, _time.monotonic() - started)
+
+    if not ok_pairs:
         log.warning("Keine Quelle erfolgreich – bestehende Angebote bleiben (nur Abgelaufenes wird entfernt).")
         gh_annotation("error", "Keine Quelle erfolgreich", "deals.json wurde nur um abgelaufene Angebote bereinigt.")
 
-    merged, stats = merge_with_existing(existing, fresh, ok_sources, today)
+    merged, stats = merge_with_existing(existing, fresh, ok_pairs, today)
     log.info("Ergebnis: %d Angebote (%d neu, %d abgelaufen entfernt, %d behalten aus ausgefallenen/manuellen Quellen)",
              len(merged), stats["new"], stats["expired"], stats["kept"])
     update_regular_prices(merged, args.dry_run)
@@ -792,7 +873,7 @@ def main() -> int:
         args.output.write_text(output, encoding="utf-8")
         log.info("geschrieben: %s", args.output)
     write_step_summary(report, merged, stats, args.dry_run)
-    return 1 if args.strict and not ok_sources else 0
+    return 1 if args.strict and not ok_pairs else 0
 
 
 if __name__ == "__main__":

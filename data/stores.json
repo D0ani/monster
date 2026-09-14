@@ -1,211 +1,4223 @@
 [
   {
-    "id": "aldi-sued-industriestrasse-5",
+    "id": "netto-singener-strasse-16-aach",
+    "chain": "Netto",
+    "name": "Netto Singener Straße",
+    "address": "Singener Straße 16, 78267 Aach",
+    "municipality": "Aach",
+    "cities": [
+      "aach"
+    ],
+    "lat": 47.841231,
+    "lon": 8.852674,
+    "postcode": "78267",
+    "addressApprox": true,
+    "osm": "node/4710670692"
+  },
+  {
+    "id": "aldi-sued-prof-maier-leibnitz-strasse-14-allensbach",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Prof.-Maier-Leibnitz-Straße",
+    "address": "Prof.-Maier-Leibnitz-Straße 14, 78476 Allensbach",
+    "municipality": "Allensbach",
+    "cities": [
+      "allensbach"
+    ],
+    "lat": 47.724547,
+    "lon": 9.070406,
+    "postcode": "78476",
+    "addressApprox": false,
+    "osm": "way/663765746"
+  },
+  {
+    "id": "edeka-zum-riesenberg-5-allensbach",
+    "chain": "Edeka",
+    "name": "Edeka Baur",
+    "address": "Zum Riesenberg 5, 78476 Allensbach",
+    "municipality": "Allensbach",
+    "cities": [
+      "allensbach"
+    ],
+    "lat": 47.722814,
+    "lon": 9.072768,
+    "postcode": "78476",
+    "addressApprox": false,
+    "osm": "way/60433124"
+  },
+  {
+    "id": "netto-konstanzer-strasse-13-allensbach",
+    "chain": "Netto",
+    "name": "Netto Konstanzer Straße",
+    "address": "Konstanzer Straße 13, 78476 Allensbach",
+    "municipality": "Allensbach",
+    "cities": [
+      "allensbach"
+    ],
+    "lat": 47.714969,
+    "lon": 9.068716,
+    "postcode": "78476",
+    "addressApprox": false,
+    "osm": "way/129857796"
+  },
+  {
+    "id": "norma-prof-maier-leibnitz-strasse-11-allensbach",
+    "chain": "Norma",
+    "name": "Norma Prof.-Maier-Leibnitz-Straße",
+    "address": "Prof.-Maier-Leibnitz-Straße 11, 78476 Allensbach",
+    "municipality": "Allensbach",
+    "cities": [
+      "allensbach"
+    ],
+    "lat": 47.724047,
+    "lon": 9.071777,
+    "postcode": "78476",
+    "addressApprox": false,
+    "osm": "way/60732853"
+  },
+  {
+    "id": "dm-ueberlinger-strasse-7-bodman-ludwigshafen",
+    "chain": "dm",
+    "name": "dm Überlinger Straße",
+    "address": "Überlinger Straße 7, 78351 Bodman-Ludwigshafen",
+    "municipality": "Bodman-Ludwigshafen",
+    "cities": [
+      "bodman-ludwigshafen"
+    ],
+    "lat": 47.817052,
+    "lon": 9.06009,
+    "postcode": "78351",
+    "addressApprox": false,
+    "osm": "way/320801097"
+  },
+  {
+    "id": "edeka-salzbachaecker-9-bodman-ludwigshafen",
+    "chain": "Edeka",
+    "name": "EDEKA Schreiber",
+    "address": "Salzbachäcker 9, 78351 Bodman-Ludwigshafen",
+    "municipality": "Bodman-Ludwigshafen",
+    "cities": [
+      "bodman-ludwigshafen"
+    ],
+    "lat": 47.816584,
+    "lon": 9.060907,
+    "postcode": "78351",
+    "addressApprox": false,
+    "osm": "way/202799966"
+  },
+  {
+    "id": "penny-breite-12-bodman-ludwigshafen",
+    "chain": "Penny",
+    "name": "PENNY Bodman",
+    "address": "Breite 12, 78351 Bodman-Ludwigshafen",
+    "municipality": "Bodman-Ludwigshafen",
+    "cities": [
+      "bodman-ludwigshafen"
+    ],
+    "lat": 47.803906,
+    "lon": 9.025161,
+    "postcode": "78351",
+    "addressApprox": false,
+    "osm": "way/938119414"
+  },
+  {
+    "id": "aldi-sued-hegaustrasse-4-engen",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Hegaustraße",
+    "address": "Hegaustraße 4, 78234 Engen",
+    "municipality": "Engen",
+    "cities": [
+      "engen"
+    ],
+    "lat": 47.854803,
+    "lon": 8.76917,
+    "postcode": "78234",
+    "addressApprox": false,
+    "osm": "way/51694989"
+  },
+  {
+    "id": "edeka-hegaustrasse-5a-engen",
+    "chain": "Edeka",
+    "name": "EDEKA Holzky",
+    "address": "Hegaustraße 5a, 78234 Engen",
+    "municipality": "Engen",
+    "cities": [
+      "engen"
+    ],
+    "lat": 47.854473,
+    "lon": 8.768003,
+    "postcode": "78234",
+    "addressApprox": false,
+    "osm": "way/51270326"
+  },
+  {
+    "id": "fristo-am-bahndamm-8a-engen",
+    "chain": "Fristo",
+    "name": "Fristo Am Bahndamm",
+    "address": "Am Bahndamm 8a, 78234 Engen",
+    "municipality": "Engen",
+    "cities": [
+      "engen"
+    ],
+    "lat": 47.857986,
+    "lon": 8.774932,
+    "postcode": "78234",
+    "addressApprox": false,
+    "osm": "way/51273960"
+  },
+  {
+    "id": "getraenke-mueller-anselfinger-strasse-32-engen",
+    "chain": "Getränke Müller",
+    "name": "Getränke Müller Anselfinger Straße",
+    "address": "Anselfinger Straße 32, 78234 Engen",
+    "municipality": "Engen",
+    "cities": [
+      "engen"
+    ],
+    "lat": 47.847259,
+    "lon": 8.760609,
+    "postcode": "78234",
+    "addressApprox": false,
+    "osm": "way/151624328"
+  },
+  {
+    "id": "lidl-hegaustrasse-3-engen",
+    "chain": "Lidl",
+    "name": "Lidl Hegaustraße",
+    "address": "Hegaustraße 3, 78234 Engen",
+    "municipality": "Engen",
+    "cities": [
+      "engen"
+    ],
+    "lat": 47.855727,
+    "lon": 8.770267,
+    "postcode": "78234",
+    "addressApprox": false,
+    "osm": "way/51692576"
+  },
+  {
+    "id": "netto-breitestrasse-12-engen",
+    "chain": "Netto",
+    "name": "Netto Breitestraße",
+    "address": "Breitestraße 12, 78234 Engen",
+    "municipality": "Engen",
+    "cities": [
+      "engen"
+    ],
+    "lat": 47.855472,
+    "lon": 8.77448,
+    "postcode": "78234",
+    "addressApprox": false,
+    "osm": "node/4554027793"
+  },
+  {
+    "id": "norma-am-bahndamm-10-engen",
+    "chain": "Norma",
+    "name": "Norma Am Bahndamm",
+    "address": "Am Bahndamm 10, 78234 Engen",
+    "municipality": "Engen",
+    "cities": [
+      "engen"
+    ],
+    "lat": 47.858497,
+    "lon": 8.774987,
+    "postcode": "78234",
+    "addressApprox": false,
+    "osm": "way/51273963"
+  },
+  {
+    "id": "rossmann-breitestrasse-12a-engen",
+    "chain": "Rossmann",
+    "name": "Rossmann Breitestraße",
+    "address": "Breitestraße 12a, 78234 Engen",
+    "municipality": "Engen",
+    "cities": [
+      "engen"
+    ],
+    "lat": 47.855623,
+    "lon": 8.774321,
+    "postcode": "78234",
+    "addressApprox": false,
+    "osm": "node/4554033960"
+  },
+  {
+    "id": "aldi-sued-auf-der-hoehe-2-gailingen-am-hochrhein",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Auf der Höhe",
+    "address": "Auf der Höhe 2, 78262 Gailingen am Hochrhein",
+    "municipality": "Gailingen am Hochrhein",
+    "cities": [
+      "gailingen-am-hochrhein"
+    ],
+    "lat": 47.697095,
+    "lon": 8.744383,
+    "postcode": "78262",
+    "addressApprox": false,
+    "osm": "way/144468213"
+  },
+  {
+    "id": "dm-im-rheinauer-4-gailingen-am-hochrhein",
+    "chain": "dm",
+    "name": "dm Im Rheinauer",
+    "address": "Im Rheinauer 4, 78262 Gailingen am Hochrhein",
+    "municipality": "Gailingen am Hochrhein",
+    "cities": [
+      "gailingen-am-hochrhein"
+    ],
+    "lat": 47.697653,
+    "lon": 8.747081,
+    "postcode": "78262",
+    "addressApprox": false,
+    "osm": "way/144468217"
+  },
+  {
+    "id": "edeka-auf-der-hoehe-4-gailingen-am-hochrhein",
+    "chain": "Edeka",
+    "name": "Edeka Auf der Höhe",
+    "address": "Auf der Höhe 4, 78262 Gailingen am Hochrhein",
+    "municipality": "Gailingen am Hochrhein",
+    "cities": [
+      "gailingen-am-hochrhein"
+    ],
+    "lat": 47.69653,
+    "lon": 8.744872,
+    "postcode": "78262",
+    "addressApprox": false,
+    "osm": "node/9717808291"
+  },
+  {
+    "id": "lidl-im-rheinauer-7-gailingen-am-hochrhein",
+    "chain": "Lidl",
+    "name": "Lidl Im Rheinauer",
+    "address": "Im Rheinauer 7, 78262 Gailingen am Hochrhein",
+    "municipality": "Gailingen am Hochrhein",
+    "cities": [
+      "gailingen-am-hochrhein"
+    ],
+    "lat": 47.696969,
+    "lon": 8.746105,
+    "postcode": "78262",
+    "addressApprox": false,
+    "osm": "way/144468218"
+  },
+  {
+    "id": "aldi-sued-kornblumenweg-39-gottmadingen",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Kornblumenweg",
+    "address": "Kornblumenweg 39, 78244 Gottmadingen",
+    "municipality": "Gottmadingen",
+    "cities": [
+      "gottmadingen"
+    ],
+    "lat": 47.735856,
+    "lon": 8.787029,
+    "postcode": "78244",
+    "addressApprox": false,
+    "osm": "node/3796774884"
+  },
+  {
+    "id": "dm-kornblumenweg-gottmadingen",
+    "chain": "dm",
+    "name": "dm Kornblumenweg",
+    "address": "Kornblumenweg, 78244 Gottmadingen",
+    "municipality": "Gottmadingen",
+    "cities": [
+      "gottmadingen"
+    ],
+    "lat": 47.736069,
+    "lon": 8.787502,
+    "postcode": "78244",
+    "addressApprox": true,
+    "osm": "node/363725347"
+  },
+  {
+    "id": "edeka-erwin-dietrich-strasse-6-gottmadingen",
+    "chain": "Edeka",
+    "name": "EDEKA Baur",
+    "address": "Erwin-Dietrich-Straße 6, 78244 Gottmadingen",
+    "municipality": "Gottmadingen",
+    "cities": [
+      "gottmadingen"
+    ],
+    "lat": 47.736247,
+    "lon": 8.780896,
+    "postcode": "78244",
+    "addressApprox": false,
+    "osm": "node/356042200"
+  },
+  {
+    "id": "fristo-hauptstrasse-gottmadingen",
+    "chain": "Fristo",
+    "name": "Getränkemarkt Fristo",
+    "address": "Hauptstraße, 78244 Gottmadingen",
+    "municipality": "Gottmadingen",
+    "cities": [
+      "gottmadingen"
+    ],
+    "lat": 47.736349,
+    "lon": 8.787858,
+    "postcode": "78244",
+    "addressApprox": true,
+    "osm": "node/2929002775"
+  },
+  {
+    "id": "lidl-hauptstrasse-5-gottmadingen",
+    "chain": "Lidl",
+    "name": "Lidl Hauptstraße",
+    "address": "Hauptstraße 5, 78244 Gottmadingen",
+    "municipality": "Gottmadingen",
+    "cities": [
+      "gottmadingen"
+    ],
+    "lat": 47.736988,
+    "lon": 8.771831,
+    "postcode": "78244",
+    "addressApprox": false,
+    "osm": "node/2901824035"
+  },
+  {
+    "id": "lidl-stockenweg-4-gottmadingen",
+    "chain": "Lidl",
+    "name": "Lidl Stockenweg",
+    "address": "Stockenweg 4, 78244 Gottmadingen",
+    "municipality": "Gottmadingen",
+    "cities": [
+      "gottmadingen"
+    ],
+    "lat": 47.737992,
+    "lon": 8.739336,
+    "postcode": "78244",
+    "addressApprox": true,
+    "osm": "node/367934796"
+  },
+  {
+    "id": "mueller-hauptstrasse-gottmadingen",
+    "chain": "Müller",
+    "name": "Müller Hauptstraße",
+    "address": "Hauptstraße, 78244 Gottmadingen",
+    "municipality": "Gottmadingen",
+    "cities": [
+      "gottmadingen"
+    ],
+    "lat": 47.736531,
+    "lon": 8.772592,
+    "postcode": "78244",
+    "addressApprox": true,
+    "osm": "node/3372557669"
+  },
+  {
+    "id": "rewe-hauptstrasse-7-1-gottmadingen",
+    "chain": "Rewe",
+    "name": "Rewe Hauptstraße",
+    "address": "Hauptstraße 7/1, 78244 Gottmadingen",
+    "municipality": "Gottmadingen",
+    "cities": [
+      "gottmadingen"
+    ],
+    "lat": 47.736909,
+    "lon": 8.772736,
+    "postcode": "78244",
+    "addressApprox": false,
+    "osm": "node/3372567975"
+  },
+  {
+    "id": "dm-bruehlstrasse-7-hilzingen",
+    "chain": "dm",
+    "name": "dm Brühlstraße",
+    "address": "Brühlstraße 7, 78247 Hilzingen",
+    "municipality": "Hilzingen",
+    "cities": [
+      "hilzingen"
+    ],
+    "lat": 47.760129,
+    "lon": 8.7823,
+    "postcode": "78247",
+    "addressApprox": false,
+    "osm": "way/756942427"
+  },
+  {
+    "id": "edeka-sportgelaende-hilzingen",
+    "chain": "Edeka",
+    "name": "Edeka Sportgelände",
+    "address": "Sportgelände, 78247 Hilzingen",
+    "municipality": "Hilzingen",
+    "cities": [
+      "hilzingen"
+    ],
+    "lat": 47.763168,
+    "lon": 8.776029,
+    "postcode": "78247",
+    "addressApprox": true,
+    "osm": "node/367363659"
+  },
+  {
+    "id": "netto-bruehlstrasse-5-hilzingen",
+    "chain": "Netto",
+    "name": "Netto Brühlstraße",
+    "address": "Brühlstraße 5, 78247 Hilzingen",
+    "municipality": "Hilzingen",
+    "cities": [
+      "hilzingen"
+    ],
+    "lat": 47.760081,
+    "lon": 8.782909,
+    "postcode": "78247",
+    "addressApprox": false,
+    "osm": "way/757489406"
+  },
+  {
+    "id": "nahkauf-hauptstrasse-40-hohenfels",
+    "chain": "Nahkauf",
+    "name": "Nahkauf Hauptstraße",
+    "address": "Hauptstraße 40, 78355 Hohenfels",
+    "municipality": "Hohenfels",
+    "cities": [
+      "hohenfels"
+    ],
+    "lat": 47.883916,
+    "lon": 9.109406,
+    "postcode": "78355",
+    "addressApprox": false,
+    "osm": "node/339936068"
+  },
+  {
+    "id": "aldi-sued-bodanplatz-1-konstanz",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Bodanplatz",
+    "address": "Bodanplatz 1, 78462 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.656913,
+    "lon": 9.176495,
+    "postcode": "78462",
+    "addressApprox": false,
+    "osm": "node/1118445811"
+  },
+  {
+    "id": "aldi-sued-oberlohnstrasse-7-konstanz",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Oberlohnstraße",
+    "address": "Oberlohnstraße 7, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.674937,
+    "lon": 9.158432,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "way/711492503"
+  },
+  {
+    "id": "dm-bodanstrasse-1-konstanz",
+    "chain": "dm",
+    "name": "dm Bodanstraße",
+    "address": "Bodanstraße 1, 78462 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.657222,
+    "lon": 9.176549,
+    "postcode": "78462",
+    "addressApprox": false,
+    "osm": "node/5127136404"
+  },
+  {
+    "id": "dm-jahnstrasse-konstanz",
+    "chain": "dm",
+    "name": "dm Jahnstraße",
+    "address": "Jahnstraße, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.672812,
+    "lon": 9.183004,
+    "postcode": "78467",
+    "addressApprox": true,
+    "osm": "node/3517101331"
+  },
+  {
+    "id": "dm-kanzleistrasse-11-konstanz",
+    "chain": "dm",
+    "name": "dm Kanzleistraße",
+    "address": "Kanzleistraße 11, 78462 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.660431,
+    "lon": 9.173979,
+    "postcode": "78462",
+    "addressApprox": false,
+    "osm": "node/2452997481"
+  },
+  {
+    "id": "dm-marktstaette-konstanz",
+    "chain": "dm",
+    "name": "dm Marktstätte",
+    "address": "Marktstätte, 78462 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.660434,
+    "lon": 9.175774,
+    "postcode": "78462",
+    "addressApprox": true,
+    "osm": "node/5342993729"
+  },
+  {
+    "id": "dm-reichenaustrasse-36-konstanz",
+    "chain": "dm",
+    "name": "dm Reichenaustraße",
+    "address": "Reichenaustraße 36, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.672164,
+    "lon": 9.168196,
+    "postcode": "78467",
+    "addressApprox": true,
+    "osm": "node/1804700525"
+  },
+  {
+    "id": "dm-wollmatinger-strasse-72-konstanz",
+    "chain": "dm",
+    "name": "dm Wollmatinger Straße",
+    "address": "Wollmatinger Straße 72, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.679667,
+    "lon": 9.170282,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "way/35312026"
+  },
+  {
+    "id": "edeka-riedstrasse-2-konstanz",
+    "chain": "Edeka",
+    "name": "EDEKA Baur",
+    "address": "Riedstraße 2, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.687729,
+    "lon": 9.148081,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "node/315942988"
+  },
+  {
+    "id": "edeka-martin-schleyer-strasse-39-konstanz",
+    "chain": "Edeka",
+    "name": "EDEKA Baur",
+    "address": "Martin-Schleyer-Straße 39, 78465 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.715296,
+    "lon": 9.171651,
+    "postcode": "78465",
+    "addressApprox": false,
+    "osm": "way/104853198"
+  },
+  {
+    "id": "edeka-bodanstrasse-20-konstanz",
+    "chain": "Edeka",
+    "name": "Edeka Bodanstraße",
+    "address": "Bodanstraße 20, 78462 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.658351,
+    "lon": 9.174199,
+    "postcode": "78462",
+    "addressApprox": true,
+    "osm": "node/2295289693"
+  },
+  {
+    "id": "edeka-reichenaustrasse-36-konstanz",
+    "chain": "Edeka",
+    "name": "Edeka Reichenaustraße",
+    "address": "Reichenaustraße 36, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.672122,
+    "lon": 9.16757,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "node/1666770226"
+  },
+  {
+    "id": "edeka-staader-strasse-2-konstanz",
+    "chain": "Edeka",
+    "name": "Edeka Staader Straße",
+    "address": "Staader Straße 2, 78464 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.68063,
+    "lon": 9.202367,
+    "postcode": "78464",
+    "addressApprox": false,
+    "osm": "node/3516991616"
+  },
+  {
+    "id": "edeka-gottlieber-strasse-34-konstanz",
+    "chain": "Edeka",
+    "name": "Edeka-Baur",
+    "address": "Gottlieber Straße 34, 78462 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.662702,
+    "lon": 9.165439,
+    "postcode": "78462",
+    "addressApprox": false,
+    "osm": "node/5833921498"
+  },
+  {
+    "id": "edeka-allensbacher-strasse-3-konstanz",
+    "chain": "Edeka",
+    "name": "Kaufhaus Okle",
+    "address": "Allensbacher Straße 3, 78465 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.734108,
+    "lon": 9.11578,
+    "postcode": "78465",
+    "addressApprox": false,
+    "osm": "way/107493877"
+  },
+  {
+    "id": "fristo-feldstrasse-6-konstanz",
+    "chain": "Fristo",
+    "name": "Fristo Feldstraße",
+    "address": "Feldstraße 6, 78462 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.665524,
+    "lon": 9.164866,
+    "postcode": "78462",
+    "addressApprox": false,
+    "osm": "way/96862607"
+  },
+  {
+    "id": "kaufland-carl-benz-strasse-22-konstanz",
+    "chain": "Kaufland",
+    "name": "Kaufland Carl-Benz-Straße",
+    "address": "Carl-Benz-Straße 22, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.67727,
+    "lon": 9.148056,
+    "postcode": "78467",
+    "addressApprox": true,
+    "osm": "node/3029568341"
+  },
+  {
+    "id": "kaufland-zaehringerplatz-9-konstanz",
+    "chain": "Kaufland",
+    "name": "Kaufland Zähringerplatz",
+    "address": "Zähringerplatz 9, 78464 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.672981,
+    "lon": 9.183245,
+    "postcode": "78464",
+    "addressApprox": false,
+    "osm": "node/298697029"
+  },
+  {
+    "id": "lidl-kreuzlinger-strasse-konstanz",
+    "chain": "Lidl",
+    "name": "Lidl Kreuzlinger Straße",
+    "address": "Kreuzlinger Straße, 78462 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.657168,
+    "lon": 9.171389,
+    "postcode": "78462",
+    "addressApprox": true,
+    "osm": "node/571500828"
+  },
+  {
+    "id": "lidl-max-stromeyer-strasse-15-konstanz",
+    "chain": "Lidl",
+    "name": "Lidl Max-Stromeyer-Straße",
+    "address": "Max-Stromeyer-Straße 15, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.674345,
+    "lon": 9.165263,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "node/288662496"
+  },
+  {
+    "id": "mueller-marktstaette-13-konstanz",
+    "chain": "Müller",
+    "name": "Müller Marktstätte",
+    "address": "Marktstätte 13, 78462 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.660164,
+    "lon": 9.175549,
+    "postcode": "78462",
+    "addressApprox": false,
+    "osm": "node/807213909"
+  },
+  {
+    "id": "netto-sepp-biehler-strasse-1-konstanz",
+    "chain": "Netto",
+    "name": "Netto Sepp-Biehler-Straße",
+    "address": "Sepp-Biehler-Straße 1, 78464 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.681321,
+    "lon": 9.200681,
+    "postcode": "78464",
+    "addressApprox": false,
+    "osm": "way/72862489"
+  },
+  {
+    "id": "netto-wendelsbergstrasse-4-konstanz",
+    "chain": "Netto",
+    "name": "Netto Wendelsbergstraße",
+    "address": "Wendelsbergstraße 4, 78465 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.73229,
+    "lon": 9.115077,
+    "postcode": "78465",
+    "addressApprox": false,
+    "osm": "way/107493876"
+  },
+  {
+    "id": "norma-radolfzeller-strasse-19-konstanz",
+    "chain": "Norma",
+    "name": "Norma Radolfzeller Straße",
+    "address": "Radolfzeller Straße 19, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.690131,
+    "lon": 9.147,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "way/118376962"
+  },
+  {
+    "id": "norma-robert-bosch-strasse-2-konstanz",
+    "chain": "Norma",
+    "name": "Norma Robert-Bosch-Straße",
+    "address": "Robert-Bosch-Straße 2, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.674138,
+    "lon": 9.149883,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "way/26928112"
+  },
+  {
+    "id": "penny-mainaustrasse-konstanz",
+    "chain": "Penny",
+    "name": "Penny Mainaustraße",
+    "address": "Mainaustraße, 78464 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.682075,
+    "lon": 9.202275,
+    "postcode": "78464",
+    "addressApprox": true,
+    "osm": "node/7948689562"
+  },
+  {
+    "id": "penny-sonnenbuehlstrasse-98-konstanz",
+    "chain": "Penny",
+    "name": "Penny Sonnenbühlstraße",
+    "address": "Sonnenbühlstraße 98, 78464 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.675538,
+    "lon": 9.197383,
+    "postcode": "78464",
+    "addressApprox": false,
+    "osm": "node/4692618768"
+  },
+  {
+    "id": "penny-stifterstrasse-65-konstanz",
+    "chain": "Penny",
+    "name": "Penny Stifterstraße",
+    "address": "Stifterstraße 65, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.687451,
+    "lon": 9.156281,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "way/114717338"
+  },
+  {
+    "id": "penny-wollmatinger-strasse-22-konstanz",
+    "chain": "Penny",
+    "name": "Penny Wollmatinger Straße",
+    "address": "Wollmatinger Straße 22, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.676141,
+    "lon": 9.18017,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "way/118049983"
+  },
+  {
+    "id": "rewe-max-stromeyer-strasse-55-konstanz",
+    "chain": "Rewe",
+    "name": "Rewe Max-Stromeyer-Straße",
+    "address": "Max-Stromeyer-Straße 55, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.679501,
+    "lon": 9.148395,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "way/753418529"
+  },
+  {
+    "id": "rewe-schneckenburgstrasse-3-konstanz",
+    "chain": "Rewe",
+    "name": "Rewe Schneckenburgstraße",
+    "address": "Schneckenburgstraße 3, 78467 Konstanz",
+    "municipality": "Konstanz",
+    "cities": [
+      "konstanz"
+    ],
+    "lat": 47.672659,
+    "lon": 9.169093,
+    "postcode": "78467",
+    "addressApprox": false,
+    "osm": "way/711042981"
+  },
+  {
+    "id": "edeka-radolfzeller-strasse-1-moos",
+    "chain": "Edeka",
+    "name": "Edeka Radolfzeller Straße",
+    "address": "Radolfzeller Straße 1, 78345 Moos",
+    "municipality": "Moos",
+    "cities": [
+      "moos"
+    ],
+    "lat": 47.726933,
+    "lon": 8.934784,
+    "postcode": "78345",
+    "addressApprox": true,
+    "osm": "node/3796783129"
+  },
+  {
+    "id": "aldi-sued-hohenkraeher-bruehl-27-muehlhausen-ehingen",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Hohenkräher Brühl",
+    "address": "Hohenkräher Brühl 27, 78259 Mühlhausen-Ehingen",
+    "municipality": "Mühlhausen-Ehingen",
+    "cities": [
+      "muehlhausen-ehingen"
+    ],
+    "lat": 47.800888,
+    "lon": 8.82501,
+    "postcode": "78259",
+    "addressApprox": false,
+    "osm": "way/1153494006"
+  },
+  {
+    "id": "dm-hohenkraeher-bruehl-16-muehlhausen-ehingen",
+    "chain": "dm",
+    "name": "dm Hohenkräher Brühl",
+    "address": "Hohenkräher Brühl 16, 78259 Mühlhausen-Ehingen",
+    "municipality": "Mühlhausen-Ehingen",
+    "cities": [
+      "muehlhausen-ehingen"
+    ],
+    "lat": 47.80205,
+    "lon": 8.824915,
+    "postcode": "78259",
+    "addressApprox": false,
+    "osm": "way/844707692"
+  },
+  {
+    "id": "netto-hohenkraeher-bruehl-muehlhausen-ehingen",
+    "chain": "Netto",
+    "name": "Netto Hohenkräher Brühl",
+    "address": "Hohenkräher Brühl, 78259 Mühlhausen-Ehingen",
+    "municipality": "Mühlhausen-Ehingen",
+    "cities": [
+      "muehlhausen-ehingen"
+    ],
+    "lat": 47.802303,
+    "lon": 8.823278,
+    "postcode": "78259",
+    "addressApprox": true,
+    "osm": "node/311180024"
+  },
+  {
+    "id": "lidl-hoeristrasse-3-oehningen",
+    "chain": "Lidl",
+    "name": "Lidl Höristraße",
+    "address": "Höristraße 3, 78337 Öhningen",
+    "municipality": "Öhningen",
+    "cities": [
+      "oehningen"
+    ],
+    "lat": 47.66004,
+    "lon": 8.889323,
+    "postcode": "78337",
+    "addressApprox": false,
+    "osm": "way/202491191"
+  },
+  {
+    "id": "netto-am-alten-sportplatz-1-orsingen-nenzingen",
+    "chain": "Netto",
+    "name": "Netto Am Alten Sportplatz",
+    "address": "Am Alten Sportplatz 1, 78359 Orsingen-Nenzingen",
+    "municipality": "Orsingen-Nenzingen",
+    "cities": [
+      "orsingen-nenzingen"
+    ],
+    "lat": 47.84052,
+    "lon": 8.936216,
+    "postcode": "78359",
+    "addressApprox": false,
+    "osm": "way/288798374"
+  },
+  {
+    "id": "aldi-sued-eisenbahnstrasse-1-2-radolfzell-am-bodensee",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Eisenbahnstraße",
+    "address": "Eisenbahnstraße 1/2, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.73978,
+    "lon": 8.958424,
+    "postcode": "78315",
+    "addressApprox": false,
+    "osm": "way/179147752"
+  },
+  {
+    "id": "dm-markthallenstrasse-radolfzell-am-bodensee",
+    "chain": "dm",
+    "name": "dm Markthallenstraße",
+    "address": "Markthallenstraße, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.739554,
+    "lon": 8.97013,
+    "postcode": "78315",
+    "addressApprox": true,
+    "osm": "node/3029549795"
+  },
+  {
+    "id": "edeka-stockacher-strasse-radolfzell-am-bodensee",
+    "chain": "Edeka",
+    "name": "EDEKA Münchow",
+    "address": "Stockacher Straße, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.750777,
+    "lon": 8.975721,
+    "postcode": "78315",
+    "addressApprox": true,
+    "osm": "node/13287463220"
+  },
+  {
+    "id": "fristo-lippenwiesen-radolfzell-am-bodensee",
+    "chain": "Fristo",
+    "name": "Fristo Lippenwiesen",
+    "address": "Lippenwiesen, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.745292,
+    "lon": 8.954861,
+    "postcode": "78315",
+    "addressApprox": true,
+    "osm": "node/2383015782"
+  },
+  {
+    "id": "kaufland-markthallenstrasse-1-radolfzell-am-bodensee",
+    "chain": "Kaufland",
+    "name": "Kaufland Markthallenstraße",
+    "address": "Markthallenstraße 1, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.739446,
+    "lon": 8.970583,
+    "postcode": "78315",
+    "addressApprox": false,
+    "osm": "node/3029536339"
+  },
+  {
+    "id": "lidl-lippenwiese-11-radolfzell-am-bodensee",
+    "chain": "Lidl",
+    "name": "Lidl Lippenwiese",
+    "address": "Lippenwiese 11, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.745386,
+    "lon": 8.954539,
+    "postcode": "78315",
+    "addressApprox": false,
+    "osm": "node/2383014716"
+  },
+  {
+    "id": "mueller-hoellturm-passage-radolfzell-am-bodensee",
+    "chain": "Müller",
+    "name": "Müller Höllturm-Passage",
+    "address": "Höllturm-Passage, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.738134,
+    "lon": 8.971237,
+    "postcode": "78315",
+    "addressApprox": true,
+    "osm": "node/575691894"
+  },
+  {
+    "id": "nahkauf-konstanzer-strasse-26-radolfzell-am-bodensee",
+    "chain": "Nahkauf",
+    "name": "Nahkauf Konstanzer Straße",
+    "address": "Konstanzer Straße 26, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.741645,
+    "lon": 8.978305,
+    "postcode": "78315",
+    "addressApprox": false,
+    "osm": "way/107381695"
+  },
+  {
+    "id": "netto-badener-strasse-32-radolfzell-am-bodensee",
+    "chain": "Netto",
+    "name": "Netto Badener Straße",
+    "address": "Badener Straße 32, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.772552,
+    "lon": 8.983304,
+    "postcode": "78315",
+    "addressApprox": false,
+    "osm": "way/46416422"
+  },
+  {
+    "id": "norma-robert-gerwig-strasse-12-radolfzell-am-bodensee",
+    "chain": "Norma",
+    "name": "Norma Robert-Gerwig-Straße",
+    "address": "Robert-Gerwig-Straße 12, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.745873,
+    "lon": 8.954543,
+    "postcode": "78315",
+    "addressApprox": false,
+    "osm": "node/508082892"
+  },
+  {
+    "id": "rewe-boehringer-strasse-57-radolfzell-am-bodensee",
+    "chain": "Rewe",
+    "name": "Rewe Böhringer Straße",
+    "address": "Böhringer Straße 57, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.74505,
+    "lon": 8.957677,
+    "postcode": "78315",
+    "addressApprox": false,
+    "osm": "node/559803207"
+  },
+  {
+    "id": "rossmann-schuetzenstrasse-4-radolfzell-am-bodensee",
+    "chain": "Rossmann",
+    "name": "Rossmann Schützenstraße",
+    "address": "Schützenstraße 4, 78315 Radolfzell am Bodensee",
+    "municipality": "Radolfzell am Bodensee",
+    "cities": [
+      "radolfzell-am-bodensee"
+    ],
+    "lat": 47.738293,
+    "lon": 8.969183,
+    "postcode": "78315",
+    "addressApprox": false,
+    "osm": "node/1309259008"
+  },
+  {
+    "id": "dm-am-wollmatinger-ried-2-1-reichenau",
+    "chain": "dm",
+    "name": "dm Am Wollmatinger Ried",
+    "address": "Am Wollmatinger Ried 2/1, 78479 Reichenau",
+    "municipality": "Reichenau",
+    "cities": [
+      "reichenau"
+    ],
+    "lat": 47.687838,
+    "lon": 9.123231,
+    "postcode": "78479",
+    "addressApprox": false,
+    "osm": "way/507713405"
+  },
+  {
+    "id": "lidl-am-wollmatinger-ried-2-reichenau",
+    "chain": "Lidl",
+    "name": "Lidl Am Wollmatinger Ried",
+    "address": "Am Wollmatinger Ried 2, 78479 Reichenau",
+    "municipality": "Reichenau",
+    "cities": [
+      "reichenau"
+    ],
+    "lat": 47.688431,
+    "lon": 9.123445,
+    "postcode": "78479",
+    "addressApprox": false,
+    "osm": "way/507713404"
+  },
+  {
+    "id": "nahkauf-am-voegelisberg-9-reichenau",
+    "chain": "Nahkauf",
+    "name": "Joe´s Nahkauf",
+    "address": "Am Vögelisberg 9, 78479 Reichenau",
+    "municipality": "Reichenau",
+    "cities": [
+      "reichenau"
+    ],
+    "lat": 47.694005,
+    "lon": 9.068558,
+    "postcode": "78479",
+    "addressApprox": false,
+    "osm": "way/120174014"
+  },
+  {
+    "id": "aldi-sued-industriestrasse-5-singen",
     "chain": "Aldi Süd",
     "name": "Aldi Süd Industriestraße",
     "address": "Industriestraße 5, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.750535,
     "lon": 8.851709,
+    "postcode": "78224",
     "addressApprox": false,
     "osm": "way/88447925"
   },
   {
-    "id": "aldi-sued-wehrdstrasse-6",
+    "id": "aldi-sued-wehrdstrasse-6-singen",
     "chain": "Aldi Süd",
     "name": "Aldi Süd Wehrdstraße",
     "address": "Wehrdstraße 6, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.755936,
     "lon": 8.838878,
+    "postcode": "78224",
     "addressApprox": false,
     "osm": "node/12682072413"
   },
   {
-    "id": "aldi-sued-werner-von-siemens-strasse-3",
+    "id": "aldi-sued-werner-von-siemens-strasse-3-rielasingen-worblingen",
     "chain": "Aldi Süd",
     "name": "Aldi Süd Werner-von-Siemens-Straße",
     "address": "Werner-von-Siemens-Straße 3, 78239 Rielasingen-Worblingen",
-    "city": "Rielasingen-Worblingen",
+    "municipality": "Rielasingen-Worblingen",
+    "cities": [
+      "singen",
+      "rielasingen-worblingen"
+    ],
     "lat": 47.735982,
     "lon": 8.847565,
+    "postcode": "78239",
     "addressApprox": false,
     "osm": "way/104909868"
   },
   {
-    "id": "edeka-bahnhofstrasse-29",
+    "id": "dm-august-ruf-strasse-26-singen",
+    "chain": "dm",
+    "name": "dm August-Ruf-Straße",
+    "address": "August-Ruf-Straße 26, 78224 Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
+    "lat": 47.762381,
+    "lon": 8.838429,
+    "postcode": "78224",
+    "addressApprox": false,
+    "osm": "node/5274258866"
+  },
+  {
+    "id": "dm-bahnhofstrasse-29-singen",
+    "chain": "dm",
+    "name": "dm Bahnhofstraße",
+    "address": "Bahnhofstraße 29, 78224 Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
+    "lat": 47.760201,
+    "lon": 8.842487,
+    "postcode": "78224",
+    "addressApprox": true,
+    "osm": "node/8865026561"
+  },
+  {
+    "id": "dm-steisslinger-strasse-singen",
+    "chain": "dm",
+    "name": "dm Steißlinger Straße",
+    "address": "Steißlinger Straße, 78224 Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
+    "lat": 47.745086,
+    "lon": 8.850665,
+    "postcode": "78224",
+    "addressApprox": true,
+    "osm": "node/276670221"
+  },
+  {
+    "id": "dm-werner-von-siemens-strasse-3-rielasingen-worblingen",
+    "chain": "dm",
+    "name": "dm Werner-von-Siemens-Straße",
+    "address": "Werner-von-Siemens-Straße 3, 78239 Rielasingen-Worblingen",
+    "municipality": "Rielasingen-Worblingen",
+    "cities": [
+      "singen",
+      "rielasingen-worblingen"
+    ],
+    "lat": 47.736001,
+    "lon": 8.84822,
+    "postcode": "78239",
+    "addressApprox": false,
+    "osm": "way/747951522"
+  },
+  {
+    "id": "edeka-bahnhofstrasse-29-singen",
     "chain": "Edeka",
     "name": "Edeka Bahnhofstraße",
     "address": "Bahnhofstraße 29, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.760266,
     "lon": 8.842482,
+    "postcode": "78224",
     "addressApprox": true,
     "osm": "node/8646986647"
   },
   {
-    "id": "edeka-zeppelinstrasse-4",
+    "id": "edeka-zeppelinstrasse-4-rielasingen-worblingen",
     "chain": "Edeka",
     "name": "Edeka Münchow Rielasingen",
     "address": "Zeppelinstraße 4, 78239 Rielasingen-Worblingen",
-    "city": "Rielasingen-Worblingen",
+    "municipality": "Rielasingen-Worblingen",
+    "cities": [
+      "singen",
+      "rielasingen-worblingen"
+    ],
     "lat": 47.731026,
     "lon": 8.847391,
+    "postcode": "78239",
     "addressApprox": false,
     "osm": "way/363885079"
   },
   {
-    "id": "edeka-unter-den-tannen",
+    "id": "edeka-unter-den-tannen-singen",
     "chain": "Edeka",
     "name": "Edeka Unter den Tannen",
     "address": "Unter den Tannen, 78224 Singen-Überlingen am Ried",
-    "city": "Singen-Überlingen am Ried",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.761607,
     "lon": 8.892669,
+    "postcode": "78224",
     "addressApprox": true,
     "osm": "node/1286190924"
   },
   {
-    "id": "fristo-werner-von-siemens-strasse-2",
+    "id": "fristo-werner-von-siemens-strasse-2-rielasingen-worblingen",
     "chain": "Fristo",
     "name": "Fristo Werner-von-Siemens-Straße",
     "address": "Werner-von-Siemens-Straße 2, 78239 Rielasingen-Worblingen",
-    "city": "Rielasingen-Worblingen",
+    "municipality": "Rielasingen-Worblingen",
+    "cities": [
+      "singen",
+      "rielasingen-worblingen"
+    ],
     "lat": 47.736675,
     "lon": 8.848211,
+    "postcode": "78239",
     "addressApprox": false,
     "osm": "way/211156680"
   },
   {
-    "id": "getraenke-mueller-schlachthausstrasse-14",
+    "id": "getraenke-mueller-schlachthausstrasse-14-singen",
     "chain": "Getränke Müller",
     "name": "Getränke Müller Schlachthausstraße",
     "address": "Schlachthausstraße 14, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.757809,
     "lon": 8.833241,
+    "postcode": "78224",
     "addressApprox": false,
     "osm": "way/122295494"
   },
   {
-    "id": "kaufland-georg-fischer-strasse-15",
+    "id": "kaufland-georg-fischer-strasse-15-singen",
     "chain": "Kaufland",
     "name": "Kaufland Georg-Fischer-Straße",
     "address": "Georg-Fischer-Straße 15, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.753001,
     "lon": 8.845743,
+    "postcode": "78224",
     "addressApprox": false,
     "osm": "way/77844711"
   },
   {
-    "id": "lidl-heinrich-weber-platz",
+    "id": "lidl-heinrich-weber-platz-singen",
     "chain": "Lidl",
     "name": "Lidl Heinrich-Weber-Platz",
     "address": "Heinrich-Weber-Platz, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.763013,
     "lon": 8.838263,
+    "postcode": "78224",
     "addressApprox": true,
     "osm": "node/9889709017"
   },
   {
-    "id": "lidl-rielasinger-strasse",
+    "id": "lidl-rielasinger-strasse-singen",
     "chain": "Lidl",
     "name": "Lidl Rielasinger Straße",
     "address": "Rielasinger Straße, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.755149,
     "lon": 8.839668,
+    "postcode": "78224",
     "addressApprox": true,
     "osm": "node/282555626"
   },
   {
-    "id": "nahkauf-uhlandstrasse-54",
+    "id": "mueller-bahnhofstrasse-29-singen",
+    "chain": "Müller",
+    "name": "Müller Bahnhofstraße",
+    "address": "Bahnhofstraße 29, 78224 Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
+    "lat": 47.759632,
+    "lon": 8.840563,
+    "postcode": "78224",
+    "addressApprox": false,
+    "osm": "node/642979559"
+  },
+  {
+    "id": "nahkauf-uhlandstrasse-54-singen",
     "chain": "Nahkauf",
     "name": "Nahkauf Uhlandstraße",
     "address": "Uhlandstraße 54, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.768803,
     "lon": 8.840281,
+    "postcode": "78224",
     "addressApprox": false,
     "osm": "node/297468356"
   },
   {
-    "id": "netto-hauptstrasse",
+    "id": "netto-hauptstrasse-rielasingen-worblingen",
     "chain": "Netto",
     "name": "Netto Hauptstraße",
     "address": "Hauptstraße, 78239 Rielasingen-Worblingen",
-    "city": "Rielasingen-Worblingen",
+    "municipality": "Rielasingen-Worblingen",
+    "cities": [
+      "singen",
+      "rielasingen-worblingen"
+    ],
     "lat": 47.734639,
     "lon": 8.837111,
+    "postcode": "78239",
     "addressApprox": true,
     "osm": "node/2196209035"
   },
   {
-    "id": "norma-fichtestrasse",
+    "id": "norma-fichtestrasse-singen",
     "chain": "Norma",
     "name": "Norma Fichtestraße",
     "address": "Fichtestraße, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.773228,
     "lon": 8.84578,
+    "postcode": "78224",
     "addressApprox": true,
     "osm": "node/3516802906"
   },
   {
-    "id": "norma-hegaustrasse",
+    "id": "norma-hegaustrasse-singen",
     "chain": "Norma",
     "name": "Norma Hegaustraße",
     "address": "Hegaustraße, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.760151,
     "lon": 8.840886,
+    "postcode": "78224",
     "addressApprox": true,
     "osm": "node/8865026566"
   },
   {
-    "id": "penny-gaenseweide-10",
+    "id": "penny-gaenseweide-10-rielasingen-worblingen",
     "chain": "Penny",
     "name": "Penny Gänseweide",
     "address": "Gänseweide 10, 78239 Rielasingen-Worblingen",
-    "city": "Rielasingen-Worblingen",
+    "municipality": "Rielasingen-Worblingen",
+    "cities": [
+      "singen",
+      "rielasingen-worblingen"
+    ],
     "lat": 47.728431,
     "lon": 8.850241,
+    "postcode": "78239",
     "addressApprox": false,
     "osm": "way/104155440"
   },
   {
-    "id": "rewe-forststrasse-14",
+    "id": "rewe-forststrasse-14-singen",
     "chain": "Rewe",
     "name": "Rewe Forststraße",
     "address": "Forststraße 14, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.754263,
     "lon": 8.861043,
+    "postcode": "78224",
     "addressApprox": false,
     "osm": "way/624103487"
   },
   {
-    "id": "rewe-holzeckstrasse-2",
+    "id": "rewe-holzeckstrasse-2-singen",
     "chain": "Rewe",
     "name": "Rewe Holzeckstraße",
     "address": "Holzeckstraße 2, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.761508,
     "lon": 8.851956,
+    "postcode": "78224",
     "addressApprox": false,
     "osm": "way/119749652"
   },
   {
-    "id": "rewe-steisslinger-strasse",
+    "id": "rewe-steisslinger-strasse-singen",
     "chain": "Rewe",
     "name": "Rewe Steißlinger Straße",
     "address": "Steißlinger Straße, 78224 Singen (Hohentwiel)",
-    "city": "Singen (Hohentwiel)",
+    "municipality": "Singen (Hohentwiel)",
+    "cities": [
+      "singen"
+    ],
     "lat": 47.744689,
     "lon": 8.850201,
+    "postcode": "78224",
     "addressApprox": true,
     "osm": "node/276670220"
+  },
+  {
+    "id": "netto-singener-strasse-42a-steisslingen",
+    "chain": "Netto",
+    "name": "Netto Singener Straße",
+    "address": "Singener Straße 42a, 78256 Steißlingen",
+    "municipality": "Steißlingen",
+    "cities": [
+      "steisslingen"
+    ],
+    "lat": 47.796549,
+    "lon": 8.920614,
+    "postcode": "78256",
+    "addressApprox": false,
+    "osm": "way/1189835321"
+  },
+  {
+    "id": "aldi-sued-messkircher-strasse-2-stockach",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Meßkircher Straße",
+    "address": "Meßkircher Straße 2, 78333 Stockach",
+    "municipality": "Stockach",
+    "cities": [
+      "stockach"
+    ],
+    "lat": 47.853268,
+    "lon": 9.006352,
+    "postcode": "78333",
+    "addressApprox": false,
+    "osm": "way/893749639"
+  },
+  {
+    "id": "aldi-sued-weissmuehlenstrasse-15-stockach",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Weißmühlenstraße",
+    "address": "Weißmühlenstraße 15, 78333 Stockach",
+    "municipality": "Stockach",
+    "cities": [
+      "stockach"
+    ],
+    "lat": 47.84821,
+    "lon": 9.011155,
+    "postcode": "78333",
+    "addressApprox": false,
+    "osm": "node/296933909"
+  },
+  {
+    "id": "dm-aachenstrasse-37-stockach",
+    "chain": "dm",
+    "name": "dm Aachenstraße",
+    "address": "Aachenstraße 37, 78333 Stockach",
+    "municipality": "Stockach",
+    "cities": [
+      "stockach"
+    ],
+    "lat": 47.852134,
+    "lon": 9.007574,
+    "postcode": "78333",
+    "addressApprox": false,
+    "osm": "way/451319549"
+  },
+  {
+    "id": "edeka-bahnhofstrasse-10-stockach",
+    "chain": "Edeka",
+    "name": "Edeka Bahnhofstraße",
+    "address": "Bahnhofstraße 10, 78333 Stockach",
+    "municipality": "Stockach",
+    "cities": [
+      "stockach"
+    ],
+    "lat": 47.850841,
+    "lon": 9.006542,
+    "postcode": "78333",
+    "addressApprox": false,
+    "osm": "way/114130723"
+  },
+  {
+    "id": "edeka-zoznegger-strasse-23-stockach",
+    "chain": "Edeka",
+    "name": "EDEKA Sulger",
+    "address": "Zoznegger Straße 23, 78333 Stockach",
+    "municipality": "Stockach",
+    "cities": [
+      "stockach"
+    ],
+    "lat": 47.856617,
+    "lon": 9.018066,
+    "postcode": "78333",
+    "addressApprox": false,
+    "osm": "way/501278935"
+  },
+  {
+    "id": "mueller-goethestrasse-1-stockach",
+    "chain": "Müller",
+    "name": "Müller Goethestraße",
+    "address": "Goethestraße 1, 78333 Stockach",
+    "municipality": "Stockach",
+    "cities": [
+      "stockach"
+    ],
+    "lat": 47.85112,
+    "lon": 9.010361,
+    "postcode": "78333",
+    "addressApprox": false,
+    "osm": "node/5799876460"
+  },
+  {
+    "id": "norma-talstrasse-11-stockach",
+    "chain": "Norma",
+    "name": "Norma Talstraße",
+    "address": "Talstraße 11, 78333 Stockach",
+    "municipality": "Stockach",
+    "cities": [
+      "stockach"
+    ],
+    "lat": 47.850193,
+    "lon": 9.012584,
+    "postcode": "78333",
+    "addressApprox": false,
+    "osm": "node/5127409815"
+  },
+  {
+    "id": "rewe-dillstrasse-2-stockach",
+    "chain": "Rewe",
+    "name": "Rewe Dillstraße",
+    "address": "Dillstraße 2, 78333 Stockach",
+    "municipality": "Stockach",
+    "cities": [
+      "stockach"
+    ],
+    "lat": 47.849754,
+    "lon": 9.014025,
+    "postcode": "78333",
+    "addressApprox": false,
+    "osm": "node/5680305841"
+  },
+  {
+    "id": "rewe-oberdorfstrasse-stockach",
+    "chain": "Rewe",
+    "name": "Rewe Oberdorfstraße",
+    "address": "Oberdorfstraße, 78333 Stockach",
+    "municipality": "Stockach",
+    "cities": [
+      "stockach"
+    ],
+    "lat": 47.857632,
+    "lon": 9.004505,
+    "postcode": "78333",
+    "addressApprox": true,
+    "osm": "node/3442942515"
+  },
+  {
+    "id": "aldi-sued-adalbert-stifter-strasse-103-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Adalbert-Stifter-Straße",
+    "address": "Adalbert-Stifter-Straße 103, 70437 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.835464,
+    "lon": 9.201928,
+    "postcode": "70437",
+    "addressApprox": false,
+    "osm": "way/162139741"
+  },
+  {
+    "id": "aldi-sued-am-kochenhof-10-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Am Kochenhof",
+    "address": "Am Kochenhof 10, 70192 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.799733,
+    "lon": 9.172754,
+    "postcode": "70192",
+    "addressApprox": false,
+    "osm": "way/225449336"
+  },
+  {
+    "id": "aldi-sued-am-stellwerk-1-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Am Stellwerk",
+    "address": "Am Stellwerk 1, 70197 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.769418,
+    "lon": 9.142974,
+    "postcode": "70197",
+    "addressApprox": false,
+    "osm": "way/26736927"
+  },
+  {
+    "id": "aldi-sued-augsburger-strasse-740-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Augsburger Straße",
+    "address": "Augsburger Straße 740, 70329 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.756742,
+    "lon": 9.272798,
+    "postcode": "70329",
+    "addressApprox": false,
+    "osm": "node/3739463243"
+  },
+  {
+    "id": "aldi-sued-bottroper-strasse-18-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Bottroper Straße",
+    "address": "Bottroper Straße 18, 70376 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.817809,
+    "lon": 9.215396,
+    "postcode": "70376",
+    "addressApprox": false,
+    "osm": "node/496387316"
+  },
+  {
+    "id": "aldi-sued-boeblinger-strasse-253-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Böblinger Straße",
+    "address": "Böblinger Straße 253, 70199 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.754889,
+    "lon": 9.140538,
+    "postcode": "70199",
+    "addressApprox": false,
+    "osm": "way/97301667"
+  },
+  {
+    "id": "aldi-sued-deckerstrasse-75-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Deckerstraße",
+    "address": "Deckerstraße 75, 70372 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.799478,
+    "lon": 9.231407,
+    "postcode": "70372",
+    "addressApprox": false,
+    "osm": "way/43945987"
+  },
+  {
+    "id": "aldi-sued-gablenberger-hauptstrasse-32-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Gablenberger Hauptstraße",
+    "address": "Gablenberger Hauptstraße 32, 70186 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.77907,
+    "lon": 9.207073,
+    "postcode": "70186",
+    "addressApprox": false,
+    "osm": "node/370603689"
+  },
+  {
+    "id": "aldi-sued-galileistrasse-7-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Galileistraße",
+    "address": "Galileistraße 7, 70565 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.720943,
+    "lon": 9.120737,
+    "postcode": "70565",
+    "addressApprox": false,
+    "osm": "way/887275827"
+  },
+  {
+    "id": "aldi-sued-heimsheimer-strasse-34-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Heimsheimer Straße",
+    "address": "Heimsheimer Straße 34, 70499 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.821334,
+    "lon": 9.099145,
+    "postcode": "70499",
+    "addressApprox": false,
+    "osm": "way/24956115"
+  },
+  {
+    "id": "aldi-sued-koenigstrasse-38-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Königstraße",
+    "address": "Königstraße 38, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.777401,
+    "lon": 9.177065,
+    "postcode": "70173",
+    "addressApprox": false,
+    "osm": "node/561175316"
+  },
+  {
+    "id": "aldi-sued-loeffelstrasse-3-7-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Löffelstraße",
+    "address": "Löffelstraße 3 - 7, 70597 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.748278,
+    "lon": 9.167981,
+    "postcode": "70597",
+    "addressApprox": false,
+    "osm": "node/11370681669"
+  },
+  {
+    "id": "aldi-sued-mailaender-platz-7-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Mailänder Platz",
+    "address": "Mailänder Platz 7, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.791051,
+    "lon": 9.185151,
+    "postcode": "70173",
+    "addressApprox": true,
+    "osm": "node/11005439088"
+  },
+  {
+    "id": "aldi-sued-schwabenplatz-1-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Schwabenplatz",
+    "address": "Schwabenplatz 1, 70563 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.730771,
+    "lon": 9.10885,
+    "postcode": "70563",
+    "addressApprox": false,
+    "osm": "node/315008056"
+  },
+  {
+    "id": "aldi-sued-schwieberdinger-strasse-62-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Schwieberdinger Straße",
+    "address": "Schwieberdinger Straße 62, 70435 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.831857,
+    "lon": 9.160082,
+    "postcode": "70435",
+    "addressApprox": false,
+    "osm": "node/411305628"
+  },
+  {
+    "id": "aldi-sued-sophie-tschorn-strasse-1-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Sophie-Tschorn-Straße",
+    "address": "Sophie-Tschorn-Straße 1, 70374 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.816838,
+    "lon": 9.237992,
+    "postcode": "70374",
+    "addressApprox": false,
+    "osm": "way/33956442"
+  },
+  {
+    "id": "aldi-sued-sophienstrasse-21-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Sophienstraße",
+    "address": "Sophienstraße 21, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.771994,
+    "lon": 9.172117,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "node/3094539375"
+  },
+  {
+    "id": "aldi-sued-stuttgarter-strasse-9-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Stuttgarter Straße",
+    "address": "Stuttgarter Straße 9, 70469 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.811175,
+    "lon": 9.168442,
+    "postcode": "70469",
+    "addressApprox": false,
+    "osm": "node/3739463244"
+  },
+  {
+    "id": "aldi-sued-ulmer-strasse-269-stuttgart",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Ulmer Straße",
+    "address": "Ulmer Straße 269, 70327 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.776239,
+    "lon": 9.237514,
+    "postcode": "70327",
+    "addressApprox": false,
+    "osm": "way/27520300"
+  },
+  {
+    "id": "dm-am-kochenhof-14-stuttgart",
+    "chain": "dm",
+    "name": "dm Am Kochenhof",
+    "address": "Am Kochenhof 14, 70192 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.799702,
+    "lon": 9.171935,
+    "postcode": "70192",
+    "addressApprox": false,
+    "osm": "node/2046700533"
+  },
+  {
+    "id": "dm-eberhardstrasse-35-37-stuttgart",
+    "chain": "dm",
+    "name": "dm Eberhardstraße",
+    "address": "Eberhardstraße 35-37, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.773462,
+    "lon": 9.178559,
+    "postcode": "70173",
+    "addressApprox": false,
+    "osm": "node/2131375202"
+  },
+  {
+    "id": "dm-hauptstaetter-strasse-149-stuttgart",
+    "chain": "dm",
+    "name": "dm Hauptstätter Straße",
+    "address": "Hauptstätter Straße 149, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.764365,
+    "lon": 9.169868,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "node/979327413"
+  },
+  {
+    "id": "dm-kirchheimer-strasse-128-stuttgart",
+    "chain": "dm",
+    "name": "dm Kirchheimer Straße",
+    "address": "Kirchheimer Straße 128, 70619 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.740063,
+    "lon": 9.218975,
+    "postcode": "70619",
+    "addressApprox": false,
+    "osm": "node/713598828"
+  },
+  {
+    "id": "dm-kronprinzstrasse-6-stuttgart",
+    "chain": "dm",
+    "name": "dm Kronprinzstraße",
+    "address": "Kronprinzstraße 6, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.777803,
+    "lon": 9.176594,
+    "postcode": "70173",
+    "addressApprox": true,
+    "osm": "node/1393073486"
+  },
+  {
+    "id": "dm-koenigstrasse-27-stuttgart",
+    "chain": "dm",
+    "name": "dm Königstraße",
+    "address": "Königstraße 27, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.775907,
+    "lon": 9.176432,
+    "postcode": "70173",
+    "addressApprox": false,
+    "osm": "node/5286681635"
+  },
+  {
+    "id": "dm-koenigstrasse-2-stuttgart",
+    "chain": "dm",
+    "name": "dm Königstraße",
+    "address": "Königstraße 2, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.782449,
+    "lon": 9.181515,
+    "postcode": "70173",
+    "addressApprox": false,
+    "osm": "node/12309825668"
+  },
+  {
+    "id": "dm-loeffelstrasse-3-stuttgart",
+    "chain": "dm",
+    "name": "dm Löffelstraße",
+    "address": "Löffelstraße 3, 70597 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.748705,
+    "lon": 9.168937,
+    "postcode": "70597",
+    "addressApprox": false,
+    "osm": "node/353088630"
+  },
+  {
+    "id": "dm-mailaender-platz-7-stuttgart",
+    "chain": "dm",
+    "name": "dm Mailänder Platz",
+    "address": "Mailänder Platz 7, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.790657,
+    "lon": 9.182264,
+    "postcode": "70173",
+    "addressApprox": false,
+    "osm": "node/3128052449"
+  },
+  {
+    "id": "dm-marktstrasse-17-stuttgart",
+    "chain": "dm",
+    "name": "dm Marktstraße",
+    "address": "Marktstraße 17, 70372 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.804034,
+    "lon": 9.215386,
+    "postcode": "70372",
+    "addressApprox": true,
+    "osm": "node/762936747"
+  },
+  {
+    "id": "dm-ostendstrasse-stuttgart",
+    "chain": "dm",
+    "name": "dm Ostendstraße",
+    "address": "Ostendstraße, 70188 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.785476,
+    "lon": 9.207582,
+    "postcode": "70188",
+    "addressApprox": true,
+    "osm": "node/404515543"
+  },
+  {
+    "id": "dm-pforzheimer-strasse-360-stuttgart",
+    "chain": "dm",
+    "name": "dm Pforzheimer Straße",
+    "address": "Pforzheimer Straße 360, 70499 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.813943,
+    "lon": 9.114465,
+    "postcode": "70499",
+    "addressApprox": true,
+    "osm": "node/1376486893"
+  },
+  {
+    "id": "dm-rennstrasse-6-stuttgart",
+    "chain": "dm",
+    "name": "dm Rennstraße",
+    "address": "Rennstraße 6, 70499 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.813797,
+    "lon": 9.111062,
+    "postcode": "70499",
+    "addressApprox": false,
+    "osm": "node/5759893802"
+  },
+  {
+    "id": "dm-rotebuehlstrasse-98-100-stuttgart",
+    "chain": "dm",
+    "name": "dm Rotebühlstraße",
+    "address": "Rotebühlstraße 98-100, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.77113,
+    "lon": 9.159301,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "node/1276247611"
+  },
+  {
+    "id": "dm-schwabenplatz-5-stuttgart",
+    "chain": "dm",
+    "name": "dm Schwabenplatz",
+    "address": "Schwabenplatz 5, 70563 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.730728,
+    "lon": 9.108967,
+    "postcode": "70563",
+    "addressApprox": true,
+    "osm": "node/861025065"
+  },
+  {
+    "id": "dm-schwabstrasse-93-stuttgart",
+    "chain": "dm",
+    "name": "dm Schwabstraße",
+    "address": "Schwabstraße 93, 70193 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.775662,
+    "lon": 9.155588,
+    "postcode": "70193",
+    "addressApprox": true,
+    "osm": "node/279457706"
+  },
+  {
+    "id": "dm-sophienstrasse-21-stuttgart",
+    "chain": "dm",
+    "name": "dm Sophienstraße",
+    "address": "Sophienstraße 21, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.77152,
+    "lon": 9.172809,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "node/3094539377"
+  },
+  {
+    "id": "dm-stuttgarter-strasse-77-stuttgart",
+    "chain": "dm",
+    "name": "dm Stuttgarter Straße",
+    "address": "Stuttgarter Straße 77, 70469 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.809132,
+    "lon": 9.159023,
+    "postcode": "70469",
+    "addressApprox": true,
+    "osm": "node/2864772036"
+  },
+  {
+    "id": "dm-unterlaender-strasse-70-stuttgart",
+    "chain": "dm",
+    "name": "dm Unterländer Straße",
+    "address": "Unterländer Straße 70, 70435 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.83248,
+    "lon": 9.168287,
+    "postcode": "70435",
+    "addressApprox": false,
+    "osm": "way/732889894"
+  },
+  {
+    "id": "dm-rosensteinstrasse-35-stuttgart",
+    "chain": "dm",
+    "name": "dm-drogerie markt",
+    "address": "Rosensteinstraße 35, 70191 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.795351,
+    "lon": 9.193361,
+    "postcode": "70191",
+    "addressApprox": false,
+    "osm": "node/12922760775"
+  },
+  {
+    "id": "edeka-burgenlandstrasse-stuttgart",
+    "chain": "Edeka",
+    "name": "E-Center",
+    "address": "Burgenlandstraße, 70469 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.811128,
+    "lon": 9.163653,
+    "postcode": "70469",
+    "addressApprox": true,
+    "osm": "node/59656293"
+  },
+  {
+    "id": "edeka-hauptstrasse-5-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Baisch",
+    "address": "Hauptstraße 5, 70563 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.729622,
+    "lon": 9.111959,
+    "postcode": "70563",
+    "addressApprox": false,
+    "osm": "node/128537091"
+  },
+  {
+    "id": "edeka-schemppstrasse-stuttgart",
+    "chain": "Edeka",
+    "name": "EDEKA Bauer",
+    "address": "Schemppstraße, 70186 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.739639,
+    "lon": 9.219455,
+    "postcode": "70186",
+    "addressApprox": true,
+    "osm": "node/703068254"
+  },
+  {
+    "id": "edeka-kirchheimer-strasse-67-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Bauer",
+    "address": "Kirchheimer Straße 67, 70619 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.744401,
+    "lon": 9.213603,
+    "postcode": "70619",
+    "addressApprox": false,
+    "osm": "node/2130671395"
+  },
+  {
+    "id": "edeka-epplestrasse-4-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka City",
+    "address": "Epplestraße 4, 70597 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.74872,
+    "lon": 9.169567,
+    "postcode": "70597",
+    "addressApprox": false,
+    "osm": "node/353091854"
+  },
+  {
+    "id": "edeka-europaplatz-20-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Fleck",
+    "address": "Europaplatz 20, 70565 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.713848,
+    "lon": 9.160216,
+    "postcode": "70565",
+    "addressApprox": false,
+    "osm": "node/3394215015"
+  },
+  {
+    "id": "edeka-gaisburgstrasse-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Gaisburgstraße",
+    "address": "Gaisburgstraße, 70182 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.774555,
+    "lon": 9.18617,
+    "postcode": "70182",
+    "addressApprox": true,
+    "osm": "node/133408189"
+  },
+  {
+    "id": "edeka-grazer-strasse-34-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Grazer Straße",
+    "address": "Grazer Straße 34, 70469 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.810099,
+    "lon": 9.160138,
+    "postcode": "70469",
+    "addressApprox": false,
+    "osm": "way/92931911"
+  },
+  {
+    "id": "edeka-herdweg-24-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Herdweg",
+    "address": "Herdweg 24, 70174 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.785079,
+    "lon": 9.167804,
+    "postcode": "70174",
+    "addressApprox": true,
+    "osm": "node/269609824"
+  },
+  {
+    "id": "edeka-hackstrasse-2-1-stuttgart",
+    "chain": "Edeka",
+    "name": "EDEKA Krombholz",
+    "address": "Hackstraße 2/1, 70190 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.789234,
+    "lon": 9.19675,
+    "postcode": "70190",
+    "addressApprox": false,
+    "osm": "node/13333741219"
+  },
+  {
+    "id": "edeka-schlossstrasse-104-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Schloßstraße",
+    "address": "Schloßstraße 104, 70176 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.775917,
+    "lon": 9.160282,
+    "postcode": "70176",
+    "addressApprox": false,
+    "osm": "node/6849506493"
+  },
+  {
+    "id": "edeka-flamingoweg-stuttgart",
+    "chain": "Edeka",
+    "name": "EDEKA Schuster",
+    "address": "Flamingoweg, 70378 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.830466,
+    "lon": 9.232112,
+    "postcode": "70378",
+    "addressApprox": true,
+    "osm": "node/337859353"
+  },
+  {
+    "id": "edeka-loewentorstrasse-257-stuttgart",
+    "chain": "Edeka",
+    "name": "EDEKA Schuster",
+    "address": "Löwentorstraße 257, 70376 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.821683,
+    "lon": 9.210198,
+    "postcode": "70376",
+    "addressApprox": false,
+    "osm": "way/124040763"
+  },
+  {
+    "id": "edeka-ludwigsburger-strasse-109-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Simonis",
+    "address": "Ludwigsburger Straße 109, 70435 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.830917,
+    "lon": 9.174211,
+    "postcode": "70435",
+    "addressApprox": false,
+    "osm": "node/11230099028"
+  },
+  {
+    "id": "edeka-sophienstrasse-21-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Sophienstraße",
+    "address": "Sophienstraße 21, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.772035,
+    "lon": 9.172472,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "node/3094539374"
+  },
+  {
+    "id": "edeka-stammheimer-strasse-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Stammheimer Straße",
+    "address": "Stammheimer Straße, 70435 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.835133,
+    "lon": 9.165394,
+    "postcode": "70435",
+    "addressApprox": false,
+    "osm": "node/603315955"
+  },
+  {
+    "id": "edeka-griegstrasse-25-stuttgart",
+    "chain": "Edeka",
+    "name": "EDEKA Stgt. -Botnang",
+    "address": "Griegstraße 25, 70195 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.778635,
+    "lon": 9.127815,
+    "postcode": "70195",
+    "addressApprox": false,
+    "osm": "node/266362092"
+  },
+  {
+    "id": "edeka-wallensteinstrasse-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Wallensteinstraße",
+    "address": "Wallensteinstraße, 70437 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.841856,
+    "lon": 9.208505,
+    "postcode": "70437",
+    "addressApprox": true,
+    "osm": "node/1608799683"
+  },
+  {
+    "id": "edeka-rosensteinstrasse-37b-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Weckert",
+    "address": "Rosensteinstraße 37B, 70191 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.795766,
+    "lon": 9.193587,
+    "postcode": "70191",
+    "addressApprox": false,
+    "osm": "node/10659701759"
+  },
+  {
+    "id": "edeka-am-kochenhof-10-stuttgart",
+    "chain": "Edeka",
+    "name": "EDEKA Weckert Killesberghöhe",
+    "address": "Am Kochenhof 10, 70192 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.799711,
+    "lon": 9.172221,
+    "postcode": "70192",
+    "addressApprox": false,
+    "osm": "way/225449338"
+  },
+  {
+    "id": "edeka-wollgrasweg-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka Wollgrasweg",
+    "address": "Wollgrasweg, 70599 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.709905,
+    "lon": 9.201408,
+    "postcode": "70599",
+    "addressApprox": true,
+    "osm": "node/248207150"
+  },
+  {
+    "id": "edeka-im-asemwald-46-stuttgart",
+    "chain": "Edeka",
+    "name": "Edeka xpress",
+    "address": "Im Asemwald 46, 70599 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.725478,
+    "lon": 9.192896,
+    "postcode": "70599",
+    "addressApprox": false,
+    "osm": "node/478214358"
+  },
+  {
+    "id": "kaufland-aldinger-strasse-70-stuttgart",
+    "chain": "Kaufland",
+    "name": "Kaufland Aldinger Straße",
+    "address": "Aldinger Straße 70, 70378 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.840008,
+    "lon": 9.228473,
+    "postcode": "70378",
+    "addressApprox": false,
+    "osm": "way/373710028"
+  },
+  {
+    "id": "kaufland-augsburger-strasse-460-stuttgart",
+    "chain": "Kaufland",
+    "name": "Kaufland Augsburger Straße",
+    "address": "Augsburger Straße 460, 70327 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.775562,
+    "lon": 9.257924,
+    "postcode": "70327",
+    "addressApprox": false,
+    "osm": "way/111326834"
+  },
+  {
+    "id": "kaufland-rembrandtstrasse-47-stuttgart",
+    "chain": "Kaufland",
+    "name": "Kaufland Rembrandtstraße",
+    "address": "Rembrandtstraße 47, 70567 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.730935,
+    "lon": 9.150057,
+    "postcode": "70567",
+    "addressApprox": false,
+    "osm": "node/3607642242"
+  },
+  {
+    "id": "kaufland-schwabenplatz-1-stuttgart",
+    "chain": "Kaufland",
+    "name": "Kaufland Schwabenplatz",
+    "address": "Schwabenplatz 1, 70563 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.730321,
+    "lon": 9.109163,
+    "postcode": "70563",
+    "addressApprox": false,
+    "osm": "node/315008055"
+  },
+  {
+    "id": "kaufland-wildunger-strasse-2-4-stuttgart",
+    "chain": "Kaufland",
+    "name": "Kaufland Wildunger Straße",
+    "address": "Wildunger Straße 2-4, 70372 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.801626,
+    "lon": 9.221884,
+    "postcode": "70372",
+    "addressApprox": false,
+    "osm": "node/1572715838"
+  },
+  {
+    "id": "lidl-adestrasse-30-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Adestraße",
+    "address": "Adestraße 30, 70435 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.834945,
+    "lon": 9.158489,
+    "postcode": "70435",
+    "addressApprox": false,
+    "osm": "node/5163878144"
+  },
+  {
+    "id": "lidl-blumenstrasse-18-20-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Blumenstraße",
+    "address": "Blumenstraße 18-20, 70182 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.773416,
+    "lon": 9.185823,
+    "postcode": "70182",
+    "addressApprox": false,
+    "osm": "node/5163878175"
+  },
+  {
+    "id": "lidl-bottroper-strasse-8a-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Bottroper Straße",
+    "address": "Bottroper Straße 8a, 70376 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.818177,
+    "lon": 9.213746,
+    "postcode": "70376",
+    "addressApprox": false,
+    "osm": "node/5163878142"
+  },
+  {
+    "id": "lidl-gerlinger-strasse-96-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Gerlinger Straße",
+    "address": "Gerlinger Straße 96, 70499 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.814325,
+    "lon": 9.086336,
+    "postcode": "70499",
+    "addressApprox": false,
+    "osm": "node/5163878172"
+  },
+  {
+    "id": "lidl-griegstrasse-2-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Griegstraße",
+    "address": "Griegstraße 2, 70195 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.778784,
+    "lon": 9.125611,
+    "postcode": "70195",
+    "addressApprox": false,
+    "osm": "node/266175760"
+  },
+  {
+    "id": "lidl-hauptstaetter-strasse-111-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Hauptstätter Straße",
+    "address": "Hauptstätter Straße 111, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.767082,
+    "lon": 9.172417,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "node/4100644360"
+  },
+  {
+    "id": "lidl-heigelinstrasse-4-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Heigelinstraße",
+    "address": "Heigelinstraße 4, 70567 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.71346,
+    "lon": 9.164836,
+    "postcode": "70567",
+    "addressApprox": false,
+    "osm": "node/5163878183"
+  },
+  {
+    "id": "lidl-heiligenwiesen-35-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Heiligenwiesen",
+    "address": "Heiligenwiesen 35, 70327 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.762574,
+    "lon": 9.253384,
+    "postcode": "70327",
+    "addressApprox": false,
+    "osm": "node/5163878159"
+  },
+  {
+    "id": "lidl-hofener-strasse-126-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Hofener Straße",
+    "address": "Hofener Straße 126, 70374 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.814506,
+    "lon": 9.226944,
+    "postcode": "70374",
+    "addressApprox": false,
+    "osm": "node/5163878141"
+  },
+  {
+    "id": "lidl-marienstrasse-12-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Marienstraße",
+    "address": "Marienstraße 12, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.773496,
+    "lon": 9.17324,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "node/311737339"
+  },
+  {
+    "id": "lidl-osterbronnstrasse-50-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Osterbronnstraße",
+    "address": "Osterbronnstraße 50, 70565 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.718555,
+    "lon": 9.112562,
+    "postcode": "70565",
+    "addressApprox": true,
+    "osm": "node/8380864197"
+  },
+  {
+    "id": "lidl-pforzheimer-strasse-338-342-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Pforzheimer Straße",
+    "address": "Pforzheimer Straße 338-342, 70499 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.814127,
+    "lon": 9.116653,
+    "postcode": "70499",
+    "addressApprox": false,
+    "osm": "node/1376024668"
+  },
+  {
+    "id": "lidl-rosensteinstrasse-55-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Rosensteinstraße",
+    "address": "Rosensteinstraße 55, 70191 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.799038,
+    "lon": 9.194116,
+    "postcode": "70191",
+    "addressApprox": false,
+    "osm": "node/5163878189"
+  },
+  {
+    "id": "lidl-schwabstrasse-91-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Schwabstraße",
+    "address": "Schwabstraße 91, 70193 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.775486,
+    "lon": 9.155695,
+    "postcode": "70193",
+    "addressApprox": false,
+    "osm": "node/268510495"
+  },
+  {
+    "id": "lidl-stuttgarter-strasse-32-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Stuttgarter Straße",
+    "address": "Stuttgarter Straße 32, 70469 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.811307,
+    "lon": 9.165502,
+    "postcode": "70469",
+    "addressApprox": false,
+    "osm": "node/59656294"
+  },
+  {
+    "id": "lidl-unter-dem-birkenkopf-19-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Unter dem Birkenkopf",
+    "address": "Unter dem Birkenkopf 19, 70197 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.768418,
+    "lon": 9.140883,
+    "postcode": "70197",
+    "addressApprox": false,
+    "osm": "node/5163878177"
+  },
+  {
+    "id": "lidl-vaihinger-strasse-115-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Vaihinger Straße",
+    "address": "Vaihinger Straße 115, 70567 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.727742,
+    "lon": 9.138525,
+    "postcode": "70567",
+    "addressApprox": false,
+    "osm": "node/5163878180"
+  },
+  {
+    "id": "lidl-wildunger-strasse-4-stuttgart",
+    "chain": "Lidl",
+    "name": "Lidl Wildunger Straße",
+    "address": "Wildunger Straße 4, 70372 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.801292,
+    "lon": 9.222041,
+    "postcode": "70372",
+    "addressApprox": false,
+    "osm": "node/1572657958"
+  },
+  {
+    "id": "mueller-marktplatz-4-stuttgart",
+    "chain": "Müller",
+    "name": "Müller Beauty Store",
+    "address": "Marktplatz 4, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.775427,
+    "lon": 9.177689,
+    "postcode": "70173",
+    "addressApprox": false,
+    "osm": "node/2759446748"
+  },
+  {
+    "id": "mueller-europaplatz-20-stuttgart",
+    "chain": "Müller",
+    "name": "Müller Europaplatz",
+    "address": "Europaplatz 20, 70565 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.713699,
+    "lon": 9.160236,
+    "postcode": "70565",
+    "addressApprox": true,
+    "osm": "node/3394215028"
+  },
+  {
+    "id": "mueller-hauptstrasse-5-stuttgart",
+    "chain": "Müller",
+    "name": "Müller Hauptstraße",
+    "address": "Hauptstraße 5, 70563 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.729439,
+    "lon": 9.112288,
+    "postcode": "70563",
+    "addressApprox": false,
+    "osm": "node/283619012"
+  },
+  {
+    "id": "mueller-koenigstrasse-5-stuttgart",
+    "chain": "Müller",
+    "name": "Müller Königstraße",
+    "address": "Königstraße 5, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.780202,
+    "lon": 9.180166,
+    "postcode": "70173",
+    "addressApprox": false,
+    "osm": "node/1392605320"
+  },
+  {
+    "id": "mueller-otto-hirsch-bruecken-17-stuttgart",
+    "chain": "Müller",
+    "name": "Müller Otto-Hirsch-Brücken",
+    "address": "Otto-Hirsch-Brücken 17, 70329 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.760772,
+    "lon": 9.25541,
+    "postcode": "70329",
+    "addressApprox": false,
+    "osm": "node/987860753"
+  },
+  {
+    "id": "mueller-wildunger-strasse-2-4-stuttgart",
+    "chain": "Müller",
+    "name": "Müller Wildunger Straße",
+    "address": "Wildunger Straße 2-4, 70372 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.80152,
+    "lon": 9.221288,
+    "postcode": "70372",
+    "addressApprox": true,
+    "osm": "node/1572657986"
+  },
+  {
+    "id": "netto-aldinger-strasse-54-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Aldinger Straße",
+    "address": "Aldinger Straße 54, 70378 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.839742,
+    "lon": 9.22735,
+    "postcode": "70378",
+    "addressApprox": false,
+    "osm": "node/187022729"
+  },
+  {
+    "id": "netto-biklenstrasse-10-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Biklenstraße",
+    "address": "Biklenstraße 10, 70327 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.787591,
+    "lon": 9.248138,
+    "postcode": "70327",
+    "addressApprox": false,
+    "osm": "node/12894245805"
+  },
+  {
+    "id": "netto-boeblinger-strasse-222-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Böblinger Straße",
+    "address": "Böblinger Straße 222, 70199 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.757202,
+    "lon": 9.145708,
+    "postcode": "70199",
+    "addressApprox": true,
+    "osm": "node/268986994"
+  },
+  {
+    "id": "netto-dr-steinheil-weg-4-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Dr.-Steinheil-Weg",
+    "address": "Dr.-Steinheil-Weg 4, 70599 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.697782,
+    "lon": 9.216941,
+    "postcode": "70599",
+    "addressApprox": false,
+    "osm": "way/378374548"
+  },
+  {
+    "id": "netto-elwertstrasse-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Elwertstraße",
+    "address": "Elwertstraße, 70372 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.799981,
+    "lon": 9.219706,
+    "postcode": "70372",
+    "addressApprox": true,
+    "osm": "way/421557796"
+  },
+  {
+    "id": "netto-filderhauptstrasse-49-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Filderhauptstraße",
+    "address": "Filderhauptstraße 49, 70599 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.701172,
+    "lon": 9.209982,
+    "postcode": "70599",
+    "addressApprox": true,
+    "osm": "node/1687692452"
+  },
+  {
+    "id": "netto-freihofstrasse-6-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Freihofstraße",
+    "address": "Freihofstraße 6, 70439 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.848727,
+    "lon": 9.156081,
+    "postcode": "70439",
+    "addressApprox": true,
+    "osm": "node/257897100"
+  },
+  {
+    "id": "netto-heusteigstrasse-105-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Heusteigstraße",
+    "address": "Heusteigstraße 105, 70180 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.764515,
+    "lon": 9.17125,
+    "postcode": "70180",
+    "addressApprox": false,
+    "osm": "node/264885080"
+  },
+  {
+    "id": "netto-hohewartstrasse-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Hohewartstraße",
+    "address": "Hohewartstraße, 70469 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.808533,
+    "lon": 9.156347,
+    "postcode": "70469",
+    "addressApprox": true,
+    "osm": "node/670987683"
+  },
+  {
+    "id": "netto-kornbergstrasse-15-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Kornbergstraße",
+    "address": "Kornbergstraße 15, 70176 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.783554,
+    "lon": 9.161836,
+    "postcode": "70176",
+    "addressApprox": true,
+    "osm": "node/6305261830"
+  },
+  {
+    "id": "netto-leharstrasse-5-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Leharstraße",
+    "address": "Leharstraße 5, 70195 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.781485,
+    "lon": 9.131893,
+    "postcode": "70195",
+    "addressApprox": false,
+    "osm": "node/266362670"
+  },
+  {
+    "id": "netto-meluner-strasse-2-6-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Meluner Straße",
+    "address": "Meluner Straße 2-6, 70569 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.738603,
+    "lon": 9.092404,
+    "postcode": "70569",
+    "addressApprox": false,
+    "osm": "node/2297644870"
+  },
+  {
+    "id": "netto-memmingerstrasse-20-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Memmingerstraße",
+    "address": "Memmingerstraße 20, 70374 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.810461,
+    "lon": 9.229589,
+    "postcode": "70374",
+    "addressApprox": false,
+    "osm": "way/440724240"
+  },
+  {
+    "id": "netto-nagoldstrasse-55-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Nagoldstraße",
+    "address": "Nagoldstraße 55, 70376 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.820175,
+    "lon": 9.218281,
+    "postcode": "70376",
+    "addressApprox": false,
+    "osm": "node/3458661147"
+  },
+  {
+    "id": "netto-schemppstrasse-83-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Schemppstraße",
+    "address": "Schemppstraße 83, 70619 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.739664,
+    "lon": 9.21965,
+    "postcode": "70619",
+    "addressApprox": false,
+    "osm": "node/703467092"
+  },
+  {
+    "id": "netto-thomas-mann-strasse-9-stuttgart",
+    "chain": "Netto",
+    "name": "Netto Thomas-Mann-Straße",
+    "address": "Thomas-Mann-Straße 9, 70469 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.807027,
+    "lon": 9.146719,
+    "postcode": "70469",
+    "addressApprox": true,
+    "osm": "node/282326660"
+  },
+  {
+    "id": "norma-boeblinger-strasse-8-stuttgart",
+    "chain": "Norma",
+    "name": "Norma Böblinger Straße",
+    "address": "Böblinger Straße 8, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.764373,
+    "lon": 9.166822,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "way/42626343"
+  },
+  {
+    "id": "norma-nordbahnhofstrasse-61-stuttgart",
+    "chain": "Norma",
+    "name": "Norma Nordbahnhofstraße",
+    "address": "Nordbahnhofstraße 61, 70191 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.795867,
+    "lon": 9.189726,
+    "postcode": "70191",
+    "addressApprox": false,
+    "osm": "node/1826342764"
+  },
+  {
+    "id": "norma-ostendstrasse-110-stuttgart",
+    "chain": "Norma",
+    "name": "Norma Ostendstraße",
+    "address": "Ostendstraße 110, 70188 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.781649,
+    "lon": 9.207665,
+    "postcode": "70188",
+    "addressApprox": false,
+    "osm": "node/404515514"
+  },
+  {
+    "id": "norma-streibgasse-8-stuttgart",
+    "chain": "Norma",
+    "name": "Norma Streibgasse",
+    "address": "Streibgasse 8, 70567 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.726696,
+    "lon": 9.147835,
+    "postcode": "70567",
+    "addressApprox": true,
+    "osm": "node/267343329"
+  },
+  {
+    "id": "penny-birkheckenstrasse-4-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Birkheckenstraße",
+    "address": "Birkheckenstraße 4, 70599 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.722528,
+    "lon": 9.208899,
+    "postcode": "70599",
+    "addressApprox": true,
+    "osm": "node/270343394"
+  },
+  {
+    "id": "penny-bottroper-strasse-16-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Bottroper Straße",
+    "address": "Bottroper Straße 16, 70376 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.817935,
+    "lon": 9.214864,
+    "postcode": "70376",
+    "addressApprox": true,
+    "osm": "node/3660964795"
+  },
+  {
+    "id": "penny-breitscheidstrasse-12-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Breitscheidstraße",
+    "address": "Breitscheidstraße 12, 70174 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.779593,
+    "lon": 9.167273,
+    "postcode": "70174",
+    "addressApprox": false,
+    "osm": "node/13427405501"
+  },
+  {
+    "id": "penny-flamingoweg-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Flamingoweg",
+    "address": "Flamingoweg, 70378 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.830137,
+    "lon": 9.231361,
+    "postcode": "70378",
+    "addressApprox": true,
+    "osm": "node/337859337"
+  },
+  {
+    "id": "penny-haldenrainstrasse-77-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Haldenrainstraße",
+    "address": "Haldenrainstraße 77, 70437 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.831133,
+    "lon": 9.186727,
+    "postcode": "70437",
+    "addressApprox": false,
+    "osm": "node/269400811"
+  },
+  {
+    "id": "penny-haussmannstrasse-103-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Haußmannstraße",
+    "address": "Haußmannstraße 103, 70188 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.785543,
+    "lon": 9.200104,
+    "postcode": "70188",
+    "addressApprox": false,
+    "osm": "way/99917997"
+  },
+  {
+    "id": "penny-bildaeckerstrasse-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Heumaden",
+    "address": "Bildäckerstraße, 70186 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.746103,
+    "lon": 9.232279,
+    "postcode": "70186",
+    "addressApprox": true,
+    "osm": "node/279875021"
+  },
+  {
+    "id": "penny-kleinknechtstrasse-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Kleinknechtstraße",
+    "address": "Kleinknechtstraße, 70567 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.726662,
+    "lon": 9.151094,
+    "postcode": "70567",
+    "addressApprox": true,
+    "osm": "node/5660213466"
+  },
+  {
+    "id": "penny-kroetenweg-3-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Krötenweg",
+    "address": "Krötenweg 3, 70499 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.803948,
+    "lon": 9.090631,
+    "postcode": "70499",
+    "addressApprox": false,
+    "osm": "node/1354263902"
+  },
+  {
+    "id": "penny-loewen-markt-5-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Löwen-Markt",
+    "address": "Löwen-Markt 5, 70499 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.814475,
+    "lon": 9.113511,
+    "postcode": "70499",
+    "addressApprox": false,
+    "osm": "node/1373116586"
+  },
+  {
+    "id": "penny-martha-schmidtmann-strasse-9-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Martha-Schmidtmann-Straße",
+    "address": "Martha-Schmidtmann-Straße 9, 70374 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.808271,
+    "lon": 9.233264,
+    "postcode": "70374",
+    "addressApprox": false,
+    "osm": "way/420304188"
+  },
+  {
+    "id": "penny-neckarstrasse-207-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Neckarstraße",
+    "address": "Neckarstraße 207, 70190 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.79318,
+    "lon": 9.201142,
+    "postcode": "70190",
+    "addressApprox": true,
+    "osm": "node/1505621878"
+  },
+  {
+    "id": "penny-platz-am-alten-haus-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Platz am Alten Haus",
+    "address": "Platz am Alten Haus, 70329 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.758732,
+    "lon": 9.254456,
+    "postcode": "70329",
+    "addressApprox": true,
+    "osm": "node/598695337"
+  },
+  {
+    "id": "penny-schwabstrasse-53-61-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Schwabstraße",
+    "address": "Schwabstraße 53-61, 70197 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.771749,
+    "lon": 9.15702,
+    "postcode": "70197",
+    "addressApprox": false,
+    "osm": "node/268510307"
+  },
+  {
+    "id": "penny-ulmer-strasse-205-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Ulmer Straße",
+    "address": "Ulmer Straße 205, 70327 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.779601,
+    "lon": 9.233254,
+    "postcode": "70327",
+    "addressApprox": false,
+    "osm": "way/168821362"
+  },
+  {
+    "id": "penny-vera-vollmer-strasse-8-stuttgart",
+    "chain": "Penny",
+    "name": "Penny Vera-Vollmer-Straße",
+    "address": "Vera-Vollmer-Straße 8, 70469 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.816267,
+    "lon": 9.166902,
+    "postcode": "70469",
+    "addressApprox": false,
+    "osm": "way/270309965"
+  },
+  {
+    "id": "rewe-breitscheidstrasse-10-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Breitscheidstraße",
+    "address": "Breitscheidstraße 10, 70174 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.779618,
+    "lon": 9.167345,
+    "postcode": "70174",
+    "addressApprox": false,
+    "osm": "node/264885087"
+  },
+  {
+    "id": "rewe-burgunderstrasse-32-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Burgunderstraße",
+    "address": "Burgunderstraße 32, 70435 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.8301,
+    "lon": 9.168232,
+    "postcode": "70435",
+    "addressApprox": false,
+    "osm": "node/447468129"
+  },
+  {
+    "id": "rewe-vaihinger-strasse-49-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe City",
+    "address": "Vaihinger Straße 49, 70567 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.727978,
+    "lon": 9.146586,
+    "postcode": "70567",
+    "addressApprox": true,
+    "osm": "node/243755000"
+  },
+  {
+    "id": "rewe-freihofstrasse-22-24-stuttgart",
+    "chain": "Rewe",
+    "name": "REWE City",
+    "address": "Freihofstraße 22-24, 70439 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.847505,
+    "lon": 9.156863,
+    "postcode": "70439",
+    "addressApprox": false,
+    "osm": "node/257897099"
+  },
+  {
+    "id": "rewe-epplestrasse-40-44-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe City",
+    "address": "Epplestraße 40-44, 70597 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.745972,
+    "lon": 9.169201,
+    "postcode": "70597",
+    "addressApprox": false,
+    "osm": "node/595682339"
+  },
+  {
+    "id": "rewe-ulmer-strasse-296-stuttgart",
+    "chain": "Rewe",
+    "name": "REWE City",
+    "address": "Ulmer Straße 296, 70327 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.774654,
+    "lon": 9.238644,
+    "postcode": "70327",
+    "addressApprox": false,
+    "osm": "node/2672740856"
+  },
+  {
+    "id": "rewe-ostendstrasse-90-stuttgart",
+    "chain": "Rewe",
+    "name": "REWE City",
+    "address": "Ostendstraße 90, 70188 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.783089,
+    "lon": 9.207632,
+    "postcode": "70188",
+    "addressApprox": false,
+    "osm": "node/2972524966"
+  },
+  {
+    "id": "rewe-badstrasse-11-stuttgart",
+    "chain": "Rewe",
+    "name": "REWE City",
+    "address": "Badstraße 11, 70372 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.803104,
+    "lon": 9.215263,
+    "postcode": "70372",
+    "addressApprox": false,
+    "osm": "way/210464126"
+  },
+  {
+    "id": "rewe-naststrasse-17-stuttgart",
+    "chain": "Rewe",
+    "name": "REWE City",
+    "address": "Naststraße 17, 70376 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.813724,
+    "lon": 9.209762,
+    "postcode": "70376",
+    "addressApprox": false,
+    "osm": "way/383719807"
+  },
+  {
+    "id": "rewe-hauptstaetter-strasse-147-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Hauptstätter Straße",
+    "address": "Hauptstätter Straße 147, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.764174,
+    "lon": 9.169949,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "node/979327414"
+  },
+  {
+    "id": "rewe-industriestrasse-5-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Industriestraße",
+    "address": "Industriestraße 5, 70565 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.725515,
+    "lon": 9.115138,
+    "postcode": "70565",
+    "addressApprox": false,
+    "osm": "node/270183090"
+  },
+  {
+    "id": "rewe-kronenstrasse-7-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Kronenstraße",
+    "address": "Kronenstraße 7, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.782014,
+    "lon": 9.179467,
+    "postcode": "70173",
+    "addressApprox": false,
+    "osm": "node/1445050559"
+  },
+  {
+    "id": "rewe-loewen-markt-5-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Löwen-Markt",
+    "address": "Löwen-Markt 5, 70499 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.814646,
+    "lon": 9.113297,
+    "postcode": "70499",
+    "addressApprox": false,
+    "osm": "node/404778641"
+  },
+  {
+    "id": "rewe-marienplatz-8-10-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Marienplatz",
+    "address": "Marienplatz 8-10, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.763942,
+    "lon": 9.167418,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "node/5044211896"
+  },
+  {
+    "id": "rewe-olgastrasse-86-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Olgastraße",
+    "address": "Olgastraße 86, 70180 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.770117,
+    "lon": 9.18042,
+    "postcode": "70180",
+    "addressApprox": false,
+    "osm": "node/265727467"
+  },
+  {
+    "id": "rewe-ostendstrasse-75-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Ostendstraße",
+    "address": "Ostendstraße 75, 70188 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.785023,
+    "lon": 9.208093,
+    "postcode": "70188",
+    "addressApprox": false,
+    "osm": "node/404515512"
+  },
+  {
+    "id": "rewe-otto-hirsch-bruecken-17-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Otto-Hirsch-Brücken",
+    "address": "Otto-Hirsch-Brücken 17, 70329 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.760838,
+    "lon": 9.255897,
+    "postcode": "70329",
+    "addressApprox": false,
+    "osm": "node/378149599"
+  },
+  {
+    "id": "rewe-rotebuehlplatz-21-25-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Rotebühlplatz",
+    "address": "Rotebühlplatz 21-25, 70178 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.774338,
+    "lon": 9.17165,
+    "postcode": "70178",
+    "addressApprox": false,
+    "osm": "node/8905162545"
+  },
+  {
+    "id": "rewe-rotenwaldstrasse-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Rotenwaldstraße",
+    "address": "Rotenwaldstraße, 70197 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.768322,
+    "lon": 9.146237,
+    "postcode": "70197",
+    "addressApprox": false,
+    "osm": "node/1244527616"
+  },
+  {
+    "id": "rewe-rueckertstrasse-7-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Rückertstraße",
+    "address": "Rückertstraße 7, 70197 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.77414,
+    "lon": 9.145213,
+    "postcode": "70197",
+    "addressApprox": false,
+    "osm": "node/6913316585"
+  },
+  {
+    "id": "rewe-schwabstrasse-43-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Schwabstraße",
+    "address": "Schwabstraße 43, 70197 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.770767,
+    "lon": 9.157521,
+    "postcode": "70197",
+    "addressApprox": false,
+    "osm": "node/6691319613"
+  },
+  {
+    "id": "rewe-sontheimer-strasse-10-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Sontheimer Straße",
+    "address": "Sontheimer Straße 10, 70437 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.831778,
+    "lon": 9.185615,
+    "postcode": "70437",
+    "addressApprox": false,
+    "osm": "way/231507775"
+  },
+  {
+    "id": "rewe-sophie-tschorn-strasse-4-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Sophie-Tschorn-Straße",
+    "address": "Sophie-Tschorn-Straße 4, 70374 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.817668,
+    "lon": 9.239353,
+    "postcode": "70374",
+    "addressApprox": false,
+    "osm": "way/421387754"
+  },
+  {
+    "id": "rewe-unterlaender-strasse-49-stuttgart",
+    "chain": "Rewe",
+    "name": "Rewe Unterländer Straße",
+    "address": "Unterländer Straße 49, 70435 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.832113,
+    "lon": 9.170526,
+    "postcode": "70435",
+    "addressApprox": false,
+    "osm": "node/1455257401"
+  },
+  {
+    "id": "rossmann-adalbert-stifter-strasse-101-stuttgart",
+    "chain": "Rossmann",
+    "name": "Rossmann Adalbert-Stifter-Straße",
+    "address": "Adalbert-Stifter-Straße 101, 70437 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.836323,
+    "lon": 9.20356,
+    "postcode": "70437",
+    "addressApprox": false,
+    "osm": "node/1306933900"
+  },
+  {
+    "id": "rossmann-badstrasse-9-stuttgart",
+    "chain": "Rossmann",
+    "name": "Rossmann Badstraße",
+    "address": "Badstraße 9, 70372 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.803086,
+    "lon": 9.215666,
+    "postcode": "70372",
+    "addressApprox": false,
+    "osm": "node/4818822230"
+  },
+  {
+    "id": "rossmann-bahnhofstrasse-30-stuttgart",
+    "chain": "Rossmann",
+    "name": "Rossmann Express",
+    "address": "Bahnhofstraße 30, 70372 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.80155,
+    "lon": 9.21836,
+    "postcode": "70372",
+    "addressApprox": false,
+    "osm": "node/5779229798"
+  },
+  {
+    "id": "rossmann-leharstrasse-5-stuttgart",
+    "chain": "Rossmann",
+    "name": "Rossmann Leharstraße",
+    "address": "Leharstraße 5, 70195 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.781379,
+    "lon": 9.13192,
+    "postcode": "70195",
+    "addressApprox": false,
+    "osm": "node/12084602628"
+  },
+  {
+    "id": "rossmann-ludwigsburger-strasse-127-129-stuttgart",
+    "chain": "Rossmann",
+    "name": "Rossmann Ludwigsburger Straße",
+    "address": "Ludwigsburger Straße 127-129, 70435 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.832071,
+    "lon": 9.174569,
+    "postcode": "70435",
+    "addressApprox": false,
+    "osm": "node/3802122920"
+  },
+  {
+    "id": "rossmann-tunnelstrasse-2-stuttgart",
+    "chain": "Rossmann",
+    "name": "Rossmann Tunnelstraße",
+    "address": "Tunnelstraße 2, 70469 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.811703,
+    "lon": 9.16919,
+    "postcode": "70469",
+    "addressApprox": false,
+    "osm": "node/5530286133"
+  },
+  {
+    "id": "tegut-alarichstrasse-6-stuttgart",
+    "chain": "tegut",
+    "name": "tegut Alarichstraße",
+    "address": "Alarichstraße 6, 70469 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.809641,
+    "lon": 9.176536,
+    "postcode": "70469",
+    "addressApprox": false,
+    "osm": "node/7003849035"
+  },
+  {
+    "id": "tegut-epplestrasse-14-stuttgart",
+    "chain": "tegut",
+    "name": "tegut Epplestraße",
+    "address": "Epplestraße 14, 70597 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.747771,
+    "lon": 9.170021,
+    "postcode": "70597",
+    "addressApprox": false,
+    "osm": "node/3660849483"
+  },
+  {
+    "id": "tegut-heusteigstrasse-stuttgart",
+    "chain": "tegut",
+    "name": "tegut Heusteigstraße",
+    "address": "Heusteigstraße, 70180 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.769422,
+    "lon": 9.178296,
+    "postcode": "70180",
+    "addressApprox": true,
+    "osm": "node/1668976055"
+  },
+  {
+    "id": "tegut-koenigstrasse-26-stuttgart",
+    "chain": "tegut",
+    "name": "tegut Königstraße",
+    "address": "Königstraße 26, 70173 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.779559,
+    "lon": 9.178124,
+    "postcode": "70173",
+    "addressApprox": false,
+    "osm": "node/5557365061"
+  },
+  {
+    "id": "tegut-mailaender-platz-7-stuttgart",
+    "chain": "tegut",
+    "name": "tegut Mailänder Platz",
+    "address": "Mailänder Platz 7, 70191 Stuttgart",
+    "municipality": "Stuttgart",
+    "cities": [
+      "stuttgart"
+    ],
+    "lat": 48.79073,
+    "lon": 9.181571,
+    "postcode": "70191",
+    "addressApprox": false,
+    "osm": "node/3121033310"
+  },
+  {
+    "id": "edeka-marktstrasse-9-tengen",
+    "chain": "Edeka",
+    "name": "Edeka Münchow",
+    "address": "Marktstraße 9, 78250 Tengen",
+    "municipality": "Tengen",
+    "cities": [
+      "tengen"
+    ],
+    "lat": 47.818052,
+    "lon": 8.656292,
+    "postcode": "78250",
+    "addressApprox": false,
+    "osm": "way/112688126"
+  },
+  {
+    "id": "edeka-baerenloh-2-volkertshausen",
+    "chain": "Edeka",
+    "name": "Edeka Hengge",
+    "address": "Bärenloh 2, 78269 Volkertshausen",
+    "municipality": "Volkertshausen",
+    "cities": [
+      "volkertshausen"
+    ],
+    "lat": 47.817262,
+    "lon": 8.865092,
+    "postcode": "78269",
+    "addressApprox": true,
+    "osm": "node/1718393778"
   }
 ]
