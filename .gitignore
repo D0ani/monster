@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+_site/
+.DS_Store
+Thumbs.db
+# Debug-Ausgaben des Scrapers (--debug-dir)
+debug/

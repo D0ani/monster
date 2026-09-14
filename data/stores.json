@@ -1,0 +1,211 @@
+[
+  {
+    "id": "aldi-sued-industriestrasse-5",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Industriestraße",
+    "address": "Industriestraße 5, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.750535,
+    "lon": 8.851709,
+    "addressApprox": false,
+    "osm": "way/88447925"
+  },
+  {
+    "id": "aldi-sued-wehrdstrasse-6",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Wehrdstraße",
+    "address": "Wehrdstraße 6, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.755936,
+    "lon": 8.838878,
+    "addressApprox": false,
+    "osm": "node/12682072413"
+  },
+  {
+    "id": "aldi-sued-werner-von-siemens-strasse-3",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Werner-von-Siemens-Straße",
+    "address": "Werner-von-Siemens-Straße 3, 78239 Rielasingen-Worblingen",
+    "city": "Rielasingen-Worblingen",
+    "lat": 47.735982,
+    "lon": 8.847565,
+    "addressApprox": false,
+    "osm": "way/104909868"
+  },
+  {
+    "id": "edeka-bahnhofstrasse-29",
+    "chain": "Edeka",
+    "name": "Edeka Bahnhofstraße",
+    "address": "Bahnhofstraße 29, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.760266,
+    "lon": 8.842482,
+    "addressApprox": true,
+    "osm": "node/8646986647"
+  },
+  {
+    "id": "edeka-zeppelinstrasse-4",
+    "chain": "Edeka",
+    "name": "Edeka Münchow Rielasingen",
+    "address": "Zeppelinstraße 4, 78239 Rielasingen-Worblingen",
+    "city": "Rielasingen-Worblingen",
+    "lat": 47.731026,
+    "lon": 8.847391,
+    "addressApprox": false,
+    "osm": "way/363885079"
+  },
+  {
+    "id": "edeka-unter-den-tannen",
+    "chain": "Edeka",
+    "name": "Edeka Unter den Tannen",
+    "address": "Unter den Tannen, 78224 Singen-Überlingen am Ried",
+    "city": "Singen-Überlingen am Ried",
+    "lat": 47.761607,
+    "lon": 8.892669,
+    "addressApprox": true,
+    "osm": "node/1286190924"
+  },
+  {
+    "id": "fristo-werner-von-siemens-strasse-2",
+    "chain": "Fristo",
+    "name": "Fristo Werner-von-Siemens-Straße",
+    "address": "Werner-von-Siemens-Straße 2, 78239 Rielasingen-Worblingen",
+    "city": "Rielasingen-Worblingen",
+    "lat": 47.736675,
+    "lon": 8.848211,
+    "addressApprox": false,
+    "osm": "way/211156680"
+  },
+  {
+    "id": "getraenke-mueller-schlachthausstrasse-14",
+    "chain": "Getränke Müller",
+    "name": "Getränke Müller Schlachthausstraße",
+    "address": "Schlachthausstraße 14, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.757809,
+    "lon": 8.833241,
+    "addressApprox": false,
+    "osm": "way/122295494"
+  },
+  {
+    "id": "kaufland-georg-fischer-strasse-15",
+    "chain": "Kaufland",
+    "name": "Kaufland Georg-Fischer-Straße",
+    "address": "Georg-Fischer-Straße 15, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.753001,
+    "lon": 8.845743,
+    "addressApprox": false,
+    "osm": "way/77844711"
+  },
+  {
+    "id": "lidl-heinrich-weber-platz",
+    "chain": "Lidl",
+    "name": "Lidl Heinrich-Weber-Platz",
+    "address": "Heinrich-Weber-Platz, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.763013,
+    "lon": 8.838263,
+    "addressApprox": true,
+    "osm": "node/9889709017"
+  },
+  {
+    "id": "lidl-rielasinger-strasse",
+    "chain": "Lidl",
+    "name": "Lidl Rielasinger Straße",
+    "address": "Rielasinger Straße, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.755149,
+    "lon": 8.839668,
+    "addressApprox": true,
+    "osm": "node/282555626"
+  },
+  {
+    "id": "nahkauf-uhlandstrasse-54",
+    "chain": "Nahkauf",
+    "name": "Nahkauf Uhlandstraße",
+    "address": "Uhlandstraße 54, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.768803,
+    "lon": 8.840281,
+    "addressApprox": false,
+    "osm": "node/297468356"
+  },
+  {
+    "id": "netto-hauptstrasse",
+    "chain": "Netto",
+    "name": "Netto Hauptstraße",
+    "address": "Hauptstraße, 78239 Rielasingen-Worblingen",
+    "city": "Rielasingen-Worblingen",
+    "lat": 47.734639,
+    "lon": 8.837111,
+    "addressApprox": true,
+    "osm": "node/2196209035"
+  },
+  {
+    "id": "norma-fichtestrasse",
+    "chain": "Norma",
+    "name": "Norma Fichtestraße",
+    "address": "Fichtestraße, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.773228,
+    "lon": 8.84578,
+    "addressApprox": true,
+    "osm": "node/3516802906"
+  },
+  {
+    "id": "norma-hegaustrasse",
+    "chain": "Norma",
+    "name": "Norma Hegaustraße",
+    "address": "Hegaustraße, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.760151,
+    "lon": 8.840886,
+    "addressApprox": true,
+    "osm": "node/8865026566"
+  },
+  {
+    "id": "penny-gaenseweide-10",
+    "chain": "Penny",
+    "name": "Penny Gänseweide",
+    "address": "Gänseweide 10, 78239 Rielasingen-Worblingen",
+    "city": "Rielasingen-Worblingen",
+    "lat": 47.728431,
+    "lon": 8.850241,
+    "addressApprox": false,
+    "osm": "way/104155440"
+  },
+  {
+    "id": "rewe-forststrasse-14",
+    "chain": "Rewe",
+    "name": "Rewe Forststraße",
+    "address": "Forststraße 14, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.754263,
+    "lon": 8.861043,
+    "addressApprox": false,
+    "osm": "way/624103487"
+  },
+  {
+    "id": "rewe-holzeckstrasse-2",
+    "chain": "Rewe",
+    "name": "Rewe Holzeckstraße",
+    "address": "Holzeckstraße 2, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.761508,
+    "lon": 8.851956,
+    "addressApprox": false,
+    "osm": "way/119749652"
+  },
+  {
+    "id": "rewe-steisslinger-strasse",
+    "chain": "Rewe",
+    "name": "Rewe Steißlinger Straße",
+    "address": "Steißlinger Straße, 78224 Singen (Hohentwiel)",
+    "city": "Singen (Hohentwiel)",
+    "lat": 47.744689,
+    "lon": 8.850201,
+    "addressApprox": true,
+    "osm": "node/276670220"
+  }
+]

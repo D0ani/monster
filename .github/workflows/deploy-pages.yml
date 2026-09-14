@@ -1,0 +1,54 @@
+name: GitHub Pages deployen
+
+on:
+  push:
+    branches: [main]
+    paths-ignore:
+      - "README.md"
+      - "scripts/**"
+      - ".github/workflows/update-deals.yml"
+  workflow_dispatch:
+  # Wird von update-deals.yml nach einem Daten-Commit aufgerufen
+  workflow_call:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    name: Build & Deploy
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v5
+        with:
+          # Beim Aufruf aus update-deals.yml den gerade gepushten Stand holen – nicht den Auslöse-Commit
+          ref: ${{ github.ref_name }}
+
+      - name: Seite zusammenstellen (nur statische Dateien)
+        run: |
+          mkdir -p _site
+          cp index.html style.css app.js _site/
+          cp -r data assets _site/
+          ls -la _site _site/data
+
+      - name: Pages konfigurieren
+        uses: actions/configure-pages@v5
+
+      - name: Artefakt hochladen
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+
+      - name: Deployen
+        id: deployment
+        uses: actions/deploy-pages@v4

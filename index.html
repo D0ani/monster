@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Monster-Angebote Singen</title>
+  <meta name="description" content="Wo ist Monster Energy gerade im Angebot? Aktuelle Prospektpreise der Supermärkte, Discounter und Getränkemärkte in Singen (Hohentwiel) und Rielasingen-Worblingen – täglich automatisch aktualisiert.">
+  <meta name="theme-color" content="#0a0b0d">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img class="brand-can" src="assets/can-ultra-white.webp" alt="Dose Monster Energy Ultra (weiß)" width="197" height="520">
+        <div>
+          <p class="eyebrow">Energy-Deals · Landkreis Konstanz</p>
+          <h1>Monster-Angebote <em>Singen</em></h1>
+          <p class="brand-sub">Singen (Hohentwiel) mit allen Ortsteilen &amp; Rielasingen-Worblingen · täglich aktualisiert</p>
+        </div>
+      </div>
+      <p class="updated" id="updated" role="status">
+        <span class="updated-dot" aria-hidden="true"></span>
+        <span id="updated-text">Daten werden geladen …</span>
+      </p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="summary" id="summary" aria-label="Überblick"></section>
+
+    <section class="panel filters" aria-label="Filter und Sortierung">
+      <div class="filter-top">
+        <label class="search">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <span class="visually-hidden">Sorte, Markt oder Ort suchen</span>
+          <input id="q" type="search" placeholder="Sorte, Markt oder Ort – z. B. Ultra, Bohlingen …" autocomplete="off" spellcheck="false">
+        </label>
+        <label class="sort">
+          <span>Sortieren nach</span>
+          <select id="sort">
+            <option value="unit">Preis pro Dose</option>
+            <option value="total">Gesamtpreis</option>
+            <option value="discount">Rabatt in %</option>
+          </select>
+        </label>
+      </div>
+
+      <div class="chip-row">
+        <span class="chip-label" id="lbl-chain">Markt</span>
+        <div class="chips" id="chain-chips" role="group" aria-labelledby="lbl-chain"></div>
+      </div>
+      <div class="chip-row">
+        <span class="chip-label" id="lbl-pack">Packung</span>
+        <div class="chips" id="pack-chips" role="group" aria-labelledby="lbl-pack"></div>
+      </div>
+
+      <div class="filter-foot">
+        <label class="toggle">
+          <input type="checkbox" id="only-valid">
+          <span class="toggle-track" aria-hidden="true"></span>
+          <span>Nur heute gültige Angebote</span>
+        </label>
+        <button type="button" class="link-btn" id="reset">Filter zurücksetzen</button>
+      </div>
+    </section>
+
+    <section class="panel map-panel" aria-labelledby="map-title">
+      <div class="map-head">
+        <div>
+          <h2 id="map-title">Karte</h2>
+          <p class="map-hint" id="map-hint">Zeigt die Filialen passend zu deinen Filtern. Kartenkacheln werden erst nach Klick von OpenStreetMap geladen.</p>
+        </div>
+        <button type="button" class="btn" id="map-toggle" aria-expanded="false" aria-controls="map-wrap">Karte anzeigen</button>
+      </div>
+      <div id="map-wrap" hidden>
+        <div id="map" aria-label="Karte der Filialen"></div>
+      </div>
+    </section>
+
+    <div class="results-head">
+      <p id="result-count" aria-live="polite"></p>
+    </div>
+    <section class="deal-grid" id="deals" aria-label="Angebote"></section>
+
+    <div class="empty panel" id="empty" hidden>
+      <p class="empty-title">Keine passenden Angebote</p>
+      <p>Diese Woche hat offenbar kein Markt in Singen oder Rielasingen-Worblingen Monster zu deinen Filtern im Prospekt. Probier andere Filter – oder schau morgen wieder vorbei.</p>
+      <button type="button" class="btn" data-action="reset">Filter zurücksetzen</button>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>Preise laut Händlerprospekten, in der Regel <strong>zzgl. 0,25&nbsp;€ Pfand pro Dose</strong>. Prospektangebote gelten für die Region – Verfügbarkeit in der einzelnen Filiale kann abweichen. Angaben ohne Gewähr.</p>
+      <p>Datenquellen: marktguru.de, kaufDA.de, prospektangebote.de · Filialdaten &amp; Karte © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende · Dosenfoto: TurnOnTheNight, <a href="https://commons.wikimedia.org/wiki/File:Monster_Energy_Zero_Ultra_(China_Version)_330ml_20260628130320.jpg">Wikimedia Commons</a> (CC0) · Kein offizielles Angebot von Monster Energy.</p>
+    </div>
+  </footer>
+
+  <noscript><p class="wrap noscript">Diese Seite braucht JavaScript, um die Angebote zu laden.</p></noscript>
+</body>
+</html>

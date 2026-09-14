@@ -1,0 +1,6 @@
+requests>=2.32
+beautifulsoup4>=4.12
+# Zeitzonen-Daten für zoneinfo (unter Windows zwingend, unter Linux harmlos)
+tzdata>=2024.1
+# Nur für JS-geschützte Quellen (prospektangebote.de). Ohne Playwright wird die Quelle übersprungen.
+playwright>=1.47
