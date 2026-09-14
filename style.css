@@ -641,20 +641,15 @@ h1 em {
 .history-panel h2 { margin: 0; font-size: .95rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
 .history-sub { margin: 2px 0 12px; font-size: .84rem; color: var(--muted); }
 .history-chart { position: relative; }
-.history-h3 {
-  margin: 22px 0 0; padding-top: 16px;
-  border-top: 1px solid var(--border);
-  font-size: .82rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase;
-}
-.hist-svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-y; }
+.hist-svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-y; -webkit-tap-highlight-color: transparent; }
 .hist-svg:focus-visible { outline: 2px solid var(--ice); outline-offset: 4px; border-radius: 8px; }
 .hist-grid { stroke: rgb(255 255 255 / .07); stroke-width: 1; shape-rendering: crispEdges; }
 .hist-tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
 .hist-line { fill: none; stroke: var(--chart-line); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
 .hist-dot { fill: var(--chart-line); stroke: var(--surface); stroke-width: 2; }
-/* Nachgetragene Werte (nicht live erfasst): gestrichelte Linie, hohler Punkt */
-.hist-line--partial { stroke-dasharray: 4 4; stroke-linecap: butt; }
-.hist-dot--partial { fill: var(--surface); stroke: var(--chart-line); }
+/* Achsen wie im klassischen Liniendiagramm; Verbindung über Wochen ohne Daten gestrichelt */
+.hist-axis { stroke: rgb(255 255 255 / .42); stroke-width: 1; shape-rendering: crispEdges; }
+.hist-line--gap { stroke-dasharray: 3 5; opacity: .5; }
 .hist-label { fill: var(--text); font-size: 12px; font-weight: 750; }
 .hist-cross { stroke: rgb(255 255 255 / .35); stroke-width: 1; }
 .hist-hit { fill: transparent; cursor: crosshair; }

@@ -430,28 +430,44 @@ def fetch_marktguru(session: requests.Session, city: dict) -> list[Offer]:
                     break
                 _time.sleep(1)
 
-    offers = []
-    for item in raw.values():
-        brand = item.get("brand") or {}
-        title = f"{brand.get('name', '')} {(item.get('product') or {}).get('name', '')}".strip()
-        description = item.get("description") or ""
-        if not is_monster_energy(title, description):
-            continue
-        dates = item.get("validityDates") or [{}]
-        valid_from = min(filter(None, (to_local_date(d.get("from")) for d in dates)), default=None)
-        valid_to = max(filter(None, (to_local_date(d.get("to"), end=True) for d in dates)), default=None)
-        url = f"https://www.marktguru.de/b/{brand['uniqueName']}" if brand.get("uniqueName") else MARKTGURU_HOME
-        is_liter = (item.get("unit") or {}).get("shortName") == "l"
-        for advertiser in item.get("advertisers") or []:
-            offers.append(Offer(
-                source="marktguru", source_url=url, retailer=advertiser.get("name") or "",
-                title=title, description=description,
-                price=parse_price(item.get("price")), regular_price=parse_price(item.get("oldPrice")),
-                valid_from=valid_from, valid_to=valid_to,
-                volume=item.get("volume") if is_liter else None, quantity=item.get("quantity"),
-                loyalty=bool(item.get("requiresLoyalityMembership")),
-            ))
-    return offers
+    return [offer for item in raw.values() for offer in marktguru_offers(item)]
+
+
+def marktguru_offers(item: dict) -> list[Offer]:
+    """Ein marktguru-Angebot (Suche oder Markenseite) → ein Offer je Händler; leer, wenn kein Monster Energy."""
+    brand = item.get("brand") or {}
+    title = f"{brand.get('name', '')} {(item.get('product') or {}).get('name', '')}".strip()
+    description = item.get("description") or ""
+    if not is_monster_energy(title, description):
+        return []
+    # Suche: validityDates + advertisers · Markenseite: validFrom/validTo + retailer
+    dates = item.get("validityDates") or [{"from": item.get("validFrom"), "to": item.get("validTo")}]
+    valid_from = min(filter(None, (to_local_date(d.get("from")) for d in dates)), default=None)
+    valid_to = max(filter(None, (to_local_date(d.get("to"), end=True) for d in dates)), default=None)
+    url = f"https://www.marktguru.de/b/{brand['uniqueName']}" if brand.get("uniqueName") else MARKTGURU_HOME
+    is_liter = (item.get("unit") or {}).get("shortName") == "l"
+    advertisers = item.get("advertisers") or ([item["retailer"]] if item.get("retailer") else [])
+    return [Offer(
+        source="marktguru", source_url=url, retailer=advertiser.get("name") or "",
+        title=title, description=description,
+        price=parse_price(item.get("price")), regular_price=parse_price(item.get("oldPrice")),
+        valid_from=valid_from, valid_to=valid_to,
+        volume=item.get("volume") if is_liter else None, quantity=item.get("quantity"),
+        loyalty=bool(item.get("requiresLoyalityMembership")),
+    ) for advertiser in advertisers]
+
+
+MARKTGURU_BRAND_OFFERS = "https://api.marktguru.de/api/v1/publishers/brand/monster-energy/offers"
+
+
+def fetch_marktguru_expired(session: requests.Session, today: date) -> list[Offer]:
+    """Abgelaufene Monster-Angebote, die marktguru auf der Markenseite noch mit „Verpasst!“ zeigt –
+    nur für den Preisverlauf (die Liste ist nicht regional gefiltert, siehe archive_deals)."""
+    params = {"as": "web", "zipCode": DEFAULT_CITY["zips"][0], "limit": 100, "offset": 0}
+    resp = http_get(session, MARKTGURU_BRAND_OFFERS, headers=marktguru_headers(session), params=params)
+    debug_dump("marktguru_verpasst.json", resp.text)
+    offers = [offer for item in resp.json().get("results") or [] for offer in marktguru_offers(item)]
+    return [offer for offer in offers if offer.valid_to and offer.valid_to < today]
 
 
 KAUFDA_URL = "https://www.kaufda.de/Angebote/Monster"
@@ -756,6 +772,19 @@ def chain_rank(chain: str) -> int:
 
 BACKFILL_DAYS = 14  # so weit zurück werden nicht erfasste Tage aus noch laufenden Angeboten nachgetragen
 
+# Abgelaufene Angebote verraten nicht mehr, für welche Region ihr Prospekt galt. In den Verlauf kommen daher
+# nur Ketten mit bundesweit einheitlichem Prospekt – und nur in Städten, in denen die Kette eine Filiale hat.
+ARCHIVE_CHAINS = {"Kaufland", "Netto", "Lidl", "Aldi Süd", "Penny", "Norma", "dm", "Rossmann", "Müller"}
+
+
+def archive_deals(offers: list[Offer], stores_by_city: dict, cities: list[dict], now_iso: str) -> list[dict]:
+    """Abgelaufene Angebote → Einträge je Stadt, nur für den Preisverlauf (nicht für deals.json)."""
+    for offer in offers:
+        offer.regional = False  # nur Städte mit Filiale der Kette
+    return [deal for city in cities
+            for deal in build_deals(offers, stores_by_city.get(city["slug"], {}), date.min, now_iso, city)
+            if deal["chain"] in ARCHIVE_CHAINS]
+
 
 def best_prices(deals: list[dict], day: str) -> dict[str, dict]:
     """Günstigster an `day` gültiger Dosenpreis je Stadt (ohne App-Pflicht): {"p", "c"[, "o"]}.
@@ -777,15 +806,17 @@ def best_prices(deals: list[dict], day: str) -> dict[str, dict]:
     return best
 
 
-def update_history(deals: list[dict], cities: list[dict], today: date, dry_run: bool) -> None:
+def update_history(deals: list[dict], cities: list[dict], today: date, dry_run: bool,
+                   archive: list[dict] | None = None) -> None:
     """Preisverlauf: pro Stadt der günstigste an dem Tag gültige Dosenpreis (ohne App-Pflicht).
 
     Format: {"singen": {"2026-09-14": {"p": 0.99, "c": "Rewe", "o": ["Nahkauf"]}, "2026-09-15": {"p": null}, …}, …}
     "p": null heißt: an diesem Tag gab es dort kein Angebot (Tag wurde aber erfasst).
     "o": weitere Ketten zum selben Preis.
     "b": 1 heißt nachgetragen – der Tag wurde nicht live erfasst (Aufzeichnung lief noch nicht, Scraper
-    ausgefallen), der Wert stammt aus Angeboten, die später noch liefen. Damals schon abgelaufene Angebote
-    kennt keine Quelle mehr – der echte Tiefstpreis kann also niedriger gewesen sein.
+    ausgefallen); der Wert stammt aus Angeboten, die später noch liefen, oder aus `archive` (abgelaufene
+    Angebote, die marktguru noch als „Verpasst!“ zeigt). Vollständig ist das nicht – der echte Tiefstpreis
+    kann niedriger gewesen sein.
     """
     history = json.loads(HISTORY_FILE.read_text(encoding="utf-8")) if HISTORY_FILE.exists() else {}
     before = json.dumps(history, sort_keys=True)
@@ -793,12 +824,20 @@ def update_history(deals: list[dict], cities: list[dict], today: date, dry_run: 
     best = best_prices(deals, day)
     for city in cities:
         history.setdefault(city["slug"], {})[day] = best.get(city["slug"], {"p": None})
-    # Nicht erfasste Vortage aus noch laufenden Angeboten nachtragen – nie über live erfasste Tage schreiben,
-    # einen Nachtrag nur durch einen niedrigeren Preis ersetzen (abgelaufene Angebote fallen später weg)
+    # Nicht erfasste Vortage nachtragen: aus noch laufenden Angeboten (bis BACKFILL_DAYS zurück) und aus
+    # abgelaufenen (archive, ganze Laufzeit). Nie über live erfasste Tage schreiben, einen Nachtrag nur durch
+    # einen niedrigeren Preis ersetzen (abgelaufene Angebote fallen später aus den Quellen heraus).
+    archive = archive or []
+    past_days = {today - timedelta(days=back) for back in range(1, BACKFILL_DAYS + 1)}
+    oldest = today - timedelta(days=HISTORY_DAYS)
+    for deal in archive:
+        cursor = max(date.fromisoformat(deal["validFrom"]), oldest)
+        while cursor <= min(date.fromisoformat(deal["validTo"]), today - timedelta(days=1)):
+            past_days.add(cursor)
+            cursor += timedelta(days=1)
     slugs, backfilled = {c["slug"] for c in cities}, 0
-    for back in range(1, BACKFILL_DAYS + 1):
-        past = (today - timedelta(days=back)).isoformat()
-        for city, value in best_prices(deals, past).items():
+    for past in sorted(d.isoformat() for d in past_days):
+        for city, value in best_prices(deals + archive, past).items():
             days = history.setdefault(city, {}) if city in slugs else None
             if days is None:
                 continue
@@ -807,7 +846,7 @@ def update_history(deals: list[dict], cities: list[dict], today: date, dry_run: 
                 days[past] = {**value, "b": 1}
                 backfilled += 1
     if backfilled:
-        log.info("Preisverlauf: %d nicht erfasste Tage aus noch laufenden Angeboten nachgetragen", backfilled)
+        log.info("Preisverlauf: %d nicht erfasste Tage nachgetragen (laufende + abgelaufene Angebote)", backfilled)
     cutoff = (today - timedelta(days=HISTORY_DAYS)).isoformat()
     history = {c: {d: v for d, v in sorted(days.items()) if d >= cutoff} for c, days in sorted(history.items())}
     if json.dumps(history, sort_keys=True) != before and not dry_run:
@@ -972,7 +1011,14 @@ def main() -> int:
     log.info("Ergebnis: %d Angebote (%d neu, %d abgelaufen entfernt, %d behalten aus ausgefallenen/manuellen Quellen)",
              len(merged), stats["new"], stats["expired"], stats["kept"])
     update_regular_prices(merged, args.dry_run)
-    update_history(merged, cities, today, args.dry_run)
+    archive: list[dict] = []
+    if any(s.key == "marktguru" for s in selected):
+        try:  # abgelaufene Angebote nur für den Preisverlauf – ein Ausfall ist unkritisch
+            archive = archive_deals(fetch_marktguru_expired(session, today), stores_by_city, cities, now_iso)
+            log.info("marktguru „Verpasst!“: %d Einträge aus abgelaufenen Angeboten für den Preisverlauf", len(archive))
+        except Exception as exc:  # bewusst breit
+            log.warning("abgelaufene marktguru-Angebote nicht abrufbar: %s", exc)
+    update_history(merged, cities, today, args.dry_run, archive)
     write_city_bundles(merged, cities, now_iso, args.dry_run, prune=not args.city)
 
     output = json.dumps(merged, ensure_ascii=False, indent=2) + "\n"

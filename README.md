@@ -17,12 +17,14 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 - Filter nach Kette und Packungsgröße (Einzeln/4er/6er/10er/…), Sortierung (Preis/Dose, Gesamtpreis, Rabatt)
 - **„In meiner Nähe“**: Standort (nur im Browser, nirgends gespeichert) → Entfernung an jeder Filiale, Sortierung
   „Entfernung“, automatisch die nächstgelegene Stadt, eigener Standort auf der Karte
-- **Preisverlauf** (`data/history.json`): Tagesbestpreis je Stadt als Diagramm, darunter die Kurve
-  „Tiefstpreis pro Woche“ (+ Tabellenansicht) und „↓ Tiefstpreis seit X Wochen“ an Angeboten. Hover bzw. Tippen
-  zeigt den günstigsten Laden (Logo, Kette, Filialen in der Stadt, gleich teure Ketten). Gesammelt wird täglich
-  ab dem 14.09.2026; nicht erfasste Vortage (bis 14 Tage) trägt der Scraper aus noch laufenden Angeboten nach –
-  markiert mit `"b": 1`, im Diagramm gestrichelt bzw. als hohler Punkt. Weitere Felder: `"p"` Preis pro Dose
-  (`null` = kein Angebot), `"c"` Kette, `"o"` weitere Ketten zum selben Preis
+- **Preisverlauf** (`data/history.json`): Liniendiagramm mit x- und y-Achse – ein Punkt pro Woche (günstigste
+  Dose ohne App-Pflicht), Datum des Wochenbeginns an der x-Achse, Wochen ohne Daten gestrichelt überbrückt; dazu
+  eine Tabellenansicht und „↓ Tiefstpreis seit X Wochen“ an Angeboten. Hover bzw. Tippen zeigt den günstigsten
+  Laden (Logo, Kette, Filialen in der Stadt, gleich teure Ketten). Gesammelt wird täglich ab dem 14.09.2026;
+  nicht erfasste Tage trägt der Scraper nach – aus noch laufenden Angeboten (bis 14 Tage zurück) und aus
+  abgelaufenen, die marktguru auf der Markenseite noch als „Verpasst!“ zeigt (nur Ketten mit bundesweitem
+  Prospekt wie Kaufland oder Netto, nur in Städten mit Filiale). Felder: `"p"` Preis pro Dose (`null` = kein
+  Angebot), `"c"` Kette, `"o"` weitere Ketten zum selben Preis, `"b": 1` nachgetragen
 - **Installierbar**: als Web-App (Chrome-Menü ⋮ → „App installieren“, `manifest.webmanifest` + `sw.js`, offline
   mit letztem Stand) oder als Android-APK (Link ganz unten im Footer, siehe „Android-App“)
 - **Angebote für nächste Woche**, sobald die neuen Prospekte online sind (meist Do–So): eigener Abschnitt,
