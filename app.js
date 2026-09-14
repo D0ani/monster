@@ -1014,7 +1014,7 @@
     if (priced.length < 2) {
       const cur = priced[priced.length - 1];
       el.historySub.textContent = cur
-        ? `Woche ab ${fmtShort(cur.monday)}: ${eur.format(cur.p)}${cur.chains.length ? ` (${cur.chains.join(', ')})` : ''} – ab der nächsten Woche entsteht hier die Kurve.`
+        ? `Bisher ein Wochenwert: ${fmtRange(cur.from, cur.to)} ${eur.format(cur.p)}${cur.chains.length ? ` (${cur.chains.join(', ')})` : ''} – mit dem nächsten Angebot entsteht hier die Kurve.`
         : 'Noch kein Monster-Angebot erfasst – die Kurve entsteht, sobald es hier Angebote gibt.';
     } else {
       const gaps = weeks.slice(weeks.indexOf(priced[0]), weeks.indexOf(priced[priced.length - 1])).some((w) => w.p == null);
