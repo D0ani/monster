@@ -6,6 +6,7 @@
   <title>Monster-Angebote Singen</title>
   <meta name="description" content="Wo ist Monster Energy gerade im Angebot? Aktuelle Prospektpreise der Supermärkte, Discounter und Getränkemärkte in Singen (Hohentwiel) und Rielasingen-Worblingen – täglich automatisch aktualisiert.">
   <meta name="theme-color" content="#0a0b0d">
+  <script>try{if(localStorage.getItem('monster-brand')==='redbull')document.documentElement.dataset.brand='redbull'}catch(e){}</script>
   <!-- Installierbare Web-App: Chrome-Menü ⋮ → "App installieren" -->
   <link rel="manifest" href="manifest.webmanifest">
   <!-- ?v=… erhöhen, wenn sich die Icons ändern – zwingt Browser und Messenger, sie neu zu laden -->
@@ -36,7 +37,8 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <div class="brand">
-        <img class="brand-can" src="assets/can-ultra-white.webp" alt="Dose Monster Energy Ultra (weiß)" width="144" height="380">
+        <img class="brand-can brand-can--monster" src="assets/can-ultra-white.webp" alt="Dose Monster Energy Ultra (weiß)" width="144" height="380">
+        <img class="brand-can brand-can--rb" src="assets/can-redbull.webp" alt="Dose Red Bull Energy Drink" width="148" height="380" loading="lazy" decoding="async">
         <div>
           <p class="eyebrow" id="city-region">Energy-Deals · Landkreis Konstanz</p>
           <h1>Monster-Angebote <em id="city-name">Singen</em></h1>
@@ -139,7 +141,7 @@
   <footer class="site-footer">
     <div class="wrap">
       <p>Preise laut Händlerprospekten, in der Regel <strong>zzgl. 0,25&nbsp;€ Pfand pro Dose</strong>. Prospektangebote gelten für die Region – Verfügbarkeit in der einzelnen Filiale kann abweichen. Angaben ohne Gewähr.</p>
-      <p>Datenquellen: marktguru.de, kaufDA.de, prospektangebote.de · Filialdaten &amp; Karte © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende · Dosenfoto: TurnOnTheNight, <a href="https://commons.wikimedia.org/wiki/File:Monster_Energy_Zero_Ultra_(China_Version)_330ml_20260628130320.jpg">Wikimedia Commons</a> (CC0) · Händlerlogos: <a href="https://github.com/D0ani/monster/blob/main/assets/logos/CREDITS.md">Wikimedia Commons</a> (gemeinfrei), Marken der jeweiligen Inhaber, nur zur Kennzeichnung · Kein offizielles Angebot von Monster Energy.</p>
+      <p>Datenquellen: marktguru.de, kaufDA.de, prospektangebote.de · Filialdaten &amp; Karte © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende · Dosenfoto: TurnOnTheNight, <a href="https://commons.wikimedia.org/wiki/File:Monster_Energy_Zero_Ultra_(China_Version)_330ml_20260628130320.jpg">Wikimedia Commons</a> (CC0) · Händlerlogos: <a href="https://github.com/D0ani/monster/blob/main/assets/logos/CREDITS.md">Wikimedia Commons</a> (gemeinfrei), Marken der jeweiligen Inhaber, nur zur Kennzeichnung · <span class="credit-rb">Red-Bull-Dose: DYVER, <a href="https://commons.wikimedia.org/wiki/File:Redbull_Dose.jpg">Wikimedia Commons</a> (<a href="https://creativecommons.org/licenses/by-sa/4.0/deed.de">CC BY-SA 4.0</a>, freigestellt) · Kein Angebot von Red Bull · </span>Kein offizielles Angebot von Monster Energy.</p>
       <p class="app-download" id="app-download"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg> <a href="https://github.com/D0ani/monster/releases/latest/download/monster-angebote.apk">Android-App (APK) herunterladen</a> · oder im Chrome-Menü <strong>⋮ → „App installieren“</strong></p>
     </div>
   </footer>

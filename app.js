@@ -1332,9 +1332,46 @@
     setInterval(() => deals.length && renderList(), 60_000);
   }
 
+  // Versteckte Red-Bull-Variante: 5× schnell auf den Footer (nicht auf einen Link) klicken, nochmal 5× schaltet
+  // zurück. Die Wahl merkt sich der Browser; index.html setzt sie schon vor dem ersten Zeichnen (kein Aufblitzen).
+  const BRAND_KEY = 'monster-brand';
+  const THEME_COLOR = { monster: '#0a0b0d', redbull: '#060d24' };
+  function applyBrand(brand) {
+    if (brand === 'redbull') {
+      document.documentElement.dataset.brand = 'redbull';
+      // Kopf-Dose sofort laden – umgeschaltet wird unten im Footer, der Kopf ist dann außer Sicht
+      const can = document.querySelector('.brand-can--rb');
+      if (can) can.loading = 'eager';
+    } else {
+      delete document.documentElement.dataset.brand;
+    }
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.content = THEME_COLOR[brand] || THEME_COLOR.monster;
+  }
+  function bindSecretBrand() {
+    const footer = document.querySelector('.site-footer');
+    if (!footer) return;
+    let clicks = [];
+    // Mehrfachklicks würden sonst Text im Footer markieren
+    footer.addEventListener('mousedown', (e) => { if (e.detail > 1 && !e.target.closest('a')) e.preventDefault(); });
+    footer.addEventListener('click', (e) => {
+      if (e.target.closest('a')) return;
+      const now = Date.now();
+      clicks = clicks.filter((t) => now - t < 2500).concat(now);
+      if (clicks.length < 5) return;
+      clicks = [];
+      const next = document.documentElement.dataset.brand === 'redbull' ? 'monster' : 'redbull';
+      applyBrand(next);
+      try { localStorage.setItem(BRAND_KEY, next); } catch { /* ohne Speicher gilt die Wahl bis zum Neuladen */ }
+      if (navigator.vibrate) navigator.vibrate(40);
+    });
+  }
+
   readURL();
   syncControls();
   bindEvents();
+  applyBrand(document.documentElement.dataset.brand === 'redbull' ? 'redbull' : 'monster');
+  bindSecretBrand();
   // In der Android-App den APK-Download ausblenden (die App hängt eine eigene Kennung an den User-Agent)
   if (/MonsterAngeboteApp/.test(navigator.userAgent)) el.appDownload.hidden = true;
   // Service Worker: macht die Seite installierbar (Chrome-Menü ⋮ → "App installieren") und offline nutzbar

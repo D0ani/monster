@@ -717,3 +717,72 @@ h1 em {
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation: none !important; transition: none !important; }
 }
+
+/* ==========================================================================
+   Red-Bull-Variante (data-brand="redbull" auf <html>, umgeschaltet in app.js)
+   Weiß/Silber der Ultra-Dose → Red-Bull-Blau, Eisblau → Gold, Rabatt → Rot.
+   ========================================================================== */
+:root[data-brand="redbull"] {
+  --bg: #060d24;
+  --surface: #0c1734;
+  --surface-2: #122043;
+  --surface-3: #1a2b54;
+  --text: #f2f5fb;
+  --muted: #9eabc9;
+  --border: #1b2a50;
+  --border-strong: #2a3d6c;
+  --silver: #b9c6e4;
+  --silver-grad: linear-gradient(135deg, #3a6be0 0%, #2451c4 38%, #1a3c9c 70%, #3161d6 100%);
+  --silver-text: linear-gradient(180deg, #fff3c4 0%, #ffc906 55%, #e09a00 100%);
+  --ink: #2451c4;
+  --ink-contrast: #ffffff;
+  --ice: #ffc906;
+  --chart-line: #e0284f;
+  --rb-red: #db0a40;
+}
+[data-brand="redbull"] body {
+  background: radial-gradient(80% 50% at 50% -10%, rgb(58 107 224 / .16), transparent 70%), var(--bg);
+}
+[data-brand="redbull"] .site-header {
+  background:
+    radial-gradient(34% 120% at 9% 55%, rgb(58 107 224 / .34), transparent 70%),
+    radial-gradient(60% 140% at 100% 0%, rgb(219 10 64 / .16), transparent 60%),
+    radial-gradient(40% 90% at 85% 100%, rgb(255 201 6 / .08), transparent 60%),
+    linear-gradient(180deg, #0a1433, var(--bg));
+  border-image: linear-gradient(90deg, transparent, rgb(255 201 6 / .45), transparent) 1;
+}
+[data-brand="redbull"] .brand-can { filter: drop-shadow(0 0 26px rgb(58 107 224 / .5)) drop-shadow(0 22px 22px rgb(0 0 0 / .75)); }
+[data-brand="redbull"] .updated { border-color: rgb(185 198 228 / .18); color: var(--text); }
+[data-brand="redbull"] .updated-dot { box-shadow: 0 0 0 4px rgb(255 201 6 / .18), 0 0 12px rgb(255 201 6 / .6); }
+[data-brand="redbull"] .stat--hero { border-color: rgb(109 149 240 / .7); box-shadow: 0 0 40px -12px rgb(58 107 224 / .7), var(--shadow); }
+[data-brand="redbull"] .stat--hero .stat-label,
+[data-brand="redbull"] .stat--hero .stat-sub { color: rgb(255 255 255 / .78); }
+[data-brand="redbull"] .city-search input:focus { box-shadow: 0 0 0 3px rgb(58 107 224 / .3); }
+[data-brand="redbull"] .chip[aria-pressed="true"],
+[data-brand="redbull"] .near-btn[aria-pressed="true"],
+[data-brand="redbull"] .btn { border-color: #6d95f0; box-shadow: 0 0 18px -6px rgb(58 107 224 / .85); }
+[data-brand="redbull"] .chip[aria-pressed="true"] .chip-count { background: rgb(255 255 255 / .2); }
+[data-brand="redbull"] .card { background: linear-gradient(180deg, #101e43, var(--surface) 40%); }
+[data-brand="redbull"] .card::before { background: linear-gradient(90deg, transparent, rgb(255 201 6 / .6), transparent); }
+[data-brand="redbull"] .card.is-best {
+  border-color: rgb(109 149 240 / .8);
+  box-shadow: 0 0 0 1px rgb(109 149 240 / .4), 0 0 36px -14px rgb(58 107 224 / .75), var(--shadow);
+}
+[data-brand="redbull"] .card.is-best::before { background: linear-gradient(90deg, var(--rb-red), #ffc906, var(--rb-red)); }
+[data-brand="redbull"] .best-flag { box-shadow: 0 0 16px -4px rgb(58 107 224 / .9); }
+[data-brand="redbull"] .tag--pack { border-color: rgb(109 149 240 / .8); }
+[data-brand="redbull"] .discount { background: var(--rb-red); color: #fff; box-shadow: 0 0 18px -6px rgb(219 10 64 / .8); }
+[data-brand="redbull"] .status--active { background: rgb(255 201 6 / .1); box-shadow: inset 0 0 0 1px rgb(255 201 6 / .3); }
+[data-brand="redbull"] .app-pill { background: rgb(255 201 6 / .1); box-shadow: inset 0 0 0 1px rgb(255 201 6 / .4); }
+[data-brand="redbull"] .app-pill--required { background: var(--ice); color: #1d1500; box-shadow: 0 0 20px -6px rgb(255 201 6 / .7); }
+[data-brand="redbull"] .tag--low { background: rgb(255 201 6 / .1); border-color: rgb(255 201 6 / .45); }
+[data-brand="redbull"] .upcoming-banner { border-color: rgb(255 201 6 / .45); background: rgb(255 201 6 / .08); }
+[data-brand="redbull"] .upcoming-banner:hover { background: rgb(255 201 6 / .16); }
+[data-brand="redbull"] .grid-heading--next::after { background: rgb(255 201 6 / .35); }
+[data-brand="redbull"] .hist-grid { stroke: rgb(185 198 228 / .09); }
+[data-brand="redbull"] .hist-axis { stroke: rgb(185 198 228 / .45); }
+/* Kopf-Dose + Bildnachweis der Red-Bull-Variante (die Dose lädt erst, wenn sie sichtbar wird: loading="lazy") */
+.brand-can--rb, .credit-rb { display: none; }
+[data-brand="redbull"] .brand-can--monster { display: none; }
+[data-brand="redbull"] .brand-can--rb { display: block; }
+[data-brand="redbull"] .credit-rb { display: inline; }
