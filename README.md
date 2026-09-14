@@ -21,7 +21,9 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 │   ├── update-deals.yml     # täglich 06:00 + manuell: Scraper → commit data/deals.json → Deployment
 │   └── deploy-pages.yml     # Pages-Deployment (Push auf main, manuell, oder Aufruf durch update-deals)
 ├── assets/
-│   └── favicon.svg
+│   ├── can-ultra-white.webp # Dosenfoto im Header (CC0, Wikimedia Commons, freigestellt)
+│   ├── favicon-32.png, icon-192.png, apple-touch-icon.png
+│   └── og-image.jpg         # Vorschaubild beim Teilen des Links (1200×630)
 ├── data/
 │   ├── deals.json           # Angebote (vom Scraper überschrieben/gemergt)
 │   └── stores.json          # Filialverzeichnis Singen + Rielasingen (aus OpenStreetMap)
