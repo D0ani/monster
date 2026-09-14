@@ -110,6 +110,9 @@
   let knownChains = [];  // Ketten aus dem Filialverzeichnis
   let allStores = [];    // komplettes Filialverzeichnis (für "Alle Filialen zeigen")
   let regularPrices = {}; // zuletzt gesehener Normalpreis pro Dose je Kette
+  // Unverbindliche Preisempfehlung Monster Energy 0,5 l (aktionspreis.de; auch Streichpreis bei Edeka/Marktkauf laut
+  // marktguru) – gilt als Normalpreis, solange für eine Kette kein eigener Prospekt-Normalpreis bekannt ist
+  const MONSTER_UVP = 1.49;
   let noDealStores = []; // aktuell angezeigte Filialen ohne Angebot
   const cityBundles = new Map(); // bereits geladene Stadt-Pakete (Stadtwechsel zurück kostet nichts)
   let cities = [DEFAULT_CITY];
@@ -630,7 +633,7 @@
     const price = known && known.pricePerUnit
       ? `<p class="store-price">${known.manual ? 'Normalpreis (eigene Angabe)' : 'Normalpreis zuletzt laut Prospekt'}: `
         + `<b>${eur.format(known.pricePerUnit)}</b> pro Dose${known.seen ? ` · Stand ${esc(fmtDay(known.seen))}` : ''}</p>`
-      : '<p class="store-price">Kein Monster-Angebot im aktuellen Prospekt · Normalpreis nicht bekannt</p>';
+      : `<p class="store-price">Kein Monster-Angebot im aktuellen Prospekt · Normalpreis (UVP): <b>${eur.format(MONSTER_UVP)}</b> pro Dose</p>`;
     return `
       <article class="card card--store">
         <header class="card-head">
@@ -836,7 +839,8 @@
       const known = regularPrices[s.chain];
       const icon = pinIcon(s.chain, 'pin--none');
       const info = known && known.pricePerUnit
-        ? `<br><small>Normalpreis zuletzt: ${eur.format(known.pricePerUnit)}/Dose</small>` : '';
+        ? `<br><small>Normalpreis zuletzt: ${eur.format(known.pricePerUnit)}/Dose</small>`
+        : `<br><small>Normalpreis (UVP): ${eur.format(MONSTER_UVP)}/Dose</small>`;
       const marker = L.marker([s.lat, s.lon], { icon, title: s.name, zIndexOffset: -500 })
         .bindPopup(`<p class="popup-title">${esc(s.name)}</p><p class="popup-addr">${esc(s.address)}</p>`
           + `<ul class="popup-list"><li>Kein Monster-Angebot${info}</li></ul>`);
@@ -1003,23 +1007,38 @@
     return `<span class="tag tag--low" title="${esc(title)}">↓ Tiefstpreis seit ${low.weeks} Wochen</span>`;
   }
 
+  // Normalpreis je Kette: zuletzt im Prospekt gesehener Streichpreis, sonst UVP
+  const normalPrice = (chain) => (regularPrices[chain] && regularPrices[chain].pricePerUnit) || MONSTER_UVP;
+
+  // Günstigster Normalpreis vor Ort (für Wochen ohne Angebot); uvp = für keine dieser Ketten ist ein eigener bekannt
+  function normalBaseline(chains) {
+    const p = chains.length ? Math.min(...chains.map(normalPrice)) : MONSTER_UVP;
+    const at = chains.filter((c) => Math.abs(normalPrice(c) - p) < 0.005).sort((a, b) => chainRank(a) - chainRank(b));
+    const uvp = !at.some((c) => regularPrices[c] && regularPrices[c].pricePerUnit);
+    return { p, chains: uvp ? [] : at, uvp };
+  }
+
   function renderHistory() {
     const city = currentCity();
     const weeks = weeklySeries(city.slug);
     el.historyPanel.hidden = !weeks.length;
     if (!weeks.length) return;
     el.historyTitle.textContent = `Preisverlauf · ${city.name}`;
-    const priced = weeks.filter((w) => w.p != null);
-    el.historyChart.hidden = priced.length < 2;
-    if (priced.length < 2) {
-      const cur = priced[priced.length - 1];
+    const offerWeeks = weeks.filter((w) => w.p != null);
+    // Wochen ohne erfasstes Angebot: Normalpreis (hohler Punkt) – so bleibt die Kurve durchgehend
+    const normal = normalBaseline([...new Set(allStores.map((s) => s.chain))]);
+    for (const w of weeks) {
+      if (w.p == null) Object.assign(w, { p: normal.p, chains: normal.chains, normal: normal.uvp ? 'uvp' : 'regular' });
+    }
+    el.historyChart.hidden = !offerWeeks.length || weeks.length < 2;
+    if (el.historyChart.hidden) {
+      const cur = offerWeeks[0];
       el.historySub.textContent = cur
-        ? `Bisher ein Wochenwert: ${fmtRange(cur.from, cur.to)} ${eur.format(cur.p)}${cur.chains.length ? ` (${cur.chains.join(', ')})` : ''} – mit dem nächsten Angebot entsteht hier die Kurve.`
+        ? `Bisher ein Wochenwert: ${fmtRange(cur.from, cur.to)} ${eur.format(cur.p)}${cur.chains.length ? ` (${cur.chains.join(', ')})` : ''} – ab der nächsten Woche entsteht hier die Kurve.`
         : 'Noch kein Monster-Angebot erfasst – die Kurve entsteht, sobald es hier Angebote gibt.';
     } else {
-      const gaps = weeks.slice(weeks.indexOf(priced[0]), weeks.indexOf(priced[priced.length - 1])).some((w) => w.p == null);
       el.historySub.textContent = `Günstigster Dosenpreis pro Woche (ohne App-Pflicht) seit ${fmtDay(weeks[0].from)}`
-        + (gaps ? ' · gestrichelt = Wochen ohne Angebotsdaten' : '');
+        + (weeks.some((w) => w.normal) ? ' · hohler Punkt = kein Angebot (Normalpreis)' : '');
       drawPriceChart(weeks, city);
     }
     renderHistoryTable(weeks);
@@ -1075,8 +1094,9 @@
       prev = pt;
       gap = false;
     });
+    const dotR = Math.max(2.5, Math.min(6, bw * 0.34)).toFixed(1); // viele Wochen auf schmalem Handy → kleinere Punkte
     const dots = weeks.map((w, i) => (w.p == null ? ''
-      : `<circle class="hist-dot" cx="${x(i).toFixed(1)}" cy="${y(w.p).toFixed(1)}" r="6"/>`)).join('');
+      : `<circle class="hist-dot${w.normal ? ' hist-dot--normal' : ''}" cx="${x(i).toFixed(1)}" cy="${y(w.p).toFixed(1)}" r="${dotR}"/>`)).join('');
 
     // Selektive Direkt-Labels: letzter Wert + Tiefstpreis seit Beginn (falls niedriger)
     const lastIdx = weeks.map((w) => w.p != null).lastIndexOf(true);
@@ -1112,7 +1132,7 @@
       xAt: x,
       yAt: y,
       indexAt: (px) => Math.round((px - m.left) / bw - 0.5),
-      info: (i) => ({ p: weeks[i].p, chains: weeks[i].chains, when: fmtRange(weeks[i].from, weeks[i].to), partial: weeks[i].partial, city }),
+      info: (i) => ({ p: weeks[i].p, chains: weeks[i].chains, when: fmtRange(weeks[i].from, weeks[i].to), partial: weeks[i].partial, normal: weeks[i].normal, city }),
     });
   }
 
@@ -1129,7 +1149,7 @@
   }
 
   // Tooltip-Inhalt: Preis, Zeitraum, günstigste Kette(n) mit Logo und ihren Filialen in der Stadt
-  function fillTip(tip, { p, chains, when, partial, city }) {
+  function fillTip(tip, { p, chains, when, partial, normal, city }) {
     const row = (cls, text) => {
       const span = document.createElement('span');
       span.className = cls;
@@ -1139,6 +1159,7 @@
     const value = document.createElement('strong');
     value.textContent = p != null ? eur.format(p) : p === null ? 'kein Angebot' : 'keine Daten';
     const rows = [value, row('tip-when', when)];
+    if (normal) rows.push(row('tip-note', normal === 'uvp' ? 'Kein Angebot erfasst – Normalpreis laut UVP' : 'Kein Angebot erfasst – Normalpreis laut Prospekt'));
     if (p != null) {
       for (const chain of chains.slice(0, 3)) {
         const shop = document.createElement('span');
@@ -1150,7 +1171,7 @@
       }
       if (chains.length > 3) rows.push(row('tip-store', `+ ${chains.length - 3} weitere zum selben Preis`));
     }
-    if (partial && p != null) rows.push(row('tip-note', 'Nachgetragen aus abgelaufenen Angeboten – günstigere können fehlen'));
+    if (partial && !normal && p != null) rows.push(row('tip-note', 'Nachgetragen aus abgelaufenen Angeboten – günstigere können fehlen'));
     tip.replaceChildren(...rows);
   }
 
@@ -1222,10 +1243,15 @@
   // Tabellen-Ansicht (Wochen-Tiefstpreise seit Beginn) – macht jeden Wert auch ohne Hover lesbar
   function renderHistoryTable(weeks) {
     el.historyTable.hidden = !weeks.length;
+    const shop = (w) => {
+      if (w.p == null) return w.p === null ? 'kein Angebot' : 'keine Daten';
+      if (w.normal) return `kein Angebot · Normalpreis${w.chains.length ? ` ${esc(w.chains.join(', '))}` : ' (UVP)'}`;
+      return esc(w.chains.join(', '));
+    };
     const rows = weeks.slice().reverse().map((w) => `<tr><td>${fmtRange(w.from, w.to)}</td>`
-      + `<td class="num">${w.p != null ? `${eur.format(w.p)}${w.partial ? '*' : ''}` : '–'}</td>`
-      + `<td>${w.p != null ? esc(w.chains.join(', ')) : w.p === null ? 'kein Angebot' : 'keine Daten'}</td></tr>`).join('');
-    const note = weeks.some((w) => w.partial && w.p != null)
+      + `<td class="num">${w.p != null ? `${eur.format(w.p)}${w.partial && !w.normal ? '*' : ''}` : '–'}</td>`
+      + `<td>${shop(w)}</td></tr>`).join('');
+    const note = weeks.some((w) => w.partial && !w.normal)
       ? '<p class="history-note">* nachgetragen aus abgelaufenen Angeboten – günstigere können fehlen.</p>' : '';
     el.historyTable.innerHTML = '<summary>Als Tabelle anzeigen</summary><table><thead><tr><th>Zeitraum</th>'
       + `<th class="num">Tiefstpreis</th><th>Günstigster Laden</th></tr></thead><tbody>${rows}</tbody></table>${note}`;

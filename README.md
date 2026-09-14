@@ -23,8 +23,11 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
   Laden (Logo, Kette, Filialen in der Stadt, gleich teure Ketten). Gesammelt wird täglich ab dem 14.09.2026;
   nicht erfasste Tage trägt der Scraper nach – aus noch laufenden Angeboten (bis 14 Tage zurück) und aus
   abgelaufenen, die marktguru auf der Markenseite noch als „Verpasst!“ zeigt (nur Ketten mit bundesweitem
-  Prospekt wie Kaufland oder Netto, nur in Städten mit Filiale). Felder: `"p"` Preis pro Dose (`null` = kein
-  Angebot), `"c"` Kette, `"o"` weitere Ketten zum selben Preis, `"b": 1` nachgetragen
+  Prospekt wie Kaufland oder Netto, nur in Städten mit Filiale). Ältere Aktionen holt
+  `python scripts/import_history.py` (bei Bedarf von Hand, `--rebuild` baut alle Nachträge neu auf) aus
+  energy-angebote.de, mydealz.de und marktguru. Wochen ohne erfasstes Angebot zeigen den Normalpreis
+  (Prospekt-Streichpreis der Kette, sonst UVP 1,49 €) als hohlen Punkt. Felder: `"p"` Preis pro Dose (`null` =
+  kein Angebot), `"c"` Kette, `"o"` weitere Ketten zum selben Preis, `"b": 1` nachgetragen
 - **Installierbar**: als Web-App (Chrome-Menü ⋮ → „App installieren“, `manifest.webmanifest` + `sw.js`, offline
   mit letztem Stand) oder als Android-APK (Link ganz unten im Footer, siehe „Android-App“)
 - **Angebote für nächste Woche**, sobald die neuen Prospekte online sind (meist Do–So): eigener Abschnitt,
