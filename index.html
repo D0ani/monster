@@ -78,14 +78,13 @@
         <span class="chip-label" id="lbl-pack">Packung</span>
         <div class="chips" id="pack-chips" role="group" aria-labelledby="lbl-pack"></div>
       </div>
+      <div class="chip-row">
+        <span class="chip-label" id="lbl-when">Zeitraum</span>
+        <div class="chips" id="when-chips" role="group" aria-labelledby="lbl-when"></div>
+      </div>
 
       <div class="filter-foot">
         <div class="toggles">
-          <label class="toggle">
-            <input type="checkbox" id="only-valid">
-            <span class="toggle-track" aria-hidden="true"></span>
-            <span>Nur heute gültige Angebote</span>
-          </label>
           <label class="toggle">
             <input type="checkbox" id="show-all">
             <span class="toggle-track" aria-hidden="true"></span>
@@ -110,6 +109,7 @@
     </section>
 
     <div class="results-head">
+      <button type="button" class="upcoming-banner" id="upcoming-banner" hidden></button>
       <p id="result-count" aria-live="polite"></p>
     </div>
     <section class="deal-grid" id="deals" aria-label="Angebote"></section>

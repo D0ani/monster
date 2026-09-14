@@ -53,8 +53,9 @@
     { key: 'pack10', label: '10er' },
   ];
 
-  const DEFAULT_STATE = { city: 'singen', chain: 'all', pack: 'all', sort: 'unit', onlyValid: false, showAll: false };
-  const URL_KEYS = { city: 'stadt', chain: 'kette', pack: 'packung', sort: 'sort', onlyValid: 'gueltig', showAll: 'alle' };
+  // when: 'all' | 'now' (jetzt gültig) | 'next' (ab nächster Woche / demnächst)
+  const DEFAULT_STATE = { city: 'singen', chain: 'all', pack: 'all', sort: 'unit', when: 'all', showAll: false };
+  const URL_KEYS = { city: 'stadt', chain: 'kette', pack: 'packung', sort: 'sort', when: 'zeitraum', showAll: 'alle' };
 
   const eur = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' });
   const liters = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 3 });
@@ -72,7 +73,8 @@
     sort: $('#sort'),
     chainChips: $('#chain-chips'),
     packChips: $('#pack-chips'),
-    onlyValid: $('#only-valid'),
+    whenChips: $('#when-chips'),
+    upcomingBanner: $('#upcoming-banner'),
     showAll: $('#show-all'),
     cityInput: $('#city'),
     cityList: $('#city-list'),
@@ -303,7 +305,6 @@
     el.cityInput.value = '';
     el.cityInput.placeholder = `${city.name} · andere Stadt oder PLZ suchen …`;
     document.title = `Monster-Angebote ${city.name}`;
-    renderSummary();
     update();
   }
 
@@ -356,7 +357,8 @@
   function matches(d, ignore) {
     if (ignore !== 'chain' && state.chain !== 'all' && d.chain !== state.chain) return false;
     if (ignore !== 'pack' && state.pack !== 'all' && d.packType !== state.pack) return false;
-    if (state.onlyValid && d.status !== 'active') return false;
+    if (ignore !== 'when' && state.when === 'now' && d.status !== 'active') return false;
+    if (ignore !== 'when' && state.when === 'next' && d.status !== 'upcoming') return false;
     return true;
   }
 
@@ -424,6 +426,27 @@
     el.packChips.innerHTML = [...BASE_PACKS.map((p) => p.key), ...extraPacks]
       .map((k) => chip(k, packChipLabel(k), k === 'all' ? packTotal : packCounts.get(k) || 0, state.pack === k))
       .join('');
+
+    // Zeitraum: Alle · Jetzt gültig · Nächste Woche (bzw. "Demnächst", wenn der Start noch in dieser Woche liegt)
+    const whenBase = deals.filter((d) => matches(d, 'when'));
+    const upcoming = whenBase.filter((d) => d.status === 'upcoming');
+    el.whenChips.innerHTML = chip('all', 'Alle', whenBase.length, state.when === 'all')
+      + chip('now', 'Jetzt gültig', whenBase.length - upcoming.length, state.when === 'now')
+      + chip('next', upcoming.length ? upcomingLabel(upcoming, true) : 'Nächste Woche', upcoming.length, state.when === 'next');
+  }
+
+  // Montag der kommenden Woche (YYYY-MM-DD)
+  function nextMondayISO() {
+    const d = new Date(`${today}T00:00:00Z`);
+    d.setUTCDate(d.getUTCDate() + 7 - ((d.getUTCDay() + 6) % 7));
+    return d.toISOString().slice(0, 10);
+  }
+
+  // "Nächste Woche · ab Mo., 21.09." bzw. "Demnächst · ab Do., 17.09." (short = nur der erste Teil)
+  function upcomingLabel(list, short = false) {
+    const first = list.map((d) => d.validFrom).filter(Boolean).sort()[0];
+    const label = first && first >= nextMondayISO() ? 'Nächste Woche' : 'Demnächst';
+    return short || !first ? label : `${label} · ab ${fmtDay(first)}`;
   }
 
   function renderUpdated(list) {
@@ -439,7 +462,10 @@
   }
 
   function renderSummary() {
-    const active = deals.filter((d) => d.status === 'active' && d.pricePerUnit != null);
+    // In der Ansicht "Nächste Woche" zeigt die Kachel den günstigsten kommenden Preis
+    const wantNext = state.when === 'next';
+    const upcomingAll = deals.filter((d) => d.status === 'upcoming');
+    const active = deals.filter((d) => d.status === (wantNext ? 'upcoming' : 'active') && d.pricePerUnit != null);
     if (!deals.length) {
       el.summary.innerHTML = '';
       return;
@@ -451,14 +477,14 @@
     const stores = new Set(deals.map(storeKey));
     el.summary.innerHTML = `
       <div class="stat stat--hero">
-        <p class="stat-label">Günstigste Dose heute</p>
+        <p class="stat-label">${wantNext && upcomingAll.length ? `Günstigste Dose · ${esc(upcomingLabel(upcomingAll))}` : 'Günstigste Dose heute'}</p>
         <p class="stat-value">${best ? eur.format(best.pricePerUnit) : '–'}</p>
         <p class="stat-sub">${best ? `${esc(best.chain)} · ${esc(packLabel(best))}${best.appRequired ? ' · nur mit App' : ''}` : 'aktuell kein gültiges Angebot'}</p>
       </div>
       <div class="stat">
         <p class="stat-label">Angebote</p>
         <p class="stat-value">${deals.length}</p>
-        <p class="stat-sub">in ${stores.size} ${stores.size === 1 ? 'Filiale' : 'Filialen'}</p>
+        <p class="stat-sub">in ${stores.size} ${stores.size === 1 ? 'Filiale' : 'Filialen'}${upcomingAll.length ? ` · ${upcomingAll.length} demnächst` : ''}</p>
       </div>
       <div class="stat">
         <p class="stat-label">Ketten</p>
@@ -578,10 +604,26 @@
 
   function renderList() {
     visible = sortDeals(deals.filter((d) => matches(d)));
-    const priced = visible.filter((d) => d.status === 'active' && d.pricePerUnit != null && !d.appRequired);
-    const bestUnit = Math.min(...priced.map((d) => d.pricePerUnit));
-    // "Bestpreis" nur zeigen, wenn es überhaupt teurere Alternativen gibt – sonst sagt das Label nichts aus
-    const showBest = priced.some((d) => d.pricePerUnit - bestUnit >= 0.005);
+    // Aktuelle und kommende Angebote getrennt – kommende bekommen einen eigenen Abschnitt
+    const nowDeals = visible.filter((d) => d.status !== 'upcoming');
+    const nextDeals = visible.filter((d) => d.status === 'upcoming');
+    const cards = (list) => {
+      const priced = list.filter((d) => d.pricePerUnit != null && !d.appRequired);
+      const bestUnit = Math.min(...priced.map((d) => d.pricePerUnit));
+      // "Bestpreis" nur zeigen, wenn es überhaupt teurere Alternativen gibt – sonst sagt das Label nichts aus
+      const showBest = priced.some((d) => d.pricePerUnit - bestUnit >= 0.005);
+      return list.map((d) => cardHTML(d, showBest && !d.appRequired && Math.abs(d.pricePerUnit - bestUnit) < 0.005)).join('');
+    };
+    const nextHeading = nextDeals.length && nowDeals.length
+      ? `<h2 class="grid-heading grid-heading--next">${esc(upcomingLabel(nextDeals))} (${nextDeals.length})</h2>` : '';
+
+    // Hinweis-Leiste, sobald Angebote für nächste Woche online sind
+    const upcomingHere = deals.filter((d) => d.status === 'upcoming' && matches(d, 'when'));
+    el.upcomingBanner.hidden = state.when === 'next' || !upcomingHere.length;
+    if (upcomingHere.length) {
+      const n = upcomingHere.length;
+      el.upcomingBanner.textContent = `📅 Schon da: ${n} ${n === 1 ? 'Angebot' : 'Angebote'} · ${upcomingLabel(upcomingHere)} – jetzt ansehen`;
+    }
 
     // "Alle Filialen zeigen": Filialen ohne irgendein Angebot ergänzen (Packungs-Filter spielt hier keine Rolle)
     const withDeals = new Set(deals.map(storeKey));
@@ -591,9 +633,7 @@
         .sort((a, b) => chainRank(a.chain) - chainRank(b.chain) || a.name.localeCompare(b.name, 'de'))
       : [];
 
-    el.list.innerHTML = visible
-      .map((d) => cardHTML(d, showBest && d.status === 'active' && !d.appRequired && Math.abs(d.pricePerUnit - bestUnit) < 0.005))
-      .join('')
+    el.list.innerHTML = cards(nowDeals) + nextHeading + cards(nextDeals)
       + (noDealStores.length
         ? `<h2 class="grid-heading">Filialen ohne Monster-Angebot (${noDealStores.length})</h2>${noDealStores.map(storeCardHTML).join('')}`
         : '');
@@ -629,6 +669,7 @@
 
   function update() {
     today = todayISO();
+    renderSummary();
     renderChips();
     renderList();
     renderMap();
@@ -642,7 +683,9 @@
     if (p.has(URL_KEYS.chain)) state.chain = p.get(URL_KEYS.chain);
     if (p.has(URL_KEYS.pack)) state.pack = p.get(URL_KEYS.pack);
     if (SORTERS[p.get(URL_KEYS.sort)]) state.sort = p.get(URL_KEYS.sort);
-    state.onlyValid = p.get(URL_KEYS.onlyValid) === '1';
+    const when = p.get(URL_KEYS.when);
+    if (when === 'now' || when === 'next') state.when = when;
+    else if (p.get('gueltig') === '1') state.when = 'now'; // alte Links ("Nur heute gültige")
     state.showAll = p.get(URL_KEYS.showAll) === '1';
     if (p.has(URL_KEYS.city)) state.city = p.get(URL_KEYS.city);
   }
@@ -659,7 +702,6 @@
 
   function syncControls() {
     el.sort.value = state.sort;
-    el.onlyValid.checked = state.onlyValid;
     el.showAll.checked = state.showAll;
   }
 
@@ -782,9 +824,16 @@
       state.sort = el.sort.value;
       update();
     });
-    el.onlyValid.addEventListener('change', () => {
-      state.onlyValid = el.onlyValid.checked;
+    el.whenChips.addEventListener('click', (e) => {
+      const btn = e.target.closest('.chip');
+      if (!btn || btn.disabled) return;
+      state.when = btn.dataset.value === state.when ? 'all' : btn.dataset.value;
       update();
+    });
+    el.upcomingBanner.addEventListener('click', () => {
+      state.when = 'next';
+      update();
+      el.list.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
     el.showAll.addEventListener('change', () => {
       state.showAll = el.showAll.checked;

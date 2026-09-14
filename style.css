@@ -555,6 +555,23 @@ h1 em {
   color: var(--muted);
 }
 .grid-heading::after { content: ""; flex: 1; height: 1px; background: var(--border-strong); }
+/* Abschnitt + Hinweis für Angebote ab nächster Woche */
+.grid-heading--next { color: var(--ice); }
+.grid-heading--next::after { background: rgb(124 201 232 / .35); }
+.upcoming-banner {
+  display: inline-flex; align-items: center; gap: 8px;
+  margin: 0 0 12px;
+  padding: 8px 15px;
+  border: 1px solid rgb(124 201 232 / .45);
+  border-radius: 999px;
+  background: rgb(124 201 232 / .1);
+  color: var(--ice);
+  font-size: .88rem; font-weight: 750; text-align: left;
+  cursor: pointer;
+  transition: background .15s;
+}
+.upcoming-banner:hover { background: rgb(124 201 232 / .2); }
+.upcoming-banner[hidden] { display: none; }
 .card--store { background: var(--surface); border-style: dashed; box-shadow: none; animation: none; }
 .card--store::before { display: none; }
 .card--store .chain-badge { filter: saturate(.4) brightness(.85); }

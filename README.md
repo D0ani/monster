@@ -15,6 +15,8 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
   auf Karten, Markt-Chips und Karten-Pins (`assets/logos/`, Herkunft/Lizenz in `assets/logos/CREDITS.md`).
   Neue Kette: PNG nach `assets/logos/` legen und in `CHAINS` in `app.js` als `logo` eintragen
 - Filter nach Kette und Packungsgröße (Einzeln/4er/6er/10er/…), Sortierung (Preis/Dose, Gesamtpreis, Rabatt)
+- **Angebote für nächste Woche**, sobald die neuen Prospekte online sind (meist Do–So): eigener Abschnitt,
+  Hinweis-Leiste und Zeitraum-Chips „Alle · Jetzt gültig · Nächste Woche“ (`?zeitraum=next`)
 - App-Pille unter dem Preis: „Preis nur mit Lidl Plus“ (App-Pflicht, gefüllt) bzw. „Mit REWE-App +0,10 € Bonus“ /
   „Mit Netto-App nur 3,49 €“ (Extra-Rabatt, umrandet). Angebote **ohne App-Pflicht stehen immer vor App-Preisen**
 - Schalter **„Alle Filialen zeigen“**: listet zusätzlich alle Filialen ohne aktuelles Angebot (graue Pins auf der
