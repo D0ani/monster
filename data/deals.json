@@ -15,10 +15,17 @@
     "regularPrice": null,
     "validFrom": "2026-09-14",
     "validTo": "2026-09-19",
-    "note": "Mit App 0,10 € REWE Bonus · zzgl. 0,25 € Pfand",
+    "app": {
+      "name": "REWE-App",
+      "required": false,
+      "price": null,
+      "bonus": 0.1,
+      "text": "Mit REWE-App +0,10 € Bonus"
+    },
+    "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-14T07:55:07Z"
+    "lastUpdated": "2026-09-14T08:05:15Z"
   },
   {
     "id": "rewe-rewe-forststrasse-14-single-2026-09-14-0-99",
@@ -36,10 +43,17 @@
     "regularPrice": null,
     "validFrom": "2026-09-14",
     "validTo": "2026-09-19",
-    "note": "Mit App 0,10 € REWE Bonus · zzgl. 0,25 € Pfand",
+    "app": {
+      "name": "REWE-App",
+      "required": false,
+      "price": null,
+      "bonus": 0.1,
+      "text": "Mit REWE-App +0,10 € Bonus"
+    },
+    "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-14T07:55:07Z"
+    "lastUpdated": "2026-09-14T08:05:15Z"
   },
   {
     "id": "rewe-rewe-forststrasse-14-pack4-2026-09-14-3-96",
@@ -57,10 +71,17 @@
     "regularPrice": null,
     "validFrom": "2026-09-14",
     "validTo": "2026-09-19",
-    "note": "Mit App 0,10 € REWE Bonus · 4er-Pack laut Prospekt · zzgl. Pfand",
+    "app": {
+      "name": "REWE-App",
+      "required": false,
+      "price": null,
+      "bonus": 0.1,
+      "text": "Mit REWE-App +0,10 € Bonus"
+    },
+    "note": "4er-Pack laut Prospekt · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-14T07:55:07Z"
+    "lastUpdated": "2026-09-14T08:05:15Z"
   },
   {
     "id": "rewe-rewe-holzeckstrasse-2-single-2026-09-14-0-99",
@@ -78,10 +99,17 @@
     "regularPrice": null,
     "validFrom": "2026-09-14",
     "validTo": "2026-09-19",
-    "note": "Mit App 0,10 € REWE Bonus · zzgl. 0,25 € Pfand",
+    "app": {
+      "name": "REWE-App",
+      "required": false,
+      "price": null,
+      "bonus": 0.1,
+      "text": "Mit REWE-App +0,10 € Bonus"
+    },
+    "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-14T07:55:07Z"
+    "lastUpdated": "2026-09-14T08:05:15Z"
   },
   {
     "id": "rewe-rewe-holzeckstrasse-2-pack4-2026-09-14-3-96",
@@ -99,10 +127,17 @@
     "regularPrice": null,
     "validFrom": "2026-09-14",
     "validTo": "2026-09-19",
-    "note": "Mit App 0,10 € REWE Bonus · 4er-Pack laut Prospekt · zzgl. Pfand",
+    "app": {
+      "name": "REWE-App",
+      "required": false,
+      "price": null,
+      "bonus": 0.1,
+      "text": "Mit REWE-App +0,10 € Bonus"
+    },
+    "note": "4er-Pack laut Prospekt · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-14T07:55:07Z"
+    "lastUpdated": "2026-09-14T08:05:15Z"
   },
   {
     "id": "rewe-rewe-steisslinger-strasse-single-2026-09-14-0-99",
@@ -120,10 +155,17 @@
     "regularPrice": null,
     "validFrom": "2026-09-14",
     "validTo": "2026-09-19",
-    "note": "Mit App 0,10 € REWE Bonus · zzgl. 0,25 € Pfand",
+    "app": {
+      "name": "REWE-App",
+      "required": false,
+      "price": null,
+      "bonus": 0.1,
+      "text": "Mit REWE-App +0,10 € Bonus"
+    },
+    "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-14T07:55:07Z"
+    "lastUpdated": "2026-09-14T08:05:15Z"
   },
   {
     "id": "rewe-rewe-steisslinger-strasse-pack4-2026-09-14-3-96",
@@ -141,9 +183,16 @@
     "regularPrice": null,
     "validFrom": "2026-09-14",
     "validTo": "2026-09-19",
-    "note": "Mit App 0,10 € REWE Bonus · 4er-Pack laut Prospekt · zzgl. Pfand",
+    "app": {
+      "name": "REWE-App",
+      "required": false,
+      "price": null,
+      "bonus": 0.1,
+      "text": "Mit REWE-App +0,10 € Bonus"
+    },
+    "note": "4er-Pack laut Prospekt · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-14T07:55:07Z"
+    "lastUpdated": "2026-09-14T08:05:15Z"
   }
 ]

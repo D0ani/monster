@@ -8,7 +8,9 @@ auf schwarzem Grund, Silber-Akzente, Eisblau wie der ENERGY-Schriftzug.
 Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggregatoren gescrapt.
 
 - Kein Backend, kein Framework: `index.html` + `style.css` + `app.js` lesen `data/deals.json`
-- Filter nach Kette, Packungsgröße (Einzeln/4er/6er/10er/…), Sorten-Suche, Sortierung (Preis/Dose, Gesamtpreis, Rabatt)
+- Filter nach Kette und Packungsgröße (Einzeln/4er/6er/10er/…), Sortierung (Preis/Dose, Gesamtpreis, Rabatt)
+- App-Pille unter dem Preis: „Preis nur mit Lidl Plus“ (App-Pflicht, gefüllt) bzw. „Mit REWE-App +0,10 € Bonus“ /
+  „Mit Netto-App nur 3,49 €“ (Extra-Rabatt, umrandet). Angebote **ohne App-Pflicht stehen immer vor App-Preisen**
 - Filter stehen in der URL (`?kette=Rewe&packung=pack4`) → Links teilbar
 - Optionale Karte (Leaflet + OpenStreetMap), synchron zu den Filtern. Lädt erst nach Klick → keine
   Drittanbieter-Requests beim Seitenaufruf, keine Google Fonts (DSGVO-freundlich)
@@ -153,7 +155,8 @@ Array von Angeboten. Pflichtfelder wie spezifiziert, dazu einige optionale Zusat
 | `regularPrice` | Streich-/Normalpreis, nur wenn die Quelle einen nennt – sonst `null` (kein Rabatt-Chip) |
 | `validFrom`/`validTo` | Kalendertage in Europe/Berlin, jeweils inklusive |
 | `lat`/`lon` | optional; fehlen sie, sucht das Frontend die Filiale in `stores.json` |
-| `note` | optional: App-Rabatte, Pfand, „Preis je Dose beim Kauf im 12er-Pack“ … |
+| `app` | optional: `{"name": "REWE-App", "required": false, "price": null, "bonus": 0.1, "text": "…"}` – `required: true` = Preis gilt nur mit App/Kundenkarte (wird hinten einsortiert), `price` = günstigerer Preis mit App, `bonus` = Gutschrift mit App |
+| `note` | optional: Pfand, „Preis je Dose beim Kauf im 12er-Pack“ … |
 
 **Manuelle Angebote** (z. B. Aushang im Markt) kann man direkt in `deals.json` eintragen. Solange `source`
 nicht auf marktguru/kaufda/prospektangebote zeigt, lässt der Scraper sie bis zum Ablauf in Ruhe.

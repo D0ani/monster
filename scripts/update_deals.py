@@ -116,6 +116,7 @@ class Offer:
     volume: float | None = None
     quantity: float | None = None
     retailer_hint: str = ""  # zusätzlicher Text für die Kettenerkennung, z. B. URL-Slug "netto marken discount"
+    loyalty: bool = False  # Quelle meldet ausdrücklich: Preis nur mit Kundenkarte/App
     regional: bool = True  # False = Quelle ist bundesweit, nicht auf Singen gefiltert
 
     @property
@@ -292,19 +293,64 @@ def product_name(offer: Offer) -> str:
     return name
 
 
-KEEP_UPPER = {"REWE", "PENNY", "NETTO", "LIDL", "EDEKA", "ALDI", "PAYBACK", "DEUTSCHLANDCARD", "KAUFLAND"}
-TITLE_WORDS = {"APP", "BONUS", "PLUS", "COUPON"}
+# App-/Kundenkarten-Hinweise → Name der App für die Pille im Frontend
+APP_NAMES: list[tuple[str, str]] = [
+    (r"lidl\s*plus", "Lidl Plus"),
+    (r"kaufland\s*card", "Kaufland Card"),
+    (r"netto\s*(plus|app)", "Netto-App"),
+    (r"penny\s*app", "PENNY-App"),
+    (r"rewe\s*(bonus|app)", "REWE-App"),
+    (r"edeka\s*app|genuss\s*\+", "EDEKA-App"),
+    (r"aldi\s*app", "ALDI-App"),
+    (r"payback", "PAYBACK"),
+    (r"deutschlandcard", "DeutschlandCard"),
+]
+APP_HINT_RE = re.compile(r"\bapp\b|lidl\s*plus|kaufland\s*card|payback|deutschlandcard|coupon", re.I)
+# "MIT APP 0,10 € REWE BONUS" → Gutschrift
+APP_BONUS_RE = re.compile(r"(\d{1,2}[.,]\d{2})\s*€?\s*(?:[a-zäöü-]+\s+){0,2}bonus", re.I)
+# "MIT NETTO PLUS APP 3.49 €" / "Lidl Plus Preis 0,79" → Preis mit App (aber nicht, wenn danach "Bonus" kommt)
+APP_PRICE_RE = re.compile(
+    r"(?:\bapp\b|plus|card)\s*(?:-?preis)?\s*:?\s*(?:nur\s*)?(\d{1,3}[.,]\d{2})(?!\s*€?\s*(?:[a-zäöü-]+\s+)?bonus)", re.I)
+
+
+def euro(value: float) -> str:
+    return f"{value:.2f}".replace(".", ",") + " €"
+
+
+def app_info(offer: Offer, chain: str, variant: dict) -> dict | None:
+    """Braucht der Preis eine App/Kundenkarte – oder gibt es mit App extra Rabatt?
+
+    required=True → der angezeigte Preis gilt nur mit App (z. B. Lidl-Plus-Preis); im Frontend nach hinten sortiert
+    price         → mit App günstiger als der angezeigte Preis ("MIT NETTO PLUS APP 3.49 €")
+    bonus         → Gutschrift mit App ("MIT APP 0,10 € REWE BONUS")
+    """
+    text = offer.text
+    if not (offer.loyalty or APP_HINT_RE.search(text)):
+        return None
+    name = next((n for pattern, n in APP_NAMES if re.search(pattern, text, re.I)), f"{chain}-App")
+    bonus_m, price_m = APP_BONUS_RE.search(text), APP_PRICE_RE.search(text)
+    bonus = parse_price(bonus_m.group(1)) if bonus_m else None
+    app_price = parse_price(price_m.group(1)) if price_m and not variant.get("bundle") else None
+    if app_price and variant.get("perCanPricing"):
+        app_price = round(app_price * variant["unitCount"], 2)
+    required = (offer.loyalty
+                or (app_price is not None and abs(app_price - variant["price"]) < 0.01)
+                or (app_price is None and bonus is None))
+    if app_price is not None and (required or app_price >= variant["price"]):
+        app_price = None
+    if required:
+        label = f"Preis nur mit {name}"
+    elif app_price:
+        label = f"Mit {name} nur {euro(app_price)}"
+    elif bonus:
+        label = f"Mit {name} +{euro(bonus)} Bonus"
+    else:
+        label = f"Extra-Rabatt mit {name}"
+    return {"name": name, "required": bool(required), "price": app_price, "bonus": bonus, "text": label}
 
 
 def build_note(offer: Offer, variant: dict) -> str | None:
-    parts = []
-    # marktguru: "HINWEIS: MIT APP 0,10 € REWE BONUS versch. Sorten …" → "Mit App 0,10 € REWE Bonus"
-    hint = re.search(r"HINWEIS:\s*(.+?)(?=\s+\S*[a-zäöü]|\s{2,}|$)", offer.description)
-    if hint:
-        words = [w if w in KEEP_UPPER or not w.isalpha() else w.capitalize() if w in TITLE_WORDS else w.lower()
-                 for w in hint.group(1).split()]
-        sentence = re.sub(r"(\d)\.(\d{2})", r"\1,\2", " ".join(words))
-        parts.append(sentence[:1].upper() + sentence[1:])
+    parts = []  # App-Hinweise stehen separat in deal["app"]
     if variant.get("perCanPricing"):
         parts.append(f"Preis je Dose beim Kauf im {variant['unitCount']}er-Pack")
     if variant.get("bundle"):
@@ -375,6 +421,7 @@ def fetch_marktguru(session: requests.Session) -> list[Offer]:
                 price=parse_price(item.get("price")), regular_price=parse_price(item.get("oldPrice")),
                 valid_from=valid_from, valid_to=valid_to,
                 volume=item.get("volume") if is_liter else None, quantity=item.get("quantity"),
+                loyalty=bool(item.get("requiresLoyalityMembership")),
             ))
     return offers
 
@@ -574,6 +621,9 @@ def build_deals(offers: list[Offer], stores_by_chain: dict, today: date, now_iso
                     "validFrom": valid_from.isoformat(),
                     "validTo": offer.valid_to.isoformat(),
                 })
+                app = app_info(offer, chain, variant)
+                if app:
+                    deal["app"] = app
                 note = build_note(offer, variant)
                 if note:
                     deal["note"] = note
@@ -594,7 +644,7 @@ def merge_duplicates(deals: list[dict]) -> list[dict]:
         if current is None:
             merged[deal["id"]] = deal
             continue
-        for key in ("regularPrice", "volumeLiters", "note", "lat", "lon"):
+        for key in ("regularPrice", "volumeLiters", "app", "note", "lat", "lon"):
             if current.get(key) in (None, "") and deal.get(key) not in (None, ""):
                 current[key] = deal[key]
     return list(merged.values())

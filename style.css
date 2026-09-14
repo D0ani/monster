@@ -185,25 +185,6 @@ h1 em {
 /* ---------- Filter ---------- */
 .filter-top { display: flex; flex-direction: column; gap: 10px; }
 
-.search { position: relative; display: flex; align-items: center; flex: 1; }
-.search svg {
-  position: absolute; left: 13px; width: 19px; height: 19px;
-  fill: none; stroke: var(--muted); stroke-width: 2.2; stroke-linecap: round;
-  pointer-events: none;
-}
-.search input {
-  width: 100%;
-  min-height: 46px;
-  padding: 10px 14px 10px 42px;
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  background: var(--surface-2);
-  outline: none;
-  transition: border-color .15s, box-shadow .15s;
-}
-.search input::placeholder { color: #6f7680; }
-.search input:focus { border-color: var(--silver); box-shadow: 0 0 0 3px rgb(255 255 255 / .08); }
-
 .sort { display: flex; align-items: center; gap: 10px; font-size: .9rem; color: var(--muted); }
 .sort span { white-space: nowrap; }
 .sort select {
@@ -482,6 +463,26 @@ h1 em {
   font-weight: 900; font-size: .95rem;
   font-variant-numeric: tabular-nums;
   box-shadow: 0 0 18px -6px rgb(255 255 255 / .5);
+}
+
+/* App-Pille direkt unter dem Preis */
+.app-pill {
+  display: inline-flex; align-items: center; gap: 8px;
+  align-self: flex-start;
+  margin: 10px 0 0;
+  padding: 6px 13px 6px 10px;
+  border-radius: 999px;
+  background: rgb(124 201 232 / .12);
+  color: var(--ice);
+  box-shadow: inset 0 0 0 1px rgb(124 201 232 / .4);
+  font-size: .88rem; font-weight: 800; line-height: 1.2;
+}
+.app-pill svg { flex: none; width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2.2; stroke-linecap: round; }
+/* Preis gilt NUR mit App → kräftig gefüllt */
+.app-pill--required {
+  background: var(--ice);
+  color: #04131a;
+  box-shadow: 0 0 20px -6px rgb(124 201 232 / .75);
 }
 
 .note { margin: 10px 0 0; font-size: .82rem; color: var(--muted); }

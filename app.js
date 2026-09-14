@@ -43,8 +43,8 @@
     { key: 'pack10', label: '10er' },
   ];
 
-  const DEFAULT_STATE = { chain: 'all', pack: 'all', q: '', sort: 'unit', onlyValid: false };
-  const URL_KEYS = { chain: 'kette', pack: 'packung', q: 'q', sort: 'sort', onlyValid: 'gueltig' };
+  const DEFAULT_STATE = { chain: 'all', pack: 'all', sort: 'unit', onlyValid: false };
+  const URL_KEYS = { chain: 'kette', pack: 'packung', sort: 'sort', onlyValid: 'gueltig' };
 
   const eur = new Intl.NumberFormat('de-DE', { style: 'currency', currency: 'EUR' });
   const liters = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 3 });
@@ -59,7 +59,6 @@
     updated: $('#updated'),
     updatedText: $('#updated-text'),
     summary: $('#summary'),
-    q: $('#q'),
     sort: $('#sort'),
     chainChips: $('#chain-chips'),
     packChips: $('#pack-chips'),
@@ -191,7 +190,7 @@
       lon: lon != null ? Number(lon) : null,
       sourceLabel: sourceName(raw),
       updatedAt: raw.lastUpdated ? new Date(raw.lastUpdated) : null,
-      haystack: fold([raw.product, raw.store, raw.chain, raw.address, raw.note].join(' ')),
+      appRequired: Boolean(raw.app && raw.app.required),
     };
   }
 
@@ -236,10 +235,6 @@
     if (ignore !== 'chain' && state.chain !== 'all' && d.chain !== state.chain) return false;
     if (ignore !== 'pack' && state.pack !== 'all' && d.packType !== state.pack) return false;
     if (state.onlyValid && d.status !== 'active') return false;
-    if (state.q) {
-      const terms = fold(state.q).split(/\s+/).filter(Boolean);
-      if (!terms.every((t) => d.haystack.includes(t))) return false;
-    }
     return true;
   }
 
@@ -252,9 +247,10 @@
 
   function sortDeals(list) {
     const primary = SORTERS[state.sort] || SORTERS.unit;
-    // Aktuell gültige Angebote immer vor denen, die erst ab nächster Woche gelten
+    // 1. ohne App-Pflicht immer vor App-Preisen, 2. aktuell gültige vor kommenden, 3. gewählte Sortierung
     return list.sort((a, b) =>
-      (a.status === 'active' ? 0 : 1) - (b.status === 'active' ? 0 : 1)
+      Number(a.appRequired) - Number(b.appRequired)
+      || (a.status === 'active' ? 0 : 1) - (b.status === 'active' ? 0 : 1)
       || primary(a, b)
       || a.chain.localeCompare(b.chain, 'de')
       || a.store.localeCompare(b.store, 'de'));
@@ -311,14 +307,16 @@
       el.summary.innerHTML = '';
       return;
     }
-    const best = active.slice().sort(SORTERS.unit)[0];
+    // App-Preise zählen nur, wenn es gar kein Angebot ohne App gibt
+    const withoutApp = active.filter((d) => !d.appRequired);
+    const best = (withoutApp.length ? withoutApp : active).slice().sort(SORTERS.unit)[0];
     const chains = new Set(deals.map((d) => d.chain));
     const stores = new Set(deals.map(storeKey));
     el.summary.innerHTML = `
       <div class="stat stat--hero">
         <p class="stat-label">Günstigste Dose heute</p>
         <p class="stat-value">${best ? eur.format(best.pricePerUnit) : '–'}</p>
-        <p class="stat-sub">${best ? `${esc(best.chain)} · ${esc(packLabel(best))}` : 'aktuell kein gültiges Angebot'}</p>
+        <p class="stat-sub">${best ? `${esc(best.chain)} · ${esc(packLabel(best))}${best.appRequired ? ' · nur mit App' : ''}` : 'aktuell kein gültiges Angebot'}</p>
       </div>
       <div class="stat">
         <p class="stat-label">Angebote</p>
@@ -333,6 +331,18 @@
   }
 
   const CAL_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
+  const PHONE_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>';
+
+  // Text für die App-Pille: Preis nur mit App / mit App günstiger / Bonus mit App
+  function appText(app) {
+    const name = app.name || 'App';
+    if (app.required) return `Preis nur mit ${name}`;
+    if (app.price) return `Mit ${name} nur ${eur.format(app.price)}`;
+    if (app.bonus) return `Mit ${name} +${eur.format(app.bonus)} Bonus`;
+    return app.text || `Extra-Rabatt mit ${name}`;
+  }
+
+  const appPill = (app) => `<p class="app-pill${app.required ? ' app-pill--required' : ''}">${PHONE_ICON}<span>${esc(appText(app))}</span></p>`;
 
   function cardHTML(d, isBest) {
     const cs = chainStyle(d.chain);
@@ -392,6 +402,7 @@
           ${unitLine}
           ${d.discount ? `<span class="discount">−${d.discount}&nbsp;%</span>` : ''}
         </div>
+        ${d.app ? appPill(d.app) : ''}
         ${d.note ? `<p class="note">${esc(d.note)}</p>` : ''}
 
         <footer class="card-foot">
@@ -404,12 +415,12 @@
 
   function renderList() {
     visible = sortDeals(deals.filter((d) => matches(d)));
-    const priced = visible.filter((d) => d.status === 'active' && d.pricePerUnit != null);
+    const priced = visible.filter((d) => d.status === 'active' && d.pricePerUnit != null && !d.appRequired);
     const bestUnit = Math.min(...priced.map((d) => d.pricePerUnit));
     // "Bestpreis" nur zeigen, wenn es überhaupt teurere Alternativen gibt – sonst sagt das Label nichts aus
     const showBest = priced.some((d) => d.pricePerUnit - bestUnit >= 0.005);
     el.list.innerHTML = visible
-      .map((d) => cardHTML(d, showBest && d.status === 'active' && Math.abs(d.pricePerUnit - bestUnit) < 0.005))
+      .map((d) => cardHTML(d, showBest && d.status === 'active' && !d.appRequired && Math.abs(d.pricePerUnit - bestUnit) < 0.005))
       .join('');
     el.empty.hidden = visible.length > 0;
 
@@ -454,7 +465,6 @@
     const p = new URLSearchParams(location.search);
     if (p.has(URL_KEYS.chain)) state.chain = p.get(URL_KEYS.chain);
     if (p.has(URL_KEYS.pack)) state.pack = p.get(URL_KEYS.pack);
-    if (p.has(URL_KEYS.q)) state.q = p.get(URL_KEYS.q);
     if (SORTERS[p.get(URL_KEYS.sort)]) state.sort = p.get(URL_KEYS.sort);
     state.onlyValid = p.get(URL_KEYS.onlyValid) === '1';
   }
@@ -470,7 +480,6 @@
   }
 
   function syncControls() {
-    el.q.value = state.q;
     el.sort.value = state.sort;
     el.onlyValid.checked = state.onlyValid;
   }
@@ -547,7 +556,8 @@
         popupAnchor: [0, -16],
       });
       const rows = items.map((d) => `<li>${esc(packLabel(d))}: <b>${eur.format(d.price)}</b>`
-        + `${d.packType !== 'single' && d.pricePerUnit != null ? ` (${eur.format(d.pricePerUnit)}/Dose)` : ''}</li>`).join('');
+        + `${d.packType !== 'single' && d.pricePerUnit != null ? ` (${eur.format(d.pricePerUnit)}/Dose)` : ''}`
+        + `${d.app ? `<br><small>📱 ${esc(appText(d.app))}</small>` : ''}</li>`).join('');
       const marker = L.marker([first.lat, first.lon], { icon, title: first.store })
         .bindPopup(`<p class="popup-title">${esc(first.store)}</p><p class="popup-addr">${esc(first.address)}</p><ul class="popup-list">${rows}</ul>`);
       marker.addTo(mapState.layer);
@@ -578,14 +588,6 @@
   }
 
   function bindEvents() {
-    let timer;
-    el.q.addEventListener('input', () => {
-      clearTimeout(timer);
-      timer = setTimeout(() => {
-        state.q = el.q.value.trim();
-        update();
-      }, 120);
-    });
     el.sort.addEventListener('change', () => {
       state.sort = el.sort.value;
       update();
