@@ -953,6 +953,7 @@
   const HISTORY_DAYS_SHOWN = 84; // 12 Wochen
   const shortDateFmt = new Intl.DateTimeFormat('de-DE', { day: '2-digit', month: '2-digit', timeZone: 'UTC' });
   const fmtShort = (iso) => shortDateFmt.format(new Date(`${iso}T00:00:00Z`));
+  const fmtRange = (from, to) => (from === to ? fmtShort(from) : `${fmtShort(from)}–${fmtShort(to)}`);
   function addDays(iso, n) {
     const d = new Date(`${iso}T00:00:00Z`);
     d.setUTCDate(d.getUTCDate() + n);
@@ -960,6 +961,7 @@
   }
 
   // Tageswerte im Anzeigezeitraum: p = Preis, null = kein Angebot, undefined = an dem Tag nicht erfasst
+  // chains = günstigste Kette(n) des Tages (größte zuerst), b = nachgetragen (nicht live erfasst)
   function historySeries(slug) {
     const days = priceHistory[slug] || {};
     const recorded = Object.keys(days).sort();
@@ -968,7 +970,7 @@
     const out = [];
     for (let day = recorded[0] > windowStart ? recorded[0] : windowStart; day <= today; day = addDays(day, 1)) {
       const v = days[day];
-      out.push({ day, p: v ? v.p : undefined, c: v ? v.c : undefined });
+      out.push({ day, p: v ? v.p : undefined, chains: v && v.c ? [v.c, ...(v.o || [])] : [], b: Boolean(v && v.b) });
     }
     return out;
   }
@@ -1010,7 +1012,7 @@
       el.historySub.textContent = `Seit ${fmtDay(series[0].day)} gab es hier kein Monster-Angebot.`;
     } else {
       el.historySub.textContent = `Tagesbestpreis pro Dose (ohne App-Pflicht) · ${series.length >= HISTORY_DAYS_SHOWN
-        ? 'letzte 12 Wochen' : `seit ${fmtDay(series[0].day)}`}`;
+        ? 'letzte 12 Wochen' : `seit ${fmtDay(series[0].day)}`}${series.some((s) => s.b) ? ' · gestrichelt = nachgetragen' : ''}`;
       drawHistoryChart(series, city);
     }
 
@@ -1046,14 +1048,20 @@
       xTicks += `<text class="hist-tick" x="${xx.toFixed(1)}" y="${H - 6}" text-anchor="${i === 0 ? 'start' : 'middle'}">${fmtShort(s.day)}</text>`;
     });
 
-    let path = '';
-    let open = false;
+    // Nachgetragene Tage gestrichelt: eigener Pfad, nahtlos an die live erfasste Linie angeschlossen
+    const paths = { live: '', partial: '' };
+    let prev = null; // Linienende des Vortags { type, y } – null = Lücke
     series.forEach((s, i) => {
-      if (s.p == null) { open = false; return; }
+      if (s.p == null) { prev = null; return; }
+      const type = s.b ? 'partial' : 'live';
       const yy = y(s.p).toFixed(1);
-      path += `${open ? 'V' : `M${x(i).toFixed(1)},`}${yy}H${x(i + 1).toFixed(1)}`;
-      open = true;
+      if (prev && prev.type === type) paths[type] += `V${yy}`;
+      else paths[type] += `M${x(i).toFixed(1)},${prev ? `${prev.y}V${yy}` : yy}`;
+      paths[type] += `H${x(i + 1).toFixed(1)}`;
+      prev = { type, y: yy };
     });
+    const lines = (paths.live ? `<path class="hist-line" d="${paths.live}"/>` : '')
+      + (paths.partial ? `<path class="hist-line hist-line--partial" d="${paths.partial}"/>` : '');
 
     // Selektive Direkt-Labels: aktueller Preis am Ende, Tiefstpreis (falls niedriger als heute)
     const lastIdx = series.map((s) => s.p != null).lastIndexOf(true);
@@ -1083,43 +1091,106 @@
 
     const summary = `Preisverlauf ${city.name}: heute ${eur.format(last.p)}, Tiefstpreis ${eur.format(minVal)} am ${fmtDay(series[minIdx].day)}. Mit Pfeiltasten durch die Tage.`;
     wrap.innerHTML = `<svg class="hist-svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" tabindex="0" aria-label="${esc(summary)}">`
-      + `${grid}${xTicks}<path class="hist-line" d="${path}"/>${marks}`
+      + `${grid}${xTicks}${lines}${marks}`
       + `<line class="hist-cross" x1="0" x2="0" y1="${m.top}" y2="${m.top + ph}" visibility="hidden"/>`
       // Tippfläche über die volle Breite (auch über den Achsen-Rändern) – am Rand wird auf den ersten/letzten Tag geklemmt
       + `<rect class="hist-hit" x="0" y="${m.top}" width="${W}" height="${ph}"/></svg>`
       + '<div class="hist-tip" hidden></div>';
 
+    bindChartTip(wrap, {
+      W, H, n, start: lastIdx,
+      xAt: (i) => x(i) + bw / 2,
+      yAt: y,
+      indexAt: (px) => Math.floor((px - m.left) / bw),
+      info: (i) => ({ p: series[i].p, chains: series[i].chains, when: fmtDay(series[i].day), partial: series[i].b, city }),
+    });
+  }
+
+  // Filialen einer Kette in der gewählten Stadt: bis zu 2 Adressen, sonst die Anzahl
+  function storesLine(chain, city) {
+    const place = (s) => {
+      const [street, rest = ''] = String(s.address || '').split(',').map((t) => t.trim());
+      const town = rest.replace(/^\d{5}\s*/, '');
+      return town && !town.startsWith(city.name) ? `${street}, ${town}` : street;
+    };
+    const places = [...new Set(allStores.filter((s) => s.chain === chain).map(place).filter(Boolean))];
+    if (!places.length) return '';
+    return places.length <= 2 ? places.join('\n') : `${places.length} Filialen in ${city.name}`;
+  }
+
+  // Tooltip-Inhalt: Preis, Zeitpunkt, günstigste Kette(n) mit Logo und ihren Filialen in der Stadt
+  function fillTip(tip, { p, chains, when, partial, city }) {
+    const row = (cls, text) => {
+      const span = document.createElement('span');
+      span.className = cls;
+      span.textContent = text;
+      return span;
+    };
+    const value = document.createElement('strong');
+    value.textContent = p != null ? eur.format(p) : p === null ? 'kein Angebot' : 'nicht erfasst';
+    const rows = [value, row('tip-when', when)];
+    if (p != null) {
+      for (const chain of chains.slice(0, 3)) {
+        const shop = document.createElement('span');
+        shop.className = 'tip-shop';
+        shop.innerHTML = `${chipMark(chain)}${esc(chain)}`;
+        rows.push(shop);
+        const where = storesLine(chain, city);
+        if (where) rows.push(row('tip-store', where));
+      }
+      if (chains.length > 3) rows.push(row('tip-store', `+ ${chains.length - 3} weitere zum selben Preis`));
+    }
+    if (partial) rows.push(row('tip-note', 'Nachgetragen aus Angeboten, die noch liefen – ältere sind nicht mehr abrufbar'));
+    tip.replaceChildren(...rows);
+  }
+
+  // Fadenkreuz + Tooltip für beide Diagramme: Maus (Hover), Finger (Tippen/Wischen) und Tastatur (←/→)
+  function bindChartTip(wrap, { W, H, n, start, xAt, yAt, indexAt, info }) {
     const svg = wrap.querySelector('svg');
     const cross = svg.querySelector('.hist-cross');
     const tip = wrap.querySelector('.hist-tip');
-    let idx = lastIdx;
+    let idx = start;
     const show = (i) => {
       idx = Math.max(0, Math.min(n - 1, i));
-      const s = series[idx];
-      const cx = x(idx) + bw / 2;
+      const d = info(idx);
+      const cx = xAt(idx);
       cross.setAttribute('x1', cx);
       cross.setAttribute('x2', cx);
       cross.setAttribute('visibility', 'visible');
-      const value = document.createElement('strong');
-      value.textContent = s.p != null ? eur.format(s.p) : s.p === null ? 'kein Angebot' : 'nicht erfasst';
-      const meta = document.createElement('span');
-      meta.textContent = s.c ? `${fmtDay(s.day)} · ${s.c}` : fmtDay(s.day);
-      tip.replaceChildren(value, meta);
+      fillTip(tip, d);
+      // Neben das Fadenkreuz auf die Seite mit mehr Platz (Text bricht dort um), damit der Punkt frei bleibt;
+      // ist auf keiner Seite genug Platz, darüber bzw. darunter
+      const roomRight = W - cx - 14;
+      const roomLeft = cx - 14;
+      const room = Math.max(roomRight, roomLeft);
+      const beside = room >= 150;
+      tip.style.maxWidth = beside ? `${Math.floor(Math.min(250, room))}px` : '';
       tip.hidden = false;
       const tw = tip.offsetWidth;
-      tip.style.left = `${Math.min(Math.max(cx - tw / 2, 0), W - tw)}px`;
-      tip.style.top = `${Math.max(0, (s.p != null ? y(s.p) : m.top) - tip.offsetHeight - 12)}px`;
+      const th = tip.offsetHeight;
+      const py = d.p != null ? yAt(d.p) : H / 2;
+      let left = roomRight >= roomLeft ? cx + 14 : cx - 14 - tw;
+      let top = py - th / 2;
+      if (!beside) {
+        left = cx - tw / 2;
+        top = py - th - 14 >= 0 ? py - th - 14 : py + 14;
+      }
+      tip.style.left = `${Math.min(Math.max(left, 0), Math.max(0, W - tw))}px`;
+      tip.style.top = `${Math.min(Math.max(top, 0), Math.max(0, H - th))}px`;
     };
     const hide = () => {
       cross.setAttribute('visibility', 'hidden');
       tip.hidden = true;
     };
     const hit = svg.querySelector('.hist-hit');
-    hit.addEventListener('pointermove', (e) => {
+    const fromPointer = (e) => {
       const r = svg.getBoundingClientRect();
-      show(Math.floor(((e.clientX - r.left) * (W / r.width) - m.left) / bw));
-    });
-    hit.addEventListener('pointerleave', hide);
+      show(indexAt((e.clientX - r.left) * (W / r.width)));
+    };
+    hit.addEventListener('pointermove', fromPointer);
+    hit.addEventListener('pointerdown', fromPointer);
+    // Maus: beim Verlassen weg. Finger: bleibt nach dem Tippen stehen, bis woanders hingetippt wird
+    hit.addEventListener('pointerleave', (e) => { if (e.pointerType === 'mouse') hide(); });
     svg.addEventListener('focus', () => show(idx));
     svg.addEventListener('blur', hide);
     svg.addEventListener('keydown', (e) => {
@@ -1158,6 +1229,7 @@
   }
 
   // Tiefstpreis je Kalenderwoche seit Beginn der Aufzeichnung: p = Preis, null = kein Angebot, undefined = nicht erfasst
+  // chains = alle Ketten, die in der Woche diesen Tiefstpreis hatten; partial = Woche enthält nachgetragene Tage
   function weeklySeries(slug) {
     const days = priceHistory[slug] || {};
     const recorded = Object.keys(days).sort();
@@ -1165,15 +1237,21 @@
     const mondayOf = (iso) => addDays(iso, -((new Date(`${iso}T00:00:00Z`).getUTCDay() + 6) % 7));
     const weeks = new Map();
     for (let monday = mondayOf(recorded[0]); monday <= mondayOf(recorded[recorded.length - 1]); monday = addDays(monday, 7)) {
-      weeks.set(monday, { monday, from: monday, to: addDays(monday, 6), p: undefined, c: null });
+      weeks.set(monday, { monday, from: monday, to: addDays(monday, 6), p: undefined, chains: [], partial: false });
     }
     for (const day of recorded) {
       const w = weeks.get(mondayOf(day));
       if (w.p === undefined) { w.p = null; w.from = day; }
       w.to = day;
       const v = days[day];
-      if (v && v.p != null && (w.p == null || v.p < w.p)) { w.p = v.p; w.c = v.c; }
+      if (!v) continue;
+      if (v.b) w.partial = true;
+      if (v.p == null) continue;
+      const chains = v.c ? [v.c, ...(v.o || [])] : [];
+      if (w.p == null || v.p < w.p - 0.005) { w.p = v.p; w.chains = chains; }
+      else if (Math.abs(v.p - w.p) < 0.005) w.chains = [...new Set([...w.chains, ...chains])];
     }
+    for (const w of weeks.values()) w.chains.sort((a, b) => chainRank(a) - chainRank(b));
     return [...weeks.values()];
   }
 
@@ -1184,11 +1262,12 @@
     if (priced.length < 2) {
       const cur = priced[priced.length - 1];
       el.weeklySub.textContent = cur
-        ? `KW ${isoWeek(cur.monday)}: ${eur.format(cur.p)}${cur.c ? ` (${cur.c})` : ''} – ab der nächsten Woche entsteht hier die Kurve.`
+        ? `KW ${isoWeek(cur.monday)}: ${eur.format(cur.p)}${cur.chains.length ? ` (${cur.chains.join(', ')})` : ''} – ab der nächsten Woche entsteht hier die Kurve.`
         : 'Noch kein Monster-Angebot erfasst – die Kurve entsteht, sobald es hier Angebote gibt.';
       return;
     }
-    el.weeklySub.textContent = `Günstigster Dosenpreis je Kalenderwoche in ${city.name} (ohne App-Pflicht) · ${weeks.length} Wochen`;
+    el.weeklySub.textContent = `Günstigster Dosenpreis je Kalenderwoche in ${city.name} (ohne App-Pflicht) · ${weeks.length} Wochen`
+      + (weeks.some((w) => w.partial && w.p != null) ? ' · hohler Punkt = nachgetragen' : '');
     drawWeeklyChart(weeks, city);
   }
 
@@ -1216,7 +1295,8 @@
       path += `${open ? 'L' : 'M'}${x(i).toFixed(1)},${y(w.p).toFixed(1)}`;
       open = true;
     });
-    const dots = weeks.map((w, i) => (w.p == null ? '' : `<circle class="hist-dot" cx="${x(i).toFixed(1)}" cy="${y(w.p).toFixed(1)}" r="4"/>`)).join('');
+    const dots = weeks.map((w, i) => (w.p == null ? ''
+      : `<circle class="hist-dot${w.partial ? ' hist-dot--partial' : ''}" cx="${x(i).toFixed(1)}" cy="${y(w.p).toFixed(1)}" r="4"/>`)).join('');
 
     // Selektive Direkt-Labels: aktuelle Woche + Tiefstpreis seit Beginn (falls niedriger)
     const lastIdx = weeks.map((w) => w.p != null).lastIndexOf(true);
@@ -1241,54 +1321,31 @@
       + `<rect class="hist-hit" x="0" y="${m.top}" width="${W}" height="${ph}"/></svg>`
       + '<div class="hist-tip" hidden></div>';
 
-    const svg = wrap.querySelector('svg');
-    const cross = svg.querySelector('.hist-cross');
-    const tip = wrap.querySelector('.hist-tip');
-    let idx = lastIdx;
-    const show = (i) => {
-      idx = Math.max(0, Math.min(n - 1, i));
-      const w = weeks[idx];
-      const cx = x(idx);
-      cross.setAttribute('x1', cx);
-      cross.setAttribute('x2', cx);
-      cross.setAttribute('visibility', 'visible');
-      const value = document.createElement('strong');
-      value.textContent = w.p != null ? eur.format(w.p) : w.p === null ? 'kein Angebot' : 'nicht erfasst';
-      const meta = document.createElement('span');
-      meta.textContent = `KW ${isoWeek(w.monday)} · ${fmtShort(w.from)}–${fmtShort(w.to)}${w.c && w.p != null ? ` · ${w.c}` : ''}`;
-      tip.replaceChildren(value, meta);
-      tip.hidden = false;
-      const tw = tip.offsetWidth;
-      tip.style.left = `${Math.min(Math.max(cx - tw / 2, 0), W - tw)}px`;
-      tip.style.top = `${Math.max(0, (w.p != null ? y(w.p) : m.top) - tip.offsetHeight - 12)}px`;
-    };
-    const hide = () => {
-      cross.setAttribute('visibility', 'hidden');
-      tip.hidden = true;
-    };
-    const hit = svg.querySelector('.hist-hit');
-    hit.addEventListener('pointermove', (e) => {
-      const r = svg.getBoundingClientRect();
-      show(Math.round(((e.clientX - r.left) * (W / r.width) - m.left) / bw - 0.5));
-    });
-    hit.addEventListener('pointerleave', hide);
-    svg.addEventListener('focus', () => show(idx));
-    svg.addEventListener('blur', hide);
-    svg.addEventListener('keydown', (e) => {
-      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
-      e.preventDefault();
-      show(idx + (e.key === 'ArrowRight' ? 1 : -1));
+    bindChartTip(wrap, {
+      W, H, n, start: lastIdx,
+      xAt: x,
+      yAt: y,
+      indexAt: (px) => Math.round((px - m.left) / bw - 0.5),
+      info: (i) => ({
+        p: weeks[i].p,
+        chains: weeks[i].chains,
+        when: `KW ${isoWeek(weeks[i].monday)} · ${fmtRange(weeks[i].from, weeks[i].to)}`,
+        partial: weeks[i].partial,
+        city,
+      }),
     });
   }
 
   // Tabellen-Ansicht (Wochen-Tiefstpreise seit Beginn) – macht jeden Wert auch ohne Hover lesbar
   function renderHistoryTable(weeks) {
     el.historyTable.hidden = !weeks.length;
-    const rows = weeks.slice().reverse().map((w) => `<tr><td>KW ${isoWeek(w.monday)}</td><td>${fmtShort(w.from)} – ${fmtShort(w.to)}</td>`
-      + `<td class="num">${w.p != null ? eur.format(w.p) : '–'}</td>`
-      + `<td>${w.p != null ? esc(w.c || '') : w.p === null ? 'kein Angebot' : 'nicht erfasst'}</td></tr>`).join('');
+    const rows = weeks.slice().reverse().map((w) => `<tr><td>KW ${isoWeek(w.monday)}</td><td>${fmtRange(w.from, w.to)}</td>`
+      + `<td class="num">${w.p != null ? `${eur.format(w.p)}${w.partial ? '*' : ''}` : '–'}</td>`
+      + `<td>${w.p != null ? esc(w.chains.join(', ')) : w.p === null ? 'kein Angebot' : 'nicht erfasst'}</td></tr>`).join('');
+    const note = weeks.some((w) => w.partial && w.p != null)
+      ? '<p class="history-note">* nachgetragen aus Angeboten, die noch liefen – der echte Tiefstpreis kann niedriger gewesen sein.</p>' : '';
     el.historyTable.innerHTML = '<summary>Als Tabelle anzeigen</summary><table><thead><tr><th>KW</th><th>Zeitraum</th>'
-      + `<th class="num">Tiefstpreis</th><th>Kette</th></tr></thead><tbody>${rows}</tbody></table>`;
+      + `<th class="num">Tiefstpreis</th><th>Günstigster Laden</th></tr></thead><tbody>${rows}</tbody></table>${note}`;
   }
 
   /* ---------------- Events ---------------- */

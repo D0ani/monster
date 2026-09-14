@@ -754,28 +754,60 @@ def chain_rank(chain: str) -> int:
     return CHAIN_RANK.index(chain) if chain in CHAIN_RANK else len(CHAIN_RANK)
 
 
-def update_history(deals: list[dict], cities: list[dict], today: date, dry_run: bool) -> None:
-    """Preisverlauf: pro Stadt der günstigste heute gültige Dosenpreis (ohne App-Pflicht).
+BACKFILL_DAYS = 14  # so weit zurück werden nicht erfasste Tage aus noch laufenden Angeboten nachgetragen
 
-    Format: {"singen": {"2026-09-14": {"p": 0.99, "c": "Rewe"}, "2026-09-15": {"p": null}, …}, …}
-    "p": null heißt: an diesem Tag gab es dort kein Angebot (Tag wurde aber erfasst).
-    """
-    history = json.loads(HISTORY_FILE.read_text(encoding="utf-8")) if HISTORY_FILE.exists() else {}
-    before = json.dumps(history, sort_keys=True)
-    day = today.isoformat()
-    best: dict[str, dict] = {}
+
+def best_prices(deals: list[dict], day: str) -> dict[str, dict]:
+    """Günstigster an `day` gültiger Dosenpreis je Stadt (ohne App-Pflicht): {"p", "c"[, "o"]}.
+    "c" = größte Kette mit diesem Preis, "o" = weitere Ketten zum selben Preis (nach Größe)."""
+    per_city: dict[str, dict[str, float]] = {}
     for deal in deals:
         if not deal.get("pricePerUnit") or (deal.get("app") or {}).get("required"):
             continue
         if not (deal.get("validFrom", "") <= day <= deal.get("validTo", "")):
             continue
-        city = deal.get("city", DEFAULT_CITY["slug"])
-        price, current = round(deal["pricePerUnit"], 3), best.get(city)
-        if (current is None or price < current["p"] - 1e-9
-                or (abs(price - current["p"]) < 1e-9 and chain_rank(deal["chain"]) < chain_rank(current["c"]))):
-            best[city] = {"p": price, "c": deal["chain"]}
+        chains = per_city.setdefault(deal.get("city", DEFAULT_CITY["slug"]), {})
+        price = round(deal["pricePerUnit"], 3)
+        chains[deal["chain"]] = min(price, chains.get(deal["chain"], price))
+    best = {}
+    for city, chains in per_city.items():
+        low = min(chains.values())
+        tied = sorted((c for c, p in chains.items() if abs(p - low) < 1e-9), key=lambda c: (chain_rank(c), c))
+        best[city] = {"p": low, "c": tied[0], **({"o": tied[1:]} if len(tied) > 1 else {})}
+    return best
+
+
+def update_history(deals: list[dict], cities: list[dict], today: date, dry_run: bool) -> None:
+    """Preisverlauf: pro Stadt der günstigste an dem Tag gültige Dosenpreis (ohne App-Pflicht).
+
+    Format: {"singen": {"2026-09-14": {"p": 0.99, "c": "Rewe", "o": ["Nahkauf"]}, "2026-09-15": {"p": null}, …}, …}
+    "p": null heißt: an diesem Tag gab es dort kein Angebot (Tag wurde aber erfasst).
+    "o": weitere Ketten zum selben Preis.
+    "b": 1 heißt nachgetragen – der Tag wurde nicht live erfasst (Aufzeichnung lief noch nicht, Scraper
+    ausgefallen), der Wert stammt aus Angeboten, die später noch liefen. Damals schon abgelaufene Angebote
+    kennt keine Quelle mehr – der echte Tiefstpreis kann also niedriger gewesen sein.
+    """
+    history = json.loads(HISTORY_FILE.read_text(encoding="utf-8")) if HISTORY_FILE.exists() else {}
+    before = json.dumps(history, sort_keys=True)
+    day = today.isoformat()
+    best = best_prices(deals, day)
     for city in cities:
         history.setdefault(city["slug"], {})[day] = best.get(city["slug"], {"p": None})
+    # Nicht erfasste Vortage aus noch laufenden Angeboten nachtragen – nie über live erfasste Tage schreiben,
+    # einen Nachtrag nur durch einen niedrigeren Preis ersetzen (abgelaufene Angebote fallen später weg)
+    slugs, backfilled = {c["slug"] for c in cities}, 0
+    for back in range(1, BACKFILL_DAYS + 1):
+        past = (today - timedelta(days=back)).isoformat()
+        for city, value in best_prices(deals, past).items():
+            days = history.setdefault(city, {}) if city in slugs else None
+            if days is None:
+                continue
+            old = days.get(past)
+            if old is None or (old.get("b") and old.get("p") is not None and value["p"] < old["p"] - 1e-9):
+                days[past] = {**value, "b": 1}
+                backfilled += 1
+    if backfilled:
+        log.info("Preisverlauf: %d nicht erfasste Tage aus noch laufenden Angeboten nachgetragen", backfilled)
     cutoff = (today - timedelta(days=HISTORY_DAYS)).isoformat()
     history = {c: {d: v for d, v in sorted(days.items()) if d >= cutoff} for c, days in sorted(history.items())}
     if json.dumps(history, sort_keys=True) != before and not dry_run:

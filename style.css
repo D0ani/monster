@@ -652,6 +652,9 @@ h1 em {
 .hist-tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
 .hist-line { fill: none; stroke: var(--chart-line); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
 .hist-dot { fill: var(--chart-line); stroke: var(--surface); stroke-width: 2; }
+/* Nachgetragene Werte (nicht live erfasst): gestrichelte Linie, hohler Punkt */
+.hist-line--partial { stroke-dasharray: 4 4; stroke-linecap: butt; }
+.hist-dot--partial { fill: var(--surface); stroke: var(--chart-line); }
 .hist-label { fill: var(--text); font-size: 12px; font-weight: 750; }
 .hist-cross { stroke: rgb(255 255 255 / .35); stroke-width: 1; }
 .hist-hit { fill: transparent; cursor: crosshair; }
@@ -661,16 +664,22 @@ h1 em {
   padding: 7px 10px; border-radius: 10px;
   background: var(--surface-3); border: 1px solid var(--border-strong);
   box-shadow: 0 8px 20px -8px rgb(0 0 0 / .8);
-  white-space: nowrap;
+  width: max-content; max-width: min(250px, 100%);
 }
 .hist-tip strong { font-size: 1rem; }
-.hist-tip span { font-size: .78rem; color: var(--muted); }
+.hist-tip .tip-when { font-size: .78rem; color: var(--muted); white-space: nowrap; }
+/* Günstigster Laden: Logo + Kette, darunter seine Filialen in der Stadt */
+.hist-tip .tip-shop { display: flex; align-items: center; gap: 7px; margin-top: 6px; font-size: .86rem; font-weight: 750; }
+.hist-tip .tip-shop .chip-logo { margin-left: 0; }
+.hist-tip .tip-store { padding-left: 1px; font-size: .76rem; color: var(--muted); white-space: pre-line; }
+.hist-tip .tip-note { margin-top: 6px; font-size: .74rem; color: var(--muted); font-style: italic; }
 .history-table { margin-top: 12px; font-size: .86rem; }
 .history-table summary { cursor: pointer; color: var(--muted); font-weight: 650; }
 .history-table table { width: 100%; margin-top: 8px; border-collapse: collapse; }
 .history-table th, .history-table td { padding: 6px 8px; border-top: 1px solid var(--border); text-align: left; }
 .history-table th { color: var(--muted); font-weight: 700; font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; }
 .history-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+.history-table .history-note { margin: 8px 0 0; font-size: .78rem; color: var(--muted); }
 
 /* ---------- Footer ---------- */
 .site-footer {
