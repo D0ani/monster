@@ -18,6 +18,7 @@ Filialen aus data/stores.json verteilen → mit bestehender deals.json mergen �
     python scripts/update_deals.py --only marktguru,kaufda
     python scripts/update_deals.py --city singen,konstanz  # nur bestimmte Städte
     python scripts/update_deals.py --debug-dir debug    # Rohantworten der Quellen speichern
+    python scripts/update_deals.py --product redbull    # Red Bull statt Monster (eigene Daten in data/redbull/)
 """
 from __future__ import annotations
 
@@ -222,6 +223,62 @@ def is_monster_energy(title: str, description: str = "") -> bool:
     return bool(MONSTER_RE.search(text) and ENERGY_HINT_RE.search(text) and not EXCLUDE_RE.search(text))
 
 
+RED_BULL_FLAVORS = sorted([
+    "Sugarfree", "Zero", "Summer Edition", "Winter Edition", "Spring Edition", "Red Edition", "Blue Edition",
+    "Green Edition", "White Edition", "Yellow Edition", "Pink Edition", "Apricot Edition", "Ice Edition",
+    "Sea Blue Edition", "Coconut Edition", "Tropical Edition", "Purple Edition", "Peach Edition",
+], key=len, reverse=True)
+RED_BULL_RE = re.compile(r"\bred\s*-?\s*bull\b", re.I)
+RED_BULL_EXCLUDE_RE = re.compile(
+    r"racing|scooter|salzburg|leipzig|organics|\bcola\b|simply|trikot|shirt|hoodie|\bcap\b|m(ü|ue)tze|kappe|"
+    r"jacke|modell|lego|spielzeug|figur|rucksack|poster|buch\b|dvd|air\s*race", re.I)
+RED_BULL_HINT_RE = re.compile(
+    r"energy|dose|\b0[,.](?:25|355|473)\s*-?\s*l|(?:250|355|473)\s*ml|koffein|taurin|edition|sugarfree|\bzero\b", re.I)
+
+
+def is_red_bull(title: str, description: str = "") -> bool:
+    text = f"{title} {description}"
+    return bool(RED_BULL_RE.search(text) and RED_BULL_HINT_RE.search(text) and not RED_BULL_EXCLUDE_RE.search(text))
+
+
+@dataclass(frozen=True)
+class Product:
+    """Ein Getränk, für das Angebote gesammelt werden – eigene Suchbegriffe, Quell-URLs und Datenordner."""
+    key: str
+    name: str                       # so heißt das Produkt in den Angebotskarten
+    search_terms: tuple[str, ...]
+    matches: Callable[..., bool]    # (Titel, Beschreibung) → ist es dieses Produkt?
+    flavors: list[str]
+    marktguru_brand: str            # uniqueName der Marke bei marktguru
+    kaufda_url: str
+    pa_url: str
+    data_dir: Path
+
+
+PRODUCTS = {
+    "monster": Product("monster", "Monster Energy", ("monster",), is_monster_energy, FLAVORS, "monster-energy",
+                       "https://www.kaufda.de/Angebote/Monster", "https://www.prospektangebote.de/angebote/monster",
+                       ROOT / "data"),
+    "redbull": Product("redbull", "Red Bull", ("red bull",), is_red_bull, RED_BULL_FLAVORS, "red-bull",
+                       "https://www.kaufda.de/Angebote/Red-Bull", "https://www.prospektangebote.de/angebote/red-bull",
+                       ROOT / "data" / "redbull"),
+}
+PRODUCT = PRODUCTS["monster"]
+
+
+def use_product(key: str) -> Product:
+    """Produkt für diesen Lauf wählen: Suchbegriffe, Quell-URLs und Datenpfade zeigen danach darauf."""
+    global PRODUCT, SEARCH_TERMS, DEALS_FILE, PRICES_FILE, HISTORY_FILE, CITY_DIR
+    global KAUFDA_URL, PA_URL, MARKTGURU_BRAND_OFFERS
+    PRODUCT = PRODUCTS[key]
+    SEARCH_TERMS = list(PRODUCT.search_terms)
+    DEALS_FILE, PRICES_FILE = PRODUCT.data_dir / "deals.json", PRODUCT.data_dir / "regular-prices.json"
+    HISTORY_FILE, CITY_DIR = PRODUCT.data_dir / "history.json", PRODUCT.data_dir / "city"
+    KAUFDA_URL, PA_URL = PRODUCT.kaufda_url, PRODUCT.pa_url
+    MARKTGURU_BRAND_OFFERS = f"https://api.marktguru.de/api/v1/publishers/brand/{PRODUCT.marktguru_brand}/offers"
+    return PRODUCT
+
+
 # "4er-Pack", "12ER-TRAY", "4 x 0,5 l", "4 x 250 ml", "Tray mit 12 Dosen", "6 Dosen", "6x"
 PACK_PATTERNS = [
     re.compile(r"(\d{1,2})\s*er[-\s]?(?:pack(?:ung)?|tray|karton|kiste|box|multipack|tr(?:ä|ae)ger)", re.I),
@@ -294,8 +351,9 @@ def volume_liters(offer: Offer) -> float | None:
 
 
 def product_name(offer: Offer) -> str:
-    flavor = next((f for f in FLAVORS if re.search(rf"\b{re.escape(f)}\b", offer.text, re.I)), None)
-    name = f"Monster Energy {flavor}" if flavor else "Monster Energy"
+    # "versch. Sorten, auch ZERO" nennt eine Sorte unter vielen – dann nicht danach benennen
+    flavor = next((f for f in PRODUCT.flavors if re.search(rf"(?<!auch\s)\b{re.escape(f)}\b", offer.text, re.I)), None)
+    name = f"{PRODUCT.name} {flavor}" if flavor else PRODUCT.name
     if re.search(r"versch(\.|iedene)?\s*sorten|sortiert", offer.text, re.I):
         name += " (versch. Sorten)"
     return name
@@ -438,7 +496,7 @@ def marktguru_offers(item: dict) -> list[Offer]:
     brand = item.get("brand") or {}
     title = f"{brand.get('name', '')} {(item.get('product') or {}).get('name', '')}".strip()
     description = item.get("description") or ""
-    if not is_monster_energy(title, description):
+    if not PRODUCT.matches(title, description):
         return []
     # Suche: validityDates + advertisers · Markenseite: validFrom/validTo + retailer
     dates = item.get("validityDates") or [{"from": item.get("validFrom"), "to": item.get("validTo")}]
@@ -502,7 +560,7 @@ def fetch_kaufda(session: requests.Session, city: dict) -> list[Offer]:
         seen.add(item.get("id"))
         title = " ".join(filter(None, [item.get("brand"), item.get("title")]))
         description = item.get("description") or ""
-        if not is_monster_energy(f"{title} {' '.join(item.get('categories') or [])}", description):
+        if not PRODUCT.matches(f"{title} {' '.join(item.get('categories') or [])}", description):
             continue
         prices = item.get("prices") or {}
         offers.append(Offer(
@@ -580,7 +638,7 @@ def fetch_prospektangebote(_session: requests.Session, _city: dict | None = None
         slug_match = re.search(r"/geschaefte/([^/]+)/", url)
         retailer = organisations.get(seller) or card.get("retailer") or (slug_match.group(1) if slug_match else "")
         title, description = item.get("name") or "", item.get("description") or ""
-        if not is_monster_energy(title, description):
+        if not PRODUCT.matches(title, description):
             continue
         offers.append(Offer(
             source="prospektangebote", source_url=url, retailer=retailer,
@@ -710,6 +768,18 @@ def merge_duplicates(deals: list[dict]) -> list[dict]:
     return list(merged.values())
 
 
+def drop_app_price_twins(deals: list[dict]) -> list[dict]:
+    """Manche Quellen (kaufDA) melden den App-Preis als normalen Angebotspreis, ohne App-Hinweis. Führt eine andere
+    Quelle dasselbe Angebot mit genau diesem Preis als App-Preis, ist der Eintrag ohne Hinweis ein Doppelgänger."""
+    key = lambda d, price: (d.get("city"), d.get("store"), d["chain"], d["packType"], d["validFrom"], round(price, 2))  # noqa: E731
+    app_prices = {key(d, d["app"]["price"]) for d in deals if (d.get("app") or {}).get("price") is not None}
+    kept = [d for d in deals if d.get("app") or key(d, d["price"]) not in app_prices]
+    if len(kept) < len(deals):
+        log.info("%d Einträge ohne App-Hinweis entfernt – derselbe Preis gilt laut anderer Quelle nur mit App",
+                 len(deals) - len(kept))
+    return kept
+
+
 def origin_of(deal: dict) -> str | None:
     host = urlparse(deal.get("source") or "").hostname or ""
     return next((s.key for s in SOURCES if host.endswith(s.domain)), None)
@@ -726,7 +796,7 @@ def merge_with_existing(existing: list[dict], fresh: list[dict], ok_pairs: set[t
             expired += 1
         elif (origin_of(deal), deal.get("city", DEFAULT_CITY["slug"])) not in ok_pairs:
             kept.append(deal)
-    merged = merge_duplicates(fresh + kept)
+    merged = drop_app_price_twins(merge_duplicates(fresh + kept))
     merged.sort(key=lambda d: (d.get("city", ""), d.get("chain", ""), d.get("store", ""), d.get("validFrom", ""),
                                d.get("unitCount") or 999, d.get("price", 0)))
     old_ids = {d.get("id") for d in existing}
@@ -892,7 +962,7 @@ def write_step_summary(report: list[tuple], deals: list[dict], stats: dict, dry_
     path = os.environ.get("GITHUB_STEP_SUMMARY")
     if not path:
         return
-    lines = ["## Monster-Angebote", "", "| Quelle | Status | Monster-Angebote | Filial-Einträge |",
+    lines = [f"## {PRODUCT.name} – Angebote", "", "| Quelle | Status | Angebote | Filial-Einträge |",
              "|---|---|---:|---:|"]
     lines += [f"| {name} | {status} | {raw if raw is not None else '–'} | {n if n is not None else '–'} |"
               for name, status, raw, n in report]
@@ -913,7 +983,9 @@ def main() -> int:
     parser.add_argument("--only", help="kommagetrennte Quellen: " + ",".join(s.key for s in SOURCES))
     parser.add_argument("--city", help="nur diese Städte (Slugs aus data/cities.json, kommagetrennt)")
     parser.add_argument("--dry-run", action="store_true", help="nichts schreiben, Ergebnis ausgeben")
-    parser.add_argument("--output", type=Path, default=DEALS_FILE, help="Zieldatei (Standard: data/deals.json)")
+    parser.add_argument("--product", choices=sorted(PRODUCTS), default="monster",
+                        help="Getränk: monster (Standard) oder redbull – jedes mit eigenem Datenordner")
+    parser.add_argument("--output", type=Path, help="Zieldatei (Standard: deals.json im Datenordner des Produkts)")
     parser.add_argument("--debug-dir", type=Path, help="Rohantworten der Quellen hier speichern")
     parser.add_argument("--strict", action="store_true", help="Exit-Code 1, wenn keine Quelle erfolgreich war")
     parser.add_argument("-v", "--verbose", action="store_true")
@@ -926,6 +998,10 @@ def main() -> int:
                         format="%(asctime)s %(levelname)-7s %(message)s", datefmt="%H:%M:%S")
     logging.getLogger("urllib3").setLevel(logging.WARNING)
     DEBUG_DIR = args.debug_dir
+    product = use_product(args.product)
+    product.data_dir.mkdir(parents=True, exist_ok=True)
+    args.output = args.output or DEALS_FILE
+    log.info("Produkt: %s → %s", product.name, args.output.relative_to(ROOT))
 
     selected = SOURCES
     if args.only:
@@ -1000,8 +1076,8 @@ def main() -> int:
                           "\n".join(failures[:10]))
         status = f"ok ({ok_count}/{len(cities)} Städte)" if ok_count else f"übersprungen: {failures[0] if failures else '?'}"
         report.append((source.label, status, n_offers if ok_count else None, n_deals if ok_count else None))
-        log.info("Quelle %s: %d/%d Städte, %d Monster-Angebote -> %d Filial-Einträge (%.1f s)",
-                 source.label, ok_count, len(cities), n_offers, n_deals, _time.monotonic() - started)
+        log.info("Quelle %s: %d/%d Städte, %d %s-Angebote -> %d Filial-Einträge (%.1f s)",
+                 source.label, ok_count, len(cities), n_offers, PRODUCT.name, n_deals, _time.monotonic() - started)
 
     if not ok_pairs:
         log.warning("Keine Quelle erfolgreich – bestehende Angebote bleiben (nur Abgelaufenes wird entfernt).")

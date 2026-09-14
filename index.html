@@ -6,7 +6,6 @@
   <title>Monster-Angebote Singen</title>
   <meta name="description" content="Wo ist Monster Energy gerade im Angebot? Aktuelle Prospektpreise der Supermärkte, Discounter und Getränkemärkte in Singen (Hohentwiel) und Rielasingen-Worblingen – täglich automatisch aktualisiert.">
   <meta name="theme-color" content="#0a0b0d">
-  <script>try{if(localStorage.getItem('monster-brand')==='redbull')document.documentElement.dataset.brand='redbull'}catch(e){}</script>
   <!-- Installierbare Web-App: Chrome-Menü ⋮ → "App installieren" -->
   <link rel="manifest" href="manifest.webmanifest">
   <!-- ?v=… erhöhen, wenn sich die Icons ändern – zwingt Browser und Messenger, sie neu zu laden -->
@@ -41,7 +40,7 @@
         <img class="brand-can brand-can--rb" src="assets/can-redbull.webp" alt="Dose Red Bull Energy Drink" width="148" height="380" loading="lazy" decoding="async">
         <div>
           <p class="eyebrow" id="city-region">Energy-Deals · Landkreis Konstanz</p>
-          <h1>Monster-Angebote <em id="city-name">Singen</em></h1>
+          <h1><span id="product-word">Monster</span>-Angebote <em id="city-name">Singen</em></h1>
           <p class="brand-sub" id="city-sub">Singen (Hohentwiel) mit allen Ortsteilen &amp; Rielasingen-Worblingen · täglich aktualisiert</p>
         </div>
       </div>
@@ -126,7 +125,7 @@
 
     <div class="empty panel" id="empty" hidden>
       <p class="empty-title">Keine passenden Angebote</p>
-      <p>Diese Woche hat hier offenbar kein Markt Monster zu deinen Filtern im Prospekt. Probier andere Filter, eine andere Stadt – oder schau morgen wieder vorbei. Mit „Alle Filialen zeigen“ siehst du trotzdem alle Märkte.</p>
+      <p>Diese Woche hat hier offenbar kein Markt <span id="empty-product">Monster</span> zu deinen Filtern im Prospekt. Probier andere Filter, eine andere Stadt – oder schau morgen wieder vorbei. Mit „Alle Filialen zeigen“ siehst du trotzdem alle Märkte.</p>
       <button type="button" class="btn" data-action="reset">Filter zurücksetzen</button>
     </div>
 

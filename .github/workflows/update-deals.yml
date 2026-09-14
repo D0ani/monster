@@ -67,11 +67,13 @@ jobs:
           args=()
           if [ -n "${ONLY}" ]; then args+=(--only "${ONLY}"); fi
           python scripts/update_deals.py "${args[@]}"
+          # Zweites Produkt mit eigenem Datenordner (data/redbull/) – ein Fehler dort bricht den Lauf nicht ab
+          python scripts/update_deals.py --product redbull "${args[@]}" || echo "::warning::Lauf für Red Bull fehlgeschlagen"
 
       - name: Änderungen committen & pushen
         id: commit
         run: |
-          git add data/deals.json data/regular-prices.json data/history.json data/city
+          git add data/deals.json data/regular-prices.json data/history.json data/city data/redbull
           if git diff --cached --quiet; then
             echo "Keine Änderungen an den Daten – nichts zu committen."
             echo "changed=false" >> "$GITHUB_OUTPUT"

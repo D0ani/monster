@@ -1,17 +1,25 @@
 /* ==========================================================================
-   Monster-Angebote Singen – Frontend (Vanilla JS, ohne Framework)
+   ${product.word}-Angebote Singen – Frontend (Vanilla JS, ohne Framework)
    Lädt data/deals.json (+ optional data/stores.json) und rendert Filter,
    Angebotskarten und eine optionale Leaflet-Karte.
    ========================================================================== */
 (() => {
   'use strict';
 
-  const DATA_URL = 'data/deals.json';
+  // Produkte: Monster (Standard) und die versteckte Red-Bull-Variante – eigene Angebote/Verlauf je Produkt,
+  // Städte und Filialen gemeinsam. uvp = unverbindliche Preisempfehlung pro Dose (aktionspreis.de: Monster 0,5 l und
+  // Red Bull 0,25 l je 1,49 €) – gilt als Normalpreis, solange für eine Kette kein eigener Prospekt-Normalpreis bekannt ist
+  const PRODUCTS = {
+    monster: { key: 'monster', name: 'Monster Energy', word: 'Monster', dir: 'data/', uvp: 1.49 },
+    redbull: { key: 'redbull', name: 'Red Bull', word: 'Red-Bull', dir: 'data/redbull/', uvp: 1.49 },
+  };
+  let product = PRODUCTS.monster;
+  const DATA_URL = () => `${product.dir}deals.json`;
   const STORES_URL = 'data/stores.json';
-  const PRICES_URL = 'data/regular-prices.json';
+  const PRICES_URL = () => `${product.dir}regular-prices.json`;
   const TZ = 'Europe/Berlin';
   const CITIES_URL = 'data/cities.json';
-  const HISTORY_URL = 'data/history.json';
+  const HISTORY_URL = () => `${product.dir}history.json`;
   // Fallback, falls data/cities.json fehlt
   const DEFAULT_CITY = {
     slug: 'singen', name: 'Singen', label: 'Singen (Hohentwiel) mit allen Ortsteilen & Rielasingen-Worblingen',
@@ -23,7 +31,7 @@
   // Datensparmodus des Handys/Browsers ("Save-Data") → keine Logo-Bilder, nur Kürzel
   const SAVE_DATA = Boolean(navigator.connection && navigator.connection.saveData);
   // Kompaktes Datenpaket je Stadt (Angebote, Filialen, Verlauf) – statt alle Städte auf einmal
-  const CITY_DATA_URL = (slug) => `data/city/${encodeURIComponent(slug)}.json`;
+  const CITY_DATA_URL = (slug) => `${product.dir}city/${encodeURIComponent(slug)}.json`;
 
   // Ketten: echtes Logo (Wikimedia Commons, gemeinfrei – Nachweise in assets/logos/CREDITS.md),
   // Farben + Kürzel als Rückfall, falls es kein Logo gibt oder es nicht lädt
@@ -96,6 +104,8 @@
     historyChart: $('#history-chart'),
     historyTable: $('#history-table'),
     appDownload: $('#app-download'),
+    productWord: $('#product-word'),
+    emptyProduct: $('#empty-product'),
     reset: $('#reset'),
     count: $('#result-count'),
     list: $('#deals'),
@@ -110,9 +120,6 @@
   let knownChains = [];  // Ketten aus dem Filialverzeichnis
   let allStores = [];    // komplettes Filialverzeichnis (für "Alle Filialen zeigen")
   let regularPrices = {}; // zuletzt gesehener Normalpreis pro Dose je Kette
-  // Unverbindliche Preisempfehlung Monster Energy 0,5 l (aktionspreis.de; auch Streichpreis bei Edeka/Marktkauf laut
-  // marktguru) – gilt als Normalpreis, solange für eine Kette kein eigener Prospekt-Normalpreis bekannt ist
-  const MONSTER_UVP = 1.49;
   let noDealStores = []; // aktuell angezeigte Filialen ohne Angebot
   const cityBundles = new Map(); // bereits geladene Stadt-Pakete (Stadtwechsel zurück kostet nichts)
   let cities = [DEFAULT_CITY];
@@ -214,7 +221,7 @@
 
   function splitProduct(name) {
     const m = /^(.*?)\s*\((.+)\)\s*$/.exec(name || '');
-    return m ? [m[1], m[2]] : [name || 'Monster Energy', ''];
+    return m ? [m[1], m[2]] : [name || product.name, ''];
   }
 
   function sourceName(d) {
@@ -285,16 +292,17 @@
   // Lädt nur die Daten EINER Stadt (wenige KB). Fehlt das Paket (älterer Datenstand),
   // wird auf die großen Gesamtdateien zurückgegriffen.
   async function loadCityData(slug) {
-    if (cityBundles.has(slug)) return cityBundles.get(slug);
+    const key = `${product.key}:${slug}`;
+    if (cityBundles.has(key)) return cityBundles.get(key);
     let bundle;
     try {
       bundle = await fetchJSON(CITY_DATA_URL(slug));
     } catch {
       const [rawDeals, stores, prices, history] = await Promise.all([
-        fetchJSON(DATA_URL),
+        fetchJSON(DATA_URL()),
         fetchJSON(STORES_URL).catch(() => []),
-        fetchJSON(PRICES_URL).catch(() => ({})),
-        fetchJSON(HISTORY_URL).catch(() => ({})),
+        fetchJSON(PRICES_URL()).catch(() => ({})),
+        fetchJSON(HISTORY_URL()).catch(() => ({})),
       ]);
       const list = Array.isArray(rawDeals) ? rawDeals : rawDeals.deals || [];
       bundle = {
@@ -304,7 +312,7 @@
         prices,
       };
     }
-    cityBundles.set(slug, bundle);
+    cityBundles.set(key, bundle);
     return bundle;
   }
 
@@ -316,6 +324,7 @@
   // Datenpaket der gewählten Stadt laden, übernehmen und alles neu zeichnen
   async function applyCity() {
     const city = currentCity();
+    const wanted = product;
     document.body.classList.add('is-loading');
     let bundle;
     try {
@@ -326,7 +335,7 @@
     } finally {
       document.body.classList.remove('is-loading');
     }
-    if (city.slug !== currentCity().slug) return; // inzwischen wurde eine andere Stadt gewählt
+    if (city.slug !== currentCity().slug || wanted !== product) return; // inzwischen andere Stadt/Produkt gewählt
     allStores = bundle.stores || [];
     regularPrices = bundle.prices || {};
     priceHistory = { [city.slug]: bundle.history || {} };
@@ -344,7 +353,7 @@
     el.cityRegion.textContent = `Energy-Deals · ${city.region || 'Landkreis Konstanz'}`;
     el.cityInput.value = '';
     el.cityInput.placeholder = `${city.name} · andere Stadt oder PLZ suchen …`;
-    document.title = `Monster-Angebote ${city.name}`;
+    document.title = `${product.word}-Angebote ${city.name}`;
     update();
   }
 
@@ -633,7 +642,7 @@
     const price = known && known.pricePerUnit
       ? `<p class="store-price">${known.manual ? 'Normalpreis (eigene Angabe)' : 'Normalpreis zuletzt laut Prospekt'}: `
         + `<b>${eur.format(known.pricePerUnit)}</b> pro Dose${known.seen ? ` · Stand ${esc(fmtDay(known.seen))}` : ''}</p>`
-      : `<p class="store-price">Kein Monster-Angebot im aktuellen Prospekt · Normalpreis (UVP): <b>${eur.format(MONSTER_UVP)}</b> pro Dose</p>`;
+      : `<p class="store-price">Kein ${product.word}-Angebot im aktuellen Prospekt · Normalpreis (UVP): <b>${eur.format(product.uvp)}</b> pro Dose</p>`;
     return `
       <article class="card card--store">
         <header class="card-head">
@@ -687,7 +696,7 @@
 
     el.list.innerHTML = cards(nowDeals) + nextHeading + cards(nextDeals)
       + (noDealStores.length
-        ? `<h2 class="grid-heading">Filialen ohne Monster-Angebot (${noDealStores.length})</h2>${noDealStores.map(storeCardHTML).join('')}`
+        ? `<h2 class="grid-heading">Filialen ohne ${product.word}-Angebot (${noDealStores.length})</h2>${noDealStores.map(storeCardHTML).join('')}`
         : '');
     el.empty.hidden = visible.length > 0 || noDealStores.length > 0;
 
@@ -840,10 +849,10 @@
       const icon = pinIcon(s.chain, 'pin--none');
       const info = known && known.pricePerUnit
         ? `<br><small>Normalpreis zuletzt: ${eur.format(known.pricePerUnit)}/Dose</small>`
-        : `<br><small>Normalpreis (UVP): ${eur.format(MONSTER_UVP)}/Dose</small>`;
+        : `<br><small>Normalpreis (UVP): ${eur.format(product.uvp)}/Dose</small>`;
       const marker = L.marker([s.lat, s.lon], { icon, title: s.name, zIndexOffset: -500 })
         .bindPopup(`<p class="popup-title">${esc(s.name)}</p><p class="popup-addr">${esc(s.address)}</p>`
-          + `<ul class="popup-list"><li>Kein Monster-Angebot${info}</li></ul>`);
+          + `<ul class="popup-list"><li>Kein ${product.word}-Angebot${info}</li></ul>`);
       marker.addTo(mapState.layer);
       mapState.markers.set(storeKeyOf(s), marker);
       noDealPoints.push([s.lat, s.lon]);
@@ -1003,16 +1012,16 @@
   function lowBadge(d) {
     const low = lowestSinceWeeks(d);
     if (!low) return '';
-    const title = low.sinceStart ? 'Günstigster Preis seit Beginn der Aufzeichnung' : `Kein günstigerer Monster-Preis hier seit ${low.weeks} Wochen`;
+    const title = low.sinceStart ? 'Günstigster Preis seit Beginn der Aufzeichnung' : `Kein günstigerer ${product.word}-Preis hier seit ${low.weeks} Wochen`;
     return `<span class="tag tag--low" title="${esc(title)}">↓ Tiefstpreis seit ${low.weeks} Wochen</span>`;
   }
 
   // Normalpreis je Kette: zuletzt im Prospekt gesehener Streichpreis, sonst UVP
-  const normalPrice = (chain) => (regularPrices[chain] && regularPrices[chain].pricePerUnit) || MONSTER_UVP;
+  const normalPrice = (chain) => (regularPrices[chain] && regularPrices[chain].pricePerUnit) || product.uvp;
 
   // Günstigster Normalpreis vor Ort (für Wochen ohne Angebot); uvp = für keine dieser Ketten ist ein eigener bekannt
   function normalBaseline(chains) {
-    const p = chains.length ? Math.min(...chains.map(normalPrice)) : MONSTER_UVP;
+    const p = chains.length ? Math.min(...chains.map(normalPrice)) : product.uvp;
     const at = chains.filter((c) => Math.abs(normalPrice(c) - p) < 0.005).sort((a, b) => chainRank(a) - chainRank(b));
     const uvp = !at.some((c) => regularPrices[c] && regularPrices[c].pricePerUnit);
     return { p, chains: uvp ? [] : at, uvp };
@@ -1035,7 +1044,7 @@
       const cur = offerWeeks[0];
       el.historySub.textContent = cur
         ? `Bisher ein Wochenwert: ${fmtRange(cur.from, cur.to)} ${eur.format(cur.p)}${cur.chains.length ? ` (${cur.chains.join(', ')})` : ''} – ab der nächsten Woche entsteht hier die Kurve.`
-        : 'Noch kein Monster-Angebot erfasst – die Kurve entsteht, sobald es hier Angebote gibt.';
+        : `Noch kein ${product.word}-Angebot erfasst – die Kurve entsteht, sobald es hier Angebote gibt.`;
     } else {
       el.historySub.textContent = `Günstigster Dosenpreis pro Woche (ohne App-Pflicht) seit ${fmtDay(weeks[0].from)}`
         + (weeks.some((w) => w.normal) ? ' · hohler Punkt = kein Angebot (Normalpreis)' : '');
@@ -1107,7 +1116,12 @@
     let prevIdx = lastIdx - 1;
     while (prevIdx >= 0 && weeks[prevIdx].p == null) prevIdx -= 1;
     const prevHigher = prevIdx >= 0 && weeks[prevIdx].p > last.p + 0.005;
-    let labels = `<text class="hist-label" x="${(x(lastIdx) - 8).toFixed(1)}" y="${(y(last.p) + (prevHigher ? 22 : -13)).toFixed(1)}" text-anchor="end">${esc(eur.format(last.p))}</text>`;
+    // Kommt die Linie von oben, mittig UNTER den Punkt (links darunter liegen oft ältere Punkte) – sonst links darüber
+    const endText = eur.format(last.p);
+    const endHalf = (endText.length * 6.6) / 2;
+    let labels = prevHigher
+      ? `<text class="hist-label" x="${Math.min(x(lastIdx), W - 4 - endHalf).toFixed(1)}" y="${(y(last.p) + 24).toFixed(1)}" text-anchor="middle">${esc(endText)}</text>`
+      : `<text class="hist-label" x="${(x(lastIdx) - 8).toFixed(1)}" y="${(y(last.p) - 13).toFixed(1)}" text-anchor="end">${esc(endText)}</text>`;
     if (minVal < last.p - 0.005) {
       // Tiefstpreis unter den Punkt: darunter verläuft nie eine Linie
       const text = W < 480 ? `↓ ${eur.format(minVal)}` : `Tiefstpreis ${eur.format(minVal)}`;
@@ -1333,10 +1347,13 @@
   }
 
   // Versteckte Red-Bull-Variante: 5× schnell auf den Footer (nicht auf einen Link) klicken, nochmal 5× schaltet
-  // zurück. Die Wahl merkt sich der Browser; index.html setzt sie schon vor dem ersten Zeichnen (kein Aufblitzen).
-  const BRAND_KEY = 'monster-brand';
+  // zurück. Sie gilt nur bis zum Neuladen – die Seite startet immer mit Monster.
+  const BRAND_KEY = 'monster-brand'; // früher gemerkte Wahl, wird beim Start entfernt
   const THEME_COLOR = { monster: '#0a0b0d', redbull: '#060d24' };
-  function applyBrand(brand) {
+  function applyBrand(brand, { reload = false } = {}) {
+    product = PRODUCTS[brand] || PRODUCTS.monster;
+    el.productWord.textContent = product.word;
+    el.emptyProduct.textContent = product.word;
     if (brand === 'redbull') {
       document.documentElement.dataset.brand = 'redbull';
       // Kopf-Dose sofort laden – umgeschaltet wird unten im Footer, der Kopf ist dann außer Sicht
@@ -1347,6 +1364,10 @@
     }
     const meta = document.querySelector('meta[name="theme-color"]');
     if (meta) meta.content = THEME_COLOR[brand] || THEME_COLOR.monster;
+    if (reload) {
+      state.chain = 'all'; // Ketten mit Angebot unterscheiden sich je Produkt
+      applyCity();
+    }
   }
   function bindSecretBrand() {
     const footer = document.querySelector('.site-footer');
@@ -1361,8 +1382,7 @@
       if (clicks.length < 5) return;
       clicks = [];
       const next = document.documentElement.dataset.brand === 'redbull' ? 'monster' : 'redbull';
-      applyBrand(next);
-      try { localStorage.setItem(BRAND_KEY, next); } catch { /* ohne Speicher gilt die Wahl bis zum Neuladen */ }
+      applyBrand(next, { reload: true });
       if (navigator.vibrate) navigator.vibrate(40);
     });
   }
@@ -1370,7 +1390,8 @@
   readURL();
   syncControls();
   bindEvents();
-  applyBrand(document.documentElement.dataset.brand === 'redbull' ? 'redbull' : 'monster');
+  try { localStorage.removeItem(BRAND_KEY); } catch { /* kein Speicher – nichts zu entfernen */ }
+  applyBrand('monster');
   bindSecretBrand();
   // In der Android-App den APK-Download ausblenden (die App hängt eine eigene Kennung an den User-Agent)
   if (/MonsterAngeboteApp/.test(navigator.userAgent)) el.appDownload.hidden = true;

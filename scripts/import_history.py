@@ -2,7 +2,7 @@
 """Preisverlauf aus Archiv-Quellen nachtragen (einmalig bzw. bei Bedarf von Hand).
 
 Quellen für vergangene Monster-Angebote:
-  - energy-angebote.de  frühere Aktionszeiträume je Händler (Preis pro 0,5-l-Dose)
+  - energy-angebote.de  frühere Aktionszeiträume je Händler (Preis pro Dose; Red Bull: redbull-im-angebot.de)
   - mydealz.de          Community-Deals mit Gültigkeitszeitraum
   - marktguru.de        abgelaufene Angebote auf der Markenseite („Verpasst!“)
 
@@ -14,6 +14,7 @@ data/history.json – live erfasste Tage werden nie überschrieben, danach werde
     python scripts/import_history.py            # nachtragen
     python scripts/import_history.py --dry-run  # nur anzeigen
     python scripts/import_history.py --rebuild  # alle Nachträge verwerfen und neu aufbauen
+    python scripts/import_history.py --product redbull  # Red Bull (redbull-im-angebot.de, data/redbull/)
 """
 from __future__ import annotations
 
@@ -33,16 +34,20 @@ import update_deals as u  # noqa: E402
 
 log = logging.getLogger("import_history")
 
-EA_BASE = "https://energy-angebote.de/monster-energy-0-5l/"
-# Händler-Slug → Kette. Nicht übernommen: rewe/edeka/nahkauf (regionale Prospekte, Region unbekannt) und
-# netto (= Netto mit dem Hund, in Baden-Württemberg nicht vertreten)
-EA_SLUGS = {"kaufland": "Kaufland", "lidl": "Lidl", "aldi-sued": "Aldi Süd", "penny": "Penny",
-            "netto-marken-discount": "Netto", "norma": "Norma", "mueller": "Müller"}
+# Preisarchiv je Produkt: Basis-URL + Händler-Slug → Kette. Nicht übernommen: rewe/edeka/nahkauf (regionale
+# Prospekte, Region unbekannt) und netto (= Netto mit dem Hund, in Baden-Württemberg nicht vertreten)
+NATIONAL_SLUGS = {"kaufland": "Kaufland", "lidl": "Lidl", "aldi-sued": "Aldi Süd", "penny": "Penny",
+                  "netto-marken-discount": "Netto", "norma": "Norma", "mueller": "Müller"}
+EA_SITES = {
+    "monster": ("https://energy-angebote.de/monster-energy-0-5l/", NATIONAL_SLUGS),
+    "redbull": ("https://redbull-im-angebot.de/", {**NATIONAL_SLUGS, "rossmann": "Rossmann"}),
+}
+MYDEALZ_QUERY = {"monster": "monster energy", "redbull": "red bull"}
 
 MYDEALZ_URL = "https://www.mydealz.de/search"
 MYDEALZ_PAGES = 5
 MYDEALZ_SKIP_RE = re.compile(r"lokal|regional|\bapp\b|coupon|gutschein|payback|bonus|pfandfehler|sparabo|prime", re.I)
-MAX_OFFER_PRICE = 1.49  # UVP Monster 0,5 l – was nicht darunter liegt, ist kein Angebot (z. B. Staffelpreise)
+MAX_OFFER_PRICE = 1.49  # UVP (Monster 0,5 l wie Red Bull 0,25 l) – was nicht darunter liegt, ist kein Angebot
 
 
 def nuxt_payload(text: str):
@@ -94,9 +99,10 @@ def find_key(obj, key: str):
 
 def fetch_energy_angebote(session) -> list[dict]:
     periods = []
-    for slug, chain in EA_SLUGS.items():
+    base, slugs = EA_SITES[u.PRODUCT.key]
+    for slug, chain in slugs.items():
         try:
-            root = nuxt_payload(u.http_get(session, EA_BASE + slug).text)
+            root = nuxt_payload(u.http_get(session, base + slug).text)
         except Exception as exc:  # bewusst breit: ein Händler darf den Rest nicht aufhalten
             log.warning("energy-angebote %s übersprungen: %s", slug, exc)
             continue
@@ -107,7 +113,7 @@ def fetch_energy_angebote(session) -> list[dict]:
                 start, end = str(entry.get("validFrom") or "")[:10], str(entry.get("validUntil") or "")[:10]
                 if start and end and start <= end:
                     periods.append({"chain": chain, "from": start, "to": end, "price": round(float(entry["price"]), 3),
-                                    "source": "energy-angebote.de"})
+                                    "source": base.split("/")[2]})
         time.sleep(1)
     return periods
 
@@ -122,7 +128,7 @@ def local_day(timestamp: int, *, end: bool = False):
 def fetch_mydealz(session) -> list[dict]:
     threads = {}
     for page in range(1, MYDEALZ_PAGES + 1):
-        text = u.http_get(session, MYDEALZ_URL, params={"q": "monster energy", "page": page}).text
+        text = u.http_get(session, MYDEALZ_URL, params={"q": MYDEALZ_QUERY[u.PRODUCT.key], "page": page}).text
         for a, b in re.findall(r'data-vue3=\'([^\']+)\'|data-vue3="([^"]+)"', text):
             try:
                 thread = (json.loads(html.unescape(a or b)).get("props") or {}).get("thread")
@@ -137,7 +143,7 @@ def fetch_mydealz(session) -> list[dict]:
         merchant = (thread.get("merchant") or {}).get("merchantName") or ""
         start, end = (thread.get("startDate") or {}).get("timestamp"), (thread.get("endDate") or {}).get("timestamp")
         chain = u.normalize_chain(merchant, regional=False)
-        if (not u.is_monster_energy(title) or MYDEALZ_SKIP_RE.search(title) or chain not in u.ARCHIVE_CHAINS
+        if (not u.PRODUCT.matches(title) or MYDEALZ_SKIP_RE.search(title) or chain not in u.ARCHIVE_CHAINS
                 or not (start and end and thread.get("price"))):
             continue
         pack = u.detect_pack(title, float(thread["price"]))
@@ -158,6 +164,7 @@ def city_records(periods: list[dict], stores_by_city: dict, cities: list[dict]) 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
+    parser.add_argument("--product", choices=sorted(u.PRODUCTS), default="monster", help="monster (Standard) oder redbull")
     parser.add_argument("--dry-run", action="store_true", help="nichts schreiben, nur anzeigen")
     parser.add_argument("--rebuild", action="store_true",
                         help="vorher alle nachgetragenen Tage entfernen und komplett neu aufbauen")
@@ -167,11 +174,13 @@ def main() -> int:
             stream.reconfigure(encoding="utf-8", errors="replace")
     logging.basicConfig(level=logging.INFO, format="%(levelname)-7s %(message)s")
 
+    u.use_product(args.product).data_dir.mkdir(parents=True, exist_ok=True)
     today = datetime.now(u.TZ).date()
     session = u.make_session()
     cities, stores_by_city = u.load_cities(), u.load_stores()
     periods: list[dict] = []
-    for name, fetch in (("energy-angebote.de", fetch_energy_angebote), ("mydealz.de", fetch_mydealz)):
+    archive_site = EA_SITES[u.PRODUCT.key][0].split("/")[2]
+    for name, fetch in ((archive_site, fetch_energy_angebote), ("mydealz.de", fetch_mydealz)):
         try:
             found = [p for p in fetch(session) if p["from"] < today.isoformat() and p["price"] < MAX_OFFER_PRICE]
         except Exception as exc:  # bewusst breit

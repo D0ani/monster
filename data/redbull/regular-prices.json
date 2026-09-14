@@ -1,0 +1,22 @@
+{
+  "Lidl": {
+    "pricePerUnit": 1.24,
+    "seen": "2026-09-21",
+    "source": "marktguru"
+  },
+  "Netto": {
+    "pricePerUnit": 1.49,
+    "seen": "2026-09-14",
+    "source": "kaufDA"
+  },
+  "Penny": {
+    "pricePerUnit": 1.49,
+    "seen": "2026-09-14",
+    "source": "kaufDA"
+  },
+  "Rossmann": {
+    "pricePerUnit": 1.49,
+    "seen": "2026-09-14",
+    "source": "marktguru"
+  }
+}
