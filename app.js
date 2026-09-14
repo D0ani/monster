@@ -11,6 +11,7 @@
   const PRICES_URL = 'data/regular-prices.json';
   const TZ = 'Europe/Berlin';
   const CITIES_URL = 'data/cities.json';
+  const HISTORY_URL = 'data/history.json';
   // Fallback, falls data/cities.json fehlt
   const DEFAULT_CITY = {
     slug: 'singen', name: 'Singen', label: 'Singen (Hohentwiel) mit allen Ortsteilen & Rielasingen-Worblingen',
@@ -82,6 +83,15 @@
     cityName: $('#city-name'),
     citySub: $('#city-sub'),
     cityRegion: $('#city-region'),
+    nearBtn: $('#near-btn'),
+    nearHint: $('#near-hint'),
+    sortDistance: $('#sort option[value="distance"]'),
+    historyPanel: $('#history-panel'),
+    historyTitle: $('#history-title'),
+    historySub: $('#history-sub'),
+    historyChart: $('#history-chart'),
+    historyTable: $('#history-table'),
+    appDownload: $('#app-download'),
     reset: $('#reset'),
     count: $('#result-count'),
     list: $('#deals'),
@@ -100,6 +110,8 @@
   let everyStore = [];   // Filialen aller Städte
   let allDeals = [];     // Angebote aller Städte (normalisiert, inkl. abgelaufene)
   let cities = [DEFAULT_CITY];
+  let priceHistory = {}; // Preisverlauf je Stadt: { slug: { "YYYY-MM-DD": { p, c } } }
+  let userPos = null;    // Standort für "In meiner Nähe" – nur im Speicher, wird nirgends abgelegt
   let expiredCount = 0;
   let today = todayISO();
   let visible = [];
@@ -264,11 +276,13 @@
       renderError(err);
       return;
     }
-    const [stores, prices, cityList] = await Promise.all([
-      fetchJSON(STORES_URL).catch(() => []),   // Filialverzeichnis ist optional
-      fetchJSON(PRICES_URL).catch(() => ({})), // Normalpreise sind optional
-      fetchJSON(CITIES_URL).catch(() => []),   // Städteliste ist optional
+    const [stores, prices, cityList, historyData] = await Promise.all([
+      fetchJSON(STORES_URL).catch(() => []),    // Filialverzeichnis ist optional
+      fetchJSON(PRICES_URL).catch(() => ({})),  // Normalpreise sind optional
+      fetchJSON(CITIES_URL).catch(() => []),    // Städteliste ist optional
+      fetchJSON(HISTORY_URL).catch(() => ({})), // Preisverlauf ist optional
     ]);
+    priceHistory = historyData && typeof historyData === 'object' ? historyData : {};
     everyStore = Array.isArray(stores) ? stores : [];
     if (Array.isArray(cityList) && cityList.length) cities = cityList;
     if (!cities.some((c) => c.slug === state.city)) state.city = (cities.find((c) => c.default) || cities[0]).slug;
@@ -379,6 +393,11 @@
     discount: {
       main: (a, b) => (b.discount ?? -1) - (a.discount ?? -1) || byCents(a.pricePerUnit, b.pricePerUnit),
       tie: (a, b) => byCents(a.price, b.price),
+    },
+    // nur mit freigegebenem Standort wählbar ("In meiner Nähe")
+    distance: {
+      main: (a, b) => (distanceKm(a.lat, a.lon) ?? 1e6) - (distanceKm(b.lat, b.lon) ?? 1e6),
+      tie: (a, b) => byCents(a.pricePerUnit, b.pricePerUnit),
     },
   };
 
@@ -552,12 +571,13 @@
           <div class="store">
             <h3>${esc(d.store)}</h3>
             <p class="addr"><a href="${esc(osm)}" target="_blank" rel="noopener">${esc(d.address || 'Adresse unbekannt')}</a></p>
+            ${distLine(d.lat, d.lon)}
           </div>
           <span class="status status--${statusCls}">${esc(statusText)}</span>
         </header>
 
         <p class="product">${esc(productMain)}${productSub ? `<small>${esc(productSub)}</small>` : ''}</p>
-        <div class="tags"><span class="tag tag--pack">${esc(packLabel(d))}</span>${volume}</div>
+        <div class="tags"><span class="tag tag--pack">${esc(packLabel(d))}</span>${volume}${lowBadge(d)}</div>
 
         <div class="price-row">
           <span class="price"><strong>${eur.format(d.price)}</strong>${d.regularPrice ? `<s aria-label="statt">${eur.format(d.regularPrice)}</s>` : ''}</span>
@@ -592,6 +612,7 @@
           <div class="store">
             <h3>${esc(s.name)}</h3>
             <p class="addr"><a href="${esc(osm)}" target="_blank" rel="noopener">${esc(s.address)}</a></p>
+            ${distLine(s.lat, s.lon)}
           </div>
           <span class="status status--none">kein Angebot</span>
         </header>
@@ -630,7 +651,9 @@
     noDealStores = state.showAll
       ? allStores
         .filter((s) => !withDeals.has(storeKeyOf(s)) && (state.chain === 'all' || s.chain === state.chain))
-        .sort((a, b) => chainRank(a.chain) - chainRank(b.chain) || a.name.localeCompare(b.name, 'de'))
+        .sort((a, b) => (state.sort === 'distance' && userPos
+          ? distanceKm(a.lat, a.lon) - distanceKm(b.lat, b.lon)
+          : chainRank(a.chain) - chainRank(b.chain)) || a.name.localeCompare(b.name, 'de'))
       : [];
 
     el.list.innerHTML = cards(nowDeals) + nextHeading + cards(nextDeals)
@@ -673,6 +696,7 @@
     renderChips();
     renderList();
     renderMap();
+    renderHistory();
     writeURL();
   }
 
@@ -683,6 +707,7 @@
     if (p.has(URL_KEYS.chain)) state.chain = p.get(URL_KEYS.chain);
     if (p.has(URL_KEYS.pack)) state.pack = p.get(URL_KEYS.pack);
     if (SORTERS[p.get(URL_KEYS.sort)]) state.sort = p.get(URL_KEYS.sort);
+    if (state.sort === 'distance') state.sort = 'unit'; // Standort wird bewusst nicht gespeichert
     const when = p.get(URL_KEYS.when);
     if (when === 'now' || when === 'next') state.when = when;
     else if (p.get('gueltig') === '1') state.when = 'now'; // alte Links ("Nur heute gültige")
@@ -795,6 +820,12 @@
     }
 
     const points = [...[...groups.values()].map((g) => [g[0].lat, g[0].lon]), ...noDealPoints];
+    // Eigener Standort ("In meiner Nähe") als Punkt – nur in den Kartenausschnitt, wenn er in der Stadt liegt
+    if (userPos) {
+      L.circleMarker([userPos.lat, userPos.lon], { radius: 8, weight: 3, color: '#0a0b0d', fillColor: '#7cc9e8', fillOpacity: 1 })
+        .bindTooltip('Du bist hier').addTo(mapState.layer);
+      if (distanceKm(currentCity().lat, currentCity().lon) <= 25) points.push([userPos.lat, userPos.lon]);
+    }
     if (fit && points.length) {
       mapState.map.fitBounds(L.latLngBounds(points), { padding: [40, 40], maxZoom: 15 });
     } else if (fit) {
@@ -809,6 +840,282 @@
     el.mapWrap.scrollIntoView({ behavior: 'smooth', block: 'center' });
     mapState.map.setView(marker.getLatLng(), 16);
     marker.openPopup();
+  }
+
+  /* ---------------- In meiner Nähe ---------------- */
+
+  // Luftlinie in km (Haversine); null ohne Standort oder Koordinaten
+  function distanceKm(lat, lon) {
+    if (!userPos || lat == null || lon == null) return null;
+    const rad = (x) => (x * Math.PI) / 180;
+    const dLat = rad(lat - userPos.lat);
+    const dLon = rad(lon - userPos.lon);
+    const a = Math.sin(dLat / 2) ** 2 + Math.cos(rad(userPos.lat)) * Math.cos(rad(lat)) * Math.sin(dLon / 2) ** 2;
+    return 2 * 6371 * Math.asin(Math.sqrt(a));
+  }
+
+  const kmFmt = new Intl.NumberFormat('de-DE', { maximumFractionDigits: 1 });
+  const fmtKm = (km) => (km < 1 ? `${Math.max(10, Math.round(km * 100) * 10)} m` : `${kmFmt.format(km)} km`);
+  const distLine = (lat, lon) => {
+    const km = distanceKm(lat, lon);
+    return km == null ? '' : `<p class="dist">📍 ${fmtKm(km)} entfernt</p>`;
+  };
+
+  function showNearHint(text, isError) {
+    el.nearHint.textContent = text;
+    el.nearHint.classList.toggle('is-error', Boolean(isError));
+    el.nearHint.hidden = false;
+  }
+
+  function setNearUI() {
+    el.nearBtn.disabled = false;
+    el.nearBtn.setAttribute('aria-pressed', String(Boolean(userPos)));
+    el.nearBtn.textContent = userPos ? '📍 Standort aktiv' : '📍 In meiner Nähe';
+    el.sortDistance.disabled = !userPos;
+  }
+
+  // Standort einmal abfragen → nächste Stadt wählen, nach Entfernung sortieren. Zweiter Klick: wieder aus.
+  function locate() {
+    if (userPos) {
+      userPos = null;
+      if (state.sort === 'distance') state.sort = 'unit';
+      el.nearHint.hidden = true;
+      setNearUI();
+      syncControls();
+      update();
+      return;
+    }
+    if (!navigator.geolocation) {
+      showNearHint('Dein Browser kann den Standort nicht bestimmen.', true);
+      return;
+    }
+    el.nearBtn.disabled = true;
+    el.nearBtn.textContent = '📍 Standort wird ermittelt …';
+    navigator.geolocation.getCurrentPosition((pos) => {
+      userPos = { lat: pos.coords.latitude, lon: pos.coords.longitude };
+      state.sort = 'distance';
+      const nearest = cities
+        .filter((c) => c.lat != null)
+        .map((c) => ({ city: c, km: distanceKm(c.lat, c.lon) }))
+        .sort((a, b) => a.km - b.km)[0];
+      let message = 'Standort erkannt – sortiert nach Entfernung.';
+      if (nearest && nearest.km <= 25) {
+        if (nearest.city.slug !== state.city) message = `Standort erkannt – ${nearest.city.name} ausgewählt, sortiert nach Entfernung.`;
+        state.city = nearest.city.slug;
+      } else if (nearest) {
+        message = `Standort erkannt – für deine Umgebung gibt es noch keine Daten (nächste Stadt: ${nearest.city.name}, ${fmtKm(nearest.km)}).`;
+      }
+      setNearUI();
+      syncControls();
+      applyCity();
+      showNearHint(message, false);
+    }, (err) => {
+      setNearUI();
+      showNearHint(err.code === 1
+        ? 'Standortfreigabe verweigert – bitte in den Browser- bzw. App-Einstellungen erlauben.'
+        : 'Standort konnte nicht ermittelt werden. Bitte später erneut versuchen.', true);
+    }, { enableHighAccuracy: false, timeout: 12000, maximumAge: 300000 });
+  }
+
+  /* ---------------- Preisverlauf ---------------- */
+
+  const HISTORY_DAYS_SHOWN = 84; // 12 Wochen
+  const shortDateFmt = new Intl.DateTimeFormat('de-DE', { day: '2-digit', month: '2-digit', timeZone: 'UTC' });
+  const fmtShort = (iso) => shortDateFmt.format(new Date(`${iso}T00:00:00Z`));
+  function addDays(iso, n) {
+    const d = new Date(`${iso}T00:00:00Z`);
+    d.setUTCDate(d.getUTCDate() + n);
+    return d.toISOString().slice(0, 10);
+  }
+
+  // Tageswerte im Anzeigezeitraum: p = Preis, null = kein Angebot, undefined = an dem Tag nicht erfasst
+  function historySeries(slug) {
+    const days = priceHistory[slug] || {};
+    const recorded = Object.keys(days).sort();
+    if (!recorded.length) return [];
+    const windowStart = addDays(today, -(HISTORY_DAYS_SHOWN - 1));
+    const out = [];
+    for (let day = recorded[0] > windowStart ? recorded[0] : windowStart; day <= today; day = addDays(day, 1)) {
+      const v = days[day];
+      out.push({ day, p: v ? v.p : undefined, c: v ? v.c : undefined });
+    }
+    return out;
+  }
+
+  // Seit wie vielen Wochen gab es in dieser Stadt keinen niedrigeren Dosenpreis? (null = zu wenig Verlauf)
+  function lowestSinceWeeks(d) {
+    if (d.status !== 'active' || d.pricePerUnit == null || d.appRequired) return null;
+    const past = Object.entries(priceHistory[cityOf(d)] || {})
+      .filter(([day]) => day < today)
+      .sort((a, b) => b[0].localeCompare(a[0]));
+    if (!past.length) return null;
+    const cheaper = past.find(([, v]) => v && v.p != null && v.p < d.pricePerUnit - 0.005);
+    const since = cheaper ? cheaper[0] : past[past.length - 1][0];
+    const weeks = Math.floor((Date.parse(today) - Date.parse(since)) / (7 * 86400e3));
+    return weeks >= 2 ? { weeks, sinceStart: !cheaper } : null;
+  }
+
+  function lowBadge(d) {
+    const low = lowestSinceWeeks(d);
+    if (!low) return '';
+    const title = low.sinceStart ? 'Günstigster Preis seit Beginn der Aufzeichnung' : `Kein günstigerer Monster-Preis hier seit ${low.weeks} Wochen`;
+    return `<span class="tag tag--low" title="${esc(title)}">↓ Tiefstpreis seit ${low.weeks} Wochen</span>`;
+  }
+
+  function renderHistory() {
+    const city = currentCity();
+    const series = historySeries(city.slug);
+    el.historyPanel.hidden = !series.length;
+    if (!series.length) return;
+    el.historyTitle.textContent = `Preisverlauf · günstigste Dose in ${city.name}`;
+    const recorded = series.filter((s) => s.p !== undefined);
+    const priced = series.filter((s) => s.p != null);
+    const showChart = recorded.length >= 2 && priced.length > 0;
+    el.historyChart.hidden = !showChart;
+    el.historyTable.hidden = !showChart;
+    if (recorded.length < 2) {
+      el.historySub.textContent = `Wird seit ${fmtDay(series[0].day)} täglich gesammelt – ab morgen siehst du hier die Entwicklung.`;
+      return;
+    }
+    if (!priced.length) {
+      el.historySub.textContent = `Seit ${fmtDay(series[0].day)} gab es hier kein Monster-Angebot.`;
+      return;
+    }
+    el.historySub.textContent = `Tagesbestpreis pro Dose (ohne App-Pflicht) · ${series.length >= HISTORY_DAYS_SHOWN
+      ? 'letzte 12 Wochen' : `seit ${fmtDay(series[0].day)}`}`;
+    drawHistoryChart(series, city);
+    renderHistoryTable(series);
+  }
+
+  // Stufenlinie (Preise gelten tageweise), eine Reihe, 2px, Fadenkreuz + Tooltip, Tastatur (←/→)
+  function drawHistoryChart(series, city) {
+    const wrap = el.historyChart;
+    const W = Math.max(280, Math.round(wrap.clientWidth || 600));
+    const H = 196;
+    const m = { top: 28, right: 18, bottom: 26, left: 50 };
+    const pw = W - m.left - m.right;
+    const ph = H - m.top - m.bottom;
+    const vals = series.filter((s) => s.p != null).map((s) => s.p);
+    let lo = Math.floor((Math.min(...vals) - 0.05) * 10) / 10;
+    let hi = Math.ceil((Math.max(...vals) + 0.05) * 10) / 10;
+    if (hi - lo < 0.2) { lo = Math.max(0, lo - 0.1); hi += 0.1; }
+    const step = [0.1, 0.2, 0.25, 0.5, 1].find((s) => (hi - lo) / s <= 4) || 1;
+    lo = Math.max(0, Math.floor(lo / step + 1e-9) * step);
+    hi = Math.ceil(hi / step - 1e-9) * step;
+    const n = series.length;
+    const bw = pw / n;
+    const x = (i) => m.left + i * bw;
+    const y = (p) => m.top + ph - ((p - lo) / (hi - lo)) * ph;
+
+    let grid = '';
+    for (let v = lo; v <= hi + 1e-9; v += step) {
+      const yy = y(v).toFixed(1);
+      grid += `<line class="hist-grid" x1="${m.left}" x2="${W - m.right}" y1="${yy}" y2="${yy}"/>`
+        + `<text class="hist-tick" x="${m.left - 8}" y="${yy}" dy="0.32em" text-anchor="end">${eur.format(v)}</text>`;
+    }
+    let xTicks = '';
+    let lastX = -1e9;
+    series.forEach((s, i) => {
+      const monday = new Date(`${s.day}T00:00:00Z`).getUTCDay() === 1;
+      const xx = x(i) + bw / 2;
+      if ((!monday && i !== 0) || xx - lastX < 64) return;
+      lastX = xx;
+      xTicks += `<text class="hist-tick" x="${xx.toFixed(1)}" y="${H - 6}" text-anchor="${i === 0 ? 'start' : 'middle'}">${fmtShort(s.day)}</text>`;
+    });
+
+    let path = '';
+    let open = false;
+    series.forEach((s, i) => {
+      if (s.p == null) { open = false; return; }
+      const yy = y(s.p).toFixed(1);
+      path += `${open ? 'V' : `M${x(i).toFixed(1)},`}${yy}H${x(i + 1).toFixed(1)}`;
+      open = true;
+    });
+
+    // Selektive Direkt-Labels: aktueller Preis am Ende, Tiefstpreis (falls niedriger als heute)
+    const lastIdx = series.map((s) => s.p != null).lastIndexOf(true);
+    const last = series[lastIdx];
+    const minVal = Math.min(...vals);
+    const minIdx = series.map((s) => s.p != null && Math.abs(s.p - minVal) < 0.005).lastIndexOf(true);
+    const endX = x(lastIdx + 1);
+    let marks = `<circle class="hist-dot" cx="${endX.toFixed(1)}" cy="${y(last.p).toFixed(1)}" r="5"/>`
+      + `<text class="hist-label" x="${(endX - 8).toFixed(1)}" y="${(y(last.p) - 12).toFixed(1)}" text-anchor="end">${esc(eur.format(last.p))}</text>`;
+    if (minVal < last.p - 0.005) {
+      // Marker mittig in den Tiefstpreis-Abschnitt setzen – nicht an den Sprung zum nächsten Preis
+      let runStart = minIdx;
+      while (runStart > 0 && series[runStart - 1].p != null && Math.abs(series[runStart - 1].p - minVal) < 0.005) runStart -= 1;
+      const mx = (x(runStart) + x(minIdx + 1)) / 2;
+      // Schmale Diagramme (Handy): kurze Beschriftung, damit sie nicht über den nächsten Preissprung ragt
+      const minText = W < 480 ? `↓ ${eur.format(minVal)}` : `Tiefstpreis ${eur.format(minVal)}`;
+      const half = (minText.length * 6.6) / 2; // ~Textbreite bei 12px
+      const lx = Math.min(Math.max(mx, m.left + half), W - m.right - half);
+      marks += `<circle class="hist-dot" cx="${mx.toFixed(1)}" cy="${y(minVal).toFixed(1)}" r="5"/>`
+        + `<text class="hist-label" x="${lx.toFixed(1)}" y="${(y(minVal) - 12).toFixed(1)}" text-anchor="middle">${esc(minText)}</text>`;
+    }
+
+    const summary = `Preisverlauf ${city.name}: heute ${eur.format(last.p)}, Tiefstpreis ${eur.format(minVal)} am ${fmtDay(series[minIdx].day)}. Mit Pfeiltasten durch die Tage.`;
+    wrap.innerHTML = `<svg class="hist-svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" tabindex="0" aria-label="${esc(summary)}">`
+      + `${grid}${xTicks}<path class="hist-line" d="${path}"/>${marks}`
+      + `<line class="hist-cross" x1="0" x2="0" y1="${m.top}" y2="${m.top + ph}" visibility="hidden"/>`
+      // Tippfläche über die volle Breite (auch über den Achsen-Rändern) – am Rand wird auf den ersten/letzten Tag geklemmt
+      + `<rect class="hist-hit" x="0" y="${m.top}" width="${W}" height="${ph}"/></svg>`
+      + '<div class="hist-tip" hidden></div>';
+
+    const svg = wrap.querySelector('svg');
+    const cross = svg.querySelector('.hist-cross');
+    const tip = wrap.querySelector('.hist-tip');
+    let idx = lastIdx;
+    const show = (i) => {
+      idx = Math.max(0, Math.min(n - 1, i));
+      const s = series[idx];
+      const cx = x(idx) + bw / 2;
+      cross.setAttribute('x1', cx);
+      cross.setAttribute('x2', cx);
+      cross.setAttribute('visibility', 'visible');
+      const value = document.createElement('strong');
+      value.textContent = s.p != null ? eur.format(s.p) : s.p === null ? 'kein Angebot' : 'nicht erfasst';
+      const meta = document.createElement('span');
+      meta.textContent = s.c ? `${fmtDay(s.day)} · ${s.c}` : fmtDay(s.day);
+      tip.replaceChildren(value, meta);
+      tip.hidden = false;
+      const tw = tip.offsetWidth;
+      tip.style.left = `${Math.min(Math.max(cx - tw / 2, 0), W - tw)}px`;
+      tip.style.top = `${Math.max(0, (s.p != null ? y(s.p) : m.top) - tip.offsetHeight - 12)}px`;
+    };
+    const hide = () => {
+      cross.setAttribute('visibility', 'hidden');
+      tip.hidden = true;
+    };
+    const hit = svg.querySelector('.hist-hit');
+    hit.addEventListener('pointermove', (e) => {
+      const r = svg.getBoundingClientRect();
+      show(Math.floor(((e.clientX - r.left) * (W / r.width) - m.left) / bw));
+    });
+    hit.addEventListener('pointerleave', hide);
+    svg.addEventListener('focus', () => show(idx));
+    svg.addEventListener('blur', hide);
+    svg.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      show(idx + (e.key === 'ArrowRight' ? 1 : -1));
+    });
+  }
+
+  // Tabellen-Ansicht (Wochenbestpreise) – macht jeden Wert auch ohne Hover lesbar
+  function renderHistoryTable(series) {
+    const weeks = new Map();
+    for (const s of series) {
+      const monday = addDays(s.day, -((new Date(`${s.day}T00:00:00Z`).getUTCDay() + 6) % 7));
+      const w = weeks.get(monday) || { from: s.day, to: s.day, best: null };
+      w.to = s.day;
+      if (s.p != null && (!w.best || s.p < w.best.p)) w.best = s;
+      weeks.set(monday, w);
+    }
+    const rows = [...weeks.values()].reverse().map((w) => `<tr><td>${fmtShort(w.from)} – ${fmtShort(w.to)}</td>`
+      + `<td class="num">${w.best ? eur.format(w.best.p) : '–'}</td>`
+      + `<td>${w.best ? esc(w.best.c || '') : 'kein Angebot'}</td></tr>`).join('');
+    el.historyTable.innerHTML = '<summary>Als Tabelle anzeigen</summary><table><thead><tr><th>Woche</th>'
+      + `<th class="num">Günstigste Dose</th><th>Kette</th></tr></thead><tbody>${rows}</tbody></table>`;
   }
 
   /* ---------------- Events ---------------- */
@@ -860,6 +1167,19 @@
       state.pack = btn.dataset.value === state.pack ? 'all' : btn.dataset.value;
       update();
     });
+    el.nearBtn.addEventListener('click', locate);
+    // Preisverlauf bei geänderter Breite neu zeichnen (nur Breite zählt – vermeidet Endlosschleifen)
+    if ('ResizeObserver' in window) {
+      let lastWidth = 0;
+      let timer;
+      new ResizeObserver((entries) => {
+        const width = Math.round(entries[0].contentRect.width);
+        if (width === lastWidth) return;
+        lastWidth = width;
+        clearTimeout(timer);
+        timer = setTimeout(() => { if (!el.historyPanel.hidden) renderHistory(); }, 150);
+      }).observe(el.historyPanel);
+    }
     el.reset.addEventListener('click', resetFilters);
     el.empty.addEventListener('click', (e) => {
       if (e.target.closest('[data-action="reset"]')) resetFilters();
@@ -876,5 +1196,11 @@
   readURL();
   syncControls();
   bindEvents();
+  // In der Android-App den APK-Download ausblenden (die App hängt eine eigene Kennung an den User-Agent)
+  if (/MonsterAngeboteApp/.test(navigator.userAgent)) el.appDownload.hidden = true;
+  // Service Worker: macht die Seite installierbar (Chrome-Menü ⋮ → "App installieren") und offline nutzbar
+  if ('serviceWorker' in navigator && window.isSecureContext) {
+    navigator.serviceWorker.register('sw.js').catch(() => { /* ohne Service Worker läuft alles normal weiter */ });
+  }
   load();
 })();

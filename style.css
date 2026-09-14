@@ -20,6 +20,7 @@
   --ink: #f4f6f8;            /* Akzentfläche = Weiß der Dose */
   --ink-contrast: #0a0b0d;
   --ice: #7cc9e8;            /* ENERGY-Blau */
+  --chart-line: #0da2ce;     /* Diagrammlinie: gleicher Farbton, kräftiger (dataviz-Validator: L 0,665 · C 0,125 · 6,2:1) */
   --last: #ff9d8f;
   --shadow: 0 1px 0 rgb(255 255 255 / .03) inset, 0 12px 30px -16px rgb(0 0 0 / .8);
   --shadow-hover: 0 1px 0 rgb(255 255 255 / .05) inset, 0 22px 44px -18px rgb(0 0 0 / .9);
@@ -50,6 +51,8 @@ button, input, select { font: inherit; color: inherit; }
 :focus-visible { outline: 2px solid var(--ice); outline-offset: 2px; border-radius: 6px; }
 
 ::selection { background: var(--ink); color: var(--ink-contrast); }
+
+[hidden] { display: none !important; }
 
 .visually-hidden {
   position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
@@ -601,6 +604,54 @@ h1 em {
 .error-box { grid-column: 1 / -1; }
 .error-box code { padding: 1px 6px; border-radius: 6px; background: var(--surface-3); }
 
+/* ---------- In meiner Nähe ---------- */
+.near-btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 6px;
+  min-height: 44px; padding: 8px 14px;
+  border: 1px solid var(--border-strong); border-radius: 12px;
+  background: var(--surface-2); color: var(--text);
+  font-size: .9rem; font-weight: 700; white-space: nowrap;
+  cursor: pointer;
+  transition: border-color .15s, background .15s;
+}
+.near-btn:hover:not(:disabled) { border-color: var(--silver); }
+.near-btn[aria-pressed="true"] { border-color: rgb(124 201 232 / .6); background: rgb(124 201 232 / .12); color: var(--ice); }
+.near-btn:disabled { opacity: .6; cursor: progress; }
+.near-hint { margin: 8px 0 0; font-size: .84rem; color: var(--ice); }
+.near-hint.is-error { color: var(--last); }
+.dist { margin: 3px 0 0; font-size: .8rem; font-weight: 750; color: var(--ice); font-variant-numeric: tabular-nums; }
+.tag--low { background: rgb(124 201 232 / .12); border-color: rgb(124 201 232 / .45); color: var(--ice); }
+
+/* ---------- Preisverlauf (eine Datenreihe: keine Legende, Titel benennt sie) ---------- */
+.history-panel h2 { margin: 0; font-size: .95rem; font-weight: 900; letter-spacing: .12em; text-transform: uppercase; }
+.history-sub { margin: 2px 0 12px; font-size: .84rem; color: var(--muted); }
+.history-chart { position: relative; }
+.hist-svg { display: block; width: 100%; height: auto; overflow: visible; touch-action: pan-y; }
+.hist-svg:focus-visible { outline: 2px solid var(--ice); outline-offset: 4px; border-radius: 8px; }
+.hist-grid { stroke: rgb(255 255 255 / .07); stroke-width: 1; shape-rendering: crispEdges; }
+.hist-tick { fill: var(--muted); font-size: 11px; font-variant-numeric: tabular-nums; }
+.hist-line { fill: none; stroke: var(--chart-line); stroke-width: 2; stroke-linejoin: round; stroke-linecap: round; }
+.hist-dot { fill: var(--chart-line); stroke: var(--surface); stroke-width: 2; }
+.hist-label { fill: var(--text); font-size: 12px; font-weight: 750; }
+.hist-cross { stroke: rgb(255 255 255 / .35); stroke-width: 1; }
+.hist-hit { fill: transparent; cursor: crosshair; }
+.hist-tip {
+  position: absolute; z-index: 2; pointer-events: none;
+  display: grid; gap: 1px;
+  padding: 7px 10px; border-radius: 10px;
+  background: var(--surface-3); border: 1px solid var(--border-strong);
+  box-shadow: 0 8px 20px -8px rgb(0 0 0 / .8);
+  white-space: nowrap;
+}
+.hist-tip strong { font-size: 1rem; }
+.hist-tip span { font-size: .78rem; color: var(--muted); }
+.history-table { margin-top: 12px; font-size: .86rem; }
+.history-table summary { cursor: pointer; color: var(--muted); font-weight: 650; }
+.history-table table { width: 100%; margin-top: 8px; border-collapse: collapse; }
+.history-table th, .history-table td { padding: 6px 8px; border-top: 1px solid var(--border); text-align: left; }
+.history-table th { color: var(--muted); font-weight: 700; font-size: .74rem; text-transform: uppercase; letter-spacing: .06em; }
+.history-table .num { text-align: right; font-variant-numeric: tabular-nums; }
+
 /* ---------- Footer ---------- */
 .site-footer {
   margin-top: 44px;
@@ -611,6 +662,8 @@ h1 em {
 }
 .site-footer p { margin: 0 0 8px; max-width: 90ch; }
 .site-footer strong { color: var(--text); }
+.app-download { margin-top: 14px !important; font-size: .9rem; color: var(--text); }
+.app-download a { font-weight: 750; }
 .noscript { padding-block: 20px; }
 
 /* ---------- Ab Tablet ---------- */
@@ -622,6 +675,7 @@ h1 em {
   .stat--hero { grid-column: auto; }
   .filter-top { flex-direction: row; align-items: center; justify-content: space-between; }
   .city-search { flex: 0 1 340px; }
+  .filter-top .sort { margin-left: auto; }
   .sort select { flex: none; min-width: 190px; }
   .panel { padding: 18px 20px; }
   .chip-row { display: flex; align-items: baseline; gap: 14px; }

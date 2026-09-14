@@ -45,6 +45,8 @@ ROOT = Path(__file__).resolve().parent.parent
 DEALS_FILE = ROOT / "data" / "deals.json"
 STORES_FILE = ROOT / "data" / "stores.json"
 PRICES_FILE = ROOT / "data" / "regular-prices.json"  # zuletzt gesehene Normalpreise je Kette
+HISTORY_FILE = ROOT / "data" / "history.json"  # Preisverlauf: günstigster Dosenpreis je Stadt und Tag
+HISTORY_DAYS = 400
 
 # --------------------------------------------------------------------------- Konfiguration
 
@@ -741,6 +743,36 @@ def update_regular_prices(deals: list[dict], dry_run: bool) -> None:
                                encoding="utf-8")
 
 
+def update_history(deals: list[dict], cities: list[dict], today: date, dry_run: bool) -> None:
+    """Preisverlauf: pro Stadt der günstigste heute gültige Dosenpreis (ohne App-Pflicht).
+
+    Format: {"singen": {"2026-09-14": {"p": 0.99, "c": "Rewe"}, "2026-09-15": {"p": null}, …}, …}
+    "p": null heißt: an diesem Tag gab es dort kein Angebot (Tag wurde aber erfasst).
+    """
+    history = json.loads(HISTORY_FILE.read_text(encoding="utf-8")) if HISTORY_FILE.exists() else {}
+    before = json.dumps(history, sort_keys=True)
+    day = today.isoformat()
+    best: dict[str, dict] = {}
+    for deal in deals:
+        if not deal.get("pricePerUnit") or (deal.get("app") or {}).get("required"):
+            continue
+        if not (deal.get("validFrom", "") <= day <= deal.get("validTo", "")):
+            continue
+        city = deal.get("city", DEFAULT_CITY["slug"])
+        if city not in best or deal["pricePerUnit"] < best[city]["p"] - 1e-9:
+            best[city] = {"p": round(deal["pricePerUnit"], 3), "c": deal["chain"]}
+    for city in cities:
+        history.setdefault(city["slug"], {})[day] = best.get(city["slug"], {"p": None})
+    cutoff = (today - timedelta(days=HISTORY_DAYS)).isoformat()
+    history = {c: {d: v for d, v in sorted(days.items()) if d >= cutoff} for c, days in sorted(history.items())}
+    if json.dumps(history, sort_keys=True) != before and not dry_run:
+        # kompakt, eine Stadt pro Zeile – hält die Datei klein und die Git-Diffs lesbar
+        lines = [f"  {json.dumps(c, ensure_ascii=False)}: {json.dumps(days, ensure_ascii=False, separators=(',', ':'))}"
+                 for c, days in history.items()]
+        HISTORY_FILE.write_text("{\n" + ",\n".join(lines) + "\n}\n", encoding="utf-8")
+    log.info("Preisverlauf: %d Städte, heute günstigste Dose in %d Städten", len(history), len(best))
+
+
 def write_step_summary(report: list[tuple], deals: list[dict], stats: dict, dry_run: bool) -> None:
     path = os.environ.get("GITHUB_STEP_SUMMARY")
     if not path:
@@ -864,6 +896,7 @@ def main() -> int:
     log.info("Ergebnis: %d Angebote (%d neu, %d abgelaufen entfernt, %d behalten aus ausgefallenen/manuellen Quellen)",
              len(merged), stats["new"], stats["expired"], stats["kept"])
     update_regular_prices(merged, args.dry_run)
+    update_history(merged, cities, today, args.dry_run)
 
     output = json.dumps(merged, ensure_ascii=False, indent=2) + "\n"
     if args.dry_run:

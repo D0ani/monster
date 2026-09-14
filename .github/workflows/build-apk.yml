@@ -1,0 +1,81 @@
+name: Android-App bauen
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "android/**"
+      - ".github/workflows/build-apk.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write  # für das Release mit der APK
+
+concurrency:
+  group: build-apk
+  cancel-in-progress: true
+
+jobs:
+  build:
+    name: APK bauen & veröffentlichen
+    runs-on: ubuntu-latest   # Android-SDK ist auf GitHub-Runnern vorinstalliert
+    timeout-minutes: 30
+    steps:
+      - name: Repository auschecken
+        uses: actions/checkout@v5
+
+      - name: Java 17 einrichten
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Gradle einrichten
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.10.2"
+
+      - name: Signaturschlüssel aus den Secrets holen (optional)
+        env:
+          KEYSTORE_B64: ${{ secrets.ANDROID_KEYSTORE_BASE64 }}
+        run: |
+          if [ -n "$KEYSTORE_B64" ]; then
+            echo "$KEYSTORE_B64" | base64 -d > "$RUNNER_TEMP/release.jks"
+            echo "ANDROID_KEYSTORE_PATH=$RUNNER_TEMP/release.jks" >> "$GITHUB_ENV"
+            echo "Release-Signatur aktiv."
+          else
+            echo "::notice title=APK mit Debug-Schlüssel signiert::Für Updates ohne Neuinstallation die Secrets ANDROID_KEYSTORE_BASE64 und ANDROID_KEYSTORE_PASSWORD anlegen (siehe README)."
+          fi
+
+      - name: APK bauen
+        working-directory: android
+        env:
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.ANDROID_KEYSTORE_PASSWORD }}
+          VERSION_CODE: ${{ github.run_number }}
+          VERSION_NAME: 1.0.${{ github.run_number }}
+        run: gradle --no-daemon assembleRelease
+
+      - name: APK umbenennen
+        run: cp android/app/build/outputs/apk/release/app-release.apk monster-angebote.apk
+
+      - name: Als Artefakt ablegen
+        uses: actions/upload-artifact@v4
+        with:
+          name: monster-angebote-apk
+          path: monster-angebote.apk
+
+      - name: Als Release veröffentlichen
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: android-latest
+          name: Android-App (neueste Version)
+          make_latest: true
+          files: monster-angebote.apk
+          body: |
+            **Monster-Angebote als Android-App** – Version 1.0.${{ github.run_number }}
+
+            1. `monster-angebote.apk` unten herunterladen (am Handy antippen).
+            2. Beim ersten Mal „Installation aus unbekannten Quellen“ für den Browser erlauben.
+            3. Installieren – fertig. Die App zeigt immer die aktuellen Angebote der Website.
+
+            Direktlink: https://github.com/D0ani/monster/releases/latest/download/monster-angebote.apk

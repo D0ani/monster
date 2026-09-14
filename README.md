@@ -15,6 +15,12 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
   auf Karten, Markt-Chips und Karten-Pins (`assets/logos/`, Herkunft/Lizenz in `assets/logos/CREDITS.md`).
   Neue Kette: PNG nach `assets/logos/` legen und in `CHAINS` in `app.js` als `logo` eintragen
 - Filter nach Kette und Packungsgröße (Einzeln/4er/6er/10er/…), Sortierung (Preis/Dose, Gesamtpreis, Rabatt)
+- **„In meiner Nähe“**: Standort (nur im Browser, nirgends gespeichert) → Entfernung an jeder Filiale, Sortierung
+  „Entfernung“, automatisch die nächstgelegene Stadt, eigener Standort auf der Karte
+- **Preisverlauf** (`data/history.json`): Tagesbestpreis je Stadt als Diagramm (+ Tabellenansicht) und
+  „↓ Tiefstpreis seit X Wochen“ an Angeboten – der Verlauf wird ab dem 14.09.2026 täglich gesammelt
+- **Installierbar**: als Web-App (Chrome-Menü ⋮ → „App installieren“, `manifest.webmanifest` + `sw.js`, offline
+  mit letztem Stand) oder als Android-APK (Link ganz unten im Footer, siehe „Android-App“)
 - **Angebote für nächste Woche**, sobald die neuen Prospekte online sind (meist Do–So): eigener Abschnitt,
   Hinweis-Leiste und Zeitraum-Chips „Alle · Jetzt gültig · Nächste Woche“ (`?zeitraum=next`)
 - App-Pille unter dem Preis: „Preis nur mit Lidl Plus“ (App-Pflicht, gefüllt) bzw. „Mit REWE-App +0,10 € Bonus“ /
@@ -33,7 +39,8 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 .
 ├── .github/workflows/
 │   ├── update-deals.yml     # täglich 06:00 + manuell: Scraper → commit data/deals.json → Deployment
-│   └── deploy-pages.yml     # Pages-Deployment (Push auf main, manuell, oder Aufruf durch update-deals)
+│   ├── deploy-pages.yml     # Pages-Deployment (Push auf main, manuell, oder Aufruf durch update-deals)
+│   └── build-apk.yml        # baut die Android-App und veröffentlicht sie als Release
 ├── assets/
 │   ├── can-ultra-white.webp # Dosenfoto im Header (CC0, Wikimedia Commons, freigestellt)
 │   ├── logos/               # Händlerlogos (Wikimedia Commons, gemeinfrei) + CREDITS.md mit Nachweisen
@@ -42,12 +49,14 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 ├── data/
 │   ├── cities.json          # suchbare Städte (aus OpenStreetMap, von update_stores.py)
 │   ├── deals.json           # Angebote aller Städte (vom Scraper überschrieben/gemergt)
+│   ├── history.json         # Preisverlauf: günstigster Dosenpreis je Stadt und Tag
 │   ├── regular-prices.json  # zuletzt gesehene Normalpreise je Kette
 │   └── stores.json          # Filialverzeichnis aller Städte (aus OpenStreetMap)
 ├── scripts/
 │   ├── update_deals.py      # Scraper: marktguru, kaufDA, prospektangebote
 │   ├── update_stores.py     # baut data/stores.json aus OpenStreetMap neu
 │   └── requirements.txt
+├── android/                 # Android-App (schlanke WebView-Hülle um die Website)
 ├── index.html
 ├── style.css
 ├── app.js
@@ -135,6 +144,23 @@ Läufe oft 5–30 Minuten später.
   `marktguru,kaufda` eintragen, um nur bestimmte Quellen abzufragen.
 - **CLI:** `gh workflow run update-deals.yml` bzw. `gh workflow run update-deals.yml -f only=marktguru`
 - **Nur neu deployen:** Actions → „GitHub Pages deployen“ → *Run workflow*.
+
+## Android-App
+
+Die App ist eine schlanke Hülle um die Website (WebView): Dosen-Icon, Vollbild im Dark Mode, Zurück-Taste,
+nach unten ziehen zum Aktualisieren, Standortfreigabe für „In meiner Nähe“, externe Links öffnen im Browser.
+Die Angebote kommen immer live von der Website – für neue Daten muss die App nie aktualisiert werden.
+
+- **Download:** <https://github.com/D0ani/monster/releases/latest/download/monster-angebote.apk>
+  (auf der Website auf Android-Handys auch als Link „Android-App“ im Header)
+- **Installieren:** APK am Handy öffnen → einmalig „Installation aus unbekannten Quellen“ für den Browser erlauben.
+- **Bauen:** `.github/workflows/build-apk.yml` baut bei jeder Änderung unter `android/` (oder per *Run workflow*)
+  eine neue APK auf GitHub und legt sie ins Release `android-latest`. Lokal braucht es dafür kein Android-SDK.
+- **Signatur (einmalig einrichten, empfohlen):** Den Schlüssel `android/keystore/monster-release.jks` (liegt nur
+  lokal, steht in `.gitignore` – gut aufheben!) als Secrets hinterlegen: *Settings → Secrets and variables → Actions*
+  → `ANDROID_KEYSTORE_BASE64` und `ANDROID_KEYSTORE_PASSWORD` (Werte stehen in `android/keystore/GITHUB-SECRETS.txt`).
+  Ohne Secrets wird mit einem wechselnden Debug-Schlüssel signiert – installierbar, aber ein App-Update erfordert dann
+  Deinstallieren und Neuinstallieren.
 
 ## Datenmodell `data/deals.json`
 

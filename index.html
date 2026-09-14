@@ -6,6 +6,8 @@
   <title>Monster-Angebote Singen</title>
   <meta name="description" content="Wo ist Monster Energy gerade im Angebot? Aktuelle Prospektpreise der Supermärkte, Discounter und Getränkemärkte in Singen (Hohentwiel) und Rielasingen-Worblingen – täglich automatisch aktualisiert.">
   <meta name="theme-color" content="#0a0b0d">
+  <!-- Installierbare Web-App: Chrome-Menü ⋮ → "App installieren" -->
+  <link rel="manifest" href="manifest.webmanifest">
   <!-- ?v=… erhöhen, wenn sich die Icons ändern – zwingt Browser und Messenger, sie neu zu laden -->
   <link rel="icon" href="assets/favicon-32.png?v=2" type="image/png" sizes="32x32">
   <link rel="icon" href="assets/icon-192.png?v=2" type="image/png" sizes="192x192">
@@ -59,16 +61,19 @@
           <input id="city" type="search" list="city-list" placeholder="Andere Stadt oder PLZ suchen …" autocomplete="off" spellcheck="false" enterkeyhint="search">
           <datalist id="city-list"></datalist>
         </label>
+        <button type="button" class="near-btn" id="near-btn" aria-pressed="false">📍 In meiner Nähe</button>
         <label class="sort">
           <span>Sortieren nach</span>
           <select id="sort">
             <option value="unit">Preis pro Dose</option>
             <option value="total">Gesamtpreis</option>
             <option value="discount">Rabatt in %</option>
+            <option value="distance" disabled>Entfernung</option>
           </select>
         </label>
       </div>
       <p class="city-hint" id="city-hint" role="status" hidden></p>
+      <p class="near-hint" id="near-hint" role="status" hidden></p>
 
       <div class="chip-row">
         <span class="chip-label" id="lbl-chain">Markt</span>
@@ -119,12 +124,20 @@
       <p>Diese Woche hat hier offenbar kein Markt Monster zu deinen Filtern im Prospekt. Probier andere Filter, eine andere Stadt – oder schau morgen wieder vorbei. Mit „Alle Filialen zeigen“ siehst du trotzdem alle Märkte.</p>
       <button type="button" class="btn" data-action="reset">Filter zurücksetzen</button>
     </div>
+
+    <section class="panel history-panel" id="history-panel" aria-labelledby="history-title" hidden>
+      <h2 id="history-title">Preisverlauf</h2>
+      <p class="history-sub" id="history-sub"></p>
+      <div class="history-chart" id="history-chart"></div>
+      <details class="history-table" id="history-table"></details>
+    </section>
   </main>
 
   <footer class="site-footer">
     <div class="wrap">
       <p>Preise laut Händlerprospekten, in der Regel <strong>zzgl. 0,25&nbsp;€ Pfand pro Dose</strong>. Prospektangebote gelten für die Region – Verfügbarkeit in der einzelnen Filiale kann abweichen. Angaben ohne Gewähr.</p>
       <p>Datenquellen: marktguru.de, kaufDA.de, prospektangebote.de · Filialdaten &amp; Karte © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende · Dosenfoto: TurnOnTheNight, <a href="https://commons.wikimedia.org/wiki/File:Monster_Energy_Zero_Ultra_(China_Version)_330ml_20260628130320.jpg">Wikimedia Commons</a> (CC0) · Händlerlogos: <a href="https://github.com/D0ani/monster/blob/main/assets/logos/CREDITS.md">Wikimedia Commons</a> (gemeinfrei), Marken der jeweiligen Inhaber, nur zur Kennzeichnung · Kein offizielles Angebot von Monster Energy.</p>
+      <p class="app-download" id="app-download">📱 <a href="https://github.com/D0ani/monster/releases/latest/download/monster-angebote.apk">Android-App (APK) herunterladen</a> · oder im Chrome-Menü <strong>⋮ → „App installieren“</strong></p>
     </div>
   </footer>
 

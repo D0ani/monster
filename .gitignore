@@ -8,3 +8,9 @@ _site/
 Thumbs.db
 # Debug-Ausgaben des Scrapers (--debug-dir)
 debug/
+# Android: Signaturschlüssel NIE committen (liegt nur lokal + als GitHub-Secret), Build-Ausgaben
+android/keystore/
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties

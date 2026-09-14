@@ -6,7 +6,9 @@ on:
     paths-ignore:
       - "README.md"
       - "scripts/**"
+      - "android/**"
       - ".github/workflows/update-deals.yml"
+      - ".github/workflows/build-apk.yml"
   workflow_dispatch:
   # Wird von update-deals.yml nach einem Daten-Commit aufgerufen
   workflow_call:
@@ -37,7 +39,7 @@ jobs:
       - name: Seite zusammenstellen (nur statische Dateien)
         run: |
           mkdir -p _site
-          cp index.html style.css app.js _site/
+          cp index.html style.css app.js manifest.webmanifest sw.js _site/
           cp -r data assets _site/
           ls -la _site _site/data
 
