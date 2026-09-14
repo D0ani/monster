@@ -9,7 +9,8 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 
 - Kein Backend, kein Framework: `index.html` + `style.css` + `app.js` lesen `data/deals.json`
 - Kleine **Städte-Suche**: alle Gemeinden im Landkreis Konstanz mit Filialen (Konstanz, Radolfzell, Stockach,
-  Engen …) plus **Stuttgart** – per Name, Ortsteil oder PLZ; teilbar per Link `?stadt=konstanz`. Startseite bleibt Singen
+  Engen …) plus **Stuttgart** und **Leonberg** – per Name, Ortsteil oder PLZ; teilbar per Link `?stadt=konstanz`.
+  Startseite bleibt Singen
 - Supermärkte, Discounter, Getränkemärkte **und Drogerien** (Müller, dm, Rossmann)
 - Filter nach Kette und Packungsgröße (Einzeln/4er/6er/10er/…), Sortierung (Preis/Dose, Gesamtpreis, Rabatt)
 - App-Pille unter dem Preis: „Preis nur mit Lidl Plus“ (App-Pflicht, gefüllt) bzw. „Mit REWE-App +0,10 € Bonus“ /
@@ -209,7 +210,8 @@ nicht auf marktguru/kaufda/prospektangebote zeigt, lässt der Scraper sie bis zu
 z. B. `"08327"` (Landkreis Tuttlingen) oder `"08435"` (Bodenseekreis), und `BBOX` vergrößern. Danach
 `update_deals.py` laufen lassen – ab dem nächsten Lauf werden die neuen Städte täglich mit aktualisiert.
 Einzelne Städte außerhalb dieser Kreise stehen mit ihrem Gemeindeschlüssel in `EXTRA_AGS` – aktuell
-`08111000` = Stuttgart. Großhändler (METRO, Selgros …) werden ignoriert, dort kauft man nur mit Gewerbeausweis.
+`08111000` = Stuttgart und `08115028` = Leonberg. Den Schlüssel einer Stadt findet man z. B. auf Wikidata
+(Eigenschaft „Amtlicher Gemeindeschlüssel“) – wichtig bei doppelten Ortsnamen. Großhändler (METRO, Selgros …) werden ignoriert, dort kauft man nur mit Gewerbeausweis.
 Zusammengefasste Städte (wie „Singen“ = Singen mit Ortsteilen + Rielasingen-Worblingen) stehen in
 `COMBINED_CITIES`. Filialen in Singener Ortsteilen bekommen den Ortsteil in die Adresse, z. B. „78224 Singen-Bohlingen“.
 

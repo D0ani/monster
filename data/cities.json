@@ -38,8 +38,8 @@
     "zips": [
       "78267"
     ],
-    "lat": 47.84413,
-    "lon": 8.85196,
+    "lat": 47.84356,
+    "lon": 8.85193,
     "stores": 1,
     "aliases": []
   },
@@ -220,7 +220,6 @@
       "Dingelsdorf",
       "Egg",
       "Fürstenberg",
-      "Industriegebiet",
       "Königsbau",
       "Litzelstetten",
       "Oberdorf",
@@ -230,6 +229,26 @@
       "Staad",
       "Wallhausen",
       "Wollmatingen"
+    ]
+  },
+  {
+    "slug": "leonberg",
+    "name": "Leonberg",
+    "label": "Leonberg",
+    "region": "Landkreis Böblingen",
+    "zips": [
+      "71229"
+    ],
+    "lat": 48.8013,
+    "lon": 9.015,
+    "stores": 11,
+    "aliases": [
+      "Eltingen",
+      "Gebersheim",
+      "Höfingen",
+      "Hölderle",
+      "Ramtel",
+      "Warmbronn"
     ]
   },
   {
@@ -274,8 +293,8 @@
     "zips": [
       "78337"
     ],
-    "lat": 47.66004,
-    "lon": 8.88932,
+    "lat": 47.66171,
+    "lon": 8.88736,
     "stores": 1,
     "aliases": [
       "Hof Riedern",
@@ -286,8 +305,7 @@
       "Sonnenhof",
       "Stiegen",
       "Unterbühlhof",
-      "Wangen",
-      "Öhningen (Bodensee)"
+      "Wangen"
     ]
   },
   {
@@ -353,8 +371,8 @@
     "zips": [
       "78239"
     ],
-    "lat": 47.72959,
-    "lon": 8.84535,
+    "lat": 47.73379,
+    "lon": 8.84646,
     "stores": 6,
     "aliases": [
       "Arlen",
@@ -454,13 +472,11 @@
       "Asemwald",
       "Bad Cannstatt",
       "Berg",
-      "Bergheim",
       "Birkach",
       "Botnang",
       "Bruderrain",
       "Büsnau",
       "Degerloch",
-      "Dürrlewang",
       "Fasanenhof",
       "Feuerbach",
       "Frauenkopf",
@@ -474,7 +490,6 @@
       "Hoffeld",
       "Hohenheim",
       "Kaltental",
-      "Lederberg",
       "Luginsland",
       "Möhringen",
       "Mönchfeld",
@@ -493,7 +508,6 @@
       "Sommerrain",
       "Sonnenberg",
       "Stammheim",
-      "Steckfeld",
       "Steinhaldenfeld",
       "Stuttgart-Mitte",
       "Stuttgart-Nord",

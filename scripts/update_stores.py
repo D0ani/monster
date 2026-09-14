@@ -36,11 +36,12 @@ CITIES_FILE = ROOT / "data" / "cities.json"
 # 08335 = Landkreis Konstanz. Weitere z. B. "08327" (Landkreis Tuttlingen), "08435" (Bodenseekreis)
 # – dann auch BBOX (süd, west, nord, ost) entsprechend vergrößern.
 AGS_PREFIXES = ["08335"]
-REGION_NAMES = {"08335": "Landkreis Konstanz"}  # Anzeige im Header ("Energy-Deals · Landkreis Konstanz")
+# Anzeige im Header ("Energy-Deals · Landkreis Konstanz"), per Präfix des Gemeindeschlüssels
+REGION_NAMES = {"08335": "Landkreis Konstanz", "08115": "Landkreis Böblingen"}
 BBOX = (47.60, 8.55, 47.95, 9.30)
 # Einzelne Städte außerhalb dieser Kreise (amtlicher Gemeindeschlüssel, egal welche Verwaltungsebene):
-# 08111000 = Stuttgart (Stadtkreis)
-EXTRA_AGS = ["08111000"]
+# 08111000 = Stuttgart (Stadtkreis), 08115028 = Leonberg (Lkr. Böblingen – nicht das Leonberg in Bayern)
+EXTRA_AGS = ["08111000", "08115028"]
 
 # Zusammengefasste Städte (zusätzlich zu den einzelnen Gemeinden)
 COMBINED_CITIES = {
@@ -285,7 +286,7 @@ def build(session: requests.Session) -> tuple[list[dict], list[dict]]:
         for store in members:
             store["cities"].append(slug_)
         ags = municipalities[municipality]["ags"]
-        region = next((REGION_NAMES.get(p, "") for p in AGS_PREFIXES if ags.startswith(p)), "") or short_name(municipality)
+        region = next((name for prefix, name in REGION_NAMES.items() if ags.startswith(prefix)), short_name(municipality))
         cities.append(city_record(slug_, short_name(municipality), municipality, members,
                                   municipalities[municipality]["places"], region))
 

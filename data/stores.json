@@ -945,6 +945,171 @@
     "osm": "way/711042981"
   },
   {
+    "id": "aldi-sued-schweizermuehle-9-leonberg",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Schweizermühle",
+    "address": "Schweizermühle 9, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.798747,
+    "lon": 8.999808,
+    "postcode": "71229",
+    "addressApprox": false,
+    "osm": "way/23621095"
+  },
+  {
+    "id": "aldi-sued-ulmer-strasse-34-leonberg",
+    "chain": "Aldi Süd",
+    "name": "Aldi Süd Ulmer Straße",
+    "address": "Ulmer Straße 34, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.788766,
+    "lon": 9.029316,
+    "postcode": "71229",
+    "addressApprox": false,
+    "osm": "way/47635907"
+  },
+  {
+    "id": "dm-leonberger-strasse-98-110-leonberg",
+    "chain": "dm",
+    "name": "dm Leonberger Straße",
+    "address": "Leonberger Straße 98 -110, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.794569,
+    "lon": 9.010904,
+    "postcode": "71229",
+    "addressApprox": true,
+    "osm": "node/1535110321"
+  },
+  {
+    "id": "dm-steinbeisstrasse-1-leonberg",
+    "chain": "dm",
+    "name": "dm Steinbeisstraße",
+    "address": "Steinbeisstraße 1, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.798018,
+    "lon": 9.004183,
+    "postcode": "71229",
+    "addressApprox": false,
+    "osm": "way/26833501"
+  },
+  {
+    "id": "edeka-leonberger-strasse-98-110-leonberg",
+    "chain": "Edeka",
+    "name": "Edeka Baisch",
+    "address": "Leonberger Straße 98 -110, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.794385,
+    "lon": 9.011262,
+    "postcode": "71229",
+    "addressApprox": true,
+    "osm": "node/3805335996"
+  },
+  {
+    "id": "edeka-ditzinger-strasse-77-leonberg",
+    "chain": "Edeka",
+    "name": "Edeka Ditzinger Straße",
+    "address": "Ditzinger Straße 77, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.817575,
+    "lon": 9.025607,
+    "postcode": "71229",
+    "addressApprox": false,
+    "osm": "way/129957192"
+  },
+  {
+    "id": "kaufland-roemerstrasse-34-leonberg",
+    "chain": "Kaufland",
+    "name": "Kaufland Römerstraße",
+    "address": "Römerstraße 34, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.796715,
+    "lon": 9.005834,
+    "postcode": "71229",
+    "addressApprox": false,
+    "osm": "relation/17956294"
+  },
+  {
+    "id": "lidl-ditzinger-strasse-79-leonberg",
+    "chain": "Lidl",
+    "name": "Lidl Ditzinger Straße",
+    "address": "Ditzinger Straße 79, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.817635,
+    "lon": 9.026732,
+    "postcode": "71229",
+    "addressApprox": false,
+    "osm": "way/23622272"
+  },
+  {
+    "id": "lidl-glemseckstrasse-65-leonberg",
+    "chain": "Lidl",
+    "name": "Lidl Glemseckstraße",
+    "address": "Glemseckstraße 65, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.784908,
+    "lon": 9.019853,
+    "postcode": "71229",
+    "addressApprox": false,
+    "osm": "way/23656298"
+  },
+  {
+    "id": "netto-wilhelmstrasse-13-leonberg",
+    "chain": "Netto",
+    "name": "Netto Wilhelmstraße",
+    "address": "Wilhelmstraße 13, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.790345,
+    "lon": 9.008857,
+    "postcode": "71229",
+    "addressApprox": false,
+    "osm": "way/24434091"
+  },
+  {
+    "id": "rewe-roemerstrasse-25-leonberg",
+    "chain": "Rewe",
+    "name": "Rewe Römerstraße",
+    "address": "Römerstraße 25, 71229 Leonberg",
+    "municipality": "Leonberg",
+    "cities": [
+      "leonberg"
+    ],
+    "lat": 48.797996,
+    "lon": 9.005323,
+    "postcode": "71229",
+    "addressApprox": false,
+    "osm": "way/23657611"
+  },
+  {
     "id": "edeka-radolfzeller-strasse-1-moos",
     "chain": "Edeka",
     "name": "Edeka Radolfzeller Straße",
