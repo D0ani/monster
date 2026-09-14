@@ -36,7 +36,7 @@
   <header class="site-header">
     <div class="wrap header-inner">
       <div class="brand">
-        <img class="brand-can" src="assets/can-ultra-white.webp" alt="Dose Monster Energy Ultra (weiß)" width="197" height="520">
+        <img class="brand-can" src="assets/can-ultra-white.webp" alt="Dose Monster Energy Ultra (weiß)" width="144" height="380">
         <div>
           <p class="eyebrow" id="city-region">Energy-Deals · Landkreis Konstanz</p>
           <h1>Monster-Angebote <em id="city-name">Singen</em></h1>
@@ -61,7 +61,10 @@
           <input id="city" type="search" list="city-list" placeholder="Andere Stadt oder PLZ suchen …" autocomplete="off" spellcheck="false" enterkeyhint="search">
           <datalist id="city-list"></datalist>
         </label>
-        <button type="button" class="near-btn" id="near-btn" aria-pressed="false">📍 In meiner Nähe</button>
+        <button type="button" class="near-btn" id="near-btn" aria-pressed="false">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7.5"/><path d="M12 1.8v2.7M12 19.5v2.7M1.8 12h2.7M19.5 12h2.7"/></svg>
+          <span>In meiner Nähe</span>
+        </button>
         <label class="sort">
           <span>Sortieren nach</span>
           <select id="sort">
@@ -129,6 +132,9 @@
       <h2 id="history-title">Preisverlauf</h2>
       <p class="history-sub" id="history-sub"></p>
       <div class="history-chart" id="history-chart"></div>
+      <h3 class="history-h3" id="weekly-title">Tiefstpreis pro Woche</h3>
+      <p class="history-sub" id="weekly-sub"></p>
+      <div class="history-chart" id="weekly-chart"></div>
       <details class="history-table" id="history-table"></details>
     </section>
   </main>
@@ -137,7 +143,7 @@
     <div class="wrap">
       <p>Preise laut Händlerprospekten, in der Regel <strong>zzgl. 0,25&nbsp;€ Pfand pro Dose</strong>. Prospektangebote gelten für die Region – Verfügbarkeit in der einzelnen Filiale kann abweichen. Angaben ohne Gewähr.</p>
       <p>Datenquellen: marktguru.de, kaufDA.de, prospektangebote.de · Filialdaten &amp; Karte © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-Mitwirkende · Dosenfoto: TurnOnTheNight, <a href="https://commons.wikimedia.org/wiki/File:Monster_Energy_Zero_Ultra_(China_Version)_330ml_20260628130320.jpg">Wikimedia Commons</a> (CC0) · Händlerlogos: <a href="https://github.com/D0ani/monster/blob/main/assets/logos/CREDITS.md">Wikimedia Commons</a> (gemeinfrei), Marken der jeweiligen Inhaber, nur zur Kennzeichnung · Kein offizielles Angebot von Monster Energy.</p>
-      <p class="app-download" id="app-download">📱 <a href="https://github.com/D0ani/monster/releases/latest/download/monster-angebote.apk">Android-App (APK) herunterladen</a> · oder im Chrome-Menü <strong>⋮ → „App installieren“</strong></p>
+      <p class="app-download" id="app-download"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg> <a href="https://github.com/D0ani/monster/releases/latest/download/monster-angebote.apk">Android-App (APK) herunterladen</a> · oder im Chrome-Menü <strong>⋮ → „App installieren“</strong></p>
     </div>
   </footer>
 

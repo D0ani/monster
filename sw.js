@@ -1,9 +1,9 @@
 /* Service Worker – macht die Seite installierbar (Chrome-Menü ⋮ → "App installieren") und offline nutzbar.
    Seite, Skripte und Daten: erst Netz (immer aktuell), offline der zuletzt geladene Stand.
    Bilder/Logos: aus dem Cache (ändern sich praktisch nie). Fremde Server (Karte, CDN) bleiben unberührt. */
-const CACHE = 'monster-v1';
-const CORE = ['./', 'index.html', 'style.css', 'app.js', 'manifest.webmanifest',
-  'assets/can-ultra-white.webp', 'assets/icon-192.png', 'assets/icon-512.png'];
+const CACHE = 'monster-v2';
+// Nur das Nötigste vorab (die Seite hat es ohnehin gerade geladen – kommt meist aus dem HTTP-Cache)
+const CORE = ['./', 'style.css', 'app.js', 'manifest.webmanifest', 'assets/can-ultra-white.webp'];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(CORE)).then(() => self.skipWaiting()));
@@ -33,5 +33,5 @@ self.addEventListener('fetch', (event) => {
     return;
   }
   event.respondWith(fetch(request).then(store).catch(() =>
-    caches.match(request, { ignoreSearch: true }).then((hit) => hit || caches.match('index.html'))));
+    caches.match(request, { ignoreSearch: true }).then((hit) => hit || caches.match('./'))));
 });

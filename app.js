@@ -20,10 +20,14 @@
   const STALE_AFTER_H = 36;
   const LEAFLET_JS = 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js';
   const LEAFLET_CSS = 'https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css';
+  // Datensparmodus des Handys/Browsers ("Save-Data") → keine Logo-Bilder, nur Kürzel
+  const SAVE_DATA = Boolean(navigator.connection && navigator.connection.saveData);
+  // Kompaktes Datenpaket je Stadt (Angebote, Filialen, Verlauf) – statt alle Städte auf einmal
+  const CITY_DATA_URL = (slug) => `data/city/${encodeURIComponent(slug)}.json`;
 
   // Ketten: echtes Logo (Wikimedia Commons, gemeinfrei – Nachweise in assets/logos/CREDITS.md),
   // Farben + Kürzel als Rückfall, falls es kein Logo gibt oder es nicht lädt
-  const LOGO = (file) => `assets/logos/${file}.png`;
+  const LOGO = (file) => `assets/logos/${file}.webp`;
   const CHAINS = {
     'Aldi Süd': { bg: '#1c2f7c', fg: '#ffffff', abbr: 'A', logo: LOGO('aldi-sued') },
     'Edeka': { bg: '#ffe500', fg: '#1a4696', abbr: 'E', logo: LOGO('edeka') },
@@ -91,6 +95,9 @@
     historySub: $('#history-sub'),
     historyChart: $('#history-chart'),
     historyTable: $('#history-table'),
+    weeklyTitle: $('#weekly-title'),
+    weeklySub: $('#weekly-sub'),
+    weeklyChart: $('#weekly-chart'),
     appDownload: $('#app-download'),
     reset: $('#reset'),
     count: $('#result-count'),
@@ -107,8 +114,7 @@
   let allStores = [];    // komplettes Filialverzeichnis (für "Alle Filialen zeigen")
   let regularPrices = {}; // zuletzt gesehener Normalpreis pro Dose je Kette
   let noDealStores = []; // aktuell angezeigte Filialen ohne Angebot
-  let everyStore = [];   // Filialen aller Städte
-  let allDeals = [];     // Angebote aller Städte (normalisiert, inkl. abgelaufene)
+  const cityBundles = new Map(); // bereits geladene Stadt-Pakete (Stadtwechsel zurück kostet nichts)
   let cities = [DEFAULT_CITY];
   let priceHistory = {}; // Preisverlauf je Stadt: { slug: { "YYYY-MM-DD": { p, c } } }
   let userPos = null;    // Standort für "In meiner Nähe" – nur im Speicher, wird nirgends abgelegt
@@ -151,7 +157,7 @@
   }
 
   function chainStyle(chain) {
-    if (CHAINS[chain]) return CHAINS[chain];
+    if (CHAINS[chain]) return SAVE_DATA ? { ...CHAINS[chain], logo: null } : CHAINS[chain];
     let hash = 0;
     for (const ch of String(chain)) hash = (hash * 31 + ch.charCodeAt(0)) % 360;
     return { bg: `hsl(${hash} 55% 38%)`, fg: '#ffffff', abbr: String(chain).slice(0, 2) };
@@ -269,32 +275,37 @@
 
   async function load() {
     renderSkeleton();
-    let rawDeals;
-    try {
-      rawDeals = await fetchJSON(DATA_URL);
-    } catch (err) {
-      renderError(err);
-      return;
-    }
-    const [stores, prices, cityList, historyData] = await Promise.all([
-      fetchJSON(STORES_URL).catch(() => []),    // Filialverzeichnis ist optional
-      fetchJSON(PRICES_URL).catch(() => ({})),  // Normalpreise sind optional
-      fetchJSON(CITIES_URL).catch(() => []),    // Städteliste ist optional
-      fetchJSON(HISTORY_URL).catch(() => ({})), // Preisverlauf ist optional
-    ]);
-    priceHistory = historyData && typeof historyData === 'object' ? historyData : {};
-    everyStore = Array.isArray(stores) ? stores : [];
+    const cityList = await fetchJSON(CITIES_URL).catch(() => []); // Städteliste ist optional
     if (Array.isArray(cityList) && cityList.length) cities = cityList;
     if (!cities.some((c) => c.slug === state.city)) state.city = (cities.find((c) => c.default) || cities[0]).slug;
-    regularPrices = prices && typeof prices === 'object' ? prices : {};
-
-    const list = Array.isArray(rawDeals) ? rawDeals : rawDeals.deals || [];
-    const storesByKey = new Map(stores.map((s) => [fold(`${s.name}|${s.address}`), s]));
-    allDeals = list.map((d) => normalize(d, storesByKey)).filter(Boolean);
-
     renderCityOptions();
-    renderUpdated(list);
-    applyCity();
+    await applyCity();
+  }
+
+  // Lädt nur die Daten EINER Stadt (wenige KB). Fehlt das Paket (älterer Datenstand),
+  // wird auf die großen Gesamtdateien zurückgegriffen.
+  async function loadCityData(slug) {
+    if (cityBundles.has(slug)) return cityBundles.get(slug);
+    let bundle;
+    try {
+      bundle = await fetchJSON(CITY_DATA_URL(slug));
+    } catch {
+      const [rawDeals, stores, prices, history] = await Promise.all([
+        fetchJSON(DATA_URL),
+        fetchJSON(STORES_URL).catch(() => []),
+        fetchJSON(PRICES_URL).catch(() => ({})),
+        fetchJSON(HISTORY_URL).catch(() => ({})),
+      ]);
+      const list = Array.isArray(rawDeals) ? rawDeals : rawDeals.deals || [];
+      bundle = {
+        deals: list.filter((d) => cityOf(d) === slug),
+        stores: stores.filter((s) => (s.cities || [DEFAULT_CITY.slug]).includes(slug)),
+        history: history[slug] || {},
+        prices,
+      };
+    }
+    cityBundles.set(slug, bundle);
+    return bundle;
   }
 
   /* ---------------- Städte ---------------- */
@@ -302,12 +313,27 @@
   const cityOf = (item) => item.city || DEFAULT_CITY.slug; // alte Einträge ohne "city" gehören zu Singen
   const currentCity = () => cities.find((c) => c.slug === state.city) || cities[0] || DEFAULT_CITY;
 
-  // Angebote + Filialen der gewählten Stadt übernehmen und alles neu zeichnen
-  function applyCity() {
+  // Datenpaket der gewählten Stadt laden, übernehmen und alles neu zeichnen
+  async function applyCity() {
     const city = currentCity();
-    allStores = everyStore.filter((s) => (s.cities || [DEFAULT_CITY.slug]).includes(city.slug));
+    document.body.classList.add('is-loading');
+    let bundle;
+    try {
+      bundle = await loadCityData(city.slug);
+    } catch (err) {
+      renderError(err);
+      return;
+    } finally {
+      document.body.classList.remove('is-loading');
+    }
+    if (city.slug !== currentCity().slug) return; // inzwischen wurde eine andere Stadt gewählt
+    allStores = bundle.stores || [];
+    regularPrices = bundle.prices || {};
+    priceHistory = { [city.slug]: bundle.history || {} };
     knownChains = [...new Set(allStores.map((s) => s.chain))];
-    const cityDeals = allDeals.filter((d) => cityOf(d) === city.slug);
+    const storesByKey = new Map(allStores.map((s) => [fold(`${s.name}|${s.address}`), s]));
+    const cityDeals = (bundle.deals || []).map((d) => normalize({ ...d, city: city.slug }, storesByKey)).filter(Boolean);
+    renderUpdated(bundle.deals || [], bundle.updated);
     expiredCount = cityDeals.filter((d) => d.status === 'expired').length;
     deals = cityDeals.filter((d) => d.status !== 'expired');
     if (state.chain !== 'all' && !knownChains.includes(state.chain) && !deals.some((d) => d.chain === state.chain)) {
@@ -468,8 +494,9 @@
     return short || !first ? label : `${label} · ab ${fmtDay(first)}`;
   }
 
-  function renderUpdated(list) {
-    const stamps = list.map((d) => Date.parse(d.lastUpdated)).filter(Number.isFinite);
+  // generated = Zeitpunkt des Scraper-Laufs (aus dem Stadt-Paket), sonst neuester lastUpdated-Wert
+  function renderUpdated(list, generated) {
+    const stamps = (generated ? [generated] : list.map((d) => d.lastUpdated)).map((s) => Date.parse(s)).filter(Number.isFinite);
     if (!stamps.length) {
       el.updatedText.textContent = 'Noch keine Daten vorhanden';
       return;
@@ -514,6 +541,8 @@
 
   const CAL_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>';
   const PHONE_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg>';
+  const LOCATE_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="12" cy="12" r="7.5"/><path d="M12 1.8v2.7M12 19.5v2.7M1.8 12h2.7M19.5 12h2.7"/></svg>';
+  const PIN_ICON = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
 
   // Text für die App-Pille: Preis nur mit App / mit App günstiger / Bonus mit App
   function appText(app) {
@@ -643,7 +672,7 @@
     el.upcomingBanner.hidden = state.when === 'next' || !upcomingHere.length;
     if (upcomingHere.length) {
       const n = upcomingHere.length;
-      el.upcomingBanner.textContent = `📅 Schon da: ${n} ${n === 1 ? 'Angebot' : 'Angebote'} · ${upcomingLabel(upcomingHere)} – jetzt ansehen`;
+      el.upcomingBanner.innerHTML = `${CAL_ICON}<span>${esc(`Schon da: ${n} ${n === 1 ? 'Angebot' : 'Angebote'} · ${upcomingLabel(upcomingHere)} – jetzt ansehen`)}</span>`;
     }
 
     // "Alle Filialen zeigen": Filialen ohne irgendein Angebot ergänzen (Packungs-Filter spielt hier keine Rolle)
@@ -796,7 +825,7 @@
       const icon = pinIcon(first.chain);
       const rows = items.map((d) => `<li>${esc(packLabel(d))}: <b>${eur.format(d.price)}</b>`
         + `${d.packType !== 'single' && d.pricePerUnit != null ? ` (${eur.format(d.pricePerUnit)}/Dose)` : ''}`
-        + `${d.app ? `<br><small>📱 ${esc(appText(d.app))}</small>` : ''}</li>`).join('');
+        + `${d.app ? `<br><small>${esc(appText(d.app))}</small>` : ''}</li>`).join('');
       const marker = L.marker([first.lat, first.lon], { icon, title: first.store })
         .bindPopup(`<p class="popup-title">${esc(first.store)}</p><p class="popup-addr">${esc(first.address)}</p><ul class="popup-list">${rows}</ul>`);
       marker.addTo(mapState.layer);
@@ -858,7 +887,7 @@
   const fmtKm = (km) => (km < 1 ? `${Math.max(10, Math.round(km * 100) * 10)} m` : `${kmFmt.format(km)} km`);
   const distLine = (lat, lon) => {
     const km = distanceKm(lat, lon);
-    return km == null ? '' : `<p class="dist">📍 ${fmtKm(km)} entfernt</p>`;
+    return km == null ? '' : `<p class="dist">${PIN_ICON}<span><b>${fmtKm(km)}</b> entfernt</span></p>`;
   };
 
   function showNearHint(text, isError) {
@@ -870,7 +899,8 @@
   function setNearUI() {
     el.nearBtn.disabled = false;
     el.nearBtn.setAttribute('aria-pressed', String(Boolean(userPos)));
-    el.nearBtn.textContent = userPos ? '📍 Standort aktiv' : '📍 In meiner Nähe';
+    el.nearBtn.removeAttribute('aria-busy');
+    el.nearBtn.innerHTML = `${LOCATE_ICON}<span>${userPos ? 'Standort aktiv' : 'In meiner Nähe'}</span>`;
     el.sortDistance.disabled = !userPos;
   }
 
@@ -890,7 +920,8 @@
       return;
     }
     el.nearBtn.disabled = true;
-    el.nearBtn.textContent = '📍 Standort wird ermittelt …';
+    el.nearBtn.setAttribute('aria-busy', 'true');
+    el.nearBtn.innerHTML = `${LOCATE_ICON}<span>Standort wird gesucht …</span>`;
     navigator.geolocation.getCurrentPosition((pos) => {
       userPos = { lat: pos.coords.latitude, lon: pos.coords.longitude };
       state.sort = 'distance';
@@ -968,23 +999,25 @@
     el.historyPanel.hidden = !series.length;
     if (!series.length) return;
     el.historyTitle.textContent = `Preisverlauf · günstigste Dose in ${city.name}`;
+
+    // 1) Tagesverlauf der letzten 12 Wochen
     const recorded = series.filter((s) => s.p !== undefined);
     const priced = series.filter((s) => s.p != null);
-    const showChart = recorded.length >= 2 && priced.length > 0;
-    el.historyChart.hidden = !showChart;
-    el.historyTable.hidden = !showChart;
+    el.historyChart.hidden = !(recorded.length >= 2 && priced.length > 0);
     if (recorded.length < 2) {
-      el.historySub.textContent = `Wird seit ${fmtDay(series[0].day)} täglich gesammelt – ab morgen siehst du hier die Entwicklung.`;
-      return;
-    }
-    if (!priced.length) {
+      el.historySub.textContent = `Wird seit ${fmtDay(series[0].day)} täglich gesammelt – ab morgen siehst du hier den Tagesverlauf.`;
+    } else if (!priced.length) {
       el.historySub.textContent = `Seit ${fmtDay(series[0].day)} gab es hier kein Monster-Angebot.`;
-      return;
+    } else {
+      el.historySub.textContent = `Tagesbestpreis pro Dose (ohne App-Pflicht) · ${series.length >= HISTORY_DAYS_SHOWN
+        ? 'letzte 12 Wochen' : `seit ${fmtDay(series[0].day)}`}`;
+      drawHistoryChart(series, city);
     }
-    el.historySub.textContent = `Tagesbestpreis pro Dose (ohne App-Pflicht) · ${series.length >= HISTORY_DAYS_SHOWN
-      ? 'letzte 12 Wochen' : `seit ${fmtDay(series[0].day)}`}`;
-    drawHistoryChart(series, city);
-    renderHistoryTable(series);
+
+    // 2) Tiefstpreis je Kalenderwoche seit Beginn der Aufzeichnung (ganz unten) + Tabelle
+    const weeks = weeklySeries(city.slug);
+    renderWeekly(weeks, city);
+    renderHistoryTable(weeks);
   }
 
   // Stufenlinie (Preise gelten tageweise), eine Reihe, 2px, Fadenkreuz + Tooltip, Tastatur (←/→)
@@ -996,23 +1029,13 @@
     const pw = W - m.left - m.right;
     const ph = H - m.top - m.bottom;
     const vals = series.filter((s) => s.p != null).map((s) => s.p);
-    let lo = Math.floor((Math.min(...vals) - 0.05) * 10) / 10;
-    let hi = Math.ceil((Math.max(...vals) + 0.05) * 10) / 10;
-    if (hi - lo < 0.2) { lo = Math.max(0, lo - 0.1); hi += 0.1; }
-    const step = [0.1, 0.2, 0.25, 0.5, 1].find((s) => (hi - lo) / s <= 4) || 1;
-    lo = Math.max(0, Math.floor(lo / step + 1e-9) * step);
-    hi = Math.ceil(hi / step - 1e-9) * step;
+    const { lo, hi, step } = priceScale(vals);
     const n = series.length;
     const bw = pw / n;
     const x = (i) => m.left + i * bw;
     const y = (p) => m.top + ph - ((p - lo) / (hi - lo)) * ph;
 
-    let grid = '';
-    for (let v = lo; v <= hi + 1e-9; v += step) {
-      const yy = y(v).toFixed(1);
-      grid += `<line class="hist-grid" x1="${m.left}" x2="${W - m.right}" y1="${yy}" y2="${yy}"/>`
-        + `<text class="hist-tick" x="${m.left - 8}" y="${yy}" dy="0.32em" text-anchor="end">${eur.format(v)}</text>`;
-    }
+    const grid = gridMarkup(lo, hi, step, y, m, W);
     let xTicks = '';
     let lastX = -1e9;
     series.forEach((s, i) => {
@@ -1038,8 +1061,13 @@
     const minVal = Math.min(...vals);
     const minIdx = series.map((s) => s.p != null && Math.abs(s.p - minVal) < 0.005).lastIndexOf(true);
     const endX = x(lastIdx + 1);
+    // End-Label unter den Punkt, wenn kurz davor ein höherer Preis war – sonst kreuzt es die Stufe
+    let endRun = lastIdx;
+    while (endRun > 0 && series[endRun - 1].p != null && Math.abs(series[endRun - 1].p - last.p) < 0.005) endRun -= 1;
+    const before = series[endRun - 1];
+    const endBelow = Boolean(before && before.p != null && before.p > last.p && endX - x(endRun) < 70);
     let marks = `<circle class="hist-dot" cx="${endX.toFixed(1)}" cy="${y(last.p).toFixed(1)}" r="5"/>`
-      + `<text class="hist-label" x="${(endX - 8).toFixed(1)}" y="${(y(last.p) - 12).toFixed(1)}" text-anchor="end">${esc(eur.format(last.p))}</text>`;
+      + `<text class="hist-label" x="${(endX - 8).toFixed(1)}" y="${(y(last.p) + (endBelow ? 20 : -12)).toFixed(1)}" text-anchor="end">${esc(eur.format(last.p))}</text>`;
     if (minVal < last.p - 0.005) {
       // Marker mittig in den Tiefstpreis-Abschnitt setzen – nicht an den Sprung zum nächsten Preis
       let runStart = minIdx;
@@ -1101,21 +1129,166 @@
     });
   }
 
-  // Tabellen-Ansicht (Wochenbestpreise) – macht jeden Wert auch ohne Hover lesbar
-  function renderHistoryTable(series) {
-    const weeks = new Map();
-    for (const s of series) {
-      const monday = addDays(s.day, -((new Date(`${s.day}T00:00:00Z`).getUTCDay() + 6) % 7));
-      const w = weeks.get(monday) || { from: s.day, to: s.day, best: null };
-      w.to = s.day;
-      if (s.p != null && (!w.best || s.p < w.best.p)) w.best = s;
-      weeks.set(monday, w);
+  // Gemeinsamer Preis-Maßstab beider Diagramme: glatte Stufen (0,10 / 0,20 / 0,25 / 0,50 €), max. 4 Linien
+  function priceScale(vals) {
+    let lo = Math.floor((Math.min(...vals) - 0.05) * 10) / 10;
+    let hi = Math.ceil((Math.max(...vals) + 0.05) * 10) / 10;
+    if (hi - lo < 0.2) { lo = Math.max(0, lo - 0.1); hi += 0.1; }
+    const step = [0.1, 0.2, 0.25, 0.5, 1].find((s) => (hi - lo) / s <= 4) || 1;
+    return { lo: Math.max(0, Math.floor(lo / step + 1e-9) * step), hi: Math.ceil(hi / step - 1e-9) * step, step };
+  }
+
+  // Waagerechte Haarlinien + €-Beschriftung links
+  function gridMarkup(lo, hi, step, y, m, W) {
+    let grid = '';
+    for (let v = lo; v <= hi + 1e-9; v += step) {
+      const yy = y(v).toFixed(1);
+      grid += `<line class="hist-grid" x1="${m.left}" x2="${W - m.right}" y1="${yy}" y2="${yy}"/>`
+        + `<text class="hist-tick" x="${m.left - 8}" y="${yy}" dy="0.32em" text-anchor="end">${eur.format(v)}</text>`;
     }
-    const rows = [...weeks.values()].reverse().map((w) => `<tr><td>${fmtShort(w.from)} – ${fmtShort(w.to)}</td>`
-      + `<td class="num">${w.best ? eur.format(w.best.p) : '–'}</td>`
-      + `<td>${w.best ? esc(w.best.c || '') : 'kein Angebot'}</td></tr>`).join('');
-    el.historyTable.innerHTML = '<summary>Als Tabelle anzeigen</summary><table><thead><tr><th>Woche</th>'
-      + `<th class="num">Günstigste Dose</th><th>Kette</th></tr></thead><tbody>${rows}</tbody></table>`;
+    return grid;
+  }
+
+  // ISO-Kalenderwoche (KW) eines Datums
+  function isoWeek(iso) {
+    const d = new Date(`${iso}T00:00:00Z`);
+    d.setUTCDate(d.getUTCDate() + 3 - ((d.getUTCDay() + 6) % 7)); // Donnerstag dieser Woche
+    const jan4 = new Date(Date.UTC(d.getUTCFullYear(), 0, 4));
+    return 1 + Math.round(((d - jan4) / 86400e3 - 3 + ((jan4.getUTCDay() + 6) % 7)) / 7);
+  }
+
+  // Tiefstpreis je Kalenderwoche seit Beginn der Aufzeichnung: p = Preis, null = kein Angebot, undefined = nicht erfasst
+  function weeklySeries(slug) {
+    const days = priceHistory[slug] || {};
+    const recorded = Object.keys(days).sort();
+    if (!recorded.length) return [];
+    const mondayOf = (iso) => addDays(iso, -((new Date(`${iso}T00:00:00Z`).getUTCDay() + 6) % 7));
+    const weeks = new Map();
+    for (let monday = mondayOf(recorded[0]); monday <= mondayOf(recorded[recorded.length - 1]); monday = addDays(monday, 7)) {
+      weeks.set(monday, { monday, from: monday, to: addDays(monday, 6), p: undefined, c: null });
+    }
+    for (const day of recorded) {
+      const w = weeks.get(mondayOf(day));
+      if (w.p === undefined) { w.p = null; w.from = day; }
+      w.to = day;
+      const v = days[day];
+      if (v && v.p != null && (w.p == null || v.p < w.p)) { w.p = v.p; w.c = v.c; }
+    }
+    return [...weeks.values()];
+  }
+
+  function renderWeekly(weeks, city) {
+    const priced = weeks.filter((w) => w.p != null);
+    el.weeklyTitle.textContent = weeks.length ? `Tiefstpreis pro Woche · seit KW ${isoWeek(weeks[0].monday)}` : 'Tiefstpreis pro Woche';
+    el.weeklyChart.hidden = priced.length < 2;
+    if (priced.length < 2) {
+      const cur = priced[priced.length - 1];
+      el.weeklySub.textContent = cur
+        ? `KW ${isoWeek(cur.monday)}: ${eur.format(cur.p)}${cur.c ? ` (${cur.c})` : ''} – ab der nächsten Woche entsteht hier die Kurve.`
+        : 'Noch kein Monster-Angebot erfasst – die Kurve entsteht, sobald es hier Angebote gibt.';
+      return;
+    }
+    el.weeklySub.textContent = `Günstigster Dosenpreis je Kalenderwoche in ${city.name} (ohne App-Pflicht) · ${weeks.length} Wochen`;
+    drawWeeklyChart(weeks, city);
+  }
+
+  // Linie mit einem Punkt pro Woche (Lücke = Woche ohne Angebot) + Fadenkreuz, Tooltip, Tastatur (←/→)
+  function drawWeeklyChart(weeks, city) {
+    const wrap = el.weeklyChart;
+    const W = Math.max(280, Math.round(wrap.clientWidth || 600));
+    const H = 196;
+    const m = { top: 28, right: 18, bottom: 26, left: 50 };
+    const pw = W - m.left - m.right;
+    const ph = H - m.top - m.bottom;
+    const vals = weeks.filter((w) => w.p != null).map((w) => w.p);
+    const { lo, hi, step } = priceScale(vals);
+    const n = weeks.length;
+    const bw = pw / n;
+    const x = (i) => m.left + (i + 0.5) * bw;
+    const y = (p) => m.top + ph - ((p - lo) / (hi - lo)) * ph;
+
+    const every = Math.max(1, Math.ceil(58 / bw)); // KW-Beschriftung ausdünnen, letzte Woche immer
+    const xTicks = weeks.map((w, i) => ((n - 1 - i) % every ? '' : `<text class="hist-tick" x="${x(i).toFixed(1)}" y="${H - 6}" text-anchor="middle">KW ${isoWeek(w.monday)}</text>`)).join('');
+    let path = '';
+    let open = false;
+    weeks.forEach((w, i) => {
+      if (w.p == null) { open = false; return; }
+      path += `${open ? 'L' : 'M'}${x(i).toFixed(1)},${y(w.p).toFixed(1)}`;
+      open = true;
+    });
+    const dots = weeks.map((w, i) => (w.p == null ? '' : `<circle class="hist-dot" cx="${x(i).toFixed(1)}" cy="${y(w.p).toFixed(1)}" r="4"/>`)).join('');
+
+    // Selektive Direkt-Labels: aktuelle Woche + Tiefstpreis seit Beginn (falls niedriger)
+    const lastIdx = weeks.map((w) => w.p != null).lastIndexOf(true);
+    const last = weeks[lastIdx];
+    const minVal = Math.min(...vals);
+    const minIdx = weeks.map((w) => w.p != null && Math.abs(w.p - minVal) < 0.005).lastIndexOf(true);
+    // End-Label unter den Punkt, wenn die Vorwoche teurer war (die Linie kommt dann von oben links)
+    const prevHigher = lastIdx > 0 && weeks[lastIdx - 1].p != null && weeks[lastIdx - 1].p > last.p + 0.005;
+    let labels = `<text class="hist-label" x="${x(lastIdx).toFixed(1)}" y="${(y(last.p) + (prevHigher ? 20 : -12)).toFixed(1)}" text-anchor="end">${esc(eur.format(last.p))}</text>`;
+    if (minVal < last.p - 0.005) {
+      // Tiefstpreis unter den Punkt: darunter verläuft nie eine Linie
+      const text = W < 480 ? `↓ ${eur.format(minVal)}` : `Tiefstpreis ${eur.format(minVal)}`;
+      const half = (text.length * 6.6) / 2;
+      const lx = Math.min(Math.max(x(minIdx), m.left + half), W - m.right - half);
+      labels += `<text class="hist-label" x="${lx.toFixed(1)}" y="${(y(minVal) + 20).toFixed(1)}" text-anchor="middle">${esc(text)}</text>`;
+    }
+
+    const summary = `Wöchentlicher Tiefstpreis ${city.name}: diese Woche ${eur.format(last.p)}, Tiefstpreis seit Beginn ${eur.format(minVal)} in KW ${isoWeek(weeks[minIdx].monday)}. Mit Pfeiltasten durch die Wochen.`;
+    wrap.innerHTML = `<svg class="hist-svg" width="${W}" height="${H}" viewBox="0 0 ${W} ${H}" role="img" tabindex="0" aria-label="${esc(summary)}">`
+      + `${gridMarkup(lo, hi, step, y, m, W)}${xTicks}<path class="hist-line" d="${path}"/>${dots}${labels}`
+      + `<line class="hist-cross" x1="0" x2="0" y1="${m.top}" y2="${m.top + ph}" visibility="hidden"/>`
+      + `<rect class="hist-hit" x="0" y="${m.top}" width="${W}" height="${ph}"/></svg>`
+      + '<div class="hist-tip" hidden></div>';
+
+    const svg = wrap.querySelector('svg');
+    const cross = svg.querySelector('.hist-cross');
+    const tip = wrap.querySelector('.hist-tip');
+    let idx = lastIdx;
+    const show = (i) => {
+      idx = Math.max(0, Math.min(n - 1, i));
+      const w = weeks[idx];
+      const cx = x(idx);
+      cross.setAttribute('x1', cx);
+      cross.setAttribute('x2', cx);
+      cross.setAttribute('visibility', 'visible');
+      const value = document.createElement('strong');
+      value.textContent = w.p != null ? eur.format(w.p) : w.p === null ? 'kein Angebot' : 'nicht erfasst';
+      const meta = document.createElement('span');
+      meta.textContent = `KW ${isoWeek(w.monday)} · ${fmtShort(w.from)}–${fmtShort(w.to)}${w.c && w.p != null ? ` · ${w.c}` : ''}`;
+      tip.replaceChildren(value, meta);
+      tip.hidden = false;
+      const tw = tip.offsetWidth;
+      tip.style.left = `${Math.min(Math.max(cx - tw / 2, 0), W - tw)}px`;
+      tip.style.top = `${Math.max(0, (w.p != null ? y(w.p) : m.top) - tip.offsetHeight - 12)}px`;
+    };
+    const hide = () => {
+      cross.setAttribute('visibility', 'hidden');
+      tip.hidden = true;
+    };
+    const hit = svg.querySelector('.hist-hit');
+    hit.addEventListener('pointermove', (e) => {
+      const r = svg.getBoundingClientRect();
+      show(Math.round(((e.clientX - r.left) * (W / r.width) - m.left) / bw - 0.5));
+    });
+    hit.addEventListener('pointerleave', hide);
+    svg.addEventListener('focus', () => show(idx));
+    svg.addEventListener('blur', hide);
+    svg.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      e.preventDefault();
+      show(idx + (e.key === 'ArrowRight' ? 1 : -1));
+    });
+  }
+
+  // Tabellen-Ansicht (Wochen-Tiefstpreise seit Beginn) – macht jeden Wert auch ohne Hover lesbar
+  function renderHistoryTable(weeks) {
+    el.historyTable.hidden = !weeks.length;
+    const rows = weeks.slice().reverse().map((w) => `<tr><td>KW ${isoWeek(w.monday)}</td><td>${fmtShort(w.from)} – ${fmtShort(w.to)}</td>`
+      + `<td class="num">${w.p != null ? eur.format(w.p) : '–'}</td>`
+      + `<td>${w.p != null ? esc(w.c || '') : w.p === null ? 'kein Angebot' : 'nicht erfasst'}</td></tr>`).join('');
+    el.historyTable.innerHTML = '<summary>Als Tabelle anzeigen</summary><table><thead><tr><th>KW</th><th>Zeitraum</th>'
+      + `<th class="num">Tiefstpreis</th><th>Kette</th></tr></thead><tbody>${rows}</tbody></table>`;
   }
 
   /* ---------------- Events ---------------- */

@@ -32,6 +32,9 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 - Filter stehen in der URL (`?kette=Rewe&packung=pack4`) → Links teilbar
 - Optionale Karte (Leaflet + OpenStreetMap), synchron zu den Filtern. Lädt erst nach Klick → keine
   Drittanbieter-Requests beim Seitenaufruf, keine Google Fonts (DSGVO-freundlich)
+- **Datensparsam:** Die Seite lädt nur das kleine Paket der gewählten Stadt (`data/city/<stadt>.json`),
+  Logos als kleine WebP-Dateien (erst wenn sichtbar), keine Webfonts, Karte nur auf Klick; Daten werden per
+  ETag nur bei Änderungen neu übertragen; im Datensparmodus des Browsers („Save-Data“) entfallen die Logos
 
 ## Ordnerstruktur
 
@@ -47,6 +50,7 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 │   ├── favicon-32.png, icon-192.png, apple-touch-icon.png
 │   └── og-image.jpg         # Vorschaubild beim Teilen des Links (1200×630)
 ├── data/
+│   ├── city/<stadt>.json    # kompaktes Paket je Stadt – das Einzige, was die Seite an Daten lädt
 │   ├── cities.json          # suchbare Städte (aus OpenStreetMap, von update_stores.py)
 │   ├── deals.json           # Angebote aller Städte (vom Scraper überschrieben/gemergt)
 │   ├── history.json         # Preisverlauf: günstigster Dosenpreis je Stadt und Tag

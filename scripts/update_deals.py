@@ -47,6 +47,7 @@ STORES_FILE = ROOT / "data" / "stores.json"
 PRICES_FILE = ROOT / "data" / "regular-prices.json"  # zuletzt gesehene Normalpreise je Kette
 HISTORY_FILE = ROOT / "data" / "history.json"  # Preisverlauf: günstigster Dosenpreis je Stadt und Tag
 HISTORY_DAYS = 400
+CITY_DIR = ROOT / "data" / "city"  # kompaktes Datenpaket je Stadt fürs Frontend (spart Datenvolumen)
 
 # --------------------------------------------------------------------------- Konfiguration
 
@@ -743,6 +744,16 @@ def update_regular_prices(deals: list[dict], dry_run: bool) -> None:
                                encoding="utf-8")
 
 
+# Bei gleichem Preis die größere Kette nennen – gleiche Reihenfolge wie CHAIN_RANK in app.js
+CHAIN_RANK = ["Edeka", "Rewe", "Lidl", "Aldi Süd", "Kaufland", "Netto", "Penny", "dm", "Rossmann", "Globus",
+              "Norma", "Müller", "Marktkauf", "tegut", "Nahkauf", "Trinkgut", "Getränke Hoffmann", "Fristo",
+              "Getränke Müller"]
+
+
+def chain_rank(chain: str) -> int:
+    return CHAIN_RANK.index(chain) if chain in CHAIN_RANK else len(CHAIN_RANK)
+
+
 def update_history(deals: list[dict], cities: list[dict], today: date, dry_run: bool) -> None:
     """Preisverlauf: pro Stadt der günstigste heute gültige Dosenpreis (ohne App-Pflicht).
 
@@ -759,8 +770,10 @@ def update_history(deals: list[dict], cities: list[dict], today: date, dry_run: 
         if not (deal.get("validFrom", "") <= day <= deal.get("validTo", "")):
             continue
         city = deal.get("city", DEFAULT_CITY["slug"])
-        if city not in best or deal["pricePerUnit"] < best[city]["p"] - 1e-9:
-            best[city] = {"p": round(deal["pricePerUnit"], 3), "c": deal["chain"]}
+        price, current = round(deal["pricePerUnit"], 3), best.get(city)
+        if (current is None or price < current["p"] - 1e-9
+                or (abs(price - current["p"]) < 1e-9 and chain_rank(deal["chain"]) < chain_rank(current["c"]))):
+            best[city] = {"p": price, "c": deal["chain"]}
     for city in cities:
         history.setdefault(city["slug"], {})[day] = best.get(city["slug"], {"p": None})
     cutoff = (today - timedelta(days=HISTORY_DAYS)).isoformat()
@@ -771,6 +784,37 @@ def update_history(deals: list[dict], cities: list[dict], today: date, dry_run: 
                  for c, days in history.items()]
         HISTORY_FILE.write_text("{\n" + ",\n".join(lines) + "\n}\n", encoding="utf-8")
     log.info("Preisverlauf: %d Städte, heute günstigste Dose in %d Städten", len(history), len(best))
+
+
+def write_city_bundles(deals: list[dict], cities: list[dict], now_iso: str, dry_run: bool, prune: bool) -> None:
+    """Pro Stadt eine kleine, kompakte Datei mit genau dem, was die Seite braucht (Angebote, Filialen,
+    Preisverlauf, Normalpreise). Die Seite lädt nur das Paket der gewählten Stadt statt aller Städte."""
+    if dry_run:
+        return
+    stores = json.loads(STORES_FILE.read_text(encoding="utf-8")) if STORES_FILE.exists() else []
+    history = json.loads(HISTORY_FILE.read_text(encoding="utf-8")) if HISTORY_FILE.exists() else {}
+    prices = json.loads(PRICES_FILE.read_text(encoding="utf-8")) if PRICES_FILE.exists() else {}
+    CITY_DIR.mkdir(parents=True, exist_ok=True)
+    written, total = set(), 0
+    for city in cities:
+        slug = city["slug"]
+        city_stores = [{k: s[k] for k in ("chain", "name", "address", "lat", "lon") if k in s}
+                       for s in stores if slug in (s.get("cities") or [DEFAULT_CITY["slug"]])]
+        city_deals = [{k: v for k, v in d.items() if k not in ("id", "city")}
+                      for d in deals if d.get("city", DEFAULT_CITY["slug"]) == slug]
+        chains = {s["chain"] for s in city_stores} | {d["chain"] for d in city_deals}
+        bundle = {"updated": now_iso, "deals": city_deals, "stores": city_stores,
+                  "history": history.get(slug, {}), "prices": {c: v for c, v in prices.items() if c in chains}}
+        path = CITY_DIR / f"{slug}.json"
+        text = json.dumps(bundle, ensure_ascii=False, separators=(",", ":"))
+        path.write_text(text, encoding="utf-8")
+        written.add(path.name)
+        total += len(text.encode("utf-8"))
+    if prune:  # Pakete von Städten entfernen, die es nicht mehr gibt
+        for old in CITY_DIR.glob("*.json"):
+            if old.name not in written:
+                old.unlink()
+    log.info("Stadt-Pakete: %d Dateien, zusammen %.0f KB (ungezippt)", len(written), total / 1024)
 
 
 def write_step_summary(report: list[tuple], deals: list[dict], stats: dict, dry_run: bool) -> None:
@@ -897,6 +941,7 @@ def main() -> int:
              len(merged), stats["new"], stats["expired"], stats["kept"])
     update_regular_prices(merged, args.dry_run)
     update_history(merged, cities, today, args.dry_run)
+    write_city_bundles(merged, cities, now_iso, args.dry_run, prune=not args.city)
 
     output = json.dumps(merged, ensure_ascii=False, indent=2) + "\n"
     if args.dry_run:
