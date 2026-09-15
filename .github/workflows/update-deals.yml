@@ -2,9 +2,15 @@ name: Angebote aktualisieren
 
 on:
   schedule:
-    # GitHub-Cron läuft in UTC: 04:00 UTC = 06:00 Uhr MESZ (Sommer) bzw. 05:00 Uhr MEZ (Winter).
-    # Hinweis: Geplante Läufe starten bei hoher Last oft 5–30 Minuten später.
-    - cron: "0 4 * * *"
+    # GitHub-Cron läuft in UTC. Zur vollen Stunde ist GitHub überlastet und verwirft geplante Läufe teils ganz –
+    # deshalb krumme Minuten und ein zweiter Lauf als Reserve (committet nur, wenn sich etwas geändert hat):
+    # 03:37 UTC = 05:37 Uhr MESZ / 04:37 Uhr MEZ · 05:07 UTC = 07:07 Uhr MESZ / 06:07 Uhr MEZ
+    - cron: "37 3 * * *"
+    - cron: "7 5 * * *"
+  # Änderungen an diesem Workflow lösen sofort einen Lauf aus – so lässt er sich ohne Klick prüfen
+  push:
+    branches: [main]
+    paths: [".github/workflows/update-deals.yml"]
   workflow_dispatch:
     inputs:
       only:

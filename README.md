@@ -50,7 +50,7 @@ Die Daten werden **täglich automatisch** per GitHub Actions aus Prospekt-Aggreg
 ```
 .
 ├── .github/workflows/
-│   ├── update-deals.yml     # täglich 06:00 + manuell: Scraper → commit data/deals.json → Deployment
+│   ├── update-deals.yml     # täglich ~05:37 + Reserve ~07:07 + manuell: Scraper → commit → Deployment
 │   ├── deploy-pages.yml     # Pages-Deployment (Push auf main, manuell, oder Aufruf durch update-deals)
 │   └── build-apk.yml        # baut die Android-App und veröffentlicht sie als Release
 ├── assets/
@@ -117,9 +117,11 @@ python -m http.server 8000
 
 ## So läuft die tägliche Aktualisierung
 
-`update-deals.yml` wird per `schedule: cron: "0 4 * * *"` gestartet. GitHub-Cron läuft in **UTC**, das
-entspricht **06:00 Uhr MESZ** im Sommer bzw. 05:00 Uhr MEZ im Winter. Bei hoher Last startet GitHub geplante
-Läufe oft 5–30 Minuten später.
+`update-deals.yml` startet per `schedule` um **03:37 UTC** (05:37 Uhr MESZ / 04:37 Uhr MEZ) und zur Reserve
+noch einmal um **05:07 UTC** (07:07 Uhr MESZ / 06:07 Uhr MEZ) – der zweite Lauf committet nur, wenn sich etwas
+geändert hat. Krumme Minuten, weil GitHub zur vollen Stunde überlastet ist und geplante Läufe dann nicht nur
+verzögert, sondern teils ganz verwirft. Eine Änderung an der Workflow-Datei selbst löst sofort einen Lauf aus;
+von Hand geht es unter *Actions → Angebote aktualisieren → Run workflow*.
 
 1. Python + Abhängigkeiten installieren, Chromium für Playwright (gecacht).
 2. `scripts/update_deals.py` fragt jede Quelle ab:
