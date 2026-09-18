@@ -1,1 +1,7 @@
-{}
+{
+  "Penny": {
+    "pricePerUnit": 1.49,
+    "seen": "2026-09-21",
+    "source": "kaufDA"
+  }
+}
