@@ -11,13 +11,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "aach-kaufland-region-single-2026-09-28-0-88",
+    "city": "aach",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Aach",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "aach-kaufland-region-single-2026-10-01-0-88",
@@ -37,7 +57,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "allensbach-edeka-edeka-zum-riesenberg-5-allensbach-single-2026-09-28-0-99",
@@ -53,13 +73,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "allensbach-kaufland-region-single-2026-09-28-0-88",
+    "city": "allensbach",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Allensbach",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "allensbach-kaufland-region-single-2026-10-01-0-88",
@@ -79,7 +119,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "allensbach-trinkgut-region-single-2026-09-28-0-99",
@@ -99,7 +139,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "bodman-ludwigshafen-edeka-edeka-salzbachaecker-9-bodman-ludwigshafen-single-2026-09-28-0-99",
@@ -115,13 +155,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "bodman-ludwigshafen-kaufland-region-single-2026-09-28-0-88",
+    "city": "bodman-ludwigshafen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Bodman-Ludwigshafen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "bodman-ludwigshafen-kaufland-region-single-2026-10-01-0-88",
@@ -141,7 +201,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "bodman-ludwigshafen-rewe-region-single-2026-09-28-0-99",
@@ -161,7 +221,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "bodman-ludwigshafen-trinkgut-region-single-2026-09-28-0-99",
@@ -181,7 +241,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "engen-edeka-edeka-hegaustrasse-5a-engen-single-2026-09-28-0-99",
@@ -197,13 +257,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "engen-kaufland-region-single-2026-09-28-0-88",
+    "city": "engen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Engen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "engen-kaufland-region-single-2026-10-01-0-88",
@@ -223,7 +303,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "gailingen-am-hochrhein-edeka-edeka-auf-der-hoehe-4-gailingen-am-hochrhein-single-2026-09-28-0-99",
@@ -239,13 +319,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "gailingen-am-hochrhein-kaufland-region-single-2026-09-28-0-88",
+    "city": "gailingen-am-hochrhein",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Gailingen am Hochrhein",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "gailingen-am-hochrhein-kaufland-region-single-2026-10-01-0-88",
@@ -265,7 +365,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "gailingen-am-hochrhein-rewe-region-single-2026-09-28-0-99",
@@ -285,7 +385,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "gottmadingen-edeka-edeka-erwin-dietrich-strasse-6-gottmadingen-single-2026-09-28-0-99",
@@ -301,13 +401,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "gottmadingen-kaufland-region-single-2026-09-28-0-88",
+    "city": "gottmadingen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Gottmadingen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "gottmadingen-kaufland-region-single-2026-10-01-0-88",
@@ -327,7 +447,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "gottmadingen-rewe-rewe-hauptstrasse-7-1-gottmadingen-single-2026-09-28-0-99",
@@ -349,7 +469,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "hilzingen-edeka-edeka-sportgelaende-hilzingen-single-2026-09-28-0-99",
@@ -365,13 +485,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "hilzingen-kaufland-region-single-2026-09-28-0-88",
+    "city": "hilzingen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Hilzingen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "hilzingen-kaufland-region-single-2026-10-01-0-88",
@@ -391,7 +531,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "hilzingen-rewe-region-single-2026-09-28-0-99",
@@ -411,7 +551,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "hohenfels-edeka-region-single-2026-09-28-0-99",
@@ -425,13 +565,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "hohenfels-kaufland-region-single-2026-09-28-0-88",
+    "city": "hohenfels",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Hohenfels",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "hohenfels-trinkgut-region-single-2026-09-28-0-99",
@@ -451,7 +611,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-edeka-edeka-riedstrasse-2-konstanz-single-2026-09-28-0-99",
@@ -467,13 +627,13 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-edeka-edeka-martin-schleyer-strasse-39-konstanz-single-2026-09-28-0-99",
@@ -489,13 +649,13 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-edeka-edeka-bodanstrasse-20-konstanz-single-2026-09-28-0-99",
@@ -511,13 +671,13 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-edeka-edeka-reichenaustrasse-36-konstanz-single-2026-09-28-0-99",
@@ -533,13 +693,13 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-edeka-edeka-staader-strasse-2-konstanz-single-2026-09-28-0-99",
@@ -555,13 +715,13 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-edeka-edeka-gottlieber-strasse-34-konstanz-single-2026-09-28-0-99",
@@ -577,13 +737,13 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-edeka-edeka-allensbacher-strasse-3-konstanz-single-2026-09-28-0-99",
@@ -599,13 +759,35 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "konstanz-kaufland-kaufland-carl-benz-strasse-22-konstanz-single-2026-09-28-0-88",
+    "city": "konstanz",
+    "store": "Kaufland Carl-Benz-Straße",
+    "chain": "Kaufland",
+    "address": "Carl-Benz-Straße 22, 78467 Konstanz",
+    "lat": 47.67727,
+    "lon": 9.148056,
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-kaufland-kaufland-carl-benz-strasse-22-konstanz-single-2026-10-01-0-88",
@@ -627,7 +809,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "konstanz-kaufland-kaufland-zaehringerplatz-9-konstanz-single-2026-09-28-0-88",
+    "city": "konstanz",
+    "store": "Kaufland Zähringerplatz",
+    "chain": "Kaufland",
+    "address": "Zähringerplatz 9, 78464 Konstanz",
+    "lat": 47.672981,
+    "lon": 9.183245,
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-kaufland-kaufland-zaehringerplatz-9-konstanz-single-2026-10-01-0-88",
@@ -649,7 +853,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "konstanz-marktkauf-region-single-2026-09-28-0-99",
+    "city": "konstanz",
+    "store": "Marktkauf",
+    "chain": "Marktkauf",
+    "address": "Filiale im Raum Konstanz",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.49,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-10-02",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-rewe-rewe-max-stromeyer-strasse-55-konstanz-single-2026-09-28-0-99",
@@ -671,7 +895,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "konstanz-rewe-rewe-schneckenburgstrasse-3-konstanz-single-2026-09-28-0-99",
@@ -693,7 +917,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "leonberg-edeka-edeka-leonberger-strasse-98-110-leonberg-single-2026-09-28-0-99",
@@ -709,13 +933,13 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "leonberg-edeka-edeka-ditzinger-strasse-77-leonberg-single-2026-09-28-0-99",
@@ -731,13 +955,35 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "leonberg-kaufland-kaufland-roemerstrasse-34-leonberg-single-2026-09-28-0-88",
+    "city": "leonberg",
+    "store": "Kaufland Römerstraße",
+    "chain": "Kaufland",
+    "address": "Römerstraße 34, 71229 Leonberg",
+    "lat": 48.796715,
+    "lon": 9.005834,
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "leonberg-kaufland-kaufland-roemerstrasse-34-leonberg-single-2026-10-01-0-88",
@@ -759,7 +1005,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "leonberg-rewe-rewe-roemerstrasse-25-leonberg-single-2026-09-28-0-99",
@@ -781,7 +1027,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "moos-edeka-edeka-radolfzeller-strasse-1-moos-single-2026-09-28-0-99",
@@ -797,13 +1043,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "moos-kaufland-region-single-2026-09-28-0-88",
+    "city": "moos",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Moos",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "moos-kaufland-region-single-2026-10-01-0-88",
@@ -823,7 +1089,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "moos-rewe-region-single-2026-09-28-0-99",
@@ -843,7 +1109,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "muehlhausen-ehingen-edeka-region-single-2026-09-28-0-99",
@@ -857,13 +1123,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "muehlhausen-ehingen-kaufland-region-single-2026-09-28-0-88",
+    "city": "muehlhausen-ehingen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Mühlhausen-Ehingen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "muehlhausen-ehingen-kaufland-region-single-2026-10-01-0-88",
@@ -883,7 +1169,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "muehlhausen-ehingen-rewe-region-single-2026-09-28-0-99",
+    "city": "muehlhausen-ehingen",
+    "store": "Rewe",
+    "chain": "Rewe",
+    "address": "Filiale im Raum Mühlhausen-Ehingen",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-10-02",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "oehningen-edeka-region-single-2026-09-28-0-99",
@@ -897,13 +1203,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "oehningen-kaufland-region-single-2026-09-28-0-88",
+    "city": "oehningen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Öhningen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "oehningen-kaufland-region-single-2026-10-01-0-88",
@@ -923,7 +1249,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "orsingen-nenzingen-edeka-region-single-2026-09-28-0-99",
@@ -937,13 +1263,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "orsingen-nenzingen-kaufland-region-single-2026-09-28-0-88",
+    "city": "orsingen-nenzingen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Orsingen-Nenzingen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "orsingen-nenzingen-kaufland-region-single-2026-10-01-0-88",
@@ -963,7 +1309,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "orsingen-nenzingen-trinkgut-region-single-2026-09-28-0-99",
@@ -983,7 +1329,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "radolfzell-am-bodensee-edeka-edeka-stockacher-strasse-radolfzell-am-bodensee-single-2026-09-28-0-99",
@@ -999,13 +1345,35 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "radolfzell-am-bodensee-kaufland-kaufland-markthallenstrasse-1-radolfzell-am-bodensee-single-2026-09-28-0-88",
+    "city": "radolfzell-am-bodensee",
+    "store": "Kaufland Markthallenstraße",
+    "chain": "Kaufland",
+    "address": "Markthallenstraße 1, 78315 Radolfzell am Bodensee",
+    "lat": 47.739446,
+    "lon": 8.970583,
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "radolfzell-am-bodensee-kaufland-kaufland-markthallenstrasse-1-radolfzell-am-bodensee-single-2026-10-01-0-88",
@@ -1027,7 +1395,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "radolfzell-am-bodensee-rewe-rewe-boehringer-strasse-57-radolfzell-am-bodensee-single-2026-09-28-0-99",
@@ -1049,7 +1417,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "radolfzell-am-bodensee-trinkgut-region-single-2026-09-28-0-99",
@@ -1069,7 +1437,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "reichenau-edeka-region-single-2026-09-28-0-99",
@@ -1083,13 +1451,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "reichenau-kaufland-region-single-2026-09-28-0-88",
+    "city": "reichenau",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Reichenau",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "reichenau-kaufland-region-single-2026-10-01-0-88",
@@ -1109,7 +1497,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "reichenau-rewe-region-single-2026-09-28-0-99",
@@ -1129,7 +1517,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "rielasingen-worblingen-edeka-edeka-zeppelinstrasse-4-rielasingen-worblingen-single-2026-09-28-0-99",
@@ -1145,13 +1533,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "rielasingen-worblingen-kaufland-region-single-2026-09-28-0-88",
+    "city": "rielasingen-worblingen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Rielasingen-Worblingen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "rielasingen-worblingen-kaufland-region-single-2026-10-01-0-88",
@@ -1171,7 +1579,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "rielasingen-worblingen-rewe-region-single-2026-09-28-0-99",
@@ -1191,7 +1599,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "singen-edeka-edeka-bahnhofstrasse-29-singen-single-2026-09-28-0-99",
@@ -1207,13 +1615,13 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "singen-edeka-edeka-zeppelinstrasse-4-rielasingen-worblingen-single-2026-09-28-0-99",
@@ -1229,13 +1637,13 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "singen-edeka-edeka-unter-den-tannen-singen-single-2026-09-28-0-99",
@@ -1251,13 +1659,35 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "singen-kaufland-kaufland-georg-fischer-strasse-15-singen-single-2026-09-28-0-88",
+    "city": "singen",
+    "store": "Kaufland Georg-Fischer-Straße",
+    "chain": "Kaufland",
+    "address": "Georg-Fischer-Straße 15, 78224 Singen (Hohentwiel)",
+    "lat": 47.753001,
+    "lon": 8.845743,
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "singen-kaufland-kaufland-georg-fischer-strasse-15-singen-single-2026-10-01-0-88",
@@ -1279,7 +1709,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "singen-rewe-rewe-forststrasse-14-singen-single-2026-09-28-0-99",
@@ -1301,7 +1731,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "singen-rewe-rewe-holzeckstrasse-2-singen-single-2026-09-28-0-99",
@@ -1323,7 +1753,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "singen-rewe-rewe-steisslinger-strasse-singen-single-2026-09-28-0-99",
@@ -1345,7 +1775,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "singen-trinkgut-region-single-2026-09-28-0-99",
@@ -1365,7 +1795,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "steisslingen-edeka-region-single-2026-09-28-0-99",
@@ -1379,13 +1809,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "steisslingen-kaufland-region-single-2026-09-28-0-88",
+    "city": "steisslingen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Steißlingen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "steisslingen-kaufland-region-single-2026-10-01-0-88",
@@ -1405,7 +1855,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "steisslingen-trinkgut-region-single-2026-09-28-0-99",
@@ -1425,7 +1875,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stockach-edeka-edeka-zoznegger-strasse-23-stockach-single-2026-09-28-0-99",
@@ -1441,13 +1891,13 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stockach-edeka-edeka-bahnhofstrasse-10-stockach-single-2026-09-28-0-99",
@@ -1463,13 +1913,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stockach-kaufland-region-single-2026-09-28-0-88",
+    "city": "stockach",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Stockach",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stockach-kaufland-region-single-2026-10-01-0-88",
@@ -1489,7 +1959,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stockach-rewe-rewe-dillstrasse-2-stockach-single-2026-09-28-0-99",
@@ -1511,7 +1981,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stockach-rewe-rewe-oberdorfstrasse-stockach-single-2026-09-28-0-99",
@@ -1533,7 +2003,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stockach-trinkgut-region-single-2026-09-28-0-99",
@@ -1553,7 +2023,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-burgenlandstrasse-stuttgart-single-2026-09-28-0-99",
@@ -1575,7 +2045,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-schemppstrasse-stuttgart-single-2026-09-28-0-99",
@@ -1597,7 +2067,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-hackstrasse-2-1-stuttgart-single-2026-09-28-0-99",
@@ -1619,7 +2089,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-flamingoweg-stuttgart-single-2026-09-28-0-99",
@@ -1641,7 +2111,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-loewentorstrasse-257-stuttgart-single-2026-09-28-0-99",
@@ -1663,7 +2133,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-griegstrasse-25-stuttgart-single-2026-09-28-0-99",
@@ -1685,7 +2155,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-am-kochenhof-10-stuttgart-single-2026-09-28-0-99",
@@ -1707,7 +2177,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-hauptstrasse-5-stuttgart-single-2026-09-28-0-99",
@@ -1729,7 +2199,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-kirchheimer-strasse-67-stuttgart-single-2026-09-28-0-99",
@@ -1751,7 +2221,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-epplestrasse-4-stuttgart-single-2026-09-28-0-99",
@@ -1773,7 +2243,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-europaplatz-20-stuttgart-single-2026-09-28-0-99",
@@ -1795,7 +2265,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-gaisburgstrasse-stuttgart-single-2026-09-28-0-99",
@@ -1817,7 +2287,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-grazer-strasse-34-stuttgart-single-2026-09-28-0-99",
@@ -1839,7 +2309,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-herdweg-24-stuttgart-single-2026-09-28-0-99",
@@ -1861,7 +2331,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-schlossstrasse-104-stuttgart-single-2026-09-28-0-99",
@@ -1883,7 +2353,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-ludwigsburger-strasse-109-stuttgart-single-2026-09-28-0-99",
@@ -1905,7 +2375,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-sophienstrasse-21-stuttgart-single-2026-09-28-0-99",
@@ -1927,7 +2397,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-stammheimer-strasse-stuttgart-single-2026-09-28-0-99",
@@ -1949,7 +2419,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-wallensteinstrasse-stuttgart-single-2026-09-28-0-99",
@@ -1971,7 +2441,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-rosensteinstrasse-37b-stuttgart-single-2026-09-28-0-99",
@@ -1993,7 +2463,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-wollgrasweg-stuttgart-single-2026-09-28-0-99",
@@ -2015,7 +2485,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-edeka-edeka-im-asemwald-46-stuttgart-single-2026-09-28-0-99",
@@ -2037,7 +2507,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stuttgart-kaufland-kaufland-aldinger-strasse-70-stuttgart-single-2026-09-28-0-88",
+    "city": "stuttgart",
+    "store": "Kaufland Aldinger Straße",
+    "chain": "Kaufland",
+    "address": "Aldinger Straße 70, 70378 Stuttgart",
+    "lat": 48.840008,
+    "lon": 9.228473,
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-aldinger-strasse-70-stuttgart-single-2026-10-01-0-88",
@@ -2059,7 +2551,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stuttgart-kaufland-kaufland-augsburger-strasse-460-stuttgart-single-2026-09-28-0-88",
+    "city": "stuttgart",
+    "store": "Kaufland Augsburger Straße",
+    "chain": "Kaufland",
+    "address": "Augsburger Straße 460, 70327 Stuttgart",
+    "lat": 48.775562,
+    "lon": 9.257924,
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-augsburger-strasse-460-stuttgart-single-2026-10-01-0-88",
@@ -2081,7 +2595,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stuttgart-kaufland-kaufland-rembrandtstrasse-47-stuttgart-single-2026-09-28-0-88",
+    "city": "stuttgart",
+    "store": "Kaufland Rembrandtstraße",
+    "chain": "Kaufland",
+    "address": "Rembrandtstraße 47, 70567 Stuttgart",
+    "lat": 48.730935,
+    "lon": 9.150057,
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-rembrandtstrasse-47-stuttgart-single-2026-10-01-0-88",
@@ -2103,7 +2639,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stuttgart-kaufland-kaufland-schwabenplatz-1-stuttgart-single-2026-09-28-0-88",
+    "city": "stuttgart",
+    "store": "Kaufland Schwabenplatz",
+    "chain": "Kaufland",
+    "address": "Schwabenplatz 1, 70563 Stuttgart",
+    "lat": 48.730321,
+    "lon": 9.109163,
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-schwabenplatz-1-stuttgart-single-2026-10-01-0-88",
@@ -2125,7 +2683,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stuttgart-kaufland-kaufland-wildunger-strasse-2-4-stuttgart-single-2026-09-28-0-88",
+    "city": "stuttgart",
+    "store": "Kaufland Wildunger Straße",
+    "chain": "Kaufland",
+    "address": "Wildunger Straße 2-4, 70372 Stuttgart",
+    "lat": 48.801626,
+    "lon": 9.221884,
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-wildunger-strasse-2-4-stuttgart-single-2026-10-01-0-88",
@@ -2147,7 +2727,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-freihofstrasse-22-24-stuttgart-single-2026-09-28-0-99",
@@ -2169,7 +2749,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-ulmer-strasse-296-stuttgart-single-2026-09-28-0-99",
@@ -2191,7 +2771,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-ostendstrasse-90-stuttgart-single-2026-09-28-0-99",
@@ -2213,7 +2793,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-badstrasse-11-stuttgart-single-2026-09-28-0-99",
@@ -2235,7 +2815,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-naststrasse-17-stuttgart-single-2026-09-28-0-99",
@@ -2257,7 +2837,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-breitscheidstrasse-10-stuttgart-single-2026-09-28-0-99",
@@ -2279,7 +2859,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-burgunderstrasse-32-stuttgart-single-2026-09-28-0-99",
@@ -2301,7 +2881,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-vaihinger-strasse-49-stuttgart-single-2026-09-28-0-99",
@@ -2323,7 +2903,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-epplestrasse-40-44-stuttgart-single-2026-09-28-0-99",
@@ -2345,7 +2925,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-hauptstaetter-strasse-147-stuttgart-single-2026-09-28-0-99",
@@ -2367,7 +2947,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-industriestrasse-5-stuttgart-single-2026-09-28-0-99",
@@ -2389,7 +2969,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-kronenstrasse-7-stuttgart-single-2026-09-28-0-99",
@@ -2411,7 +2991,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-loewen-markt-5-stuttgart-single-2026-09-28-0-99",
@@ -2433,7 +3013,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-marienplatz-8-10-stuttgart-single-2026-09-28-0-99",
@@ -2455,7 +3035,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-olgastrasse-86-stuttgart-single-2026-09-28-0-99",
@@ -2477,7 +3057,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-ostendstrasse-75-stuttgart-single-2026-09-28-0-99",
@@ -2499,7 +3079,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-otto-hirsch-bruecken-17-stuttgart-single-2026-09-28-0-99",
@@ -2521,7 +3101,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-rotebuehlplatz-21-25-stuttgart-single-2026-09-28-0-99",
@@ -2543,7 +3123,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-rotenwaldstrasse-stuttgart-single-2026-09-28-0-99",
@@ -2565,7 +3145,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-rueckertstrasse-7-stuttgart-single-2026-09-28-0-99",
@@ -2587,7 +3167,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-schwabstrasse-43-stuttgart-single-2026-09-28-0-99",
@@ -2609,7 +3189,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-sontheimer-strasse-10-stuttgart-single-2026-09-28-0-99",
@@ -2631,7 +3211,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-sophie-tschorn-strasse-4-stuttgart-single-2026-09-28-0-99",
@@ -2653,7 +3233,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "stuttgart-rewe-rewe-unterlaender-strasse-49-stuttgart-single-2026-09-28-0-99",
@@ -2675,7 +3255,117 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stuttgart-tegut-tegut-alarichstrasse-6-stuttgart-single-2026-09-28-0-99",
+    "city": "stuttgart",
+    "store": "tegut Alarichstraße",
+    "chain": "tegut",
+    "address": "Alarichstraße 6, 70469 Stuttgart",
+    "lat": 48.809641,
+    "lon": 9.176536,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.49,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-10-03",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stuttgart-tegut-tegut-epplestrasse-14-stuttgart-single-2026-09-28-0-99",
+    "city": "stuttgart",
+    "store": "tegut Epplestraße",
+    "chain": "tegut",
+    "address": "Epplestraße 14, 70597 Stuttgart",
+    "lat": 48.747771,
+    "lon": 9.170021,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.49,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-10-03",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stuttgart-tegut-tegut-heusteigstrasse-stuttgart-single-2026-09-28-0-99",
+    "city": "stuttgart",
+    "store": "tegut Heusteigstraße",
+    "chain": "tegut",
+    "address": "Heusteigstraße, 70180 Stuttgart",
+    "lat": 48.769422,
+    "lon": 9.178296,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.49,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-10-03",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stuttgart-tegut-tegut-koenigstrasse-26-stuttgart-single-2026-09-28-0-99",
+    "city": "stuttgart",
+    "store": "tegut Königstraße",
+    "chain": "tegut",
+    "address": "Königstraße 26, 70173 Stuttgart",
+    "lat": 48.779559,
+    "lon": 9.178124,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.49,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-10-03",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "stuttgart-tegut-tegut-mailaender-platz-7-stuttgart-single-2026-09-28-0-99",
+    "city": "stuttgart",
+    "store": "tegut Mailänder Platz",
+    "chain": "tegut",
+    "address": "Mailänder Platz 7, 70191 Stuttgart",
+    "lat": 48.79073,
+    "lon": 9.181571,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.49,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-10-03",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "tengen-edeka-edeka-marktstrasse-9-tengen-single-2026-09-28-0-99",
@@ -2691,13 +3381,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "tengen-kaufland-region-single-2026-09-28-0-88",
+    "city": "tengen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Tengen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "volkertshausen-edeka-edeka-baerenloh-2-volkertshausen-single-2026-09-28-0-99",
@@ -2713,13 +3423,33 @@
     "volumeLiters": 0.5,
     "price": 0.99,
     "pricePerUnit": 0.99,
-    "regularPrice": null,
+    "regularPrice": 1.49,
     "validFrom": "2026-09-28",
     "validTo": "2026-10-02",
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
+  },
+  {
+    "id": "volkertshausen-kaufland-region-single-2026-09-28-0-88",
+    "city": "volkertshausen",
+    "store": "Kaufland",
+    "chain": "Kaufland",
+    "address": "Filiale im Raum Volkertshausen",
+    "product": "Monster Energy Ultra (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.88,
+    "pricePerUnit": 0.88,
+    "regularPrice": null,
+    "validFrom": "2026-09-28",
+    "validTo": "2026-09-30",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-09-27T10:30:43Z"
   },
   {
     "id": "volkertshausen-kaufland-region-single-2026-10-01-0-88",
@@ -2739,6 +3469,6 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-09-27T09:29:58Z"
+    "lastUpdated": "2026-09-27T10:30:43Z"
   }
 ]
