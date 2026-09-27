@@ -1,4 +1,9 @@
 {
+  "Edeka": {
+    "pricePerUnit": 1.49,
+    "seen": "2026-09-28",
+    "source": "marktguru"
+  },
   "Penny": {
     "pricePerUnit": 1.49,
     "seen": "2026-09-21",
