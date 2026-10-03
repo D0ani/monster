@@ -17,7 +17,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "allensbach-kaufland-region-single-2026-10-01-0-88",
@@ -37,7 +37,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "bodman-ludwigshafen-kaufland-region-single-2026-10-01-0-88",
@@ -57,7 +57,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "engen-kaufland-region-single-2026-10-01-0-88",
@@ -77,7 +77,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "gailingen-am-hochrhein-kaufland-region-single-2026-10-01-0-88",
@@ -97,7 +97,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "gottmadingen-kaufland-region-single-2026-10-01-0-88",
@@ -117,7 +117,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "hilzingen-kaufland-region-single-2026-10-01-0-88",
@@ -137,7 +137,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "hohenfels-kaufland-region-single-2026-10-01-0-88",
@@ -157,7 +157,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Monster",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "konstanz-kaufland-kaufland-carl-benz-strasse-22-konstanz-single-2026-10-01-0-88",
@@ -179,7 +179,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "konstanz-kaufland-kaufland-zaehringerplatz-9-konstanz-single-2026-10-01-0-88",
@@ -201,7 +201,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "leonberg-kaufland-kaufland-roemerstrasse-34-leonberg-single-2026-10-01-0-88",
@@ -223,29 +223,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
-  },
-  {
-    "id": "leonberg-netto-netto-wilhelmstrasse-13-leonberg-single-2026-10-05-0-33",
-    "city": "leonberg",
-    "store": "Netto Wilhelmstraße",
-    "chain": "Netto",
-    "address": "Wilhelmstraße 13, 71229 Leonberg",
-    "lat": 48.790345,
-    "lon": 9.008857,
-    "product": "Monster Energy (versch. Sorten)",
-    "packType": "single",
-    "unitCount": 1,
-    "volumeLiters": 0.33,
-    "price": 0.33,
-    "pricePerUnit": 0.33,
-    "regularPrice": 0.89,
-    "validFrom": "2026-10-05",
-    "validTo": "2026-10-10",
-    "note": "zzgl. 0,25 € Pfand",
-    "source": "https://www.kaufda.de/Angebote/Monster",
-    "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "moos-kaufland-region-single-2026-10-01-0-88",
@@ -265,7 +243,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "muehlhausen-ehingen-kaufland-region-single-2026-10-01-0-88",
@@ -285,7 +263,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "oehningen-kaufland-region-single-2026-10-01-0-88",
@@ -305,7 +283,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "orsingen-nenzingen-kaufland-region-single-2026-10-01-0-88",
@@ -325,7 +303,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "radolfzell-am-bodensee-kaufland-kaufland-markthallenstrasse-1-radolfzell-am-bodensee-single-2026-10-01-0-88",
@@ -347,7 +325,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "reichenau-kaufland-region-single-2026-10-01-0-88",
@@ -367,7 +345,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "rielasingen-worblingen-kaufland-region-single-2026-10-01-0-88",
@@ -387,7 +365,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "singen-kaufland-kaufland-georg-fischer-strasse-15-singen-single-2026-10-01-0-88",
@@ -409,7 +387,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "steisslingen-kaufland-region-single-2026-10-01-0-88",
@@ -429,7 +407,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "stockach-kaufland-region-single-2026-10-01-0-88",
@@ -449,7 +427,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-aldinger-strasse-70-stuttgart-single-2026-10-01-0-88",
@@ -471,7 +449,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-augsburger-strasse-460-stuttgart-single-2026-10-01-0-88",
@@ -493,7 +471,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-rembrandtstrasse-47-stuttgart-single-2026-10-01-0-88",
@@ -515,7 +493,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-schwabenplatz-1-stuttgart-single-2026-10-01-0-88",
@@ -537,7 +515,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-wildunger-strasse-2-4-stuttgart-single-2026-10-01-0-88",
@@ -559,7 +537,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "tengen-kaufland-region-single-2026-10-01-0-88",
@@ -579,7 +557,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Monster",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   },
   {
     "id": "volkertshausen-kaufland-region-single-2026-10-01-0-88",
@@ -599,6 +577,6 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-03T09:23:56Z"
+    "lastUpdated": "2026-10-03T10:21:00Z"
   }
 ]
