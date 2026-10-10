@@ -11,7 +11,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -24,7 +24,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "allensbach-lidl-region-single-2026-10-12-0-75",
@@ -38,7 +38,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -51,7 +51,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "bodman-ludwigshafen-lidl-region-single-2026-10-12-0-75",
@@ -65,7 +65,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -78,7 +78,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "engen-lidl-lidl-hegaustrasse-3-engen-single-2026-10-12-0-75",
@@ -94,7 +94,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -107,7 +107,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "gailingen-am-hochrhein-lidl-lidl-im-rheinauer-7-gailingen-am-hochrhein-single-2026-10-12-0-75",
@@ -123,7 +123,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -136,7 +136,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "gottmadingen-lidl-lidl-hauptstrasse-5-gottmadingen-single-2026-10-12-0-75",
@@ -152,7 +152,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -165,7 +165,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "gottmadingen-lidl-lidl-stockenweg-4-gottmadingen-single-2026-10-12-0-75",
@@ -181,7 +181,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -194,7 +194,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "hilzingen-lidl-region-single-2026-10-12-0-75",
@@ -208,7 +208,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -221,7 +221,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "hohenfels-lidl-region-single-2026-10-12-0-75",
@@ -235,7 +235,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -248,7 +248,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "konstanz-lidl-lidl-kreuzlinger-strasse-konstanz-single-2026-10-12-0-75",
@@ -264,7 +264,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -277,7 +277,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "konstanz-lidl-lidl-max-stromeyer-strasse-15-konstanz-single-2026-10-12-0-75",
@@ -293,7 +293,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -306,7 +306,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "leonberg-lidl-lidl-ditzinger-strasse-79-leonberg-single-2026-10-12-0-75",
@@ -322,7 +322,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -335,7 +335,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "leonberg-lidl-lidl-glemseckstrasse-65-leonberg-single-2026-10-12-0-75",
@@ -351,7 +351,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -364,7 +364,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "moos-lidl-region-single-2026-10-12-0-75",
@@ -378,7 +378,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -391,7 +391,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "muehlhausen-ehingen-lidl-region-single-2026-10-12-0-75",
@@ -405,7 +405,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -418,7 +418,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "oehningen-lidl-lidl-hoeristrasse-3-oehningen-single-2026-10-12-0-75",
@@ -434,7 +434,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -447,7 +447,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "orsingen-nenzingen-lidl-region-single-2026-10-12-0-75",
@@ -461,7 +461,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -474,7 +474,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "radolfzell-am-bodensee-lidl-lidl-lippenwiese-11-radolfzell-am-bodensee-single-2026-10-12-0-75",
@@ -490,7 +490,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -503,7 +503,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "reichenau-lidl-lidl-am-wollmatinger-ried-2-reichenau-single-2026-10-12-0-75",
@@ -519,7 +519,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -532,7 +532,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "rielasingen-worblingen-lidl-region-single-2026-10-12-0-75",
@@ -546,7 +546,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -559,7 +559,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "singen-lidl-lidl-heinrich-weber-platz-singen-single-2026-10-12-0-75",
@@ -575,7 +575,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -588,7 +588,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "singen-lidl-lidl-rielasinger-strasse-singen-single-2026-10-12-0-75",
@@ -604,7 +604,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -617,7 +617,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "steisslingen-lidl-region-single-2026-10-12-0-75",
@@ -631,7 +631,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -644,7 +644,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stockach-lidl-region-single-2026-10-12-0-75",
@@ -658,7 +658,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -671,7 +671,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-adestrasse-30-stuttgart-single-2026-10-12-0-75",
@@ -687,7 +687,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -700,7 +700,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-blumenstrasse-18-20-stuttgart-single-2026-10-12-0-75",
@@ -716,7 +716,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -729,7 +729,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-bottroper-strasse-8a-stuttgart-single-2026-10-12-0-75",
@@ -745,7 +745,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -758,7 +758,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-gerlinger-strasse-96-stuttgart-single-2026-10-12-0-75",
@@ -774,7 +774,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -787,7 +787,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-griegstrasse-2-stuttgart-single-2026-10-12-0-75",
@@ -803,7 +803,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -816,7 +816,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-hauptstaetter-strasse-111-stuttgart-single-2026-10-12-0-75",
@@ -832,7 +832,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -845,7 +845,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-heigelinstrasse-4-stuttgart-single-2026-10-12-0-75",
@@ -861,7 +861,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -874,7 +874,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-heiligenwiesen-35-stuttgart-single-2026-10-12-0-75",
@@ -890,7 +890,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -903,7 +903,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-hofener-strasse-126-stuttgart-single-2026-10-12-0-75",
@@ -919,7 +919,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -932,7 +932,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-marienstrasse-12-stuttgart-single-2026-10-12-0-75",
@@ -948,7 +948,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -961,7 +961,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-osterbronnstrasse-50-stuttgart-single-2026-10-12-0-75",
@@ -977,7 +977,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -990,7 +990,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-pforzheimer-strasse-338-342-stuttgart-single-2026-10-12-0-75",
@@ -1006,7 +1006,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -1019,7 +1019,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-rosensteinstrasse-55-stuttgart-single-2026-10-12-0-75",
@@ -1035,7 +1035,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -1048,7 +1048,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-schwabstrasse-91-stuttgart-single-2026-10-12-0-75",
@@ -1064,7 +1064,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -1077,7 +1077,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-stuttgarter-strasse-32-stuttgart-single-2026-10-12-0-75",
@@ -1093,7 +1093,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -1106,7 +1106,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-unter-dem-birkenkopf-19-stuttgart-single-2026-10-12-0-75",
@@ -1122,7 +1122,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -1135,7 +1135,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-vaihinger-strasse-115-stuttgart-single-2026-10-12-0-75",
@@ -1151,7 +1151,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -1164,7 +1164,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "stuttgart-lidl-lidl-wildunger-strasse-4-stuttgart-single-2026-10-12-0-75",
@@ -1180,7 +1180,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -1193,7 +1193,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "tengen-lidl-region-single-2026-10-12-0-75",
@@ -1207,7 +1207,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -1220,7 +1220,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   },
   {
     "id": "volkertshausen-lidl-region-single-2026-10-12-0-75",
@@ -1234,7 +1234,7 @@
     "volumeLiters": 0.5,
     "price": 0.75,
     "pricePerUnit": 0.75,
-    "regularPrice": 1.59,
+    "regularPrice": null,
     "validFrom": "2026-10-12",
     "validTo": "2026-10-17",
     "app": {
@@ -1247,6 +1247,6 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-10T10:05:52Z"
+    "lastUpdated": "2026-10-10T11:06:52Z"
   }
 ]
