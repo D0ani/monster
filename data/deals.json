@@ -24,7 +24,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "allensbach-edeka-edeka-zum-riesenberg-5-allensbach-pack24-2026-10-15-21-36",
+    "city": "allensbach",
+    "store": "Edeka Baur",
+    "chain": "Edeka",
+    "address": "Zum Riesenberg 5, 78476 Allensbach",
+    "lat": 47.722814,
+    "lon": 9.072768,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "allensbach-lidl-region-single-2026-10-12-0-75",
@@ -51,7 +73,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "bodman-ludwigshafen-lidl-region-single-2026-10-12-0-75",
@@ -78,7 +100,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "engen-lidl-lidl-hegaustrasse-3-engen-single-2026-10-12-0-75",
@@ -107,7 +129,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "gailingen-am-hochrhein-lidl-lidl-im-rheinauer-7-gailingen-am-hochrhein-single-2026-10-12-0-75",
@@ -136,7 +158,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "gottmadingen-lidl-lidl-hauptstrasse-5-gottmadingen-single-2026-10-12-0-75",
@@ -165,7 +187,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "gottmadingen-lidl-lidl-stockenweg-4-gottmadingen-single-2026-10-12-0-75",
@@ -194,7 +216,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "hilzingen-lidl-region-single-2026-10-12-0-75",
@@ -221,7 +243,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "hohenfels-lidl-region-single-2026-10-12-0-75",
@@ -248,7 +270,161 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "konstanz-edeka-edeka-riedstrasse-2-konstanz-pack24-2026-10-15-21-36",
+    "city": "konstanz",
+    "store": "EDEKA Baur",
+    "chain": "Edeka",
+    "address": "Riedstraße 2, 78467 Konstanz",
+    "lat": 47.687729,
+    "lon": 9.148081,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "konstanz-edeka-edeka-martin-schleyer-strasse-39-konstanz-pack24-2026-10-15-21-36",
+    "city": "konstanz",
+    "store": "EDEKA Baur",
+    "chain": "Edeka",
+    "address": "Martin-Schleyer-Straße 39, 78465 Konstanz",
+    "lat": 47.715296,
+    "lon": 9.171651,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "konstanz-edeka-edeka-bodanstrasse-20-konstanz-pack24-2026-10-15-21-36",
+    "city": "konstanz",
+    "store": "Edeka Bodanstraße",
+    "chain": "Edeka",
+    "address": "Bodanstraße 20, 78462 Konstanz",
+    "lat": 47.658351,
+    "lon": 9.174199,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "konstanz-edeka-edeka-reichenaustrasse-36-konstanz-pack24-2026-10-15-21-36",
+    "city": "konstanz",
+    "store": "Edeka Reichenaustraße",
+    "chain": "Edeka",
+    "address": "Reichenaustraße 36, 78467 Konstanz",
+    "lat": 47.672122,
+    "lon": 9.16757,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "konstanz-edeka-edeka-staader-strasse-2-konstanz-pack24-2026-10-15-21-36",
+    "city": "konstanz",
+    "store": "Edeka Staader Straße",
+    "chain": "Edeka",
+    "address": "Staader Straße 2, 78464 Konstanz",
+    "lat": 47.68063,
+    "lon": 9.202367,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "konstanz-edeka-edeka-gottlieber-strasse-34-konstanz-pack24-2026-10-15-21-36",
+    "city": "konstanz",
+    "store": "Edeka-Baur",
+    "chain": "Edeka",
+    "address": "Gottlieber Straße 34, 78462 Konstanz",
+    "lat": 47.662702,
+    "lon": 9.165439,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "konstanz-edeka-edeka-allensbacher-strasse-3-konstanz-pack24-2026-10-15-21-36",
+    "city": "konstanz",
+    "store": "Kaufhaus Okle",
+    "chain": "Edeka",
+    "address": "Allensbacher Straße 3, 78465 Konstanz",
+    "lat": 47.734108,
+    "lon": 9.11578,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "konstanz-lidl-lidl-kreuzlinger-strasse-konstanz-single-2026-10-12-0-75",
@@ -277,7 +453,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "konstanz-lidl-lidl-max-stromeyer-strasse-15-konstanz-single-2026-10-12-0-75",
@@ -306,7 +482,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "leonberg-lidl-lidl-ditzinger-strasse-79-leonberg-single-2026-10-12-0-75",
@@ -335,7 +511,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "leonberg-lidl-lidl-glemseckstrasse-65-leonberg-single-2026-10-12-0-75",
@@ -364,7 +540,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "moos-lidl-region-single-2026-10-12-0-75",
@@ -391,7 +567,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "muehlhausen-ehingen-lidl-region-single-2026-10-12-0-75",
@@ -418,7 +594,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "oehningen-lidl-lidl-hoeristrasse-3-oehningen-single-2026-10-12-0-75",
@@ -447,7 +623,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "orsingen-nenzingen-lidl-region-single-2026-10-12-0-75",
@@ -474,7 +650,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "radolfzell-am-bodensee-lidl-lidl-lippenwiese-11-radolfzell-am-bodensee-single-2026-10-12-0-75",
@@ -503,7 +679,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "reichenau-edeka-region-pack24-2026-10-15-21-36",
+    "city": "reichenau",
+    "store": "Edeka",
+    "chain": "Edeka",
+    "address": "Filiale im Raum Reichenau",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "reichenau-lidl-lidl-am-wollmatinger-ried-2-reichenau-single-2026-10-12-0-75",
@@ -532,7 +728,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "rielasingen-worblingen-lidl-region-single-2026-10-12-0-75",
@@ -559,7 +755,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "singen-lidl-lidl-heinrich-weber-platz-singen-single-2026-10-12-0-75",
@@ -588,7 +784,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "singen-lidl-lidl-rielasinger-strasse-singen-single-2026-10-12-0-75",
@@ -617,7 +813,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "steisslingen-lidl-region-single-2026-10-12-0-75",
@@ -644,7 +840,51 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "stockach-edeka-edeka-zoznegger-strasse-23-stockach-pack24-2026-10-15-21-36",
+    "city": "stockach",
+    "store": "EDEKA Sulger",
+    "chain": "Edeka",
+    "address": "Zoznegger Straße 23, 78333 Stockach",
+    "lat": 47.856617,
+    "lon": 9.018066,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
+  },
+  {
+    "id": "stockach-edeka-edeka-bahnhofstrasse-10-stockach-pack24-2026-10-15-21-36",
+    "city": "stockach",
+    "store": "Edeka Bahnhofstraße",
+    "chain": "Edeka",
+    "address": "Bahnhofstraße 10, 78333 Stockach",
+    "lat": 47.850841,
+    "lon": 9.006542,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "pack24",
+    "unitCount": 24,
+    "volumeLiters": 0.5,
+    "price": 21.36,
+    "pricePerUnit": 0.89,
+    "regularPrice": null,
+    "validFrom": "2026-10-15",
+    "validTo": "2026-10-21",
+    "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
+    "source": "https://www.marktguru.de/b/monster-energy",
+    "sourceName": "marktguru",
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stockach-lidl-region-single-2026-10-12-0-75",
@@ -671,7 +911,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-adestrasse-30-stuttgart-single-2026-10-12-0-75",
@@ -700,7 +940,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-blumenstrasse-18-20-stuttgart-single-2026-10-12-0-75",
@@ -729,7 +969,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-bottroper-strasse-8a-stuttgart-single-2026-10-12-0-75",
@@ -758,7 +998,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-gerlinger-strasse-96-stuttgart-single-2026-10-12-0-75",
@@ -787,7 +1027,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-griegstrasse-2-stuttgart-single-2026-10-12-0-75",
@@ -816,7 +1056,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-hauptstaetter-strasse-111-stuttgart-single-2026-10-12-0-75",
@@ -845,7 +1085,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-heigelinstrasse-4-stuttgart-single-2026-10-12-0-75",
@@ -874,7 +1114,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-heiligenwiesen-35-stuttgart-single-2026-10-12-0-75",
@@ -903,7 +1143,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-hofener-strasse-126-stuttgart-single-2026-10-12-0-75",
@@ -932,7 +1172,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-marienstrasse-12-stuttgart-single-2026-10-12-0-75",
@@ -961,7 +1201,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-osterbronnstrasse-50-stuttgart-single-2026-10-12-0-75",
@@ -990,7 +1230,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-pforzheimer-strasse-338-342-stuttgart-single-2026-10-12-0-75",
@@ -1019,7 +1259,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-rosensteinstrasse-55-stuttgart-single-2026-10-12-0-75",
@@ -1048,7 +1288,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-schwabstrasse-91-stuttgart-single-2026-10-12-0-75",
@@ -1077,7 +1317,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-stuttgarter-strasse-32-stuttgart-single-2026-10-12-0-75",
@@ -1106,7 +1346,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-unter-dem-birkenkopf-19-stuttgart-single-2026-10-12-0-75",
@@ -1135,7 +1375,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-vaihinger-strasse-115-stuttgart-single-2026-10-12-0-75",
@@ -1164,7 +1404,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "stuttgart-lidl-lidl-wildunger-strasse-4-stuttgart-single-2026-10-12-0-75",
@@ -1193,7 +1433,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "tengen-lidl-region-single-2026-10-12-0-75",
@@ -1220,7 +1460,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   },
   {
     "id": "volkertshausen-lidl-region-single-2026-10-12-0-75",
@@ -1247,6 +1487,6 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-13T12:37:54Z"
+    "lastUpdated": "2026-10-14T08:59:48Z"
   }
 ]
