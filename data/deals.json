@@ -24,7 +24,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "aach-penny-region-single-2026-10-19-0-99",
+    "city": "aach",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Aach",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "allensbach-edeka-edeka-zum-riesenberg-5-allensbach-pack24-2026-10-15-21-36",
@@ -46,7 +66,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "allensbach-lidl-region-single-2026-10-12-0-75",
@@ -73,7 +93,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "allensbach-penny-region-single-2026-10-19-0-99",
+    "city": "allensbach",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Allensbach",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "bodman-ludwigshafen-lidl-region-single-2026-10-12-0-75",
@@ -100,7 +140,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "bodman-ludwigshafen-penny-penny-breite-12-bodman-ludwigshafen-single-2026-10-19-0-99",
+    "city": "bodman-ludwigshafen",
+    "store": "PENNY Bodman",
+    "chain": "Penny",
+    "address": "Breite 12, 78351 Bodman-Ludwigshafen",
+    "lat": 47.803906,
+    "lon": 9.025161,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "engen-lidl-lidl-hegaustrasse-3-engen-single-2026-10-12-0-75",
@@ -129,7 +191,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "engen-penny-region-single-2026-10-19-0-99",
+    "city": "engen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Engen",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "gailingen-am-hochrhein-lidl-lidl-im-rheinauer-7-gailingen-am-hochrhein-single-2026-10-12-0-75",
@@ -158,7 +240,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "gailingen-am-hochrhein-penny-region-single-2026-10-19-0-99",
+    "city": "gailingen-am-hochrhein",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Gailingen am Hochrhein",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "gottmadingen-lidl-lidl-hauptstrasse-5-gottmadingen-single-2026-10-12-0-75",
@@ -187,7 +289,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "gottmadingen-lidl-lidl-stockenweg-4-gottmadingen-single-2026-10-12-0-75",
@@ -216,7 +318,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "gottmadingen-penny-region-single-2026-10-19-0-99",
+    "city": "gottmadingen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Gottmadingen",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "hilzingen-lidl-region-single-2026-10-12-0-75",
@@ -243,7 +365,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "hilzingen-penny-region-single-2026-10-19-0-99",
+    "city": "hilzingen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Hilzingen",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "hohenfels-lidl-region-single-2026-10-12-0-75",
@@ -270,7 +412,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "hohenfels-penny-region-single-2026-10-19-0-99",
+    "city": "hohenfels",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Hohenfels",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "konstanz-edeka-edeka-riedstrasse-2-konstanz-pack24-2026-10-15-21-36",
@@ -292,7 +454,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "konstanz-edeka-edeka-martin-schleyer-strasse-39-konstanz-pack24-2026-10-15-21-36",
@@ -314,7 +476,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "konstanz-edeka-edeka-bodanstrasse-20-konstanz-pack24-2026-10-15-21-36",
@@ -336,7 +498,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "konstanz-edeka-edeka-reichenaustrasse-36-konstanz-pack24-2026-10-15-21-36",
@@ -358,7 +520,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "konstanz-edeka-edeka-staader-strasse-2-konstanz-pack24-2026-10-15-21-36",
@@ -380,7 +542,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "konstanz-edeka-edeka-gottlieber-strasse-34-konstanz-pack24-2026-10-15-21-36",
@@ -402,7 +564,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "konstanz-edeka-edeka-allensbacher-strasse-3-konstanz-pack24-2026-10-15-21-36",
@@ -424,7 +586,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "konstanz-lidl-lidl-kreuzlinger-strasse-konstanz-single-2026-10-12-0-75",
@@ -453,7 +615,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "konstanz-lidl-lidl-max-stromeyer-strasse-15-konstanz-single-2026-10-12-0-75",
@@ -482,7 +644,95 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "konstanz-penny-penny-mainaustrasse-konstanz-single-2026-10-19-0-99",
+    "city": "konstanz",
+    "store": "Penny Mainaustraße",
+    "chain": "Penny",
+    "address": "Mainaustraße, 78464 Konstanz",
+    "lat": 47.682075,
+    "lon": 9.202275,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "konstanz-penny-penny-sonnenbuehlstrasse-98-konstanz-single-2026-10-19-0-99",
+    "city": "konstanz",
+    "store": "Penny Sonnenbühlstraße",
+    "chain": "Penny",
+    "address": "Sonnenbühlstraße 98, 78464 Konstanz",
+    "lat": 47.675538,
+    "lon": 9.197383,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "konstanz-penny-penny-stifterstrasse-65-konstanz-single-2026-10-19-0-99",
+    "city": "konstanz",
+    "store": "Penny Stifterstraße",
+    "chain": "Penny",
+    "address": "Stifterstraße 65, 78467 Konstanz",
+    "lat": 47.687451,
+    "lon": 9.156281,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "konstanz-penny-penny-wollmatinger-strasse-22-konstanz-single-2026-10-19-0-99",
+    "city": "konstanz",
+    "store": "Penny Wollmatinger Straße",
+    "chain": "Penny",
+    "address": "Wollmatinger Straße 22, 78467 Konstanz",
+    "lat": 47.676141,
+    "lon": 9.18017,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "leonberg-lidl-lidl-ditzinger-strasse-79-leonberg-single-2026-10-12-0-75",
@@ -511,7 +761,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "leonberg-lidl-lidl-glemseckstrasse-65-leonberg-single-2026-10-12-0-75",
@@ -540,7 +790,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "leonberg-penny-region-single-2026-10-19-0-99",
+    "city": "leonberg",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Leonberg",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "moos-lidl-region-single-2026-10-12-0-75",
@@ -567,7 +837,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "moos-penny-region-single-2026-10-19-0-99",
+    "city": "moos",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Moos",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "muehlhausen-ehingen-lidl-region-single-2026-10-12-0-75",
@@ -594,7 +884,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "muehlhausen-ehingen-penny-region-single-2026-10-19-0-99",
+    "city": "muehlhausen-ehingen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Mühlhausen-Ehingen",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "oehningen-lidl-lidl-hoeristrasse-3-oehningen-single-2026-10-12-0-75",
@@ -623,7 +933,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "oehningen-penny-region-single-2026-10-19-0-99",
+    "city": "oehningen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Öhningen",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "orsingen-nenzingen-lidl-region-single-2026-10-12-0-75",
@@ -650,7 +980,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "orsingen-nenzingen-penny-region-single-2026-10-19-0-99",
+    "city": "orsingen-nenzingen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Orsingen-Nenzingen",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "radolfzell-am-bodensee-lidl-lidl-lippenwiese-11-radolfzell-am-bodensee-single-2026-10-12-0-75",
@@ -679,7 +1029,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "radolfzell-am-bodensee-penny-region-single-2026-10-19-0-99",
+    "city": "radolfzell-am-bodensee",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Radolfzell am Bodensee",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "reichenau-edeka-region-pack24-2026-10-15-21-36",
@@ -699,7 +1069,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "reichenau-lidl-lidl-am-wollmatinger-ried-2-reichenau-single-2026-10-12-0-75",
@@ -728,7 +1098,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "reichenau-penny-region-single-2026-10-19-0-99",
+    "city": "reichenau",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Reichenau",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "rielasingen-worblingen-lidl-region-single-2026-10-12-0-75",
@@ -755,7 +1145,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "rielasingen-worblingen-penny-penny-gaenseweide-10-rielasingen-worblingen-single-2026-10-19-0-99",
+    "city": "rielasingen-worblingen",
+    "store": "Penny Gänseweide",
+    "chain": "Penny",
+    "address": "Gänseweide 10, 78239 Rielasingen-Worblingen",
+    "lat": 47.728431,
+    "lon": 8.850241,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "singen-lidl-lidl-heinrich-weber-platz-singen-single-2026-10-12-0-75",
@@ -784,7 +1196,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "singen-lidl-lidl-rielasinger-strasse-singen-single-2026-10-12-0-75",
@@ -813,7 +1225,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "singen-penny-penny-gaenseweide-10-rielasingen-worblingen-single-2026-10-19-0-99",
+    "city": "singen",
+    "store": "Penny Gänseweide",
+    "chain": "Penny",
+    "address": "Gänseweide 10, 78239 Rielasingen-Worblingen",
+    "lat": 47.728431,
+    "lon": 8.850241,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "steisslingen-lidl-region-single-2026-10-12-0-75",
@@ -840,7 +1274,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "steisslingen-penny-region-single-2026-10-19-0-99",
+    "city": "steisslingen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Steißlingen",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stockach-edeka-edeka-zoznegger-strasse-23-stockach-pack24-2026-10-15-21-36",
@@ -862,7 +1316,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stockach-edeka-edeka-bahnhofstrasse-10-stockach-pack24-2026-10-15-21-36",
@@ -884,7 +1338,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stockach-lidl-region-single-2026-10-12-0-75",
@@ -911,7 +1365,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stockach-penny-region-single-2026-10-19-0-99",
+    "city": "stockach",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Stockach",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-adestrasse-30-stuttgart-single-2026-10-12-0-75",
@@ -940,7 +1414,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-blumenstrasse-18-20-stuttgart-single-2026-10-12-0-75",
@@ -969,7 +1443,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-bottroper-strasse-8a-stuttgart-single-2026-10-12-0-75",
@@ -998,7 +1472,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-gerlinger-strasse-96-stuttgart-single-2026-10-12-0-75",
@@ -1027,7 +1501,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-griegstrasse-2-stuttgart-single-2026-10-12-0-75",
@@ -1056,7 +1530,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-hauptstaetter-strasse-111-stuttgart-single-2026-10-12-0-75",
@@ -1085,7 +1559,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-heigelinstrasse-4-stuttgart-single-2026-10-12-0-75",
@@ -1114,7 +1588,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-heiligenwiesen-35-stuttgart-single-2026-10-12-0-75",
@@ -1143,7 +1617,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-hofener-strasse-126-stuttgart-single-2026-10-12-0-75",
@@ -1172,7 +1646,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-marienstrasse-12-stuttgart-single-2026-10-12-0-75",
@@ -1201,7 +1675,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-osterbronnstrasse-50-stuttgart-single-2026-10-12-0-75",
@@ -1230,7 +1704,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-pforzheimer-strasse-338-342-stuttgart-single-2026-10-12-0-75",
@@ -1259,7 +1733,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-rosensteinstrasse-55-stuttgart-single-2026-10-12-0-75",
@@ -1288,7 +1762,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-schwabstrasse-91-stuttgart-single-2026-10-12-0-75",
@@ -1317,7 +1791,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-stuttgarter-strasse-32-stuttgart-single-2026-10-12-0-75",
@@ -1346,7 +1820,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-unter-dem-birkenkopf-19-stuttgart-single-2026-10-12-0-75",
@@ -1375,7 +1849,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-vaihinger-strasse-115-stuttgart-single-2026-10-12-0-75",
@@ -1404,7 +1878,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "stuttgart-lidl-lidl-wildunger-strasse-4-stuttgart-single-2026-10-12-0-75",
@@ -1433,7 +1907,359 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-birkheckenstrasse-4-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Birkheckenstraße",
+    "chain": "Penny",
+    "address": "Birkheckenstraße 4, 70599 Stuttgart",
+    "lat": 48.722528,
+    "lon": 9.208899,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-bottroper-strasse-16-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Bottroper Straße",
+    "chain": "Penny",
+    "address": "Bottroper Straße 16, 70376 Stuttgart",
+    "lat": 48.817935,
+    "lon": 9.214864,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-breitscheidstrasse-12-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Breitscheidstraße",
+    "chain": "Penny",
+    "address": "Breitscheidstraße 12, 70174 Stuttgart",
+    "lat": 48.779593,
+    "lon": 9.167273,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-flamingoweg-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Flamingoweg",
+    "chain": "Penny",
+    "address": "Flamingoweg, 70378 Stuttgart",
+    "lat": 48.830137,
+    "lon": 9.231361,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-haldenrainstrasse-77-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Haldenrainstraße",
+    "chain": "Penny",
+    "address": "Haldenrainstraße 77, 70437 Stuttgart",
+    "lat": 48.831133,
+    "lon": 9.186727,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-haussmannstrasse-103-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Haußmannstraße",
+    "chain": "Penny",
+    "address": "Haußmannstraße 103, 70188 Stuttgart",
+    "lat": 48.785543,
+    "lon": 9.200104,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-bildaeckerstrasse-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Heumaden",
+    "chain": "Penny",
+    "address": "Bildäckerstraße, 70186 Stuttgart",
+    "lat": 48.746103,
+    "lon": 9.232279,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-kleinknechtstrasse-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Kleinknechtstraße",
+    "chain": "Penny",
+    "address": "Kleinknechtstraße, 70567 Stuttgart",
+    "lat": 48.726662,
+    "lon": 9.151094,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-kroetenweg-3-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Krötenweg",
+    "chain": "Penny",
+    "address": "Krötenweg 3, 70499 Stuttgart",
+    "lat": 48.803948,
+    "lon": 9.090631,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-loewen-markt-5-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Löwen-Markt",
+    "chain": "Penny",
+    "address": "Löwen-Markt 5, 70499 Stuttgart",
+    "lat": 48.814475,
+    "lon": 9.113511,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-martha-schmidtmann-strasse-9-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Martha-Schmidtmann-Straße",
+    "chain": "Penny",
+    "address": "Martha-Schmidtmann-Straße 9, 70374 Stuttgart",
+    "lat": 48.808271,
+    "lon": 9.233264,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-neckarstrasse-207-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Neckarstraße",
+    "chain": "Penny",
+    "address": "Neckarstraße 207, 70190 Stuttgart",
+    "lat": 48.79318,
+    "lon": 9.201142,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-platz-am-alten-haus-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Platz am Alten Haus",
+    "chain": "Penny",
+    "address": "Platz am Alten Haus, 70329 Stuttgart",
+    "lat": 48.758732,
+    "lon": 9.254456,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-schwabstrasse-53-61-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Schwabstraße",
+    "chain": "Penny",
+    "address": "Schwabstraße 53-61, 70197 Stuttgart",
+    "lat": 48.771749,
+    "lon": 9.15702,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-ulmer-strasse-205-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Ulmer Straße",
+    "chain": "Penny",
+    "address": "Ulmer Straße 205, 70327 Stuttgart",
+    "lat": 48.779601,
+    "lon": 9.233254,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "stuttgart-penny-penny-vera-vollmer-strasse-8-stuttgart-single-2026-10-19-0-99",
+    "city": "stuttgart",
+    "store": "Penny Vera-Vollmer-Straße",
+    "chain": "Penny",
+    "address": "Vera-Vollmer-Straße 8, 70469 Stuttgart",
+    "lat": 48.816267,
+    "lon": 9.166902,
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "tengen-lidl-region-single-2026-10-12-0-75",
@@ -1460,7 +2286,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "tengen-penny-region-single-2026-10-19-0-99",
+    "city": "tengen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Tengen",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   },
   {
     "id": "volkertshausen-lidl-region-single-2026-10-12-0-75",
@@ -1487,6 +2333,26 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/monster-energy",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-16T08:27:52Z"
+    "lastUpdated": "2026-10-16T09:41:16Z"
+  },
+  {
+    "id": "volkertshausen-penny-region-single-2026-10-19-0-99",
+    "city": "volkertshausen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Volkertshausen",
+    "product": "Monster Energy (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.5,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-10-19",
+    "validTo": "2026-10-24",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Monster",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-16T09:41:16Z"
   }
 ]
