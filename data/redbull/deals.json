@@ -17,7 +17,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "aach-kaufland-region-single-2026-10-26-0-88",
@@ -37,7 +37,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "aach-lidl-region-pack6-2026-11-02-4-99",
@@ -57,7 +57,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "aach-lidl-region-pack6-2026-11-06-4-99",
@@ -77,7 +77,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "aach-mueller-region-single-2026-10-26-0-99",
@@ -97,7 +97,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "aach-mueller-region-single-2026-11-02-0-99",
+    "city": "aach",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Aach",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "aach-netto-netto-singener-strasse-16-aach-single-2026-11-02-1-49",
+    "city": "aach",
+    "store": "Netto Singener Straße",
+    "chain": "Netto",
+    "address": "Singener Straße 16, 78267 Aach",
+    "lat": 47.841231,
+    "lon": 8.852674,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "allensbach-aldi-sued-aldi-sued-prof-maier-leibnitz-strasse-14-allensbach-single-2026-10-26-0-89",
@@ -119,7 +161,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "allensbach-edeka-edeka-zum-riesenberg-5-allensbach-pack24-2026-10-29-33-36",
@@ -141,7 +183,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "allensbach-kaufland-region-single-2026-10-26-0-88",
@@ -161,7 +203,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "allensbach-lidl-region-pack6-2026-11-02-4-99",
@@ -181,7 +223,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "allensbach-lidl-region-pack6-2026-11-06-4-99",
@@ -201,7 +243,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "allensbach-mueller-region-single-2026-10-26-0-99",
@@ -221,7 +263,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "allensbach-mueller-region-single-2026-11-02-0-99",
+    "city": "allensbach",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Allensbach",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "allensbach-netto-netto-konstanzer-strasse-13-allensbach-single-2026-11-02-1-49",
+    "city": "allensbach",
+    "store": "Netto Konstanzer Straße",
+    "chain": "Netto",
+    "address": "Konstanzer Straße 13, 78476 Allensbach",
+    "lat": 47.714969,
+    "lon": 9.068716,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "allensbach-thomas-philipps-region-single-2026-10-26-0-92",
@@ -240,7 +324,7 @@
     "validTo": "2026-10-31",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z",
+    "lastUpdated": "2026-10-29T11:29:26Z",
     "note": "zzgl. 0,25 € Pfand"
   },
   {
@@ -261,7 +345,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "bodman-ludwigshafen-kaufland-region-single-2026-10-26-0-88",
@@ -281,7 +365,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "bodman-ludwigshafen-lidl-region-pack6-2026-11-02-4-99",
@@ -301,7 +385,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "bodman-ludwigshafen-lidl-region-pack6-2026-11-06-4-99",
@@ -321,7 +405,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "bodman-ludwigshafen-mueller-region-single-2026-10-26-0-99",
@@ -341,7 +425,47 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "bodman-ludwigshafen-mueller-region-single-2026-11-02-0-99",
+    "city": "bodman-ludwigshafen",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Bodman-Ludwigshafen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "bodman-ludwigshafen-netto-region-single-2026-11-02-1-49",
+    "city": "bodman-ludwigshafen",
+    "store": "Netto",
+    "chain": "Netto",
+    "address": "Filiale im Raum Bodman-Ludwigshafen",
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "bodman-ludwigshafen-thomas-philipps-region-single-2026-10-26-0-92",
@@ -361,7 +485,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "engen-aldi-sued-aldi-sued-hegaustrasse-4-engen-single-2026-10-26-0-89",
@@ -383,7 +507,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "engen-kaufland-region-single-2026-10-26-0-88",
@@ -403,7 +527,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "engen-lidl-lidl-hegaustrasse-3-engen-pack6-2026-11-02-4-99",
@@ -425,7 +549,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "engen-lidl-lidl-hegaustrasse-3-engen-pack6-2026-11-06-4-99",
@@ -447,7 +571,29 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "engen-netto-netto-breitestrasse-12-engen-single-2026-11-02-1-49",
+    "city": "engen",
+    "store": "Netto Breitestraße",
+    "chain": "Netto",
+    "address": "Breitestraße 12, 78234 Engen",
+    "lat": 47.855472,
+    "lon": 8.77448,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "engen-thomas-philipps-region-single-2026-10-26-0-92",
@@ -466,7 +612,7 @@
     "validTo": "2026-10-31",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gailingen-am-hochrhein-aldi-sued-aldi-sued-auf-der-hoehe-2-gailingen-am-hochrhein-single-2026-10-26-0-89",
@@ -488,7 +634,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gailingen-am-hochrhein-kaufland-region-single-2026-10-26-0-88",
@@ -508,7 +654,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gailingen-am-hochrhein-lidl-lidl-im-rheinauer-7-gailingen-am-hochrhein-pack6-2026-11-02-4-99",
@@ -530,7 +676,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gailingen-am-hochrhein-lidl-lidl-im-rheinauer-7-gailingen-am-hochrhein-pack6-2026-11-06-4-99",
@@ -552,7 +698,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gailingen-am-hochrhein-mueller-region-single-2026-10-26-0-99",
@@ -572,7 +718,47 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "gailingen-am-hochrhein-mueller-region-single-2026-11-02-0-99",
+    "city": "gailingen-am-hochrhein",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Gailingen am Hochrhein",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "gailingen-am-hochrhein-netto-region-single-2026-11-02-1-49",
+    "city": "gailingen-am-hochrhein",
+    "store": "Netto",
+    "chain": "Netto",
+    "address": "Filiale im Raum Gailingen am Hochrhein",
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gottmadingen-aldi-sued-aldi-sued-kornblumenweg-39-gottmadingen-single-2026-10-26-0-89",
@@ -594,7 +780,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gottmadingen-kaufland-region-single-2026-10-26-0-88",
@@ -614,7 +800,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gottmadingen-lidl-lidl-hauptstrasse-5-gottmadingen-pack6-2026-11-02-4-99",
@@ -636,7 +822,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gottmadingen-lidl-lidl-hauptstrasse-5-gottmadingen-pack6-2026-11-06-4-99",
@@ -658,7 +844,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gottmadingen-lidl-lidl-stockenweg-4-gottmadingen-pack6-2026-11-02-4-99",
@@ -680,7 +866,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gottmadingen-lidl-lidl-stockenweg-4-gottmadingen-pack6-2026-11-06-4-99",
@@ -702,7 +888,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "gottmadingen-mueller-mueller-hauptstrasse-gottmadingen-single-2026-10-26-0-99",
@@ -724,7 +910,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "gottmadingen-mueller-mueller-hauptstrasse-gottmadingen-single-2026-11-02-0-99",
+    "city": "gottmadingen",
+    "store": "Müller Hauptstraße",
+    "chain": "Müller",
+    "address": "Hauptstraße, 78244 Gottmadingen",
+    "lat": 47.736531,
+    "lon": 8.772592,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "gottmadingen-netto-region-single-2026-11-02-1-49",
+    "city": "gottmadingen",
+    "store": "Netto",
+    "chain": "Netto",
+    "address": "Filiale im Raum Gottmadingen",
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hilzingen-aldi-sued-region-single-2026-10-26-0-89",
@@ -744,7 +972,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hilzingen-kaufland-region-single-2026-10-26-0-88",
@@ -764,7 +992,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hilzingen-lidl-region-pack6-2026-11-02-4-99",
@@ -784,7 +1012,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hilzingen-lidl-region-pack6-2026-11-06-4-99",
@@ -804,7 +1032,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hilzingen-mueller-region-single-2026-10-26-0-99",
@@ -824,7 +1052,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "hilzingen-mueller-region-single-2026-11-02-0-99",
+    "city": "hilzingen",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Hilzingen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "hilzingen-netto-netto-bruehlstrasse-5-hilzingen-single-2026-11-02-1-49",
+    "city": "hilzingen",
+    "store": "Netto Brühlstraße",
+    "chain": "Netto",
+    "address": "Brühlstraße 5, 78247 Hilzingen",
+    "lat": 47.760081,
+    "lon": 8.782909,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hohenfels-aldi-sued-region-single-2026-10-26-0-89",
@@ -844,7 +1114,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hohenfels-kaufland-region-single-2026-10-26-0-88",
@@ -864,7 +1134,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hohenfels-lidl-region-pack6-2026-11-02-4-99",
@@ -884,7 +1154,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hohenfels-lidl-region-pack6-2026-11-06-4-99",
@@ -904,7 +1174,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hohenfels-mueller-region-single-2026-10-26-0-99",
@@ -924,7 +1194,47 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "hohenfels-mueller-region-single-2026-11-02-0-99",
+    "city": "hohenfels",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Hohenfels",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "hohenfels-netto-region-single-2026-11-02-1-49",
+    "city": "hohenfels",
+    "store": "Netto",
+    "chain": "Netto",
+    "address": "Filiale im Raum Hohenfels",
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "hohenfels-thomas-philipps-region-single-2026-10-26-0-92",
@@ -944,7 +1254,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-aldi-sued-aldi-sued-bodanplatz-1-konstanz-single-2026-10-26-0-89",
@@ -966,7 +1276,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-aldi-sued-aldi-sued-oberlohnstrasse-7-konstanz-single-2026-10-26-0-89",
@@ -988,7 +1298,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-edeka-edeka-riedstrasse-2-konstanz-pack24-2026-10-29-33-36",
@@ -1010,7 +1320,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-edeka-edeka-martin-schleyer-strasse-39-konstanz-pack24-2026-10-29-33-36",
@@ -1032,7 +1342,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-edeka-edeka-bodanstrasse-20-konstanz-pack24-2026-10-29-33-36",
@@ -1054,7 +1364,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-edeka-edeka-reichenaustrasse-36-konstanz-pack24-2026-10-29-33-36",
@@ -1076,7 +1386,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-edeka-edeka-staader-strasse-2-konstanz-pack24-2026-10-29-33-36",
@@ -1098,7 +1408,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-edeka-edeka-gottlieber-strasse-34-konstanz-pack24-2026-10-29-33-36",
@@ -1120,7 +1430,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-edeka-edeka-allensbacher-strasse-3-konstanz-pack24-2026-10-29-33-36",
@@ -1142,7 +1452,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-kaufland-kaufland-carl-benz-strasse-22-konstanz-single-2026-10-26-0-88",
@@ -1164,7 +1474,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-kaufland-kaufland-zaehringerplatz-9-konstanz-single-2026-10-26-0-88",
@@ -1186,7 +1496,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-lidl-lidl-kreuzlinger-strasse-konstanz-pack6-2026-11-02-4-99",
@@ -1208,7 +1518,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-lidl-lidl-kreuzlinger-strasse-konstanz-pack6-2026-11-06-4-99",
@@ -1230,7 +1540,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-lidl-lidl-max-stromeyer-strasse-15-konstanz-pack6-2026-11-02-4-99",
@@ -1252,7 +1562,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-lidl-lidl-max-stromeyer-strasse-15-konstanz-pack6-2026-11-06-4-99",
@@ -1274,7 +1584,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-mueller-mueller-marktstaette-13-konstanz-single-2026-10-26-0-99",
@@ -1296,7 +1606,73 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "konstanz-mueller-mueller-marktstaette-13-konstanz-single-2026-11-02-0-99",
+    "city": "konstanz",
+    "store": "Müller Marktstätte",
+    "chain": "Müller",
+    "address": "Marktstätte 13, 78462 Konstanz",
+    "lat": 47.660164,
+    "lon": 9.175549,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "konstanz-netto-netto-sepp-biehler-strasse-1-konstanz-single-2026-11-02-1-49",
+    "city": "konstanz",
+    "store": "Netto Sepp-Biehler-Straße",
+    "chain": "Netto",
+    "address": "Sepp-Biehler-Straße 1, 78464 Konstanz",
+    "lat": 47.681321,
+    "lon": 9.200681,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "konstanz-netto-netto-wendelsbergstrasse-4-konstanz-single-2026-11-02-1-49",
+    "city": "konstanz",
+    "store": "Netto Wendelsbergstraße",
+    "chain": "Netto",
+    "address": "Wendelsbergstraße 4, 78465 Konstanz",
+    "lat": 47.73229,
+    "lon": 9.115077,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "konstanz-thomas-philipps-region-single-2026-10-26-0-92",
@@ -1315,7 +1691,7 @@
     "validTo": "2026-10-31",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z",
+    "lastUpdated": "2026-10-29T11:29:26Z",
     "note": "zzgl. 0,25 € Pfand"
   },
   {
@@ -1338,7 +1714,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "leonberg-aldi-sued-aldi-sued-ulmer-strasse-34-leonberg-single-2026-10-26-0-89",
@@ -1360,7 +1736,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "leonberg-kaufland-kaufland-roemerstrasse-34-leonberg-single-2026-10-26-0-88",
@@ -1382,7 +1758,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "leonberg-lidl-lidl-ditzinger-strasse-79-leonberg-pack6-2026-11-02-4-99",
@@ -1404,7 +1780,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "leonberg-lidl-lidl-ditzinger-strasse-79-leonberg-pack6-2026-11-06-4-99",
@@ -1426,7 +1802,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "leonberg-lidl-lidl-glemseckstrasse-65-leonberg-pack6-2026-11-02-4-99",
@@ -1448,7 +1824,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "leonberg-lidl-lidl-glemseckstrasse-65-leonberg-pack6-2026-11-06-4-99",
@@ -1470,7 +1846,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "leonberg-mueller-region-single-2026-10-26-0-99",
@@ -1490,7 +1866,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "leonberg-mueller-region-single-2026-11-02-0-99",
+    "city": "leonberg",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Leonberg",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "leonberg-netto-netto-wilhelmstrasse-13-leonberg-single-2026-11-02-1-49",
+    "city": "leonberg",
+    "store": "Netto Wilhelmstraße",
+    "chain": "Netto",
+    "address": "Wilhelmstraße 13, 71229 Leonberg",
+    "lat": 48.790345,
+    "lon": 9.008857,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "moos-aldi-sued-region-single-2026-10-26-0-89",
@@ -1510,7 +1928,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "moos-kaufland-region-single-2026-10-26-0-88",
@@ -1530,7 +1948,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "moos-lidl-region-pack6-2026-11-02-4-99",
@@ -1550,7 +1968,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "moos-lidl-region-pack6-2026-11-06-4-99",
@@ -1570,7 +1988,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "moos-mueller-region-single-2026-10-26-0-99",
@@ -1590,7 +2008,47 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "moos-mueller-region-single-2026-11-02-0-99",
+    "city": "moos",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Moos",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "moos-netto-region-single-2026-11-02-1-49",
+    "city": "moos",
+    "store": "Netto",
+    "chain": "Netto",
+    "address": "Filiale im Raum Moos",
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "muehlhausen-ehingen-aldi-sued-aldi-sued-hohenkraeher-bruehl-27-muehlhausen-ehingen-single-2026-10-26-0-89",
@@ -1612,7 +2070,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "muehlhausen-ehingen-kaufland-region-single-2026-10-26-0-88",
@@ -1632,7 +2090,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "muehlhausen-ehingen-lidl-region-pack6-2026-11-02-4-99",
@@ -1652,7 +2110,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "muehlhausen-ehingen-lidl-region-pack6-2026-11-06-4-99",
@@ -1672,7 +2130,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "muehlhausen-ehingen-mueller-region-single-2026-10-26-0-99",
@@ -1692,7 +2150,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "muehlhausen-ehingen-mueller-region-single-2026-11-02-0-99",
+    "city": "muehlhausen-ehingen",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Mühlhausen-Ehingen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "muehlhausen-ehingen-netto-netto-hohenkraeher-bruehl-muehlhausen-ehingen-single-2026-11-02-1-49",
+    "city": "muehlhausen-ehingen",
+    "store": "Netto Hohenkräher Brühl",
+    "chain": "Netto",
+    "address": "Hohenkräher Brühl, 78259 Mühlhausen-Ehingen",
+    "lat": 47.802303,
+    "lon": 8.823278,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "oehningen-aldi-sued-region-single-2026-10-26-0-89",
@@ -1712,7 +2212,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "oehningen-kaufland-region-single-2026-10-26-0-88",
@@ -1732,7 +2232,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "oehningen-lidl-lidl-hoeristrasse-3-oehningen-pack6-2026-11-02-4-99",
@@ -1754,7 +2254,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "oehningen-lidl-lidl-hoeristrasse-3-oehningen-pack6-2026-11-06-4-99",
@@ -1776,7 +2276,27 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "oehningen-netto-region-single-2026-11-02-1-49",
+    "city": "oehningen",
+    "store": "Netto",
+    "chain": "Netto",
+    "address": "Filiale im Raum Öhningen",
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "orsingen-nenzingen-aldi-sued-region-single-2026-10-26-0-89",
@@ -1796,7 +2316,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "orsingen-nenzingen-kaufland-region-single-2026-10-26-0-88",
@@ -1816,7 +2336,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "orsingen-nenzingen-lidl-region-pack6-2026-11-02-4-99",
@@ -1836,7 +2356,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "orsingen-nenzingen-lidl-region-pack6-2026-11-06-4-99",
@@ -1856,7 +2376,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "orsingen-nenzingen-mueller-region-single-2026-10-26-0-99",
@@ -1876,7 +2396,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "orsingen-nenzingen-mueller-region-single-2026-11-02-0-99",
+    "city": "orsingen-nenzingen",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Orsingen-Nenzingen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "orsingen-nenzingen-netto-netto-am-alten-sportplatz-1-orsingen-nenzingen-single-2026-11-02-1-49",
+    "city": "orsingen-nenzingen",
+    "store": "Netto Am Alten Sportplatz",
+    "chain": "Netto",
+    "address": "Am Alten Sportplatz 1, 78359 Orsingen-Nenzingen",
+    "lat": 47.84052,
+    "lon": 8.936216,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "radolfzell-am-bodensee-aldi-sued-aldi-sued-eisenbahnstrasse-1-2-radolfzell-am-bodensee-single-2026-10-26-0-89",
@@ -1898,7 +2460,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "radolfzell-am-bodensee-kaufland-kaufland-markthallenstrasse-1-radolfzell-am-bodensee-single-2026-10-26-0-88",
@@ -1920,7 +2482,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "radolfzell-am-bodensee-lidl-lidl-lippenwiese-11-radolfzell-am-bodensee-pack6-2026-11-02-4-99",
@@ -1942,7 +2504,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "radolfzell-am-bodensee-lidl-lidl-lippenwiese-11-radolfzell-am-bodensee-pack6-2026-11-06-4-99",
@@ -1964,7 +2526,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "radolfzell-am-bodensee-mueller-mueller-hoellturm-passage-radolfzell-am-bodensee-single-2026-10-26-0-99",
@@ -1986,7 +2548,51 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "radolfzell-am-bodensee-mueller-mueller-hoellturm-passage-radolfzell-am-bodensee-single-2026-11-02-0-99",
+    "city": "radolfzell-am-bodensee",
+    "store": "Müller Höllturm-Passage",
+    "chain": "Müller",
+    "address": "Höllturm-Passage, 78315 Radolfzell am Bodensee",
+    "lat": 47.738134,
+    "lon": 8.971237,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "radolfzell-am-bodensee-netto-netto-badener-strasse-32-radolfzell-am-bodensee-single-2026-11-02-1-49",
+    "city": "radolfzell-am-bodensee",
+    "store": "Netto Badener Straße",
+    "chain": "Netto",
+    "address": "Badener Straße 32, 78315 Radolfzell am Bodensee",
+    "lat": 47.772552,
+    "lon": 8.983304,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "reichenau-aldi-sued-region-single-2026-10-26-0-89",
@@ -2006,7 +2612,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "reichenau-edeka-region-pack24-2026-10-29-33-36",
@@ -2026,7 +2632,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "reichenau-kaufland-region-single-2026-10-26-0-88",
@@ -2046,7 +2652,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "reichenau-lidl-lidl-am-wollmatinger-ried-2-reichenau-pack6-2026-11-02-4-99",
@@ -2068,7 +2674,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "reichenau-lidl-lidl-am-wollmatinger-ried-2-reichenau-pack6-2026-11-06-4-99",
@@ -2090,7 +2696,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "reichenau-mueller-region-single-2026-10-26-0-99",
@@ -2110,7 +2716,47 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "reichenau-mueller-region-single-2026-11-02-0-99",
+    "city": "reichenau",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Reichenau",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "reichenau-netto-region-single-2026-11-02-1-49",
+    "city": "reichenau",
+    "store": "Netto",
+    "chain": "Netto",
+    "address": "Filiale im Raum Reichenau",
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "reichenau-thomas-philipps-region-single-2026-10-26-0-92",
@@ -2129,7 +2775,7 @@
     "validTo": "2026-10-31",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z",
+    "lastUpdated": "2026-10-29T11:29:26Z",
     "note": "zzgl. 0,25 € Pfand"
   },
   {
@@ -2152,7 +2798,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "rielasingen-worblingen-kaufland-region-single-2026-10-26-0-88",
@@ -2172,7 +2818,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "rielasingen-worblingen-lidl-region-pack6-2026-11-02-4-99",
@@ -2192,7 +2838,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "rielasingen-worblingen-lidl-region-pack6-2026-11-06-4-99",
@@ -2212,7 +2858,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "rielasingen-worblingen-mueller-region-single-2026-10-26-0-99",
@@ -2232,7 +2878,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "rielasingen-worblingen-mueller-region-single-2026-11-02-0-99",
+    "city": "rielasingen-worblingen",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Rielasingen-Worblingen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "rielasingen-worblingen-netto-netto-hauptstrasse-rielasingen-worblingen-single-2026-11-02-1-49",
+    "city": "rielasingen-worblingen",
+    "store": "Netto Hauptstraße",
+    "chain": "Netto",
+    "address": "Hauptstraße, 78239 Rielasingen-Worblingen",
+    "lat": 47.734639,
+    "lon": 8.837111,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "singen-aldi-sued-aldi-sued-industriestrasse-5-singen-single-2026-10-26-0-89",
@@ -2254,7 +2942,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "singen-aldi-sued-aldi-sued-wehrdstrasse-6-singen-single-2026-10-26-0-89",
@@ -2276,7 +2964,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "singen-aldi-sued-aldi-sued-werner-von-siemens-strasse-3-rielasingen-worblingen-single-2026-10-26-0-89",
@@ -2298,7 +2986,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "singen-kaufland-kaufland-georg-fischer-strasse-15-singen-single-2026-10-26-0-88",
@@ -2320,7 +3008,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "singen-lidl-lidl-heinrich-weber-platz-singen-pack6-2026-11-02-4-99",
@@ -2342,7 +3030,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "singen-lidl-lidl-heinrich-weber-platz-singen-pack6-2026-11-06-4-99",
@@ -2364,7 +3052,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "singen-lidl-lidl-rielasinger-strasse-singen-pack6-2026-11-02-4-99",
@@ -2386,7 +3074,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "singen-lidl-lidl-rielasinger-strasse-singen-pack6-2026-11-06-4-99",
@@ -2408,7 +3096,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "singen-mueller-mueller-bahnhofstrasse-29-singen-single-2026-10-26-0-99",
@@ -2430,7 +3118,51 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "singen-mueller-mueller-bahnhofstrasse-29-singen-single-2026-11-02-0-99",
+    "city": "singen",
+    "store": "Müller Bahnhofstraße",
+    "chain": "Müller",
+    "address": "Bahnhofstraße 29, 78224 Singen (Hohentwiel)",
+    "lat": 47.759632,
+    "lon": 8.840563,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "singen-netto-netto-hauptstrasse-rielasingen-worblingen-single-2026-11-02-1-49",
+    "city": "singen",
+    "store": "Netto Hauptstraße",
+    "chain": "Netto",
+    "address": "Hauptstraße, 78239 Rielasingen-Worblingen",
+    "lat": 47.734639,
+    "lon": 8.837111,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "steisslingen-aldi-sued-region-single-2026-10-26-0-89",
@@ -2450,7 +3182,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "steisslingen-kaufland-region-single-2026-10-26-0-88",
@@ -2470,7 +3202,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "steisslingen-lidl-region-pack6-2026-11-02-4-99",
@@ -2490,7 +3222,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "steisslingen-lidl-region-pack6-2026-11-06-4-99",
@@ -2510,7 +3242,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "steisslingen-mueller-region-single-2026-10-26-0-99",
@@ -2530,7 +3262,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "steisslingen-mueller-region-single-2026-11-02-0-99",
+    "city": "steisslingen",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Steißlingen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "steisslingen-netto-netto-singener-strasse-42a-steisslingen-single-2026-11-02-1-49",
+    "city": "steisslingen",
+    "store": "Netto Singener Straße",
+    "chain": "Netto",
+    "address": "Singener Straße 42a, 78256 Steißlingen",
+    "lat": 47.796549,
+    "lon": 8.920614,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stockach-aldi-sued-aldi-sued-messkircher-strasse-2-stockach-single-2026-10-26-0-89",
@@ -2552,7 +3326,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stockach-aldi-sued-aldi-sued-weissmuehlenstrasse-15-stockach-single-2026-10-26-0-89",
@@ -2574,7 +3348,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stockach-edeka-edeka-zoznegger-strasse-23-stockach-pack24-2026-10-29-33-36",
@@ -2596,7 +3370,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stockach-edeka-edeka-bahnhofstrasse-10-stockach-pack24-2026-10-29-33-36",
@@ -2618,7 +3392,7 @@
     "note": "Preis je Dose beim Kauf im 24er-Pack · zzgl. Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stockach-kaufland-region-single-2026-10-26-0-88",
@@ -2638,7 +3412,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stockach-lidl-region-pack6-2026-11-02-4-99",
@@ -2658,7 +3432,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stockach-lidl-region-pack6-2026-11-06-4-99",
@@ -2678,7 +3452,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stockach-mueller-mueller-goethestrasse-1-stockach-single-2026-10-26-0-99",
@@ -2700,7 +3474,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stockach-mueller-mueller-goethestrasse-1-stockach-single-2026-11-02-0-99",
+    "city": "stockach",
+    "store": "Müller Goethestraße",
+    "chain": "Müller",
+    "address": "Goethestraße 1, 78333 Stockach",
+    "lat": 47.85112,
+    "lon": 9.010361,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stockach-netto-region-single-2026-11-02-1-49",
+    "city": "stockach",
+    "store": "Netto",
+    "chain": "Netto",
+    "address": "Filiale im Raum Stockach",
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stockach-thomas-philipps-region-single-2026-10-26-0-92",
@@ -2720,7 +3536,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-adalbert-stifter-strasse-103-stuttgart-single-2026-10-26-0-89",
@@ -2742,7 +3558,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-am-kochenhof-10-stuttgart-single-2026-10-26-0-89",
@@ -2764,7 +3580,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-am-stellwerk-1-stuttgart-single-2026-10-26-0-89",
@@ -2786,7 +3602,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-augsburger-strasse-740-stuttgart-single-2026-10-26-0-89",
@@ -2808,7 +3624,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-bottroper-strasse-18-stuttgart-single-2026-10-26-0-89",
@@ -2830,7 +3646,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-boeblinger-strasse-253-stuttgart-single-2026-10-26-0-89",
@@ -2852,7 +3668,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-deckerstrasse-75-stuttgart-single-2026-10-26-0-89",
@@ -2874,7 +3690,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-gablenberger-hauptstrasse-32-stuttgart-single-2026-10-26-0-89",
@@ -2896,7 +3712,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-galileistrasse-7-stuttgart-single-2026-10-26-0-89",
@@ -2918,7 +3734,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-heimsheimer-strasse-34-stuttgart-single-2026-10-26-0-89",
@@ -2940,7 +3756,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-koenigstrasse-38-stuttgart-single-2026-10-26-0-89",
@@ -2962,7 +3778,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-loeffelstrasse-3-7-stuttgart-single-2026-10-26-0-89",
@@ -2984,7 +3800,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-mailaender-platz-7-stuttgart-single-2026-10-26-0-89",
@@ -3006,7 +3822,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-schwabenplatz-1-stuttgart-single-2026-10-26-0-89",
@@ -3028,7 +3844,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-schwieberdinger-strasse-62-stuttgart-single-2026-10-26-0-89",
@@ -3050,7 +3866,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-sophie-tschorn-strasse-1-stuttgart-single-2026-10-26-0-89",
@@ -3072,7 +3888,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-sophienstrasse-21-stuttgart-single-2026-10-26-0-89",
@@ -3094,7 +3910,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-stuttgarter-strasse-9-stuttgart-single-2026-10-26-0-89",
@@ -3116,7 +3932,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-aldi-sued-aldi-sued-ulmer-strasse-269-stuttgart-single-2026-10-26-0-89",
@@ -3138,7 +3954,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-aldinger-strasse-70-stuttgart-single-2026-10-26-0-88",
@@ -3160,7 +3976,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-augsburger-strasse-460-stuttgart-single-2026-10-26-0-88",
@@ -3182,7 +3998,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-rembrandtstrasse-47-stuttgart-single-2026-10-26-0-88",
@@ -3204,7 +4020,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-schwabenplatz-1-stuttgart-single-2026-10-26-0-88",
@@ -3226,7 +4042,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-kaufland-kaufland-wildunger-strasse-2-4-stuttgart-single-2026-10-26-0-88",
@@ -3248,7 +4064,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-adestrasse-30-stuttgart-pack6-2026-11-02-4-99",
@@ -3270,7 +4086,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-adestrasse-30-stuttgart-pack6-2026-11-06-4-99",
@@ -3292,7 +4108,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-blumenstrasse-18-20-stuttgart-pack6-2026-11-02-4-99",
@@ -3314,7 +4130,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-blumenstrasse-18-20-stuttgart-pack6-2026-11-06-4-99",
@@ -3336,7 +4152,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-bottroper-strasse-8a-stuttgart-pack6-2026-11-02-4-99",
@@ -3358,7 +4174,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-bottroper-strasse-8a-stuttgart-pack6-2026-11-06-4-99",
@@ -3380,7 +4196,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-gerlinger-strasse-96-stuttgart-pack6-2026-11-02-4-99",
@@ -3402,7 +4218,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-gerlinger-strasse-96-stuttgart-pack6-2026-11-06-4-99",
@@ -3424,7 +4240,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-griegstrasse-2-stuttgart-pack6-2026-11-02-4-99",
@@ -3446,7 +4262,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-griegstrasse-2-stuttgart-pack6-2026-11-06-4-99",
@@ -3468,7 +4284,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-hauptstaetter-strasse-111-stuttgart-pack6-2026-11-02-4-99",
@@ -3490,7 +4306,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-hauptstaetter-strasse-111-stuttgart-pack6-2026-11-06-4-99",
@@ -3512,7 +4328,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-heigelinstrasse-4-stuttgart-pack6-2026-11-02-4-99",
@@ -3534,7 +4350,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-heigelinstrasse-4-stuttgart-pack6-2026-11-06-4-99",
@@ -3556,7 +4372,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-heiligenwiesen-35-stuttgart-pack6-2026-11-02-4-99",
@@ -3578,7 +4394,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-heiligenwiesen-35-stuttgart-pack6-2026-11-06-4-99",
@@ -3600,7 +4416,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-hofener-strasse-126-stuttgart-pack6-2026-11-02-4-99",
@@ -3622,7 +4438,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-hofener-strasse-126-stuttgart-pack6-2026-11-06-4-99",
@@ -3644,7 +4460,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-marienstrasse-12-stuttgart-pack6-2026-11-02-4-99",
@@ -3666,7 +4482,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-marienstrasse-12-stuttgart-pack6-2026-11-06-4-99",
@@ -3688,7 +4504,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-osterbronnstrasse-50-stuttgart-pack6-2026-11-02-4-99",
@@ -3710,7 +4526,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-osterbronnstrasse-50-stuttgart-pack6-2026-11-06-4-99",
@@ -3732,7 +4548,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-pforzheimer-strasse-338-342-stuttgart-pack6-2026-11-02-4-99",
@@ -3754,7 +4570,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-pforzheimer-strasse-338-342-stuttgart-pack6-2026-11-06-4-99",
@@ -3776,7 +4592,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-rosensteinstrasse-55-stuttgart-pack6-2026-11-02-4-99",
@@ -3798,7 +4614,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-rosensteinstrasse-55-stuttgart-pack6-2026-11-06-4-99",
@@ -3820,7 +4636,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-schwabstrasse-91-stuttgart-pack6-2026-11-02-4-99",
@@ -3842,7 +4658,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-schwabstrasse-91-stuttgart-pack6-2026-11-06-4-99",
@@ -3864,7 +4680,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-stuttgarter-strasse-32-stuttgart-pack6-2026-11-02-4-99",
@@ -3886,7 +4702,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-stuttgarter-strasse-32-stuttgart-pack6-2026-11-06-4-99",
@@ -3908,7 +4724,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-unter-dem-birkenkopf-19-stuttgart-pack6-2026-11-02-4-99",
@@ -3930,7 +4746,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-unter-dem-birkenkopf-19-stuttgart-pack6-2026-11-06-4-99",
@@ -3952,7 +4768,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-vaihinger-strasse-115-stuttgart-pack6-2026-11-02-4-99",
@@ -3974,7 +4790,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-vaihinger-strasse-115-stuttgart-pack6-2026-11-06-4-99",
@@ -3996,7 +4812,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-wildunger-strasse-4-stuttgart-pack6-2026-11-02-4-99",
@@ -4018,7 +4834,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-lidl-lidl-wildunger-strasse-4-stuttgart-pack6-2026-11-06-4-99",
@@ -4040,7 +4856,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-mueller-mueller-marktplatz-4-stuttgart-single-2026-10-26-0-99",
@@ -4062,7 +4878,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-mueller-mueller-marktplatz-4-stuttgart-single-2026-11-02-0-99",
+    "city": "stuttgart",
+    "store": "Müller Beauty Store",
+    "chain": "Müller",
+    "address": "Marktplatz 4, 70173 Stuttgart",
+    "lat": 48.775427,
+    "lon": 9.177689,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-mueller-mueller-europaplatz-20-stuttgart-single-2026-10-26-0-99",
@@ -4084,7 +4922,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-mueller-mueller-europaplatz-20-stuttgart-single-2026-11-02-0-99",
+    "city": "stuttgart",
+    "store": "Müller Europaplatz",
+    "chain": "Müller",
+    "address": "Europaplatz 20, 70565 Stuttgart",
+    "lat": 48.713699,
+    "lon": 9.160236,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-mueller-mueller-hauptstrasse-5-stuttgart-single-2026-10-26-0-99",
@@ -4106,7 +4966,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-mueller-mueller-hauptstrasse-5-stuttgart-single-2026-11-02-0-99",
+    "city": "stuttgart",
+    "store": "Müller Hauptstraße",
+    "chain": "Müller",
+    "address": "Hauptstraße 5, 70563 Stuttgart",
+    "lat": 48.729439,
+    "lon": 9.112288,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-mueller-mueller-koenigstrasse-5-stuttgart-single-2026-10-26-0-99",
@@ -4128,7 +5010,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-mueller-mueller-koenigstrasse-5-stuttgart-single-2026-11-02-0-99",
+    "city": "stuttgart",
+    "store": "Müller Königstraße",
+    "chain": "Müller",
+    "address": "Königstraße 5, 70173 Stuttgart",
+    "lat": 48.780202,
+    "lon": 9.180166,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-mueller-mueller-otto-hirsch-bruecken-17-stuttgart-single-2026-10-26-0-99",
@@ -4150,7 +5054,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-mueller-mueller-otto-hirsch-bruecken-17-stuttgart-single-2026-11-02-0-99",
+    "city": "stuttgart",
+    "store": "Müller Otto-Hirsch-Brücken",
+    "chain": "Müller",
+    "address": "Otto-Hirsch-Brücken 17, 70329 Stuttgart",
+    "lat": 48.760772,
+    "lon": 9.25541,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "stuttgart-mueller-mueller-wildunger-strasse-2-4-stuttgart-single-2026-10-26-0-99",
@@ -4172,7 +5098,381 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-mueller-mueller-wildunger-strasse-2-4-stuttgart-single-2026-11-02-0-99",
+    "city": "stuttgart",
+    "store": "Müller Wildunger Straße",
+    "chain": "Müller",
+    "address": "Wildunger Straße 2-4, 70372 Stuttgart",
+    "lat": 48.80152,
+    "lon": 9.221288,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-aldinger-strasse-54-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Aldinger Straße",
+    "chain": "Netto",
+    "address": "Aldinger Straße 54, 70378 Stuttgart",
+    "lat": 48.839742,
+    "lon": 9.22735,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-biklenstrasse-10-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Biklenstraße",
+    "chain": "Netto",
+    "address": "Biklenstraße 10, 70327 Stuttgart",
+    "lat": 48.787591,
+    "lon": 9.248138,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-boeblinger-strasse-222-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Böblinger Straße",
+    "chain": "Netto",
+    "address": "Böblinger Straße 222, 70199 Stuttgart",
+    "lat": 48.757202,
+    "lon": 9.145708,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-dr-steinheil-weg-4-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Dr.-Steinheil-Weg",
+    "chain": "Netto",
+    "address": "Dr.-Steinheil-Weg 4, 70599 Stuttgart",
+    "lat": 48.697782,
+    "lon": 9.216941,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-elwertstrasse-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Elwertstraße",
+    "chain": "Netto",
+    "address": "Elwertstraße, 70372 Stuttgart",
+    "lat": 48.799981,
+    "lon": 9.219706,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-filderhauptstrasse-49-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Filderhauptstraße",
+    "chain": "Netto",
+    "address": "Filderhauptstraße 49, 70599 Stuttgart",
+    "lat": 48.701172,
+    "lon": 9.209982,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-freihofstrasse-6-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Freihofstraße",
+    "chain": "Netto",
+    "address": "Freihofstraße 6, 70439 Stuttgart",
+    "lat": 48.848727,
+    "lon": 9.156081,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-heusteigstrasse-105-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Heusteigstraße",
+    "chain": "Netto",
+    "address": "Heusteigstraße 105, 70180 Stuttgart",
+    "lat": 48.764515,
+    "lon": 9.17125,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-hohewartstrasse-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Hohewartstraße",
+    "chain": "Netto",
+    "address": "Hohewartstraße, 70469 Stuttgart",
+    "lat": 48.808533,
+    "lon": 9.156347,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-kornbergstrasse-15-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Kornbergstraße",
+    "chain": "Netto",
+    "address": "Kornbergstraße 15, 70176 Stuttgart",
+    "lat": 48.783554,
+    "lon": 9.161836,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-leharstrasse-5-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Leharstraße",
+    "chain": "Netto",
+    "address": "Leharstraße 5, 70195 Stuttgart",
+    "lat": 48.781485,
+    "lon": 9.131893,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-meluner-strasse-2-6-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Meluner Straße",
+    "chain": "Netto",
+    "address": "Meluner Straße 2-6, 70569 Stuttgart",
+    "lat": 48.738603,
+    "lon": 9.092404,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-memmingerstrasse-20-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Memmingerstraße",
+    "chain": "Netto",
+    "address": "Memmingerstraße 20, 70374 Stuttgart",
+    "lat": 48.810461,
+    "lon": 9.229589,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-nagoldstrasse-55-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Nagoldstraße",
+    "chain": "Netto",
+    "address": "Nagoldstraße 55, 70376 Stuttgart",
+    "lat": 48.820175,
+    "lon": 9.218281,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-schemppstrasse-83-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Schemppstraße",
+    "chain": "Netto",
+    "address": "Schemppstraße 83, 70619 Stuttgart",
+    "lat": 48.739664,
+    "lon": 9.21965,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "stuttgart-netto-netto-thomas-mann-strasse-9-stuttgart-single-2026-11-02-1-49",
+    "city": "stuttgart",
+    "store": "Netto Thomas-Mann-Straße",
+    "chain": "Netto",
+    "address": "Thomas-Mann-Straße 9, 70469 Stuttgart",
+    "lat": 48.807027,
+    "lon": 9.146719,
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "tengen-aldi-sued-region-single-2026-10-26-0-89",
@@ -4192,7 +5492,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "tengen-kaufland-region-single-2026-10-26-0-88",
@@ -4212,7 +5512,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "tengen-lidl-region-pack6-2026-11-02-4-99",
@@ -4232,7 +5532,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "tengen-lidl-region-pack6-2026-11-06-4-99",
@@ -4252,7 +5552,27 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "tengen-netto-region-single-2026-11-02-1-49",
+    "city": "tengen",
+    "store": "Netto",
+    "chain": "Netto",
+    "address": "Filiale im Raum Tengen",
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "tengen-thomas-philipps-region-single-2026-10-26-0-92",
@@ -4271,7 +5591,7 @@
     "validTo": "2026-10-31",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z",
+    "lastUpdated": "2026-10-29T11:29:26Z",
     "note": "zzgl. 0,25 € Pfand"
   },
   {
@@ -4292,7 +5612,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "volkertshausen-kaufland-region-single-2026-10-26-0-88",
@@ -4312,7 +5632,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "volkertshausen-lidl-region-pack6-2026-11-02-4-99",
@@ -4332,7 +5652,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "volkertshausen-lidl-region-pack6-2026-11-06-4-99",
@@ -4352,7 +5672,7 @@
     "note": "zzgl. 1,50 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
   },
   {
     "id": "volkertshausen-mueller-region-single-2026-10-26-0-99",
@@ -4372,6 +5692,46 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-10-29T10:22:52Z"
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "volkertshausen-mueller-region-single-2026-11-02-0-99",
+    "city": "volkertshausen",
+    "store": "Müller",
+    "chain": "Müller",
+    "address": "Filiale im Raum Volkertshausen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.99,
+    "pricePerUnit": 0.99,
+    "regularPrice": 1.59,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
+  },
+  {
+    "id": "volkertshausen-netto-region-single-2026-11-02-1-49",
+    "city": "volkertshausen",
+    "store": "Netto",
+    "chain": "Netto",
+    "address": "Filiale im Raum Volkertshausen",
+    "product": "Red Bull Summer Edition (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.355,
+    "price": 1.49,
+    "pricePerUnit": 1.49,
+    "regularPrice": 1.99,
+    "validFrom": "2026-11-02",
+    "validTo": "2026-11-07",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-10-29T11:29:26Z"
   }
 ]
