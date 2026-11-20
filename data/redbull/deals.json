@@ -1,5 +1,25 @@
 [
   {
+    "id": "aach-penny-region-single-2026-11-23-0-89",
+    "city": "aach",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Aach",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
     "id": "allensbach-nahkauf-region-single-2026-11-16-0-99",
     "city": "allensbach",
     "store": "Nahkauf",
@@ -17,7 +37,49 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "allensbach-penny-region-single-2026-11-23-0-89",
+    "city": "allensbach",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Allensbach",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "bodman-ludwigshafen-penny-penny-breite-12-bodman-ludwigshafen-single-2026-11-23-0-89",
+    "city": "bodman-ludwigshafen",
+    "store": "PENNY Bodman",
+    "chain": "Penny",
+    "address": "Breite 12, 78351 Bodman-Ludwigshafen",
+    "lat": 47.803906,
+    "lon": 9.025161,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "bodman-ludwigshafen-rewe-region-single-2026-11-16-0-99",
@@ -37,7 +99,47 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "engen-penny-region-single-2026-11-23-0-89",
+    "city": "engen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Engen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "gailingen-am-hochrhein-penny-region-single-2026-11-23-0-89",
+    "city": "gailingen-am-hochrhein",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Gailingen am Hochrhein",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "gailingen-am-hochrhein-rewe-region-single-2026-11-16-0-99",
@@ -57,7 +159,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "gottmadingen-penny-region-single-2026-11-23-0-89",
+    "city": "gottmadingen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Gottmadingen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "gottmadingen-rewe-rewe-hauptstrasse-7-1-gottmadingen-single-2026-11-16-0-99",
@@ -79,7 +201,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "hilzingen-penny-region-single-2026-11-23-0-89",
+    "city": "hilzingen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Hilzingen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "hilzingen-rewe-region-single-2026-11-16-0-99",
@@ -99,7 +241,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "hohenfels-nahkauf-nahkauf-hauptstrasse-40-hohenfels-single-2026-11-16-0-99",
@@ -121,7 +263,115 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "hohenfels-penny-region-single-2026-11-23-0-89",
+    "city": "hohenfels",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Hohenfels",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "konstanz-penny-penny-mainaustrasse-konstanz-single-2026-11-23-0-89",
+    "city": "konstanz",
+    "store": "Penny Mainaustraße",
+    "chain": "Penny",
+    "address": "Mainaustraße, 78464 Konstanz",
+    "lat": 47.682075,
+    "lon": 9.202275,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "konstanz-penny-penny-sonnenbuehlstrasse-98-konstanz-single-2026-11-23-0-89",
+    "city": "konstanz",
+    "store": "Penny Sonnenbühlstraße",
+    "chain": "Penny",
+    "address": "Sonnenbühlstraße 98, 78464 Konstanz",
+    "lat": 47.675538,
+    "lon": 9.197383,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "konstanz-penny-penny-stifterstrasse-65-konstanz-single-2026-11-23-0-89",
+    "city": "konstanz",
+    "store": "Penny Stifterstraße",
+    "chain": "Penny",
+    "address": "Stifterstraße 65, 78467 Konstanz",
+    "lat": 47.687451,
+    "lon": 9.156281,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "konstanz-penny-penny-wollmatinger-strasse-22-konstanz-single-2026-11-23-0-89",
+    "city": "konstanz",
+    "store": "Penny Wollmatinger Straße",
+    "chain": "Penny",
+    "address": "Wollmatinger Straße 22, 78467 Konstanz",
+    "lat": 47.676141,
+    "lon": 9.18017,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "konstanz-rewe-rewe-max-stromeyer-strasse-55-konstanz-single-2026-11-16-0-89",
@@ -143,7 +393,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "konstanz-rewe-rewe-max-stromeyer-strasse-55-konstanz-single-2026-11-16-0-99",
@@ -165,7 +415,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "konstanz-rewe-rewe-schneckenburgstrasse-3-konstanz-single-2026-11-16-0-89",
@@ -187,7 +437,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "konstanz-rewe-rewe-schneckenburgstrasse-3-konstanz-single-2026-11-16-0-99",
@@ -209,7 +459,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "leonberg-penny-region-single-2026-11-23-0-89",
+    "city": "leonberg",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Leonberg",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "leonberg-rewe-rewe-roemerstrasse-25-leonberg-single-2026-11-16-0-99",
@@ -231,7 +501,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "moos-nahkauf-region-single-2026-11-16-0-99",
@@ -251,7 +521,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "moos-penny-region-single-2026-11-23-0-89",
+    "city": "moos",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Moos",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "moos-rewe-region-single-2026-11-16-0-99",
@@ -271,7 +561,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "muehlhausen-ehingen-penny-region-single-2026-11-23-0-89",
+    "city": "muehlhausen-ehingen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Mühlhausen-Ehingen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "muehlhausen-ehingen-rewe-region-single-2026-11-16-0-99",
@@ -291,7 +601,47 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "oehningen-penny-region-single-2026-11-23-0-89",
+    "city": "oehningen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Öhningen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "orsingen-nenzingen-penny-region-single-2026-11-23-0-89",
+    "city": "orsingen-nenzingen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Orsingen-Nenzingen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "radolfzell-am-bodensee-nahkauf-nahkauf-konstanzer-strasse-26-radolfzell-am-bodensee-single-2026-11-16-0-99",
@@ -313,7 +663,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "radolfzell-am-bodensee-penny-region-single-2026-11-23-0-89",
+    "city": "radolfzell-am-bodensee",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Radolfzell am Bodensee",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "radolfzell-am-bodensee-rewe-rewe-boehringer-strasse-57-radolfzell-am-bodensee-single-2026-11-16-0-99",
@@ -335,7 +705,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "reichenau-nahkauf-nahkauf-am-voegelisberg-9-reichenau-single-2026-11-16-0-99",
@@ -357,7 +727,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "reichenau-penny-region-single-2026-11-23-0-89",
+    "city": "reichenau",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Reichenau",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "reichenau-rewe-region-single-2026-11-16-0-99",
@@ -377,7 +767,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "rielasingen-worblingen-nahkauf-region-single-2026-11-16-0-99",
@@ -397,7 +787,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "rielasingen-worblingen-penny-penny-gaenseweide-10-rielasingen-worblingen-single-2026-11-23-0-89",
+    "city": "rielasingen-worblingen",
+    "store": "Penny Gänseweide",
+    "chain": "Penny",
+    "address": "Gänseweide 10, 78239 Rielasingen-Worblingen",
+    "lat": 47.728431,
+    "lon": 8.850241,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "rielasingen-worblingen-rewe-region-single-2026-11-16-0-99",
@@ -417,7 +829,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "singen-nahkauf-nahkauf-uhlandstrasse-54-singen-single-2026-11-16-0-99",
@@ -439,7 +851,29 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "singen-penny-penny-gaenseweide-10-rielasingen-worblingen-single-2026-11-23-0-89",
+    "city": "singen",
+    "store": "Penny Gänseweide",
+    "chain": "Penny",
+    "address": "Gänseweide 10, 78239 Rielasingen-Worblingen",
+    "lat": 47.728431,
+    "lon": 8.850241,
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "singen-rewe-rewe-forststrasse-14-singen-single-2026-11-16-0-99",
@@ -461,7 +895,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "singen-rewe-rewe-holzeckstrasse-2-singen-single-2026-11-16-0-99",
@@ -483,7 +917,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "singen-rewe-rewe-steisslinger-strasse-singen-single-2026-11-16-0-99",
@@ -505,7 +939,27 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "steisslingen-penny-region-single-2026-11-23-0-89",
+    "city": "steisslingen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Steißlingen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stockach-nahkauf-region-single-2026-11-16-0-99",
@@ -525,7 +979,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stockach-penny-region-single-2026-11-23-0-89",
@@ -545,7 +999,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stockach-rewe-rewe-dillstrasse-2-stockach-single-2026-11-16-0-99",
@@ -567,7 +1021,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stockach-rewe-rewe-oberdorfstrasse-stockach-single-2026-11-16-0-99",
@@ -589,7 +1043,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-birkheckenstrasse-4-stuttgart-single-2026-11-23-0-89",
@@ -611,7 +1065,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-bottroper-strasse-16-stuttgart-single-2026-11-23-0-89",
@@ -633,7 +1087,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-breitscheidstrasse-12-stuttgart-single-2026-11-23-0-89",
@@ -655,7 +1109,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-flamingoweg-stuttgart-single-2026-11-23-0-89",
@@ -677,7 +1131,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-haldenrainstrasse-77-stuttgart-single-2026-11-23-0-89",
@@ -699,7 +1153,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-haussmannstrasse-103-stuttgart-single-2026-11-23-0-89",
@@ -721,7 +1175,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-bildaeckerstrasse-stuttgart-single-2026-11-23-0-89",
@@ -743,7 +1197,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-kleinknechtstrasse-stuttgart-single-2026-11-23-0-89",
@@ -765,7 +1219,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-kroetenweg-3-stuttgart-single-2026-11-23-0-89",
@@ -787,7 +1241,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-loewen-markt-5-stuttgart-single-2026-11-23-0-89",
@@ -809,7 +1263,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-martha-schmidtmann-strasse-9-stuttgart-single-2026-11-23-0-89",
@@ -831,7 +1285,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-neckarstrasse-207-stuttgart-single-2026-11-23-0-89",
@@ -853,7 +1307,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-platz-am-alten-haus-stuttgart-single-2026-11-23-0-89",
@@ -875,7 +1329,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-schwabstrasse-53-61-stuttgart-single-2026-11-23-0-89",
@@ -897,7 +1351,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-ulmer-strasse-205-stuttgart-single-2026-11-23-0-89",
@@ -919,7 +1373,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-penny-penny-vera-vollmer-strasse-8-stuttgart-single-2026-11-23-0-89",
@@ -941,7 +1395,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-freihofstrasse-22-24-stuttgart-single-2026-11-16-0-89",
@@ -963,7 +1417,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-ulmer-strasse-296-stuttgart-single-2026-11-16-0-89",
@@ -985,7 +1439,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-ostendstrasse-90-stuttgart-single-2026-11-16-0-89",
@@ -1007,7 +1461,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-badstrasse-11-stuttgart-single-2026-11-16-0-89",
@@ -1029,7 +1483,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-naststrasse-17-stuttgart-single-2026-11-16-0-89",
@@ -1051,7 +1505,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-freihofstrasse-22-24-stuttgart-single-2026-11-16-0-99",
@@ -1073,7 +1527,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-ulmer-strasse-296-stuttgart-single-2026-11-16-0-99",
@@ -1095,7 +1549,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-ostendstrasse-90-stuttgart-single-2026-11-16-0-99",
@@ -1117,7 +1571,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-badstrasse-11-stuttgart-single-2026-11-16-0-99",
@@ -1139,7 +1593,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-naststrasse-17-stuttgart-single-2026-11-16-0-99",
@@ -1161,7 +1615,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-breitscheidstrasse-10-stuttgart-single-2026-11-16-0-89",
@@ -1183,7 +1637,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-breitscheidstrasse-10-stuttgart-single-2026-11-16-0-99",
@@ -1205,7 +1659,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-burgunderstrasse-32-stuttgart-single-2026-11-16-0-89",
@@ -1227,7 +1681,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-burgunderstrasse-32-stuttgart-single-2026-11-16-0-99",
@@ -1249,7 +1703,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-vaihinger-strasse-49-stuttgart-single-2026-11-16-0-89",
@@ -1271,7 +1725,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-epplestrasse-40-44-stuttgart-single-2026-11-16-0-89",
@@ -1293,7 +1747,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-vaihinger-strasse-49-stuttgart-single-2026-11-16-0-99",
@@ -1315,7 +1769,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-epplestrasse-40-44-stuttgart-single-2026-11-16-0-99",
@@ -1337,7 +1791,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-hauptstaetter-strasse-147-stuttgart-single-2026-11-16-0-89",
@@ -1359,7 +1813,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-hauptstaetter-strasse-147-stuttgart-single-2026-11-16-0-99",
@@ -1381,7 +1835,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-industriestrasse-5-stuttgart-single-2026-11-16-0-89",
@@ -1403,7 +1857,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-industriestrasse-5-stuttgart-single-2026-11-16-0-99",
@@ -1425,7 +1879,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-kronenstrasse-7-stuttgart-single-2026-11-16-0-89",
@@ -1447,7 +1901,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-kronenstrasse-7-stuttgart-single-2026-11-16-0-99",
@@ -1469,7 +1923,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-loewen-markt-5-stuttgart-single-2026-11-16-0-89",
@@ -1491,7 +1945,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-loewen-markt-5-stuttgart-single-2026-11-16-0-99",
@@ -1513,7 +1967,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-marienplatz-8-10-stuttgart-single-2026-11-16-0-89",
@@ -1535,7 +1989,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-marienplatz-8-10-stuttgart-single-2026-11-16-0-99",
@@ -1557,7 +2011,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-olgastrasse-86-stuttgart-single-2026-11-16-0-89",
@@ -1579,7 +2033,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-olgastrasse-86-stuttgart-single-2026-11-16-0-99",
@@ -1601,7 +2055,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-ostendstrasse-75-stuttgart-single-2026-11-16-0-89",
@@ -1623,7 +2077,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-ostendstrasse-75-stuttgart-single-2026-11-16-0-99",
@@ -1645,7 +2099,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-otto-hirsch-bruecken-17-stuttgart-single-2026-11-16-0-89",
@@ -1667,7 +2121,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-otto-hirsch-bruecken-17-stuttgart-single-2026-11-16-0-99",
@@ -1689,7 +2143,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-rotebuehlplatz-21-25-stuttgart-single-2026-11-16-0-89",
@@ -1711,7 +2165,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-rotebuehlplatz-21-25-stuttgart-single-2026-11-16-0-99",
@@ -1733,7 +2187,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-rotenwaldstrasse-stuttgart-single-2026-11-16-0-89",
@@ -1755,7 +2209,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-rotenwaldstrasse-stuttgart-single-2026-11-16-0-99",
@@ -1777,7 +2231,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-rueckertstrasse-7-stuttgart-single-2026-11-16-0-89",
@@ -1799,7 +2253,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-rueckertstrasse-7-stuttgart-single-2026-11-16-0-99",
@@ -1821,7 +2275,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-schwabstrasse-43-stuttgart-single-2026-11-16-0-89",
@@ -1843,7 +2297,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-schwabstrasse-43-stuttgart-single-2026-11-16-0-99",
@@ -1865,7 +2319,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-sontheimer-strasse-10-stuttgart-single-2026-11-16-0-89",
@@ -1887,7 +2341,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-sontheimer-strasse-10-stuttgart-single-2026-11-16-0-99",
@@ -1909,7 +2363,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-sophie-tschorn-strasse-4-stuttgart-single-2026-11-16-0-89",
@@ -1931,7 +2385,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-sophie-tschorn-strasse-4-stuttgart-single-2026-11-16-0-99",
@@ -1953,7 +2407,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-unterlaender-strasse-49-stuttgart-single-2026-11-16-0-89",
@@ -1975,7 +2429,7 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.kaufda.de/Angebote/Red-Bull",
     "sourceName": "kaufDA",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
   },
   {
     "id": "stuttgart-rewe-rewe-unterlaender-strasse-49-stuttgart-single-2026-11-16-0-99",
@@ -1997,6 +2451,46 @@
     "note": "zzgl. 0,25 € Pfand",
     "source": "https://www.marktguru.de/b/red-bull",
     "sourceName": "marktguru",
-    "lastUpdated": "2026-11-20T12:06:20Z"
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "tengen-penny-region-single-2026-11-23-0-89",
+    "city": "tengen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Tengen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
+  },
+  {
+    "id": "volkertshausen-penny-region-single-2026-11-23-0-89",
+    "city": "volkertshausen",
+    "store": "Penny",
+    "chain": "Penny",
+    "address": "Filiale im Raum Volkertshausen",
+    "product": "Red Bull (versch. Sorten)",
+    "packType": "single",
+    "unitCount": 1,
+    "volumeLiters": 0.25,
+    "price": 0.89,
+    "pricePerUnit": 0.89,
+    "regularPrice": 1.49,
+    "validFrom": "2026-11-23",
+    "validTo": "2026-11-28",
+    "note": "zzgl. 0,25 € Pfand",
+    "source": "https://www.kaufda.de/Angebote/Red-Bull",
+    "sourceName": "kaufDA",
+    "lastUpdated": "2026-11-20T13:57:46Z"
   }
 ]
